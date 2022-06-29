@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+@import "../../assets/scss/components/base";
+
+$component: componentClass("typo");
+
+@mixin c-typo-fs($fs: false, $lh: false, $valueSuffix: "") {
+  @if $fs {
+    font-size: #{rem($fs)}#{$valueSuffix};
+  }
+  @if $lh {
+    line-height: #{rem($lh)}#{$valueSuffix};
+  }
+}
+
+@mixin c-typo-text-rules(
+  $prefix-name: "fs",
+  $child-selector: "",
+  $isImportant: false
+) {
+  $valueSuffix: "" !default;
+
+  @if ($isImportant) {
+    $valueSuffix: " !important";
+  }
+
+  @each $i, $props in tokenTypoSizes() {
+    .#{$component}-#{$prefix-name}-#{$i} #{$child-selector} {
+      @include c-typo-fs(
+        map-get($props, "fs"),
+        map-get($props, "lh"),
+        $valueSuffix
+      );
+    }
+  }
+}
+
+@mixin c-typo-text-rules-responsive(
+  $prefix-name: "fs",
+  $child-selector: "",
+  $isImportant: false
+) {
+  $valueSuffix: "" !default;
+
+  @if ($isImportant) {
+    $valueSuffix: " !important";
+  }
+
+  @each $i, $props in tokenTypoSizes() {
+    @each $k in tokenTypoBreakpoints() {
+      @if not($k == "xs") {
+        @include media-breakpoint-up(#{$k}) {
+          .#{$component}-#{$prefix-name}-#{$k}-#{$i} #{$child-selector} {
+            @include c-typo-fs(
+              map-get($props, "fs"),
+              map-get($props, "lh"),
+              $valueSuffix
+            );
+          }
+        }
+      }
+    }
+  }
+}

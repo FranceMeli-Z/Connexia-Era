@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+$zaux-helper-name: "color";
+
+////////////////////////////////////////////////////
+// HELPER MIXINS
+////////////////////////////////////////////////////
+@mixin zaux-helper-color($name, $color) {
+  .zaux-color-#{$name} {
+    color: $color !important;
+  }
+}
+
+@mixin zaux-helper-bgcolor($name, $color) {
+  .zaux-bg-#{$name} {
+    background-color: $color !important;
+  }
+}
+
+////////////////////////////////////////////////////
+// HELPER CLASSES
+////////////////////////////////////////////////////
+
+@each $setName, $setObj in tokenColors() {
+  @each $colorName, $colorVal in $setObj {
+    @include zaux-helper-color("#{$setName}-#{$colorName}", $colorVal);
+  }
+}
+
+@each $setName, $setObj in tokenColors() {
+  @each $colorName, $colorVal in $setObj {
+    @include zaux-helper-bgcolor("#{$setName}-#{$colorName}", $colorVal);
+  }
+}
+
+////////////////////////////////////////////////////
+// HELPER CSS VARIABLES
+////////////////////////////////////////////////////
+
+// :root {
+//   --#{tokenDef('css-var-prefix')}-test: #f00;
+// }

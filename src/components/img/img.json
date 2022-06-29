@@ -1,0 +1,28 @@
+{
+  "props": {
+    "defaultPlaceholder": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+    "mq": {
+      "mobile": "(max-resolution: 119dpi) and (max-width: 991px)",
+      "mobile2x": "(min-resolution: 120dpi) and (max-width: 991px)",
+      "desktop": "(max-resolution: 119dpi) and (min-width: 992px)",
+      "desktop2x": "(min-resolution: 120dpi) and (min-width: 992px)"
+    }
+  },
+  "demo": {
+    "photo1_lazy": {
+      "isLazy": true,
+      "isFluid": true,
+      "src": "media/photo1_1080p.jpg",
+      "src2x": "media/photo1_2160p.jpg",
+      "width": 1920,
+      "height": 1080,
+      "className": [],
+      "title": "title",
+      "alt": "alt",
+      "wrapperElement": "picture",
+      "wrapperClassName": [
+        "d-block"
+      ]
+    }
+  }
+}

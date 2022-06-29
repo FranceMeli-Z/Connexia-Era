@@ -1,0 +1,84 @@
+{#
+- Img element must have an alt attribute, except under certain conditions. For details, consult https://www.w3.org/WAI/tutorials/images/ .
+- https://web.dev/optimize-cls/
+#}
+{% macro content(obj) %}
+
+  {% set componentClassName = 'c-img' %}
+
+  {% set mq = component_img.props.mq %}
+
+  {% set configDefault = {
+    "className": [],
+    "wrapperTag": "picture",
+    "wrapperClassName": [],
+    "wrapperHtmlRawAttrs": "",
+    "srcPlaceholder": component_img.props.defaultPlaceholder
+  }%}
+
+  {% set obj = configDefault | overwriteMerge(obj or {}) %}
+
+  {# Creates new arrays for manipulation) #}
+  {% set _wrapperClassName = [componentClassName] | mergeArray(obj.wrapperClassName or configDefault.wrapperClassName) %}
+  {% set _imgClassName = [] | mergeArray(obj.className or configDefault.className) %}
+
+  {% if obj.isFluid %}
+    {% set _wrapperClassName = _wrapperClassName | mergeArray(["c-img--fluid"]) %}
+  {% endif %}
+
+  {% if obj.isLazy %}
+    {% set _wrapperClassName = _wrapperClassName | mergeArray(["c-img--lazy"]) %}
+  {% endif %}
+
+  <{{obj.wrapperTag}} class="{{_wrapperClassName | join(" ")}}" {{ (obj.wrapperHtmlRawAttrs|safe) if obj.wrapperHtmlRawAttrs }}>
+    {% for bp in obj.sources.maxMd %}
+      <source srcset="{{bp.src|safe}}" media="{{mq.mobile}}"/>
+      <source srcset="{{bp.src2x|safe}}" media="{{mq.mobile2x}}"/>
+    {% endfor %}
+
+    {% for bp in obj.sources.minLg %}
+      <source srcset="{{bp.src|safe}}" media="{{mq.desktop}}"/>
+      <source srcset="{{bp.src2x|safe}}" media="{{mq.desktop2x}}"/>
+    {% endfor %}
+
+    <img
+      {% if obj.isLazy %}
+
+        loading="lazy"
+        src="{{obj.srcPlaceholder|safe}}"
+        data-src="{{obj.src|safe}}"
+
+        {% if obj.src2x %}
+          data-srcset="{{obj.src|safe}} 1x, {{obj.src2x|safe}} 2x"
+        {% endif %}
+
+      {% else %}
+
+        src="{{obj.src}}"
+        {% if obj.src2x %}
+          srcset="{{obj.src|safe}} 1x, {{obj.src2x|safe}} 2x"
+        {% endif %}
+
+      {% endif %}
+
+      {% if _imgClassName|length %}
+        class="{{_imgClassName | join(" ")}}"
+      {% endif %}
+
+      {% if obj.width %}
+        width="{{obj.width}}"
+      {% endif %}
+
+      {% if obj.height %}
+        height="{{obj.height}}"
+      {% endif %}
+
+      {% if obj.title %}
+        title="{{obj.title}}"
+      {% endif %}
+
+      alt="{{obj.alt}}"
+/>
+  </{{obj.wrapperTag}}>
+  <!-- .{{componentClassName}} -->
+{% endmacro %}

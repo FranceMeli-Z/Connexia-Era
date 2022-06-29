@@ -1,0 +1,420 @@
+/*!
+ * Bootstrap v5.1.3 (https://getbootstrap.com/)
+ * Copyright 2011-2021 The Bootstrap Authors
+ * Copyright 2011-2021 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+
+////////////////////////////////////////////////////
+// Configuration
+////////////////////////////////////////////////////
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+////////////////////////////////////////////////////
+// Utilities customization
+// @see https://getbootstrap.com/docs/5.0/utilities/sizing/
+// @see https://getbootstrap.com/docs/5.0/utilities/api/#using-the-api
+// @see https://github.com/twbs/bootstrap/blob/v5.1.3/scss/_utilities.scss
+////////////////////////////////////////////////////
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "font-weight": (
+      property: font-weight,
+      class: fw,
+      values: (
+        normal: $zaux-typo-fw-regular,
+        bold: $zaux-typo-fw-bold,
+      ),
+    ),
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "font-family": (
+      property: font-family,
+      class: font,
+      values: (
+        monospace: var(--#{$variable-prefix}font-monospace),
+        zaux1: $zaux-font1,
+        zaux2: $zaux-font2,
+      ),
+    ),
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "line-height": (
+      property: line-height,
+      class: lh,
+      values: (
+        1: 1,
+      ),
+    ),
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "align": null,
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "border": null,
+  )
+);
+
+// $utilities: map-merge(
+//   $utilities,
+//   (
+//     "border-top": null,
+//   )
+// );
+
+// $utilities: map-merge(
+//   $utilities,
+//   (
+//     "border-bottom": null,
+//   )
+// );
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "border-end": null,
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "border-start": null,
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "border-color": null,
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "border-width": null,
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "rounded": (
+      responsive: false,
+      property: border-radius,
+      class: rounded,
+      values: (
+        0: 0,
+        2: tokenSpacer(2),
+        6: tokenSpacer(6),
+        circle: 50%,
+      ),
+    ),
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "rounded-top": null,
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "rounded-end": null,
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "rounded-bottom": null,
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "rounded-start": null,
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "ls": (
+      responsive: false,
+      property: letter-spacing,
+      class: ls,
+      values: (
+        4: 0.8em,
+      ),
+    ),
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "height": (
+      responsive: true,
+      property: height,
+      class: h,
+      values: (
+        f600: 600px,
+        100: 100%,
+        auto: auto,
+      ),
+    ),
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "position": (
+      property: position,
+      values: static relative absolute
+    ),
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "viewport-height": (
+      responsive: true,
+      property: height,
+      class: vh,
+      values: (
+        "100-nHeaderHeight": calc(100vh - #{$zaux-header-h}),
+        "100-nHeaderHeightLg": calc(100vh - #{$zaux-header-lg-h}),
+        100: 100vh,
+      ),
+    ),
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "width": (
+      responsive: true,
+      property: width,
+      class: w,
+      values: (
+        100: 100%,
+        auto: auto,
+      ),
+    ),
+  )
+);
+
+////////////////////////////////////////////////////
+// Layout & components
+////////////////////////////////////////////////////
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+
+// Import customized
+// @import "bootstrap/scss/type";
+
+////////////////////////////////////////////////////
+// BEGIN part of "bootstrap/scss/type"
+////////////////////////////////////////////////////
+
+//
+// Emphasis
+//
+.small {
+  @extend small;
+}
+
+.mark {
+  @extend mark;
+}
+
+//
+// Lists
+//
+.list-unstyled {
+  @include list-unstyled();
+}
+
+// Inline turns list items into inline-block
+.list-inline {
+  @include list-unstyled();
+}
+.list-inline-item {
+  display: inline-block;
+
+  &:not(:last-child) {
+    margin-right: $list-inline-padding;
+  }
+}
+
+//
+// Misc
+//
+
+// Builds on `abbr`
+.initialism {
+  @include font-size($initialism-font-size);
+  text-transform: uppercase;
+}
+
+// Blockquotes
+.blockquote {
+  margin-bottom: $blockquote-margin-y;
+  @include font-size($blockquote-font-size);
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.blockquote-footer {
+  margin-top: -$blockquote-margin-y;
+  margin-bottom: $blockquote-margin-y;
+  @include font-size($blockquote-footer-font-size);
+  color: $blockquote-footer-color;
+
+  &::before {
+    content: "\2014\00A0"; // em dash, nbsp
+  }
+}
+////////////////////////////////////////////////////
+// END part of "bootstrap/scss/type"
+////////////////////////////////////////////////////
+
+// Import customized
+// @import "bootstrap/scss/images";
+@each $k, $v in tokenBreakpoints() {
+  @if not($k == "xs") {
+    @include media-breakpoint-up(#{$k}) {
+      .img-#{$k}-fluid {
+        @include img-fluid();
+      }
+    }
+  } @else {
+    .img-fluid {
+      @include img-fluid();
+    }
+  }
+}
+
+// Import customized
+// @import "bootstrap/scss/containers";
+@if $enable-grid-classes {
+  .container,
+  [class*="container-"] {
+    @include make-container();
+  }
+
+  @each $key, $value in tokenSize("container-max-widths") {
+    .container-#{$key} {
+      max-width: $value;
+    }
+  }
+}
+
+[class*="container-"],
+[class*="col-"] {
+  transition: padding-right $zaux-transition-1, padding-left $zaux-transition-1,
+    margin-right $zaux-transition-1, margin-left $zaux-transition-1;
+}
+
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/forms/labels";
+@import "bootstrap/scss/forms/form-text";
+@import "bootstrap/scss/forms/form-control";
+@import "bootstrap/scss/forms/form-select";
+@import "bootstrap/scss/forms/form-check";
+@import "bootstrap/scss/forms/form-range";
+// @import "bootstrap/scss/forms/floating-labels";
+@import "bootstrap/scss/forms/input-group";
+// @import "bootstrap/scss/forms/validation";
+@import "bootstrap/scss/close";
+@import "bootstrap/scss/transitions";
+// @import "bootstrap/scss/accordion";
+// @import "bootstrap/scss/modal";
+// @import "bootstrap/scss/tables";
+// @import "bootstrap/scss/buttons";
+// @import "bootstrap/scss/dropdown";
+// @import "bootstrap/scss/button-group";
+// @import "bootstrap/scss/nav";
+// @import "bootstrap/scss/navbar";
+// @import "bootstrap/scss/card";
+// @import "bootstrap/scss/breadcrumb";
+// @import "bootstrap/scss/pagination";
+// @import "bootstrap/scss/badge";
+// @import "bootstrap/scss/alert";
+// @import "bootstrap/scss/progress";
+// @import "bootstrap/scss/list-group";
+// @import "bootstrap/scss/toasts";
+// @import "bootstrap/scss/tooltip";
+// @import "bootstrap/scss/popover";
+// @import "bootstrap/scss/carousel";
+// @import "bootstrap/scss/spinners";
+// @import "bootstrap/scss/offcanvas";
+// @import "bootstrap/scss/placeholders";
+
+////////////////////////////////////////////////////
+// Helpers
+////////////////////////////////////////////////////
+@import "bootstrap/scss/helpers/clearfix";
+@import "bootstrap/scss/helpers/position";
+@import "bootstrap/scss/helpers/visually-hidden";
+@import "bootstrap/scss/helpers/stretched-link";
+@import "bootstrap/scss/helpers/text-truncation";
+@import "bootstrap/scss/helpers/vr";
+// @import "bootstrap/scss/helpers/colored-links";
+// @import "bootstrap/scss/helpers/ratio";
+// @import "bootstrap/scss/helpers/stacks";
+
+////////////////////////////////////////////////////
+// Utilities
+////////////////////////////////////////////////////
+@import "bootstrap/scss/utilities/api";
+
+////////////////////////////////////////////////////
+// These below are bootstrap's inner bundles, the inclusion of the single
+// SCSS files (inside the bundles) are listed above in this file.
+////////////////////////////////////////////////////
+// @import "bootstrap/scss/forms";
+// @import "bootstrap/scss/helpers";
+
+////////////////////////////////////////////////////
+// These below are bootstrap's inner bundles, the inclusion of the single
+// SCSS files (inside the bundles) are listed above in this file.
+////////////////////////////////////////////////////
+
+@include onIE() {
+  .visually-hidden {
+    display: none;
+  }
+}

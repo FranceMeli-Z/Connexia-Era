@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+@import "../../assets/scss/components/base";
+
+$component: componentClass("slider");
+
+.#{$component} {
+  &__wrapper {
+    overflow: hidden;
+    position: relative;
+  }
+}

@@ -1,0 +1,12 @@
+@import "../../assets/scss/components/base";
+
+$component: componentClass("form");
+
+.#{$component} {
+  &--light {
+    input {
+      background-color: tokenColor("default", "white");
+    }
+  }
+
+}

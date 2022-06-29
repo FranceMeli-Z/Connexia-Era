@@ -1,0 +1,7 @@
+{
+  "app-prefix": "zaux",
+  "app-loaded-classname": "zaux-loaded",
+  "component-prefix": "c-",
+  "css-var-prefix": "zx",
+  "compatibility-layer": false
+}

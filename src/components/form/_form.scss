@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+@import "../../assets/scss/components/base";
+
+$component: componentClass("form");
+
+.#{$component} {
+& .form-group {
+  height: 50px;
+}
+ & input {
+  width: 290px;
+  border-radius: 0;
+  @include media-breakpoint-down(lg) {
+  width: 250px;
+  }
+ }
+ & button {
+  height:50px;
+}
+}

@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+@import "../../assets/scss/components/base";
+
+$component: componentClass("cta");
+
+.#{$component} {
+  &1 {
+    &--red {
+      background-color: tokenColor(set1, red1);
+      color: tokenColor(default, white) !important;
+      &:hover {
+        background-color: tokenColor(set1, darkred);
+      }
+    }
+
+    &--onlyred {
+      color: tokenColor(set1, red1);
+      &:hover {
+        color: tokenColor(set1, darkred);
+      }
+    }
+    &--grey {
+      border: 2px solid;
+      background-color: tokenColor(default, white);
+      color: tokenColor(set1, darkgrey);
+      border-color: #F1F1F1;
+      &:hover {
+        background-color: #F1F1F1;
+      }
+      &:active {
+        border-color: tokenColor(set1, red1);
+      }
+    }
+  }
+  &2 {
+    &--light {
+      background-color: tokenColor(default, white);
+      border-color: #F1F1F1;
+      &:hover {
+        background-color: #F1F1F1;
+      }
+      &:active {
+        border-color: tokenColor(set1, red1);
+      }
+
+    }
+  }
+
+  &--selected {
+    border-color: tokenColor(set1, red1);
+  }
+}

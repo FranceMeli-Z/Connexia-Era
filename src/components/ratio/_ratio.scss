@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+@import "../../assets/scss/components/base";
+
+$component: componentClass("ratio");
+
+[class*="#{$component}"] {
+  &:before {
+    display: block;
+    content: " ";
+    width: 100%;
+    padding-top: calc(var(--h) / var(--w) * 100%);
+  }
+
+  @each $k, $v in tokenBreakpoints() {
+    @if not($k == "xs") {
+      @include media-breakpoint-up($k) {
+        &[class*="--#{$k}-none"] {
+          &:before {
+            display: none;
+          }
+        }
+      }
+    } @else {
+      &[class*="--none"] {
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.#{$component} {
+  &--square {
+    &:before {
+      --w: 1;
+      --h: 1;
+    }
+  }
+  &--wide {
+    &:before {
+      --w: 16;
+      --h: 9;
+    }
+  }
+}

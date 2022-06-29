@@ -1,0 +1,54 @@
+{
+  "body": {
+    "className": ""
+  },
+  "blocks": {
+    "videoHero1": {
+      "innerClassName": [
+        "zaux-bg-set1-darkgray1",
+        "vh-100-nHeaderHeight",
+        "vh-lg-100-nHeaderHeightLg"
+      ],
+      "isAutoplay": true,
+      "imgCover": {
+        "isLazy": false,
+        "_sources": {
+          "maxMd": [
+            {
+              "src": "media/photo1_480p.webp",
+              "src2x": "media/photo1_720p.webp"
+            }
+          ],
+          "minLg": [
+            {
+              "src": "media/photo1_1080p.webp",
+              "src2x": "media/photo1_2160p.webp"
+            }
+          ]
+        },
+        "src": "//lab.zaki.it/clienti/geckosoft/2022/website/video/vid2-desktop-frame0.png",
+        "width": 1920,
+        "height": 1080,
+        "className": [
+          "c-herovideo__cover-img",
+          "zaux-fit-cover-center-center",
+          "position-absolute",
+          "top-0",
+          "start-0",
+          "w-100",
+          "h-100"
+        ],
+        "wrapperClassName": [
+          "c-herovideo__cover",
+          "h-100"
+        ]
+      },
+      "sources": [
+        {
+          "mime": "video/mp4",
+          "src": "//lab.zaki.it/clienti/geckosoft/2022/website/video/vid2-desktop.mp4"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{# Imports components #}
+{% import 'components/icon/icon.njk' as Icon %}
+
+{% macro content(obj) %}
+
+  {% set componentClassName = 'c-nav' %}
+
+  {% set configDefault = {
+    "wrapperElement" : "nav"
+  }%}
+
+  {% set obj = configDefault | merge(obj or {}) %}
+
+  {% set _className = [componentClassName] | mergeArray(obj.className or configDefault.className) %}
+
+  <div class="{{_className | join(" ")}}">
+    <{{obj.wrapperElement}} class="{{componentClassName}}">
+    <div class="row">
+      <div class="col-4 zaux-color-set1-darkgrey2">
+      <ul>
+          <li>
+            <a href="{{item.href|safe}}" class="{{componentClassName}}__item-wrapper">About Us</a>
+          </li>
+      </ul>
+      </div>
+      <div class="col-4">
+      </div>
+      <div class="col-4">
+      </div>
+    </div>
+    </{{obj.wrapperElement}}>
+    <!-- .{{componentClassName}} -->
+  </div>
+
+{% endmacro %}

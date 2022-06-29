@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+@import "../../assets/scss/components/base";
+
+$component: componentClass("header");
+
+$zaux-header-h: 65px !default;
+$zaux-header-lg-h: 158px !default;
+
+.#{$component} {
+  border-bottom-width: 4px;
+  border-bottom-style: solid;
+  border-image: linear-gradient(to right,#b827fc 0%, #fd1892 25%, #fec837 50%,  #b8fd33 75%, #2c90fc 100%) 1;
+  // position: fixed;
+  // left: 0;
+  // top: 0;
+
+  z-index: $zaux-header-zindex;
+
+  &__inner {
+    height: $zaux-header-h;
+  }
+
+  &__logo {
+    @include media-breakpoint-down(lg) {
+    width: 98px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    &__inner {
+      height: $zaux-header-lg-h;
+    }
+  }
+}

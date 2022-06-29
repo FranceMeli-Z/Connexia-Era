@@ -1,0 +1,184 @@
+{# Sets the layout to be extended #}
+{% extends "layouts/default.njk" %}
+
+{# Imports components #}
+{% import 'components/img/img.njk' as Img %}
+{% import 'components/icon/icon.njk' as Icon %}
+{% import 'components/btn/btnIcon.njk' as BtnIcon %}
+{% import 'components/herovideo/herovideo.njk' as HeroVideo %}
+{% import 'components/card1/card1.njk' as Card1 %}
+{% import 'components/form/form.njk' as Form %}
+
+{# Sets page-specific variables #}
+{% set page = {
+  "data": page_home,
+  "title": "Home",
+  "isHome": true
+} %}
+
+{% block head_css %}
+  <link rel="stylesheet" href="assets/css/general.bundle.css">
+{% endblock %}
+
+{% block content %}
+
+  <main>
+
+    {# {{ HeroVideo.content(page.data.blocks.videoHero1) }} #}
+
+     <div class="zaux-bg-set1-grey p-box">
+        <div class="pb-4 pt-9 py-lg-8">
+          <div class="zaux-theme--light1 pb-4">
+            <h6 class="pb-1 c-typo-fs-8 c-typo-fs-lg-13"><strong>Leading European Nephrology</strong></h6>
+          </div>
+          <div class="maw-f768px">
+          <p>A Europe where kidney health is prioritised, kidney care is accessible, the kidney community is thriving.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pb-7 pb-lg-16">
+      <div class="zaux-bg-set1-white p-box zaux-theme--light2">
+        <div class="pb-4 pt-6 pb-lg-9 pt-lg-11">
+          <h6 class="c-typo-fs-10 c-typo-fs-lg-16"><strong>What we do</strong></h6>
+        </div>
+        <div class="row gx-3">
+           {% set total = 6 %}
+           {% set _htmlCardContent %}
+          <div class="card1__head zaux-theme--dark1">
+            <div class="card1__head--title pb-2">
+              <h6 class="c-typo-fs-8 c-typo-fs-lg-10"><strong>Open Call: NDT Editor in Chief</strong></h6>
+            </div>
+            <div class="card1__head--abstract c-typo-style1-6 c-typo-style1-lg-8">
+              <p>Submit your application by e-mail by January 31, 2022</p>
+            </div>
+          </div>
+
+          <div class="card1__button">
+            <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">APPLY NOW</a>
+          </div>
+
+          {% endset %}
+           {# "c-ratio--square", "c-ratio--md-none" #}
+          {% for i in range(0, total) %}
+            {{Card1.content(
+              {
+                "className": ["col-12", "col-md-6","col-lg-4", "h-100", "pb-6"],
+                "variations": ["lg-size1"],
+                "innerClassName": [],
+                "contentClassName": ["d-flex", "justify-content-between", "flex-column", "p-6","zaux-bg-set1-darkgrey"],
+                "content": _htmlCardContent,
+                "img": {
+                "isShaped": true,
+                "className": ["rounded-2", "overflow-hidden"],
+                "variations": ["style1", decoVariation],
+                "img": {
+                "isLazy": true,
+                "src": "media/backCard1.png",
+                "src2x": "media/backCard1.png",
+                "width": 396,
+                "height": 380,
+                "alt": "Cover alternative text",
+                "className": ["zaux-fit-cover-center-center", "w-100"]
+                }
+                }
+              }
+            )}}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+  <div class="">
+    <div class="zaux-bg-set1-grey p-box">
+      <div class="py-6 zaux-theme--light2 text-center">
+        <h6 class="c-typo-fs-10 c-typo-fs-lg-16 mb-3"><strong>Latest Tweets</strong></h6>
+      </div>
+      <div class="pb-9">
+        Tweets
+      </div>
+    </div>
+  </div>
+
+  <div class="zaux-bg-set1-darkgrey2 p-box">
+    <div class="pt-7 pb-12 zaux-theme--dark1 text-center">
+      <div class="pb-2 pb-lg-6">
+        {{
+        Img.content({
+          "isLazy": false,
+          "src": "media/newsletter.png",
+          "src2x": "media/newsletter@2x.png",
+          "width": 54,
+          "height": 37,
+          "className": "",
+          "title": "title",
+          "alt": "alt",
+          "wrapperElement": "",
+          "wrapperClassName": ""
+        })
+      }}
+      </div>
+      <div class="pb-5">
+        <h6 class="c-typo-fs-10 c-typo-fs-lg-13"><strong>Join our newsletter</strong></h6>
+      </div>
+      <div class="c-typo-style1-8 maw-f768px m-auto pb-7 pb-lg-8">
+       <p> Nephrology News Flash is the official ERA e-newsletter. It is circulated bi-weekly and serve the nephrological community by publishing ERA‘s initiatives,
+        reporting on ongoing activities and sharing new hot papers from ERA Journals. </p>
+      </div>
+      {{
+        Form.content({
+          "className": ""
+          })
+      }}
+
+    </div>
+   </div>
+
+   <div class="">
+    <div class="zaux-bg-set1-grey p-box">
+      <div class="py-6 zaux-theme--light2 text-center">
+        <h6 class="c-typo-fs-10 c-typo-fs-lg-16 mb-3"><strong>Our Pillars</strong></h6>
+      </div>
+      <div class="row pb-7 pb-lg-10">
+        <div class="col-12 col-lg-4 pb-7 pb-lg-0">
+          <div class="pillars-t1 text-center pb-2 pb-lg-4 zaux-color-set1-green1">
+             <h6 class="c-typo-fs-8 c-typo-fs-lg-13 mb-3">EDUCATION</h6>
+          </div>
+          <div class="c-typo-style1-6 c-typo-style1-lg-8 text-center">
+           <p> We deliver excellent education for all nephrologists to apply in their daily practice. </p>
+          </div>
+        </div>
+         <div class="col-12 col-lg-4 pb-7 pb-lg-0">
+           <div class="pillars-t2 text-center pb-2 pb-lg-4 zaux-color-set1-yellow1">
+             <h6 class="c-typo-fs-8 c-typo-fs-lg-13 mb-3">SCIENCE</h6>
+          </div>
+          <div class="c-typo-style1-6 c-typo-style1-lg-8 text-center">
+          <p>  We are committed to support and to spread top quality scientific knowledge. </p>
+          </div>
+        </div>
+         <div class="col-12 col-lg-4 pb-7 pb-lg-0">
+           <div class="pillars-t3 text-center pb-2 pb-lg-4 zaux-color-set1-blue1">
+             <h6 class="c-typo-fs-8 c-typo-fs-lg-13 mb-3">NETWORKING</h6>
+          </div>
+          <div class="c-typo-style1-6 c-typo-style1-lg-8 text-center">
+            <p>We work to facilitate professional networking and free participation.</p>
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+         <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">Discover membership benefits</a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  </main>
+
+{% endblock %}
+
+{% block foot_js %}
+  <script defer src="assets/js/general.bundle.js"></script>
+{% endblock %}

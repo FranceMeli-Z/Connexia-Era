@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+@import "../../assets/scss/components/base";
+
+$component: componentClass("btn");
+
+////////////////////////////////////////////////////
+// Theme: Light1
+////////////////////////////////////////////////////
+
+.zaux-theme--light1 .#{$component}__inner {
+  &,
+  &:visited {
+    color: tokenColor("set1", "black1");
+    border-color: tokenColor("set1", "cyan1");
+  }
+}
+
+////////////////////////////////////////////////////
+// Theme: Dark1
+////////////////////////////////////////////////////
+
+.zaux-theme--dark1 .#{$component}__inner {
+  &,
+  &:visited {
+    color: tokenColor("set1", "white1");
+    border-color: tokenColor("set1", "white1");
+  }
+}

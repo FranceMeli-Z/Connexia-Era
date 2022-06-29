@@ -1,0 +1,131 @@
+{# Sets the layout to be extended #}
+{% extends "layouts/lite.njk" %}
+
+{# Imports components #}
+{% import 'components/icon/icon.njk' as Icon %}
+{% import 'components/btn/btnIcon.njk' as BtnIcon %}
+{% import 'components/card1/card1.njk' as Card1 %}
+{% import 'components/card2/card2_news.njk' as Card2 %}
+
+
+{% set componentName = "Card 2" %}
+
+{# Sets page-specific variables #}
+{% set page = {
+  "data": {},
+  "title": componentName + " - Components"
+} %}
+
+{% block head_css %}
+  <link rel="stylesheet" href="../assets/css/general.bundle.css">
+{% endblock %}
+
+{% block content %}
+  <main class="pt-4">
+
+    <div class="container-l g-3 g-lg-7">
+
+      <div class="row mx-0 border-bottom mb-4">
+        <div class="col-12 px-0">
+          <h2 class="mb-3">
+            {{componentName}}
+          </h2>
+        </div>
+        <!-- .col-* -->
+      </div>
+      <!-- .row -->
+
+      <div class="row">
+
+        <div class="col-12">
+          <div class="py-5 zaux-theme--light1">
+
+            <div class="row">
+              {%
+                set _decoVariations = [
+                  "deco1-l-t",
+                  "deco1-r-t",
+                  "deco1-r-b",
+                  "deco1-l-b"
+                ]
+              %}
+
+              {% for decoVariation in _decoVariations %}
+
+                <div class="col-12 col-md-3 mb-3">
+                  <small class="d-inline-block mb-3 fw-bold font-mono c-typo-fs-3">
+                    *--{{decoVariation}}
+                  </small>
+                  {{Card2.content(
+                    {
+                      "className": [],
+                      "innerClassName": [],
+                      "contentClassName": ["d-flex", "justify-content-between", "flex-column"],
+                      "content": {
+                        "category": "Report",
+                        "title": "CKD-MBD Newsletter #23",
+                        "date": "March 18, 2022",
+                        "author": "CKD-MBD working group"
+                      }
+                    }
+                  )}}
+
+                </div>
+                <!-- .col-* -->
+              {% endfor %}
+
+            </div>
+            <!-- .row -->
+
+             <div class="row">
+              {%
+                set _decoVariations = [
+                  "deco1-l-t",
+                  "deco1-r-t",
+                  "deco1-r-b",
+                  "deco1-l-b"
+                ]
+              %}
+
+              {% for decoVariation in _decoVariations %}
+
+                <div class="col-12 col-md-6 mb-3">
+                  <small class="d-inline-block mb-3 fw-bold font-mono c-typo-fs-3">
+                    *--{{decoVariation}}
+                  </small>
+                  {{Card2.content(
+                    {
+                      "className": [],
+                      "innerClassName": [],
+                      "contentClassName": ["d-flex", "justify-content-between", "flex-column"],
+                      "content": {
+                        "category": "Report",
+                        "title": "CKD-MBD Newsletter #23",
+                        "date": "March 18, 2022",
+                        "author": "CKD-MBD working group"
+                      }
+                    }
+                  )}}
+
+                </div>
+                <!-- .col-* -->
+              {% endfor %}
+
+            </div>
+
+          </div>
+        </div>
+        <!-- .col-* -->
+
+      </div>
+      <!-- .row -->
+
+    </div>
+    <!-- .container-* -->
+
+  </main>
+{% endblock %}
+
+{% block foot_js %}
+  <script defer src="assets/js/general.bundle.js"></script>
+{% endblock %}

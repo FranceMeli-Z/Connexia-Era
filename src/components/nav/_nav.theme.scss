@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+@import "../../assets/scss/components/base";
+
+$component: componentClass("nav2");
+
+////////////////////////////////////////////////////
+// Theme: Light1
+////////////////////////////////////////////////////
+
+.#{$component} {
+  // &__item {
+  //   &-wrapper {
+  //     @at-root .#{$zaux-system-classname-components-loaded} & {
+  //       transition: background-color $zaux-transition-1;
+  //     }
+  //   }
+  // }
+
+  a {
+    @at-root .zaux-theme--light1 & {
+      @at-root .#{$zaux-system-classname-components-loaded} & {
+        transition: all $zaux-transition-0;
+      }
+
+      &:link,
+      &:visited {
+        color: $zaux-color-set1-onyx;
+      }
+
+      &:hover,
+      &:active {
+        color: $zaux-color-set1-darkblue;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__item {
+    &:hover,
+    &.active {
+      .#{$component} {
+        &__item {
+          &-wrapper {
+            background-color: $zaux-color-default-white;
+          }
+        }
+      }
+    }
+    &-wrapper {
+      &:hover,
+      &:active {
+        .#{$component} {
+          &__item {
+            &-description {
+              color: $zaux-color-set1-onyx;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

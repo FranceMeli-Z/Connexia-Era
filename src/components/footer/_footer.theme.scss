@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+@import "../../assets/scss/components/base";
+
+$component: componentClass("footer");
+
+////////////////////////////////////////////////////
+// Theme: Light1
+////////////////////////////////////////////////////
+
+.#{$component} {
+  @at-root .zaux-theme--light1 & {
+  }
+}

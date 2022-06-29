@@ -1,0 +1,40 @@
+[class^="icozaux1-"], [class*=" icozaux1-"] {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.icozaux1-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+.icozaux1-gecko {
+  width: 0.9970703125em;
+}
+
+.icozaux1-social_instagram {
+  width: 0.998046875em;
+}
+
+.icozaux1-arrow3 {
+  width: 2.5859375em;
+}
+
+.icozaux1-doc {
+  width: 0.7890625em;
+}
+
+.icozaux1-phone {
+  width: 0.6845703125em;
+}
+
+.icozaux1-bulb {
+  width: 1.001953125em;
+}

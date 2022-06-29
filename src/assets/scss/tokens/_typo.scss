@@ -1,0 +1,42 @@
+$zaux-token-typo:(
+  base-font-size: 16px,
+  breakpoints: (md, lg, xl),
+  sizes: (
+    1: (
+      fs: 10px,
+      lh: 15px
+    ),
+    2: (
+      fs: 12px,
+      lh: 15px
+    ),
+    3: (
+      fs: 14px,
+      lh: 20px
+    ),
+    4: (
+      fs: 16px,
+      lh: 20px
+    ),
+    6: (
+      fs: 18px,
+      lh: 20px
+    ),
+    8: (
+      fs: 20px,
+      lh: 20px
+    ),
+    10: (
+      fs: 30px,
+      lh: 30px
+    ),
+    13: (
+      fs: 40px,
+      lh: 40px
+    ),
+    16: (
+      fs: 50px,
+      lh: 50px
+    )
+  )
+);

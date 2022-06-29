@@ -1,0 +1,185 @@
+@charset "UTF-8";
+
+@import "functions";
+
+//////////////////////////////////////////////////
+// TOKENS
+//////////////////////////////////////////////////
+
+@import "../tokens/breakpoints";
+@import "../tokens/colors";
+@import "../tokens/defs";
+@import "../tokens/layout";
+@import "../tokens/typo";
+
+//////////////////////////////////////////////////
+// GENERAL SETTING
+//////////////////////////////////////////////////
+
+$zaux-app-max-width: 1440px;
+$zaux-app-max-grid-width: 1254px;
+
+$zaux-font-size-base-px: tokenTypo("base-font-size");
+
+//////////////////////////////////////////////////
+// STATES
+//////////////////////////////////////////////////
+
+$zaux-system-classname-base: tokenDef("app-prefix");
+$zaux-system-classname-loaded: "#{$zaux-system-classname-base}-loaded";
+
+//////////////////////////////////////////////////
+// EASINGS
+// @see https://matthewlein.com/tools/ceaser
+//////////////////////////////////////////////////
+
+$zaux-ease-outcubic: cubic-bezier(0.215, 0.61, 0.355, 1); //easeOutCubic
+
+//////////////////////////////////////////////////
+// TRANSITIONS
+//////////////////////////////////////////////////
+
+$zaux-transition-0: 0.3s $zaux-ease-outcubic;
+$zaux-transition-1: 0.6s $zaux-ease-outcubic;
+$zaux-transition-2: 1.2s $zaux-ease-outcubic;
+$zaux-transition-3: 2.4s $zaux-ease-outcubic;
+$zaux-transition-4: 3.4s $zaux-ease-outcubic;
+$zaux-transition-5: 4.4s $zaux-ease-outcubic;
+
+//////////////////////////////////////////////////
+// Fonts
+//////////////////////////////////////////////////
+$zaux-font1: "futura-pt", Arial, sans-serif;
+$zaux-font2: 'Open Sans', Arial, sans-serif;
+// $zaux-font3: "Bw Modelica", "Helvetica Neue", Arial, sans-serif;
+$zaux-font3: "auger-mono", "Courier New", monospace;
+
+$zaux-typo-fw-thin: 100;
+$zaux-typo-fw-extralight: 200;
+$zaux-typo-fw-light: 300;
+$zaux-typo-fw-regular: 400;
+$zaux-typo-fw-medium: 500;
+$zaux-typo-fw-semibold: 600;
+$zaux-typo-fw-bold: 700;
+$zaux-typo-fw-extrabold: 800;
+$zaux-typo-fw-black: 900;
+$zaux-typo-fw-extrablack: 950;
+
+//////////////////////////////////////////////////
+// BOOTSTRAP OVERRIDE
+// @see https://github.com/twbs/bootstrap/blob/v5.1.3/scss/_variables.scss
+//////////////////////////////////////////////////
+
+// Flags
+$enable-reduced-motion: false;
+$enable-smooth-scroll: false;
+$enable-rfs: false;
+$enable-negative-margins: true;
+
+// Fonts
+$font-family-sans-serif: $zaux-font1;
+$font-family-sans-serif1: $zaux-font2;
+$font-family-monospace: $zaux-font3;
+$font-weight-base: $zaux-typo-fw-regular;
+
+// Headings
+$headings-margin-bottom: 0;
+$headings-font-weight: $zaux-typo-fw-regular;
+$headings-line-height: 1;
+
+$body-bg: tokenColor("set1", "gray2");
+$body-color: tokenColor("set1", "slategray1");
+$link-color: tokenColor("set1", "darkgray1");
+
+$link-color: tokenColor("set1", "cyan1");
+$link-decoration: none;
+$link-hover-color: shift-color($link-color, 20%);
+$link-hover-decoration: null;
+
+$hr-margin-y: 0;
+$hr-height: 0;
+$hr-opacity: 1;
+$border-color: tokenColor("set1", "black1");
+// $hr-color:inherit !default;
+
+// Removing default colors, sizes
+$colors: ();
+$theme-colors: ();
+$grays: ();
+$font-sizes: (
+  inherit: inherit,
+);
+$display-font-sizes: ();
+$paragraph-margin-bottom: 0;
+
+//////////////////////////////////////////////////
+// BOOTSTRAP SPACERS
+//////////////////////////////////////////////////
+
+$spacer: rem(tokenSize("spacer-width-px") * 1px);
+$spacers: ();
+@each $key, $value in tokenSize("spacers") {
+  $spacers: map-merge(
+    $spacers,
+    (
+      $key: $spacer * tokenSpacerMul($key),
+    )
+  );
+}
+
+//////////////////////////////////////////////////
+// BOOTSTRAP GUTTERS
+//////////////////////////////////////////////////
+
+$grid-gutter-width: rem(tokenSize("grid-gutter-width-px") * 1px);
+$gutters: ();
+@each $key, $value in tokenSize("gutters") {
+  $gutters: map-merge(
+    $gutters,
+    (
+      $key: $grid-gutter-width * tokenGutterMul($key),
+    )
+  );
+}
+
+//////////////////////////////////////////////////
+// BOOTSTRAP GRID
+//////////////////////////////////////////////////
+
+$grid-breakpoints: ();
+@each $key, $value in tokenBreakpoints() {
+  $grid-breakpoints: map-merge(
+    $grid-breakpoints,
+    (
+      $key: $value,
+    )
+  );
+}
+
+$container-max-widths: ();
+
+//////////////////////////////////////////////////
+// GLOBAL Z-INDEX
+//////////////////////////////////////////////////
+
+$zaux-global-content-zindex: 20;
+
+//////////////////////////////////////////////////
+// COMPONENTS SETTING
+//////////////////////////////////////////////////
+
+// Base
+$component-prefix: tokenDef("component-prefix") !default;
+
+// Header
+$zaux-header-h: 65px;
+$zaux-header-lg-h: 158px;
+$zaux-header-zindex: 30;
+
+//Padding boxes
+$column-padding-lg-box: 0 93px;
+$column-padding-box: 0 20px;
+
+//////////////////////////////////////////////////
+// MISC
+//////////////////////////////////////////////////

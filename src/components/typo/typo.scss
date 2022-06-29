@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+@import "../../assets/scss/components/base";
+
+$component: componentClass("typo");
+
+////////////////////////////////////////////////////
+// Generic font-size CSS utilities
+////////////////////////////////////////////////////
+
+@include c-typo-text-rules("fs");
+@include c-typo-text-rules-responsive("fs");
+
+////////////////////////////////////////////////////
+// Typography Block: Style1
+////////////////////////////////////////////////////
+
+$style-name: "style1";
+
+// Paragraphs
+@include c-typo-text-rules($style-name, 'p:not([class*="c-typo"])');
+@include c-typo-text-rules-responsive($style-name, 'p:not([class*="c-typo"])');
+
+// List items
+@include c-typo-text-rules($style-name, 'li:not([class*="c-typo"])');
+@include c-typo-text-rules-responsive($style-name, 'li:not([class*="c-typo"])');
+
+[class*="#{$component}-"] {
+  @at-root .#{$zaux-system-classname-loaded} & {
+    transition: font-size $zaux-transition-1, line-height $zaux-transition-1;
+  }
+}
+
+[class*="#{$component}-#{$style-name}-"] {
+  p,
+  li {
+    font-weight: $zaux-typo-fw-regular;
+  }
+
+  strong {
+    font-weight: $zaux-typo-fw-bold;
+  }
+
+  li {
+    margin-bottom: tokenSpacer(2);
+  }
+
+  ul,
+  ol {
+    padding-left: tokenSpacer(2);
+  }
+
+  p,
+  ul:not(:last-child),
+  ol:not(:last-child) {
+    margin-bottom: tokenSpacer(2);
+  }
+
+  ul ul:first-child,
+  ol ol:first-child {
+    padding-top: tokenSpacer(2);
+  }
+}

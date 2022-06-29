@@ -1,0 +1,113 @@
+{# Imports components #}
+{% import 'components/img/img.njk' as Img %}
+{% import 'components/icon/icon.njk' as Icon %}
+
+{% macro content(obj) %}
+
+  {% set componentClassName = 'c-footer' %}
+
+ <footer class="{{componentClassName}}">
+    <div class="c-footer__container zaux-bg-set1-grey p-box pb-4 pt-6 pt-lg-7 pb-lg-6">
+      <nav>
+        <div class="c-footer__container__row row gx-0 zaux-theme--light1">
+          <div class="col-12 col-lg-3">
+            <div>
+              {{
+              Img.content(component_footer.props.logo.img)
+              }}
+            </div>
+          </div>
+          <div class="col-6 col-lg-3 c-typo-style1-4 c-typo-style1-lg-8">
+              <ul>
+                <li><a href="">Networking</a></li>
+                <li><a href="">EKHA</a></li>
+                <li><a href="">Biomed Alliance</a></li>
+                <li><a href="">Collaboration with societies</a></li>
+                <li><a href="">National societies</a></li>
+                <li><a href="">ASB ERA ISN</a></li>
+              </ul>
+          </div>
+          <div class="col-6 col-lg-3 c-typo-style1-4 c-typo-style1-lg-8">
+              <ul>
+                <li><a href="">Membership</a></li>
+                <li><a href="">Join / Renew</a></li>
+                <li><a href="">Benefits</a></li>
+                <li><a href="">Q&A</a></li>
+              </ul>
+          </div>
+          <div class="col-12 col-lg-3">
+            <div class="d-flex pb-6">
+              <a href="#" title="Twitter">
+                T
+                {# {{
+                    Icon.content({
+                      "className": "d-inline-block $zaux-color-set1-azure1 c-typo-fs-2 pe-4",
+                      "iconName": "icozaux1-instagram",
+                      "iconSvgUrl": app.fonts.icozaux1.url
+                    })
+                  }} #}
+              </a>
+              <a href="#" title="Instagram">
+                I
+                {# {{
+                    Icon.content({
+                      "className": "d-inline-block $zaux-color-set1-azure1 c-typo-fs-2 pe-4",
+                      "iconName": "icozaux1-instagram",
+                      "iconSvgUrl": app.fonts.icozaux1.url
+                    })
+                  }} #}
+              </a>
+              <a href="#" title="Facebook">
+                F
+                {# {{
+                    Icon.content({
+                      "className": "d-inline-block $zaux-color-set1-azure1 c-typo-fs-2 pe-4",
+                      "iconName": "icozaux1-facebook",
+                      "iconSvgUrl": app.fonts.icozaux1.url
+                    })
+                  }} #}
+              </a>
+              <a href="#" title="Linkedin">
+                L
+                {# {{
+                    Icon.content({
+                      "className": "d-inline-block $zaux-color-set1-azure1 c-typo-fs-2  pe-4",
+                      "iconName": "icozaux1-linkedin",
+                      "iconSvgUrl": app.fonts.icozaux1.url
+                    })
+                  }} #}
+              </a>
+              <a href="#" title="YouTube">
+                Y
+                {# {{
+                    Icon.content({
+                      "className": "d-inline-block $zaux-color-set1-azure1 c-typo-fs-2",
+                      "iconName": "icozaux1-youtube",
+                      "iconSvgUrl": app.fonts.icozaux1.url
+                    })
+                  }} #}
+              </a>
+            </div>
+            <div class="pb-6">
+            <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">CONTACT US</a>
+            </div>
+            <div class="c-typo-style1-2 pb-1 pb-lg-6">
+              <p><strong>ERA Operative Headquarters:</strong> Strada dei Mercati 16/A I-43126 Parma – Italy  |  Phone: +39 0521 989078  |  E-mail: secretariat@era-online.org </p>
+            </div>
+           <div class="c-typo-style1-2">
+              <p><strong>ERA Registered Office:</strong> c/o PKF Littlejohn, 15 Westferry Circus, Canary Wharf London E14 4HD – United Kingdom</p>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="c-footer__last p-box zaux-bg-set1-darkgrey zaux-theme--dark1 c-typo-fs-3">
+     <a href="#">© Copyright - Era</a>
+     <a href="#">Terms and condition</a>
+     <a href="#">Cookie Policy</a>
+     <a href="#">Privcy Policy</a>
+    </div>
+
+  </footer>
+  <!-- .{{componentClassName}} -->
+{% endmacro %}

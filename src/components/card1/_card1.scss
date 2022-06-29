@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+@import "../../assets/scss/components/base";
+
+$component: componentClass("card1");
+
+.#{$component} {
+  &__inner {
+    position: relative;
+  }
+
+  &__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__content {
+    z-index: $zaux-global-content-zindex;
+    opacity: 0.75
+  }
+
+  // &--lg-size1 {
+  //   .#{$component} {
+  //     &__inner {
+  //       @include media-breakpoint-up(sm) {
+  //         height: 300px;
+  //       }
+  //     }
+  //   }
+  // }
+}

@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+@import "../../assets/scss/components/base";
+
+$component: componentClass("cta");
+
+a[class*="#{$component}"] {
+  display: inline-block;
+  text-decoration: none;
+}
+
+[class*="#{$component}"][class*="--size"] {
+  text-align: center;
+}
+
+.#{$component} {
+  &1 {
+    font-family: $zaux-font1;
+    font-weight: $zaux-typo-fw-semibold;
+
+    &--sm {
+      line-height: rem(14px);
+      font-size: rem(14px);
+      text-transform: uppercase;
+      // padding: map-get($spacers, "3");
+      padding: 11px 20px;
+      @include media-breakpoint-up(lg) {
+        line-height: rem(16px);
+        font-size: rem(16px);
+        // padding: map-get($spacers, "4");
+        padding: 15px 20px;
+      }
+    }
+  &--txt {
+    line-height: rem(14px);
+    font-size: rem(14px);
+    }
+  }
+
+  &2 {
+    font-family: $zaux-font1;
+    font-weight: $zaux-typo-fw-semibold;
+    border-radius: 25px;
+
+    &--sm {
+      line-height: rem(14px);
+      font-size: rem(14px);
+      padding: 15px;
+      @include media-breakpoint-up(xlm) {
+        // padding: 18px;
+        padding: 15px;
+      }
+    }
+
+
+  }
+  &3 {
+      width: 0;
+      height: 0;
+      border-top: 60px solid transparent;
+      border-bottom: 60px solid transparent;
+      border-left: 60px solid green;
+    }
+  }

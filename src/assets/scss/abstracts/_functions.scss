@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+//////////////////////////////////////////////////
+// UTILS
+//////////////////////////////////////////////////
+
+@function componentClass($componentName) {
+  @return $component-prefix + $componentName;
+}
+
+@function parseInt($n) {
+  @return $n / ($n * 0 + 1);
+}
+
+@function hasCompatibilityLayer() {
+  @return tokenDef("compatibility-layer");
+}
+
+@function rem($size, $base: $zaux-font-size-base-px) {
+  @return ($size / $base) * 1rem;
+}
+
+@function em($size, $base: $zaux-font-size-base-px) {
+  @return ($size / $base) * 1em;
+}
+
+@function url-friendly-color($hex) {
+  @return "%23" + str-slice("#{$hex}", 2, -1);
+}
+
+//////////////////////////////////////////////////
+// TOKENS - DEFS
+//////////////////////////////////////////////////
+
+@function tokenDef($key) {
+  @return map-get($zaux-token-defs, $key);
+}
+
+//////////////////////////////////////////////////
+// TOKENS - BREAKPOINTS
+//////////////////////////////////////////////////
+
+@function tokenBreakpoints() {
+  @return $zaux-token-breakpoints;
+}
+
+//////////////////////////////////////////////////
+// TOKENS - LAYOUT
+//////////////////////////////////////////////////
+
+@function tokenSize($key) {
+  @return map-get($zaux-token-layout, $key);
+}
+
+@function tokenSpacerMul($key) {
+  @return map-get(map-get(tokenSize("spacers"), $key), "mul");
+}
+
+@function tokenSpacer($key) {
+  @return tokenSpacerMul($key) * rem(tokenSize("spacer-width-px") * 1px);
+}
+
+@function tokenGutterMul($key) {
+  @return map-get(map-get(tokenSize("gutters"), $key), "mul");
+}
+
+//////////////////////////////////////////////////
+// TOKENS - SIZES - TYPOGRAPHY
+//////////////////////////////////////////////////
+
+@function tokenTypo($key) {
+  @return map-get($zaux-token-typo, $key);
+}
+
+@function tokenTypoBreakpoints() {
+  @return tokenTypo("breakpoints");
+}
+
+@function tokenTypoSizes() {
+  @return tokenTypo("sizes");
+}
+
+@function tokenTypoSize($key) {
+  @return map-get(tokenTypoSizes(), $key);
+}
+
+//////////////////////////////////////////////////
+// TOKENS - COLORS
+//////////////////////////////////////////////////
+
+@function tokenColors() {
+  @return $zaux-token-colors;
+}
+
+@function tokenColorSet($setName) {
+  @return map-get($zaux-token-colors, $setName);
+}
+
+@function tokenColor($setName, $colorName) {
+  @return map-get(tokenColorSet($setName), $colorName);
+}

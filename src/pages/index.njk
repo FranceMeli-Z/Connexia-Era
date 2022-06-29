@@ -1,0 +1,130 @@
+{% extends "layouts/empty.njk" %}
+
+{# Page-specific variables #}
+{% set page = {
+  "title": "Welcome"
+} %}
+
+{% block content %}
+  <!DOCTYPE html>
+  <html lang="{{app.lang}}">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>{{page.title}} - {{app.title}}</title>
+      <meta name="application-name" content="{{app.title}}"/>
+
+      <!--
+      Theme colors for web browsers and favicons
+      @see https://codeburst.io/progressive-web-apps-customize-status-bar-23c4b2de590f
+      -->
+      <meta name="theme-color" content="{{token_colors.app.theme}}">
+      <meta name="apple-mobile-web-app-status-bar-style" content="{{token_colors.app.theme}}">
+      <meta name="msapplication-navbutton-color" content="{{token_colors.app.theme}}">
+      <meta name="msapplication-TileColor" content="{{token_colors.app.theme}}"/>
+
+      {% include "partials/head_favicon.njk" %}
+
+      <!--
+      Disables phone number format recognition in Microsoft Edge
+      @see https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/dev-guides/dn265018(v=vs.85)
+      -->
+      <meta name="format-detection" content="telephone=no">
+
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+      <style>
+
+        :root {
+          --bs-font-sans-serif: "Helvetica", "Arial", sans-serif;
+        }
+
+        header {
+          background: {{token_colors.app.theme}};
+        }
+
+        a:hover,
+        a:link,
+        a:visited {
+          color: {{token_colors.app.theme}};
+        }
+
+        a:link,
+        a:visited {
+          text-decoration: none;
+        }
+
+        a:hover {
+          text-decoration: underline;
+        }
+      </style>
+    </head>
+    <body>
+      <header>
+        <div class="container ms-0 pb-2 p-4 text-white">
+          <h1 class="fw-light">
+            {{app.name}}
+          </h1>
+          <p>
+            <small>
+              <i>
+                {{app.description}}
+              </i>
+            </small>
+          </p>
+        </div>
+        <!-- .container -->
+      </header>
+      <main class="p-4" role="main">
+
+        <h4>
+          Templates
+        </h4>
+        <ol>
+          <li>
+            <a href="home.html">
+              Home
+            </a>
+          </li>
+        </ol>
+
+        <h4>
+          Guidelines
+        </h4>
+        <ol>
+          <li>
+            <a href="guidelines/ui.html">
+              Basic styles
+            </a>
+          </li>
+        </ol>
+
+        <h4>
+          Components
+        </h4>
+        <ol>
+          <li>
+            <a href="guidelines/component_btn.html">
+              Component: Button (btn)
+            </a>
+          </li>
+          <li>
+            <a href="guidelines/component_card1.html">
+              Component: Card1 (card1)
+            </a>
+          </li>
+           <li>
+            <a href="guidelines/component_card2.html">
+              Component: Card2 (card2)
+            </a>
+          </li>
+        </ol>
+
+      </main>
+    </body>
+  </html>
+{% endblock %}
+
+{# {% set total = 1 %}
+{% for i in range(0, total) %} #}
+{# {% endfor %} #}

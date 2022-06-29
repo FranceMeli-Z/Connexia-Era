@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+@import "../../assets/scss/components/base";
+
+$component: componentClass("fx");
+
+.#{$component} {
+  &--blend-multiply {
+    mix-blend-mode: multiply;
+  }
+}

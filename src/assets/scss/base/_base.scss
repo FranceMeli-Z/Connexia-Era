@@ -1,0 +1,30 @@
+@if hasCompatibilityLayer() {
+  // Fix SVG in <img> tags not scaling in IE9, IE10, IE11
+  // IE9, IE10, and IE11 don't properly scale SVG files added with img tags when viewBox, width
+  // and height attributes are specified. To get more consistent scaling across browsers always ensure
+  // you specify a viewBox but leave off the width and height attributes on your svg element.
+  // @see https://gist.github.com/larrybotha/7881691
+  // @see https://stackoverflow.com/questions/9777143/svg-in-img-element-proportions-not-respected-in-ie9/9792254#9792254
+  @include onIE() {
+    img[src$=".svg"] {
+      width: 100%;
+    }
+  }
+}
+
+// Improving Font Rendering With CSS
+// @see https://betterprogramming.pub/improving-font-rendering-with-css-3383fc358cbc
+body {
+  @include text-antialiased;
+  margin: auto;
+  max-width: $zaux-app-max-width;
+}
+
+// Custom scrollbars
+:root {
+  @include scrollbars(7px, rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0.5), 0);
+}
+
+main {
+  min-height: calc( 100vh - 500px );
+}

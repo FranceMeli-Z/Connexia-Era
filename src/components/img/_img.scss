@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+@import "../../assets/scss/components/base";
+
+$component: componentClass("img");
+
+$zaux-img-loaded-class: "-is-loaded" !default;
+$zaux-img-placeholder-bg-color: #333 !default;
+
+.#{$component} {
+  line-height: 0;
+  display: block;
+
+  img {
+    opacity: 1;
+    transition: transform $zaux-transition-1, opacity $zaux-transition-1;
+  }
+
+  &:not(.#{$component}--lazy).#{$component}--fluid {
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  // &[class*="ratio--"] {
+  //   position: relative;
+  //   img {
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     width: 100%;
+  //     height: 100%;
+  //   }
+  // }
+
+  &--lazy.#{$component}--fluid {
+    &.#{$zaux-img-loaded-class} {
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  &--lazy:not([class*="#{$zaux-img-loaded-class}"]) {
+    img {
+      opacity: 0;
+    }
+  }
+}

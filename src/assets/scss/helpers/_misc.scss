@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+.zaux-svg-fluid-wrapper {
+  display: block;
+  line-height: 0;
+  svg {
+    max-width: 100%;
+  }
+}
+
+:root:not(.ie-legacy) {
+  .zaux-svg-fluid-wrapper {
+    svg {
+      height: auto;
+    }
+  }
+}

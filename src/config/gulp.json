@@ -1,0 +1,15 @@
+{
+  "webserver": {
+    "open": true,
+    "port": 9000,
+    "ui": {
+      "port": 9001
+    },
+    "injectChanges": false,
+    "ghostMode": {
+      "clicks": false,
+      "forms": false,
+      "scroll": false
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+@import "../../assets/scss/components/base";
+
+$component: componentClass("card2");
+
+.#{$component} {
+
+  &__inner {
+    border-left-width: 2px;
+    border-left-style: solid;
+    border-image: linear-gradient(to bottom ,#b827fc 0%, #fd1892 25%, #fec837 50%,  #b8fd33 75%, #2c90fc 100%) 1;
+    padding-left: 13px;
+  }
+
+  &__content{
+    &--cat {
+      text-transform: uppercase;
+    }
+  &--date {
+    @include media-breakpoint-down(lg) {
+      color: tokenColor("set1","darkgrey");
+  }
+}
+    &--author a {
+      text-decoration: underline !important;
+    }
+  }
+
+  // &--lg-size1 {
+  //   .#{$component} {
+  //     &__inner {
+  //       @include media-breakpoint-up(sm) {
+  //         height: 300px;
+  //       }
+  //     }
+  //   }
+  // }
+}

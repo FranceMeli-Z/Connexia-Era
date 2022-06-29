@@ -1,0 +1,147 @@
+@charset "UTF-8";
+
+@import "../../assets/scss/components/base";
+
+$component: componentClass("btn");
+
+[class*="#{$component}--"] {
+  font-size: 0;
+  line-height: 0;
+
+  &,
+  &:link,
+  &:visited,
+  &:active,
+  &:focus,
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.#{$component} {
+  &__label-wrapper {
+    font-size: initial;
+  }
+
+  &--ani-1 {
+    i[class*="icon"] {
+      transition: all $zaux-transition-0;
+    }
+
+    i[class*="-arrow"] {
+      font-size: 36px;
+      // width: 16px;
+      width: 14px;
+      overflow: hidden;
+      svg {
+        display: block;
+        float: right;
+      }
+    }
+
+    &:focus,
+    &:hover {
+      i[class*="icon"] {
+        width: 36px;
+      }
+    }
+  }
+
+  &--ani-2 {
+    i[class*="-arrow"] {
+      font-size: 36px;
+      // width: 16px;
+      width: 14px;
+      overflow: hidden;
+      svg {
+        display: block;
+        float: right;
+      }
+    }
+
+    .#{$component} {
+      &__inner {
+        transition: all $zaux-transition-0;
+      }
+
+      &__label {
+        white-space: nowrap;
+        transition: all $zaux-transition-0;
+
+        width: 0;
+        opacity: 0;
+        padding-left: 0;
+      }
+    }
+
+    &:focus,
+    &:hover {
+      .#{$component} {
+        &__label {
+          width: auto;
+          opacity: 1;
+          padding-left: tokenSpacer(2);
+        }
+      }
+    }
+  }
+
+  &--style1 {
+    $h: 60px;
+
+    text-align: center;
+
+    .#{$component} {
+      &__inner {
+        font-size: rem($h);
+        border: 1px solid transparent;
+        height: 1em;
+        border-radius: 0.5em;
+        display: block;
+      }
+    }
+  }
+
+  &--style2 {
+    $h: 40px;
+
+    text-align: center;
+
+    .#{$component} {
+      &__inner {
+        font-size: rem($h);
+        border: 1px solid transparent;
+        height: 1em;
+        border-radius: 0.5em;
+        display: block;
+      }
+    }
+  }
+
+  &--px1 {
+    .#{$component} {
+      &__inner {
+        padding-right: 30px;
+        padding-left: 20px;
+      }
+    }
+  }
+
+  &--px2 {
+    .#{$component} {
+      &__inner {
+        padding-right: 24px;
+        padding-left: 16px;
+      }
+    }
+  }
+
+  &--px3 {
+    .#{$component} {
+      &__inner {
+        padding-right: 12px;
+        padding-left: 12px;
+      }
+    }
+  }
+}

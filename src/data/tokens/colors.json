@@ -1,0 +1,25 @@
+{
+  "default": {
+    "white": "#FFFFFF",
+    "black": "#333333",
+    "red": "#d9534f",
+    "green": "#5cb85c",
+    "blue": "#337ab7",
+    "magenta": "#FF00FF",
+    "orange": "#f0ad4e"
+  },
+  "app": {
+    "theme": "#475461"
+  },
+  "set1": {
+    "grey": "#F1F1F1",
+    "grey1": "#ACACAC",
+    "red1": "#D32E12",
+    "darkgrey": "#3F3F3F",
+    "darkred": "#BD2910",
+    "darkgrey2": "#676767",
+    "green1": "#0DAF2B",
+    "yellow1": "#FBC817",
+    "blue1": "#005EC3"
+  }
+}

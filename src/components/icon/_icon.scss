@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+@import "../../assets/scss/components/base";
+
+$component: componentClass("icon");
+
+.#{$component} {
+  display: inline-block;
+  line-height: 0;
+
+  &,
+  &[class*="-fs"] {
+    line-height: 0 !important;
+  }
+
+  //////////////////////////////////////////////////
+  // DEBUG
+  //////////////////////////////////////////////////
+
+  // background-color: rgba(255, 0, 0, 0.2);
+}

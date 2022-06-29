@@ -1,0 +1,16 @@
+{
+  "name": "Era",
+  "name-extended": "Era - front-end kit",
+  "description": "Era - front-end kit '22",
+  "title": "Era",
+  "slogan": "",
+  "lang": "en",
+  "fonts": {
+    "icozaux1": {
+      "url": "assets/icon/icozaux1/symbol-defs.svg"
+    }
+  },
+  "misc": {
+    "htmlAttrsAosAnim1": " data-aos=\"fade-up\" data-aos-offset=\"200\" data-aos-delay=\"50\" data-aos-duration=\"600\" data-aos-easing=\"ease-in-out-quad\""
+  }
+}

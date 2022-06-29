@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+@import "../../assets/scss/components/base";
+
+$component: componentClass("herovideo");
+
+.#{$component} {
+  overflow: hidden;
+
+  &__inner {
+    position: relative;
+    &:after {
+      transition: opacity $zaux-transition-0;
+    }
+  }
+
+  &__content-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: $zaux-global-content-zindex;
+  }
+
+  &__btn--play {
+    cursor: pointer;
+    transition: opacity $zaux-transition-0;
+    z-index: $zaux-global-content-zindex;
+
+    .c-icon1 {
+      svg {
+        transition: transform $zaux-transition-1;
+      }
+    }
+
+    &:hover {
+      .c-icon1 {
+        svg {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+
+  &__instance {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity $zaux-transition-0;
+  }
+
+  &--no-overlay-on-playing[class*="--state-playing"] {
+    .#{$component}__inner {
+      &:after {
+        opacity: 0 !important;
+      }
+    }
+  }
+
+  &[class*="--state-canplay"] {
+    .#{$component} {
+      &__cover {
+        display: none;
+      }
+
+      &__instance {
+        opacity: 1;
+      }
+    }
+  }
+
+  &[class*="--state-playing"] {
+    .#{$component} {
+      &__btn--play {
+        opacity: 0;
+      }
+    }
+  }
+
+  &[data-yt-vid-id][class*="state-canplay"] {
+    .#{$component} {
+      &__inner {
+        &:after {
+          display: none !important;
+        }
+      }
+
+      &__btn--play {
+        display: none !important;
+      }
+    }
+  }
+}

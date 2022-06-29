@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+@import "../../assets/scss/components/base";
+
+$component: componentClass("typo");
+
+@function getTypoFontsize($index) {
+  @return map-get(tokenTypoSize($index), "fs");
+}
+
+@function getTypoLineheight($index) {
+  @return map-get(tokenTypoSize($index), "lh");
+}

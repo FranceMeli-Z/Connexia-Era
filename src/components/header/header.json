@@ -1,0 +1,17 @@
+{
+  "props": {
+    "logo": {
+      "img": {
+        "isLazy": false,
+        "src": "assets/img/LogoEra.png",
+        "width": 180,
+        "height": 85,
+        "className": ["img-fluid"],
+        "title": "title",
+        "alt": "alt",
+        "wrapperElement": "span",
+        "wrapperClassName": []
+      }
+    }
+  }
+}

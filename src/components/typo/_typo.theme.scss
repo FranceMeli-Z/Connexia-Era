@@ -1,0 +1,155 @@
+@charset "UTF-8";
+
+@import "../../assets/scss/components/base";
+
+$component: componentClass("typo");
+
+////////////////////////////////////////////////////
+// Theme: Light1
+////////////////////////////////////////////////////
+
+// .zaux-theme--light1 {
+//   // h1,
+//   // .h1,
+//   // h2,
+//   // .h2,
+//   // h3,
+//   // .h3,
+//   // h4,
+//   // .h4,
+//   // h5,
+//   // .h5,
+//   // h6,
+//   // .h6,
+//   // p,
+//   // li {
+//   // }
+
+//   a {
+//     @at-root .#{$zaux-system-classname-loaded} & {
+//       transition: color $zaux-transition-1;
+//     }
+//   }
+// }
+
+.zaux-theme--light1 {
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5,
+  h6,
+  .h6,
+  p,
+  li {
+    color: tokenColor(set1, darkgrey);
+  }
+
+  a {
+    @at-root .#{$zaux-system-classname-loaded} & {
+      transition: color $zaux-transition-1;
+    }
+
+    &:link,
+    &:visited {
+      color: tokenColor(set1, darkgrey);
+    }
+
+    &:hover,
+    &:active {
+      color: tokenColor(set1, darkgrey);
+      // text-decoration: underline;
+      text-decoration: none;
+    }
+  }
+}
+
+/////////
+///
+.zaux-theme--light2 {
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5,
+  h6,
+  .h6{
+    color: tokenColor(set1, red1);
+  }
+
+  p,
+  li {
+    color: tokenColor(set1, darkgrey);
+  }
+
+  a {
+    @at-root .#{$zaux-system-classname-loaded} & {
+      transition: color $zaux-transition-1;
+    }
+
+    &:link,
+    &:visited {
+      color: tokenColor(set1, darkgrey);
+    }
+
+    &:hover,
+    &:active {
+      color: tokenColor(set1, darkgrey);
+      // text-decoration: underline;
+      text-decoration: none;
+    }
+  }
+}
+
+////////////////////////////////////////////////////
+// Theme: Dark1
+////////////////////////////////////////////////////
+
+.zaux-theme--dark1 {
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5,
+  h6,
+  .h6 {
+    color: tokenColor(default, white);
+  }
+
+  p,
+  li {
+    color:tokenColor(default, white);
+  }
+
+  a {
+    @at-root .#{$zaux-system-classname-loaded} & {
+      transition: color $zaux-transition-1;
+    }
+
+    &:link,
+    &:visited {
+      color: tokenColor(default, white);
+    }
+
+    &:hover,
+    &:active {
+      color: tokenColor(default, white);
+      text-decoration: underline;
+    }
+  }
+}

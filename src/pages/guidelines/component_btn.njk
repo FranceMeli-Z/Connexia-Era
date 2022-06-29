@@ -1,0 +1,245 @@
+{# Sets the layout to be extended #}
+{% extends "layouts/lite.njk" %}
+
+{# Imports components #}
+{% import 'components/icon/icon.njk' as Icon %}
+{% import 'components/btn/btn.njk' as Btn %}
+{% import 'components/btn/btnIcon.njk' as BtnIcon %}
+{% import 'components/cta/ctaIcon.njk' as CtaIcon %}
+
+{% set componentName = "Button" %}
+
+{# Sets page-specific variables #}
+{% set page = {
+  "data": {},
+  "title": componentName + " - Components"
+} %}
+
+{% block head_css %}
+  <link rel="stylesheet" href="../assets/css/general.bundle.css">
+{% endblock %}
+
+{% block content %}
+  <main class="pt-4">
+
+    <div class="container-l g-3 g-lg-7">
+
+      <div class="row mx-0 border-bottom mb-4">
+        <div class="col-12 px-0">
+          <h2 class="mb-3">
+            {{componentName}}
+          </h2>
+        </div>
+        <!-- .col-* -->
+      </div>
+      <!-- .row -->
+
+      <div class="row">
+
+        <div class="col-12">
+          <div class="p-5 zaux-theme--light1">
+            <div class="mb-4">
+
+              {{BtnIcon.content(
+                {
+                  "className": ["zaux-color-set1-cyan1", "me-3"],
+                  "iconFamily": "icozaux1",
+                  "iconName": "arrow3"
+                },
+                {
+                  "tag": "button",
+                  "label": "Raccontaci la tua idea",
+                  "variations": ["style1", "ani-1", "px1"],
+                  "className": ["d-inline-block"],
+                  "innerClassName": ["d-flex", "justify-content-center", "align-items-center"],
+                  "labelClassName": ["c-typo-fs-9", "fw-bold"]
+                }
+              )}}
+            </div>
+
+            <div class="mb-4">
+
+              {{BtnIcon.content(
+                {
+                  "className": ["zaux-color-set1-cyan1", "me-3"],
+                  "iconFamily": "icozaux1",
+                  "iconName": "arrow3"
+                },
+                {
+                  "tag": "button",
+                  "label": "Raccontaci la tua idea",
+                  "variations": ["style2", "ani-1", "px2"],
+                  "className": ["d-inline-block"],
+                  "innerClassName": ["d-flex", "justify-content-center", "align-items-center"],
+                  "labelClassName": ["c-typo-fs-6", "fw-bold"]
+                }
+              )}}
+            </div>
+
+            <div class="mb-4">
+              {{ BtnIcon.content(
+                {
+                  "className": ["zaux-color-set1-cyan1"],
+                  "iconFamily": "icozaux1",
+                  "iconName": "arrow3"
+                },
+                {
+                  "tag": "button",
+                  "hideLabel": true,
+                  "variations": ["style2", "ani-1", "px3"],
+                  "className": ["d-inline-block"],
+                  "innerClassName": ["d-flex", "justify-content-center", "align-items-center"],
+                  "labelClassName": ["c-typo-fs-6", "fw-bold"]
+                }
+              )}}
+            </div>
+
+            <div class="mb-4">
+              {{ BtnIcon.content(
+                {
+                  "className": ["zaux-color-set1-cyan1"],
+                  "iconFamily": "icozaux1",
+                  "iconName": "arrow3"
+                },
+                {
+                  "tag": "button",
+                  "label": "Raccontaci la tua idea",
+                  "variations": ["style2", "ani-2", "px3"],
+                  "className": ["d-inline-block"],
+                  "innerClassName": ["d-flex", "justify-content-center", "align-items-center"],
+                  "labelClassName": ["c-typo-fs-6", "fw-bold"]
+                }
+              )}}
+            </div>
+
+          </div>
+        </div>
+        <!-- .col-* -->
+
+        <div class="col-12">
+          <div class="p-5 zaux-bg-set1-darkgray1 zaux-theme--dark1">
+
+            <div class="mb-4">
+
+              {{BtnIcon.content(
+                {
+                  "className": ["zaux-color-set1-white", "me-3"],
+                  "iconFamily": "icozaux1",
+                  "iconName": "arrow3"
+                },
+                {
+                  "tag": "button",
+                  "label": "Raccontaci la tua idea",
+                  "variations": ["style1", "ani-1", "px1"],
+                  "className": ["d-inline-block"],
+                  "innerClassName": ["d-flex", "justify-content-center", "align-items-center"],
+                  "labelClassName": ["c-typo-fs-9", "fw-bold"]
+                }
+              )}}
+            </div>
+
+            <div class="mb-4">
+
+              {{BtnIcon.content(
+                {
+                  "className": ["zaux-color-set1-white", "me-3"],
+                  "iconFamily": "icozaux1",
+                  "iconName": "arrow3"
+                },
+                {
+                  "tag": "button",
+                  "label": "Raccontaci la tua idea",
+                  "variations": ["style2", "ani-1", "px2"],
+                  "className": ["d-inline-block"],
+                  "innerClassName": ["d-flex", "justify-content-center", "align-items-center"],
+                  "labelClassName": ["c-typo-fs-6", "fw-bold"]
+                }
+              )}}
+            </div>
+
+            <div class="mb-4">
+
+              {{ BtnIcon.content(
+                {
+                  "className": ["zaux-color-set1-white"],
+                  "iconFamily": "icozaux1",
+                  "iconName": "arrow3"
+                },
+                {
+                  "tag": "button",
+                  "hideLabel": true,
+                  "variations": ["style2", "ani-1", "px3"],
+                  "className": ["d-inline-block"],
+                  "innerClassName": ["d-flex", "justify-content-center", "align-items-center"],
+                  "labelClassName": ["c-typo-fs-6", "fw-bold"]
+                }
+              )}}
+            </div>
+
+            <div class="mb-4">
+              {{ BtnIcon.content(
+                {
+                  "className": ["zaux-color-set1-white1"],
+                  "iconFamily": "icozaux1",
+                  "iconName": "arrow3"
+                },
+                {
+                  "tag": "button",
+                  "label": "Raccontaci la tua idea",
+                  "variations": ["style2", "ani-2", "px3"],
+                  "className": ["d-inline-block"],
+                  "innerClassName": ["d-flex", "justify-content-center", "align-items-center"],
+                  "labelClassName": ["c-typo-fs-6", "fw-bold"]
+                }
+              )}}
+            </div>
+
+          </div>
+
+        </div>
+        <!-- .col-* -->
+
+      </div>
+      <!-- .row -->
+       <div class="c-wrapper px-4 py-4 overflow-hidden">
+
+        <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">JOIN</a>
+
+        <div class="mb-6" aria-hidden="true"></div>
+
+        <a class="c-cta1 c-cta1--txt c-cta1--onlyred" href="#" title="button title">Submit example</a>
+
+        <div class="mb-6" aria-hidden="true"></div>
+
+        <div style="background-color: #F6F6F6; padding:10px;">
+         <a class="c-cta2 c-cta2--sm c-cta1--grey" href="#" title="button title">Optimising care</a>
+        </div>
+
+
+        <div>
+        {{ CtaIcon.content(
+                {
+                  "className": ["zaux-color-set1-white1"],
+                  "iconFamily": "icozaux1",
+                  "iconName": "arrow2"
+                }
+              )}}
+        {{ CtaIcon.content(
+                {
+                  "className": ["zaux-color-set1-white1"],
+                  "iconFamily": "icozaux1",
+                  "iconName": "arrow2"
+                }
+        )}}
+        </div>
+
+    </div>
+    <!-- .container-* -->
+
+  </main>
+{% endblock %}
+
+{% block foot_js %}
+  <script defer src="assets/js/general.bundle.js"></script>
+{% endblock %}
+

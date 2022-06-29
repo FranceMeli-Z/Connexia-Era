@@ -1,0 +1,155 @@
+{# Sets the layout to be extended #}
+{% extends "layouts/lite.njk" %}
+
+{# Imports components #}
+{% import 'components/icon/icon.njk' as Icon %}
+{% import 'components/btn/btnIcon.njk' as BtnIcon %}
+{% import 'components/card1/card1.njk' as Card1 %}
+{% import 'components/card1/card1_type_related.njk' as Card2 %}
+
+
+{% set componentName = "Card 1" %}
+
+{# Sets page-specific variables #}
+{% set page = {
+  "data": {},
+  "title": componentName + " - Components"
+} %}
+
+{% block head_css %}
+  <link rel="stylesheet" href="../assets/css/general.bundle.css">
+{% endblock %}
+
+{% block content %}
+  <main class="pt-4">
+
+    <div class="container-l g-3 g-lg-7">
+
+      <div class="row mx-0 border-bottom mb-4">
+        <div class="col-12 px-0">
+          <h2 class="mb-3">
+            {{componentName}}
+          </h2>
+        </div>
+        <!-- .col-* -->
+      </div>
+      <!-- .row -->
+
+      <div class="row">
+
+        <div class="col-12">
+          <div class="py-5 zaux-theme--dark1">
+
+            <div class="row">
+
+              {% set _htmlCardContent %}
+
+              {{
+                Icon.content({
+                  "className": ["zaux-color-set1-cyan1", "c-typo-fs-18", "c-typo-fs-sm-20", "mb-2", "mb-md-4"],
+                  "iconFamily": "icozaux1",
+                  "iconName": "branches"
+                })
+              }}
+
+              <h3 class="c-card1__title c-typo-fs-6 c-typo-fs-md-15 fw-bold mb-3 mb-md-6">
+                Digital Transformation
+              </h3>
+              <!-- .c-card1__title -->
+
+              {{ BtnIcon.content(
+                {
+                  "className": ["zaux-color-set1-white1"],
+                  "iconFamily": "icozaux1",
+                  "iconName": "arrow3"
+                },
+                {
+                  "tag": "a",
+                  "link": "#Card1Link",
+                  "label": "Esplora",
+                  "variations": ["style2", "ani-2", "px3"],
+                  "className": ["d-none", "d-md-inline-block", "stretched-link"],
+                  "innerClassName": ["d-flex", "justify-content-center", "align-items-center"],
+                  "labelClassName": ["c-typo-fs-6", "fw-bold"]
+                }
+              )}}
+
+              {% endset %}
+
+              {%
+                set _decoVariations = [
+                  "deco1-l-t",
+                  "deco1-r-t",
+                  "deco1-r-b",
+                  "deco1-l-b"
+                ]
+              %}
+
+              {% for decoVariation in _decoVariations %}
+
+                <div class="col-6 col-md-3 mb-3">
+                  <small class="d-inline-block mb-3 fw-bold font-mono c-typo-fs-3">
+                    *--{{decoVariation}}
+                  </small>
+                  {{Card1.content(
+                    {
+                      "className": [],
+                      "variations": ["lg-size1"],
+                      "innerClassName": [],
+                      "contentClassName": ["d-flex", "justify-content-between", "flex-column"],
+                      "content": _htmlCardContent,
+                      "img": {
+                        "isShaped": true,
+                        "className": ["rounded-2", "overflow-hidden", "c-ratio--square", "c-ratio--md-none"],
+                        "variations": ["style1", decoVariation],
+                        "img": {
+                          "isLazy": true,
+                          "src": "media/backCard1.png",
+                          "src2x": "media/backCard1.png",
+                          "width": 300,
+                          "height": 300,
+                          "alt": "Cover alternative text",
+                          "className": ["zaux-fit-cover-center-center"]
+                        }
+                      }
+                    }
+                  )}}
+
+                </div>
+                <!-- .col-* -->
+              {% endfor %}
+
+            </div>
+            <!-- .row -->
+
+          </div>
+        </div>
+        <!-- .col-* -->
+
+      </div>
+      <!-- .row -->
+
+    </div>
+    <!-- .container-* -->
+
+    <div>
+       {{Card2.content(
+        {
+        "className": [],
+        "variations": [],
+        "innerClassName": [],
+        "contentClassName": [""],
+        "category": "Newsletter",
+        "title": "Titolo della news",
+        "date": "March, 18, 2022",
+        "author": "CKD-MBD Newsletter #23"
+        }
+     )}}
+    </div>
+
+  </main>
+{% endblock %}
+
+{% block foot_js %}
+  <script defer src="assets/js/general.bundle.js"></script>
+{% endblock %}

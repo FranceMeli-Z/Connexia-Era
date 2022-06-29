@@ -1,0 +1,192 @@
+{# Sets the layout to be extended #}
+{% extends "layouts/lite.njk" %}
+
+{# Imports components #}
+{% import 'components/img/img.njk' as Img %}
+{% import 'components/icon/icon.njk' as Icon %}
+{% import 'components/btn/btn.njk' as Btn %}
+
+{# Sets page-specific variables #}
+{% set page = {
+  "data": {},
+  "title": "Basic styles - Guidelines"
+} %}
+
+{% block head_css %}
+  <link rel="stylesheet" href="../assets/css/general.bundle.css">
+{% endblock %}
+
+{% block content %}
+  <main class="pt-4">
+
+    <div class="container-l g-3 g-lg-7">
+
+      <div class="row mx-0 border-bottom mb-4">
+        <div class="col-12 px-0">
+          <h2 class="mb-3">
+            Spacers
+          </h2>
+        </div>
+        <!-- .col-* -->
+      </div>
+      <!-- .row -->
+
+      <div class="row">
+        <div class="col-3">
+          <a href="https://getbootstrap.com/docs/5.0/utilities/spacing/" target="_blank">
+            See Bootstrap's spacing CSS utility classes
+          </a><br>
+          <code>
+            .p-*-*<br>
+            .m-*-*
+          </code>
+        </div>
+        <!-- .col-* -->
+        <div class="col-9">
+          <div class="row gy-0 overflow-hidden">
+
+            {% set base_px = token_layout['spacer-width-px'] %}
+
+            <div class="col-12 mb-6">
+              <strong>
+                Base spacer width: <span class="zaux-color-default-red">{{base_px}}px</span>
+              </strong>
+            </div>
+
+            {% for k, item in token_layout.spacers %}
+              <div class="col-2 text-center">
+                <small>
+                  <b>{{k}}<br>({{base_px * item.mul}}px)</b><br>
+                  <span class="zaux-color-default-red">{{base_px}}px</span> &Cross; {{item.mul}}
+                </small>
+                <div class="pb-{{k}}" style="background: #CCC;"></div>
+              </div>
+            {% endfor %}
+
+          </div>
+          <!-- .row -->
+        </div>
+        <!-- .col-* -->
+      </div>
+      <!-- .row -->
+
+      <div class="row mx-0 border-bottom mb-4">
+        <div class="col-12 px-0">
+          <h2 class="mb-3">
+            Typography
+          </h2>
+        </div>
+        <!-- .col-* -->
+      </div>
+      <!-- .row -->
+
+      {% for k, item in token_typo.sizes %}
+        <div class="row mb-4">
+          <div class="col-3">
+            <code>
+              .c-typo-fs-*-{{k}}
+            </code>
+          </div>
+          <!-- .col-* -->
+          <div class="col-9">
+            <div class="row gy-0">
+              <div class="col-12">
+                <div class="overflow-auto">
+                  <div class="c-typo-fs-{{k}}" style="white-space: nowrap;">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </div>
+                </div>
+                <small>
+                  font-size: <b>{{item.fs}}</b> line-height: <b>{{item.lh}}</b>
+                </small>
+              </div>
+            </div>
+            <!-- .row -->
+          </div>
+          <!-- .col-* -->
+        </div>
+        <!-- .row -->
+      {% endfor %}
+
+    </div>
+    <!-- .container-* -->
+
+    <div class="container-l g-3 g-lg-7">
+      <div class="row mx-0 border-bottom mb-4">
+        <div class="col-12 px-0">
+          <h2 class="mb-3">
+            Colors
+          </h2>
+        </div>
+        <!-- .col-* -->
+      </div>
+      <!-- .row -->
+
+      {%
+        set _colors = {
+          "black1": "zaux-color-default-white",
+          "darkgray1": "zaux-color-default-white",
+          "darkgray1o80": "zaux-color-default-white",
+          "cyan1": "zaux-color-default-white",
+          "slategray1": "zaux-color-default-white"
+        }
+      %}
+      {% for k, item in token_colors %}
+
+        {% if k !== "default" and k !== "app" %}
+          <div class="row mb-4">
+            <div class="col-3">
+              <b>{{k}}</b><br>
+              <code>
+                .zaux-bg-{{k}}-*<br>
+                .zaux-color-{{k}}-*
+              </code>
+            </div>
+            <!-- .col-* -->
+            <div class="col-9">
+              <div class="px-1">
+                <div class="row mb-4">
+                  {% for c, hex in item %}
+                    <div class="col-4 g-0">
+                      <div class="zaux-bg-{{k}}-{{c}} {{_colors[c]}} py-7 fw-bold text-center" style="box-shadow: 0 0 0px 1px #9993;">
+                        {{c}}
+                      </div>
+                    </div>
+                    <!-- .col-* -->
+                  {% endfor %}
+                </div>
+                <!-- .row -->
+              </div>
+            </div>
+            <!-- .col-* -->
+          </div>
+          <!-- .row -->
+        {% endif %}
+      {% endfor %}
+    </div>
+    <!-- .container-* -->
+
+    <div class="container-l g-3 g-lg-7">
+      <div class="row mx-0 border-bottom mb-4">
+        <div class="col-12 px-0">
+          <h2 class="mb-3">
+            Containers
+          </h2>
+        </div>
+        <!-- .col-* -->
+      </div>
+      <!-- .row -->
+    </div>
+    <!-- .container-* -->
+
+    {% for k, item in token_layout['container-max-widths'] %}
+      <div class="container-{{k}} mb-4" style="box-shadow:0 0 0px 1px #999;">
+        <div class="py-4 text-center" style="background: #CCC; color: black;">
+          .container-{{k}}
+        </div>
+      </div>
+      <!-- .container-{{k}} -->
+    {% endfor %}
+
+  </main>
+{% endblock %}

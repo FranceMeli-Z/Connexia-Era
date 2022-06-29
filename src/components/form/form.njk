@@ -1,0 +1,35 @@
+
+
+{% import 'components/icon/icon.njk' as Icon %}
+{% macro content(obj) %}
+
+  {% set componentClassName = 'c-form' %}
+
+  {% set configDefault = {
+    "className": []
+  }%}
+
+  {% set obj = configDefault | overwriteMerge(obj or {}) %}
+
+ {% set _className = [componentClassName] | mergeArray(obj.className or configDefault.className) %}
+
+    <div class="{{_className | join(" ")}}">
+      <form class="{{componentClassName}}--light d-flex justify-content-center">
+        <div class="form-group">
+          <input id="newsletterEmailAddress" type="email" class="form-control h-100 mb-2" placeholder="Il tuo indirizzo email">
+        </div>
+        {# <div class="form-group">
+          <div class="form-check checkbox">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label c-typo-ff-1 c-typo-fw-regular" for="gridCheck">
+              Acconsento al trattamento dei dati personali secondo la <a href="#" class="c-typo-ff-2 c-typo-fw-medium">Privacy Policy</a> *
+            </label>
+          </div>
+        </div> #}
+        <button type="submit" class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">JOIN</button>
+      </form>
+    </div>
+
+
+
+{% endmacro %}

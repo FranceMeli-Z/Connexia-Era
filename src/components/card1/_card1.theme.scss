@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+@import "../../assets/scss/components/base";
+
+$component: componentClass("card1");
+
+////////////////////////////////////////////////////
+// Theme: Light1
+////////////////////////////////////////////////////
+
+.zaux-theme--light1 .#{$component}__inner {
+}
+
+////////////////////////////////////////////////////
+// Theme: Dark1
+////////////////////////////////////////////////////
+
+.zaux-theme--dark1 .#{$component} {
+  &__title {
+    color: tokenColor("set1", "white1");
+  }
+}

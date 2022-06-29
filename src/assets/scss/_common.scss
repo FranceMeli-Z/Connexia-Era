@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+// Configuration and helpers
+@import "abstracts/variables";
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/placeholders";
+
+// Components vars, mixins, functions
+@import "../../components/typo/typo.functions";
+@import "../../components/typo/typo.mixins";
+
+// Vendor's SCSS files
+@import "vendor/aos";
+@import "vendor/bootstrap";
+@import "vendor/swiper";
+
+// Helpers
+@import "helpers/color";
+@import "helpers/fit";
+@import "helpers/misc";
+@import "helpers/positioning";
+@import "helpers/sizing";
+@import "helpers/spacing";
+
+// Base
+@import "base/reset";
+@import "base/fonts";
+@import "base/base";
+@import "base/animations";

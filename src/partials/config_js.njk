@@ -1,0 +1,17 @@
+<script>
+  !(function (f, c) {
+    var ns = f[c] = f[c] || {};
+    ns.lang = {{lang | dump | safe}};
+    ns.fonts = {{app.fonts | dump | safe}};
+    ns.config = {
+      "debug": true,
+      "appLoadedClassName": "{{token_defs['app-loaded-classname']}}",
+      "breakpoints": {{token_breakpoints | dump | replace("px", "") | safe}},
+      "helpers": {
+        "lazyload": {
+          "fallbackLibUrl": "//cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"
+        }
+      }
+    };
+  })(this, 'zaux');
+</script>

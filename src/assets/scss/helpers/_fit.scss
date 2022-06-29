@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+$zaux-helper-name: "fit";
+
+.zaux-#{$zaux-helper-name} {
+  &-cover {
+    &-center-center {
+      @include objectfit(cover, center center);
+    }
+    // &-left-center {
+    //   @include objectfit(cover, left center);
+    // }
+    // &-right-center {
+    //   @include objectfit(cover, right center);
+    // }
+  }
+}

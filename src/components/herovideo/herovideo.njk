@@ -1,0 +1,72 @@
+{% import 'components/icon/icon.njk' as Icon %}
+{% import 'components/img/img.njk' as Img %}
+
+{% macro content(obj, contentHtml) %}
+
+  {% set componentClassName = 'c-herovideo' %}
+
+  {% set configDefault = {
+    "className": [],
+    "innerClassName": []
+  } %}
+
+  {% set obj = configDefault | merge(obj or {}) %}
+
+  {# Creates new arrays for manipulation) #}
+  {% set _className = [componentClassName] | mergeArray(obj.className or configDefault.className) %}
+  {% set _innerClassName = [] | mergeArray(obj.innerClassName or configDefault.innerClassName) %}
+
+  <div
+    {% if obj.htmlId %}id="{{obj.htmlId}}"{% endif %}
+    class="{{_className | join(" ")}}"
+    {% if obj.ytVidId %}data-yt-vid-id="{{obj.ytVidId}}"{% endif %}
+    {% if obj.isAutoplay %}data-autoplay="true"{% endif %}
+    data-js-component="HeroVideo"
+  >
+    <div class="{{componentClassName}}__inner {{_innerClassName | join(" ")}}">
+
+      {{
+        Img.content(obj.imgCover)
+      }}
+
+      {% if obj.showPlayBtn %}
+        <div class="{{componentClassName}}__btn--play position-absolute top-0 start-0 w-100 h-100 text-center d-flex align-items-center">
+          {{Icon.content({
+            "className": "zaux-flip-h w-100 c-typo-fs-53 zaux-color-default-white",
+            "iconName": "icozaux1-circlearrow2",
+            "iconSvgUrl": app.fonts.icozaux1.url
+          })}}
+        </div>
+      {% endif %}
+
+      {% if obj.sources and not obj.ytVidId %}
+        <{{"script"}} class="{{componentClassName}}__instance-html-template" type="text/template">
+          <video class="{{componentClassName}}__instance zaux-fit-cover-center-center" loop muted playsinline>
+            {% for s in obj.sources %}
+              <source src="{{s.src}}" type="{{s.mime}}"/>
+            {% endfor %}
+            {{lang.html5_video_no_support or "Your browser does not support the video tag."}}
+          </video>
+        </{{"script"}}>
+      {% else %}
+        <div class="{{componentClassName}}__instance"></div>
+      {% endif %}
+
+      {% if contentHtml %}
+        <div class="{{componentClassName}}__content-wrapper d-flex align-items-center">
+          <div class="{{componentClassName}}__content w-100">
+            <div>
+              {{contentHtml | safe}}
+            </div>
+          </div>
+          <!-- .{{componentClassName}}__content -->
+        </div>
+        <!-- .{{componentClassName}}__content-wrapper -->
+      {% endif %}
+
+    </div>
+    <!-- .{{componentClassName}}__inner -->
+  </div>
+  <!-- .{{componentClassName}} -->
+
+{% endmacro %}
