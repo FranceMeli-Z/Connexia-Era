@@ -1,0 +1,15 @@
+{% macro content(obj) %}
+
+  {% set componentClassName = 'c-breadcrumbs' %}
+
+  <div class="c-breadcrumbs">
+    <span>
+      <span>
+        <a href="#home">Home</a> / <span>
+          <a href="#parent">Parent Page</a> / <span class="breadcrumb_last" aria-current="page">Current Page</span>
+        </span>
+      </span>
+    </span>
+  </div>
+
+{% endmacro %}

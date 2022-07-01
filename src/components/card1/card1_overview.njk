@@ -16,7 +16,7 @@
   {# Creates new arrays for manipulation) #}
   {% set _className = [componentClassName] | mergeArray(obj.className or configDefault.className) %}
   {% set _innerClassName = [componentClassName + "__inner"] | mergeArray(obj.innerClassName or configDefault.innerClassName) %}
-  {% set _contentClassName = [componentClassName + "__content"] | mergeArray(obj.contentClassName or configDefault.contentClassName) %}
+  {% set _contentClassName = [componentClassName + "__overview"] | mergeArray(obj.contentClassName or configDefault.contentClassName) %}
 
   {# Pushes every variation into class attribute (prepending the base class) #}
   {% for variation in ([] | mergeArray(obj.variations or configDefault.variations)) %}
@@ -26,18 +26,20 @@
   <div class="{{_className | join(" ")}}">
     <div class="{{_innerClassName | join(" ")}}">
         <div class="{{_contentClassName | join(" ")}}">
-            <div class="{{_contentClassName}}__cat">
-              <a>{{obj.category}}</a>
-            </div>
-            <div class="{{_contentClassName}}__title">
-               {{obj.title|safe}}
-            </div>
-             <div class="{{_contentClassName}}__date">
-              <a>{{obj.date|safe}}</a>
+             {% if obj.img %}
+              <div class="{{componentClassName}}__overview--img pb-3 pb-lg-7">
+                <a href="#">
+                  {{
+                    Img.content(obj.img)
+                  }}
+                </a>
+              </div>
+            {% endif %}
+            <div class="{{componentClassName}}__overview--title zaux-theme--light1 pb-3 pb-lg-4">
+              <h6 class="c-typo-fs-6 c-typo-fs-lg-8"> {{obj.title|safe}} </h6>
             </div>
         </div>
-        <!-- .{{componentClassName}}__cover -->
-
+        <!-- .{{componentClassName}}__profile -->
     </div>
     <!-- .{{componentClassName}}__inner -->
   </div>

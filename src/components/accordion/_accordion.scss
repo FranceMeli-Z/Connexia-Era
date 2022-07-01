@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+@import "../../assets/scss/components/base";
+
+$component: componentClass("accordion");
+
+.#{$component} {
+
+  &__head {
+
+    &--title {
+        // border-bottom: 2px solid $zaux-color-set1-onyx !important;
+        height: 45px;
+
+      @include media-breakpoint-up(xl) {
+          height: 70px;
+          }
+    }
+
+    &--subtitle {
+
+      & p {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    &--details {
+      cursor: pointer;
+
+    }
+
+  }
+
+  &.closed .#{$component}__head--details {
+    & svg {
+      transform: rotateZ(90deg);
+      margin-left: 4px;
+    }
+  }
+
+  &.open .#{$component}__head--details {
+    & svg {
+      transform: rotateZ(270deg);
+      margin-left: 4px;
+    }
+  }
+
+  &.open  .#{$component}__show {
+    display: block !important;
+  }
+
+}

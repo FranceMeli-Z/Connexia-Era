@@ -30,3 +30,65 @@
   stroke: currentColor;
   fill: currentColor;
 }
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('../fonts/WorkSans/WorkSans-Bold.eot');
+  src: url('../fonts/WorkSans/WorkSans-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/WorkSans/WorkSans-Bold.woff2') format('woff2'),
+      url('../fonts/WorkSans/WorkSans-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  src: url('../fonts/WorkSans/WorkSans-Regular.eot');
+  src: url('../fonts/WorkSans/WorkSans-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/WorkSans/WorkSans-Regular.woff2') format('woff2'),
+      url('../fonts/WorkSans/WorkSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Futura PT';
+  src: url('../fonts/FuturaPt/FuturaPT-Bold.woff2') format('woff2'),
+      url('../fonts/FuturaPt/FuturaPT-Bold.woff') format('woff'),
+      url('../fonts/FuturaPt/FuturaPT-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Futura PT Book';
+  src: url('../fonts/FuturaPt/FuturaPT-Book.woff2') format('woff2'),
+      url('../fonts/FuturaPt/FuturaPT-Book.woff') format('woff'),
+      url('../fonts/FuturaPt/FuturaPT-Book.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Futura PT Book';
+  src: url('../fonts/FuturaPt/FuturaPT-BookObl.woff2') format('woff2'),
+      url('../fonts/FuturaPt/FuturaPT-BookObl.woff') format('woff'),
+      url('../fonts/FuturaPt/FuturaPT-BookObl.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Futura PT Demi';
+  src: url('../fonts/FuturaPt/FuturaPT-Demi.woff2') format('woff2'),
+      url('../fonts/FuturaPt/FuturaPT-Demi.woff') format('woff'),
+      url('../fonts/FuturaPt/FuturaPT-Demi.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}

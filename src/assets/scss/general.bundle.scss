@@ -3,11 +3,9 @@
 @import "common";
 
 // Components
-@import "../../components/btn/btn";
 @import "../../components/typo/typo";
 @import "../../components/fx/fx";
 @import "../../components/header/header";
-@import "../../components/herovideo/herovideo";
 @import "../../components/footer/footer";
 @import "../../components/icon/icon";
 @import "../../components/img/img";
@@ -16,8 +14,11 @@
 @import "../../components/slider/slider";
 @import "../../components/card1/card1";
 @import "../../components/card2/card2";
+@import "../../components/boxcontent/boxcontent";
 @import "../../components/cta/cta";
 @import "../../components/form/form";
+@import "../../components/breadcrumbs/breadcrumbs";
+@import "../../components/accordion/accordion";
 
 // Components (themes)
 @import "../../components/btn/btn.theme";
@@ -26,8 +27,10 @@
 @import "../../components/herovideo/herovideo.theme";
 @import "../../components/card1/card1.theme";
 @import "../../components/card2/card2.theme";
+@import "../../components/boxcontent/boxcontent.theme";
 @import "../../components/shapedimg/shapedimg.theme";
 @import "../../components/footer/footer.theme";
 @import "../../components/form/form.theme";
 @import "../../components/icon/icon.theme";
 @import "../../components/cta/cta.theme";
+@import "../../components/accordion/accordion.theme";

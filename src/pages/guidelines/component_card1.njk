@@ -5,7 +5,8 @@
 {% import 'components/icon/icon.njk' as Icon %}
 {% import 'components/btn/btnIcon.njk' as BtnIcon %}
 {% import 'components/card1/card1.njk' as Card1 %}
-{% import 'components/card1/card1_type_related.njk' as Card2 %}
+{% import 'components/card1/card1_profile.njk' as CardProfile %}
+{% import 'components/card1/card1_overview.njk' as CardOverview %}
 
 
 {% set componentName = "Card 1" %}
@@ -35,14 +36,138 @@
       </div>
       <!-- .row -->
 
-      <div class="row">
+      <div class="row gx-3 py-5 zaux-theme--dark1">
 
-        <div class="col-12">
-          <div class="py-5 zaux-theme--dark1">
+          {% set total = 6 %}
+           {% set _htmlCardContent %}
+          <div class="card1__head zaux-theme--dark1">
+            <div class="card1__head--title pb-2">
+              <h6 class="c-typo-fs-8 c-typo-fs-lg-10"><strong>Open Call: NDT Editor in Chief</strong></h6>
+            </div>
+            <div class="card1__head--abstract c-typo-style1-6 c-typo-style1-lg-8">
+              <p>Submit your application by e-mail by January 31, 2022</p>
+            </div>
+          </div>
 
-            <div class="row">
+          <div class="card1__button text-end">
+            <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">APPLY NOW</a>
+          </div>
 
-              {% set _htmlCardContent %}
+          {% endset %}
+
+              {%
+                set _decoVariations = [
+                  "deco1-l-t",
+                  "deco1-r-t"
+                ]
+              %}
+
+              {% for decoVariation in _decoVariations %}
+
+                <div class="col-12 col-md-6 col-lg-4 mb-3">
+                  {{Card1.content(
+              {
+                "className": ["h-100", "pb-6"],
+                "variations": ["lg-size1"],
+                "innerClassName": [],
+                "contentClassName": ["d-flex", "justify-content-between", "flex-column", "p-6","zaux-bg-set1-darkgrey"],
+                "content": _htmlCardContent,
+                "img": {
+                "isShaped": true,
+                "className": ["rounded-2", "overflow-hidden"],
+                "variations": ["style1", decoVariation],
+                "img": {
+                "isLazy": true,
+                "src": "media/backCard1.png",
+                "src2x": "media/backCard1.png",
+                "width": 396,
+                "height": 380,
+                "alt": "Cover alternative text",
+                "className": ["zaux-fit-cover-center-center", "w-100"]
+                }
+                }
+              }
+            )}}
+
+                </div>
+                <!-- .col-* -->
+              {% endfor %}
+
+            </div>
+            <!-- .row -->
+      <!-- .row -->
+
+    </div>
+    <!-- .container-* -->
+
+    <div class="container-l g-3 g-lg-7 py-4">
+
+      <div class="row gx-3">
+          {% for decoVariation in _decoVariations %}
+          <div class="col-12 col-lg-4 pb-2">
+            {{CardProfile.content(
+              {
+              "className": [],
+              "variations": [],
+              "innerClassName": ["zaux-bg-set1-grey py-8"],
+              "contentClassName": ["text-center"],
+              "img": {
+                "isLazy": true,
+                "src": "media/Profile.png",
+                "src2x": "media/Profile@2x.png",
+                "width": 120,
+                "height": 120,
+                "alt": "Cover alternative text",
+                "className": ["img-fluid"]
+              },
+              "nome": "Marc Vervloet",
+              "ruolo": "Chair"
+              }
+            )}}
+          </div>
+      {% endfor %}
+      </div>
+
+    </div>
+
+     <div class="container-l g-3 g-lg-7 py-4">
+
+      <div class="row gx-3">
+          {% for decoVariation in _decoVariations %}
+          <div class="col-6 col-lg-3 pb-2">
+            {{CardOverview.content(
+              {
+              "className": [],
+              "variations": [],
+              "innerClassName": [""],
+              "contentClassName": ["text-center"],
+              "img": {
+                "isLazy": true,
+                "src": "media/LogoOverview.png",
+                "src2x": "media/LogoOverview@2x.png",
+                "width": 200,
+                "height": 90,
+                "alt": "Cover alternative text",
+                "className": ["img-fluid"]
+              },
+              "title": "CKD-MBD"
+              }
+            )}}
+          </div>
+      {% endfor %}
+      </div>
+
+    </div>
+
+  </main>
+{% endblock %}
+
+{% block foot_js %}
+  <script defer src="assets/js/general.bundle.js"></script>
+{% endblock %}
+
+
+{# {% set _htmlCardContent %}
 
               {{
                 Icon.content({
@@ -74,82 +199,4 @@
                 }
               )}}
 
-              {% endset %}
-
-              {%
-                set _decoVariations = [
-                  "deco1-l-t",
-                  "deco1-r-t",
-                  "deco1-r-b",
-                  "deco1-l-b"
-                ]
-              %}
-
-              {% for decoVariation in _decoVariations %}
-
-                <div class="col-6 col-md-3 mb-3">
-                  <small class="d-inline-block mb-3 fw-bold font-mono c-typo-fs-3">
-                    *--{{decoVariation}}
-                  </small>
-                  {{Card1.content(
-                    {
-                      "className": [],
-                      "variations": ["lg-size1"],
-                      "innerClassName": [],
-                      "contentClassName": ["d-flex", "justify-content-between", "flex-column"],
-                      "content": _htmlCardContent,
-                      "img": {
-                        "isShaped": true,
-                        "className": ["rounded-2", "overflow-hidden", "c-ratio--square", "c-ratio--md-none"],
-                        "variations": ["style1", decoVariation],
-                        "img": {
-                          "isLazy": true,
-                          "src": "media/backCard1.png",
-                          "src2x": "media/backCard1.png",
-                          "width": 300,
-                          "height": 300,
-                          "alt": "Cover alternative text",
-                          "className": ["zaux-fit-cover-center-center"]
-                        }
-                      }
-                    }
-                  )}}
-
-                </div>
-                <!-- .col-* -->
-              {% endfor %}
-
-            </div>
-            <!-- .row -->
-
-          </div>
-        </div>
-        <!-- .col-* -->
-
-      </div>
-      <!-- .row -->
-
-    </div>
-    <!-- .container-* -->
-
-    <div>
-       {{Card2.content(
-        {
-        "className": [],
-        "variations": [],
-        "innerClassName": [],
-        "contentClassName": [""],
-        "category": "Newsletter",
-        "title": "Titolo della news",
-        "date": "March, 18, 2022",
-        "author": "CKD-MBD Newsletter #23"
-        }
-     )}}
-    </div>
-
-  </main>
-{% endblock %}
-
-{% block foot_js %}
-  <script defer src="assets/js/general.bundle.js"></script>
-{% endblock %}
+              {% endset %} #}

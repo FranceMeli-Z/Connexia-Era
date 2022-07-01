@@ -4,7 +4,7 @@
 {# Imports components #}
 {% import 'components/icon/icon.njk' as Icon %}
 {% import 'components/btn/btnIcon.njk' as BtnIcon %}
-{% import 'components/card1/card1.njk' as Card1 %}
+{% import 'components/card2/card2_related.njk' as CardRelated %}
 {% import 'components/card2/card2_news.njk' as Card2 %}
 
 
@@ -40,7 +40,7 @@
         <div class="col-12">
           <div class="py-5 zaux-theme--light1">
 
-            <div class="row">
+            <div class="row pb-5">
               {%
                 set _decoVariations = [
                   "deco1-l-t",
@@ -53,13 +53,10 @@
               {% for decoVariation in _decoVariations %}
 
                 <div class="col-12 col-md-3 mb-3">
-                  <small class="d-inline-block mb-3 fw-bold font-mono c-typo-fs-3">
-                    *--{{decoVariation}}
-                  </small>
                   {{Card2.content(
                     {
                       "className": [],
-                      "innerClassName": [],
+                      "innerClassName": ["border-left-gradient"],
                       "contentClassName": ["d-flex", "justify-content-between", "flex-column"],
                       "content": {
                         "category": "Report",
@@ -77,6 +74,39 @@
             </div>
             <!-- .row -->
 
+             <div class="row pb-5">
+              {%
+                set _decoVariations = [
+                  "deco1-l-t",
+                  "deco1-r-t",
+                  "deco1-r-b",
+                  "deco1-l-b"
+                ]
+              %}
+
+              {% for decoVariation in _decoVariations %}
+
+                <div class="col-12 col-md-6 mb-3">
+                  {{Card2.content(
+                    {
+                      "className": [],
+                      "innerClassName": ["border-left-gradient"],
+                      "contentClassName": ["d-flex", "justify-content-between", "flex-column"],
+                      "content": {
+                        "category": "Report",
+                        "title": "CKD-MBD Newsletter #23",
+                        "date": "March 18, 2022",
+                        "author": "CKD-MBD working group"
+                      }
+                    }
+                  )}}
+
+                </div>
+                <!-- .col-* -->
+              {% endfor %}
+
+            </div>
+
              <div class="row">
               {%
                 set _decoVariations = [
@@ -90,14 +120,11 @@
               {% for decoVariation in _decoVariations %}
 
                 <div class="col-12 col-md-6 mb-3">
-                  <small class="d-inline-block mb-3 fw-bold font-mono c-typo-fs-3">
-                    *--{{decoVariation}}
-                  </small>
-                  {{Card2.content(
+                  {{CardRelated.content(
                     {
                       "className": [],
-                      "innerClassName": [],
-                      "contentClassName": ["d-flex", "justify-content-between", "flex-column"],
+                      "innerClassName": ["border-all-gradient py-8"],
+                      "contentClassName": [""],
                       "content": {
                         "category": "Report",
                         "title": "CKD-MBD Newsletter #23",

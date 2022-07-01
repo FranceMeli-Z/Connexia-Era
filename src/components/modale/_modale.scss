@@ -1,0 +1,32 @@
+@import "../../assets/scss/components/base";
+
+$component: componentClass("modale");
+
+.#{$component} {
+
+  & .modal-dialog {
+    max-width: 900px;
+    @include media-breakpoint-down(lg) {
+      margin: 50px auto;
+    }
+  }
+
+  &__content--footer {
+    z-index: 999;
+    position: relative;
+  }
+
+  & .row {
+    @include media-breakpoint-down(lg) {
+      display: block;
+    }
+
+  }
+
+}
+
+.btn.btn-primary {
+  white-space: nowrap;
+  color: $zaux-color-set1-darkblue;
+  text-decoration: none;
+}

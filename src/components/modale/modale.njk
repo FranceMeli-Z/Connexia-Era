@@ -1,0 +1,56 @@
+{% import 'components/img/img.njk' as Img %}
+
+{% macro content(obj) %}
+
+  {% set componentClassName = 'c-modale' %}
+
+<div class="{{componentClassName}} modal fade" id="AlphaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="zaux-bg-set1-azurewhite rounded-2">
+       <button type="button" class="{{componentClassName}}__btn btn-close float-end pe-5 pt-5" data-bs-dismiss="modal" aria-label="Close"></button>
+      <div class="row">
+
+         <div class="col-lg-2">
+            <div class="d-lg-flex h-100 align-items-lg-end text-center pt-4 pt-lg-0">
+                  {{
+                    Img.content({
+                      "isLazy": true,
+                      "src": "media/D_Lamp.png",
+                      "src2x": "media/D_Lamp_@2x.png",
+                      "width": 450,
+                      "height": 600,
+                      "className": "zaux-size-lg-cut3",
+                      "title": "title",
+                      "alt": "alt",
+                      "wrapperElement": "figure",
+                      "wrapperClassName": "zaux-pos-tx-lg-f250"
+                    })
+                  }}
+                </div>
+{# c-img text-center text-lg-start #}
+      </div>
+
+
+      <div class="col-lg-10">
+      <div class="{{componentClassName}}__content py-5 py-lg-6 ps-4 pe-4 pe-lg-6 ps-lg-0">
+      <div class="c-typo-texts-6 zaux-theme--light1 c-typo-ff-2 c-typo-fw-medium">
+        <h6 class="c-typo-fs-10 c-typo-fs-xl-13 mb-3 mb-lg-4" id="exampleModalLabel">
+            Gestionale ERP - software aziendale
+        </h6>
+      </div>
+      <div class="c-typo-texts-6 zaux-theme--light1 mb-6">
+       <p>Vincere la sfida della trasformazione digitale è più semplice di quanto immagini. Non solo perché le soluzioni che ti proponiamo sono facili da implementare, intuitive, modulari e personalizzabili ma anche perché in un unico luogo puoi trovare software gestionali per aziende di qualsiasi settore e dimensione: dai software per piccole imprese ai gestionali ERP cloud per aziende di grandi dimensioni.
+        Noi Alphateam possiamo guidarti nel futuro che desideri per il tuo business sia in qualità di rivenditori software TeamSystem, sia con i software MyAlpha, prodotti realizzati in house, per rispondere a esigenze verticali e complementari rispetto all’universo TeamSystem. Sia con soluzioni gestionali all inclusive come gli ERP, la gestione delle risorse umane; sia con funzionalità specifiche e integrabili come la fatturazione elettronica, l’archiviazione documentale o l’analisi finanziaria e di controllo.
+        </p>
+        <p><strong>In un unico luogo puoi trovare tutto quello che ti serve per non mancare l’appuntamento con il futuro della tua impresa. </strong></p>
+      </div>
+      <div class="{{componentClassName}}__content--footer">
+         <a type="button" class="c-btn1 c-btn1--size-l c-btn1--sm c-btn1--light" data-bs-dismiss="modal">Chiudi</a>
+      </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endmacro %}

@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'Work Sans';
+    src: url('WorkSans-Bold.eot');
+    src: url('WorkSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('WorkSans-Bold.woff2') format('woff2'),
+        url('WorkSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('WorkSans-Regular.eot');
+    src: url('WorkSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('WorkSans-Regular.woff2') format('woff2'),
+        url('WorkSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

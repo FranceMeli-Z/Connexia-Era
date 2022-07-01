@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+@import "../../assets/scss/components/base";
+
+$component: componentClass("boxcontent");
+
+.#{$component} {
+
+  &__content{
+    &:hover {
+      cursor: pointer;
+      h6 {
+        text-decoration: underline;
+      }
+    }
+  }
+}

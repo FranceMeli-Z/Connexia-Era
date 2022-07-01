@@ -15,11 +15,20 @@ $component: componentClass("card1");
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: $zaux-global-content-zindex;
+    opacity: 0.75;
+    &:hover {
+      opacity: 0.95;
+    }
   }
 
-  &__content {
-    z-index: $zaux-global-content-zindex;
-    opacity: 0.75
+  &__overview{
+    &:hover {
+      cursor: pointer;
+      h6 {
+        text-decoration: underline;
+      }
+    }
   }
 
   // &--lg-size1 {

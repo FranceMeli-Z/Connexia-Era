@@ -5,8 +5,9 @@
 {% import 'components/img/img.njk' as Img %}
 {% import 'components/icon/icon.njk' as Icon %}
 {% import 'components/btn/btnIcon.njk' as BtnIcon %}
-{% import 'components/herovideo/herovideo.njk' as HeroVideo %}
 {% import 'components/card1/card1.njk' as Card1 %}
+{% import 'components/card2/card2_news.njk' as Card2 %}
+{% import 'components/boxcontent/boxcontent.njk' as BoxContent %}
 {% import 'components/form/form.njk' as Form %}
 
 {# Sets page-specific variables #}
@@ -32,7 +33,7 @@
             <h6 class="pb-1 c-typo-fs-8 c-typo-fs-lg-13"><strong>Leading European Nephrology</strong></h6>
           </div>
           <div class="maw-f768px">
-          <p>A Europe where kidney health is prioritised, kidney care is accessible, the kidney community is thriving.</p>
+            <p>A Europe where kidney health is prioritised, kidney care is accessible, the kidney community is thriving.</p>
           </div>
         </div>
       </div>
@@ -54,7 +55,7 @@
             </div>
           </div>
 
-          <div class="card1__button">
+          <div class="card1__button text-end">
             <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">APPLY NOW</a>
           </div>
 
@@ -127,6 +128,7 @@
       </div>
       {{
         Form.content({
+          "newsletter": "y",
           "className": ""
           })
       }}
@@ -141,24 +143,24 @@
       </div>
       <div class="row pb-7 pb-lg-10">
         <div class="col-12 col-lg-4 pb-7 pb-lg-0">
-          <div class="pillars-t1 text-center pb-2 pb-lg-4 zaux-color-set1-green1">
-             <h6 class="c-typo-fs-8 c-typo-fs-lg-13 mb-3">EDUCATION</h6>
+          <div class="pillars-t1 text-center pb-2 pb-lg-4">
+             <h6 class="c-typo-fs-8 c-typo-fs-lg-13 mb-3"><a class="zaux-color-set1-green1" href="#">EDUCATION</a></h6>
           </div>
           <div class="c-typo-style1-6 c-typo-style1-lg-8 text-center">
            <p> We deliver excellent education for all nephrologists to apply in their daily practice. </p>
           </div>
         </div>
          <div class="col-12 col-lg-4 pb-7 pb-lg-0">
-           <div class="pillars-t2 text-center pb-2 pb-lg-4 zaux-color-set1-yellow1">
-             <h6 class="c-typo-fs-8 c-typo-fs-lg-13 mb-3">SCIENCE</h6>
+           <div class="pillars-t2 text-center pb-2 pb-lg-4">
+             <h6 class="c-typo-fs-8 c-typo-fs-lg-13 mb-3"><a class="zaux-color-set1-yellow1" href="#">SCIENCE</a></h6>
           </div>
           <div class="c-typo-style1-6 c-typo-style1-lg-8 text-center">
           <p>  We are committed to support and to spread top quality scientific knowledge. </p>
           </div>
         </div>
          <div class="col-12 col-lg-4 pb-7 pb-lg-0">
-           <div class="pillars-t3 text-center pb-2 pb-lg-4 zaux-color-set1-blue1">
-             <h6 class="c-typo-fs-8 c-typo-fs-lg-13 mb-3">NETWORKING</h6>
+           <div class="pillars-t3 text-center pb-2 pb-lg-4">
+             <h6 class="c-typo-fs-8 c-typo-fs-lg-13 mb-3"><a href="#" class="zaux-color-set1-blue1">NETWORKING</a></h6>
           </div>
           <div class="c-typo-style1-6 c-typo-style1-lg-8 text-center">
             <p>We work to facilitate professional networking and free participation.</p>
@@ -171,8 +173,63 @@
     </div>
   </div>
 
+  {% include "partials/ui/news.njk" %}
 
+  <hr>
 
+  {% include "partials/ui/mostpopular.njk" %}
+
+  <hr>
+
+  <div class="p-box pb-8">
+    <div class="py-6 zaux-theme--light2 pb-6 pb-md-9">
+      <h6 class="c-typo-fs-10 c-typo-fs-lg-16"><strong>Latest Webcast</strong></h6>
+    </div>
+    <div class="row">
+              {%
+                set _decoVariations = [
+                  "deco1-l-t",
+                  "deco1-r-t"
+                ]
+              %}
+
+              {% for decoVariation in _decoVariations %}
+
+                <div class="col-12">
+                  {{BoxContent.content(
+                    {
+                      "className": ["pb-6","pb-lg-8"],
+                      "innerClassName": ["row"],
+                      "contentClassName": ["col-12", "col-lg-8","pe-4"],
+                      "content": {
+                        "title": "5th European Renal Osteodystrophy (EUROD) Winter Meeting",
+                        "category": "Report",
+                        "date": "March 18, 2022"
+                      },
+                        "img": {
+                          "isLazy": true,
+                          "src": "media/ProvaContent.png",
+                          "src2x": "media/ProvaContent@2x.png",
+                          "width": 396,
+                          "height": 223,
+                          "alt": "Cover alternative text",
+                          "className": ["img-fluid"]
+                        },
+                      "webcast" : {
+                         "author": "Francesca Mallamaci",
+                         "pannelist": ["Carmine Zoccali, Italy", "Mehmet Kanbay, Turkey"],
+                         "moderators": ["Will Herrington, United Kingdom", "Maria Josè Soler, Spain"]
+                      }
+
+                    }
+                  )}}
+
+                </div>
+                <!-- .col-* -->
+              {% endfor %}
+
+    </div>
+  </div>
 
 
   </main>

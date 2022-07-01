@@ -6,14 +6,9 @@ $component: componentClass("card2");
 
 .#{$component} {
 
-  &__inner {
-    border-left-width: 2px;
-    border-left-style: solid;
-    border-image: linear-gradient(to bottom ,#b827fc 0%, #fd1892 25%, #fec837 50%,  #b8fd33 75%, #2c90fc 100%) 1;
-    padding-left: 13px;
-  }
 
   &__content{
+    padding-left: 13px;
     &--cat {
       text-transform: uppercase;
     }
@@ -25,8 +20,15 @@ $component: componentClass("card2");
     &--author a {
       text-decoration: underline !important;
     }
-  }
 
+
+  &:hover {
+    cursor: pointer;
+    h6 {
+      text-decoration: underline;
+    }
+  }
+  }
   // &--lg-size1 {
   //   .#{$component} {
   //     &__inner {

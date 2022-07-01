@@ -1,6 +1,6 @@
 <div class="p-box">
-  <div class="py-6 zaux-theme--light2 text-center pb-6 pb-md-9">
-    <h6 class="c-typo-fs-10 c-typo-fs-lg-16"><strong>News from ERA</strong></h6>
+  <div class="py-6 zaux-theme--light2 pb-6 pb-md-9">
+    <h6 class="c-typo-fs-10 c-typo-fs-lg-16"><strong>Most Popular</strong></h6>
   </div>
   <div class="">
   </div>
@@ -16,18 +16,15 @@
 
               {% for decoVariation in _decoVariations %}
 
-                <div class="col-12 col-md-6 mb-3">
-                  <small class="d-inline-block mb-3 fw-bold font-mono c-typo-fs-3">
-                    *--{{decoVariation}}
-                  </small>
+                <div class="col-12 col-md-6">
                   {{Card2.content(
                     {
-                      "className": [],
+                      "className": ["pb-8"],
                       "innerClassName": [],
                       "contentClassName": ["d-flex", "justify-content-between", "flex-column"],
                       "content": {
                         "category": "Report",
-                        "title": "CKD-MBD Newsletter #23",
+                        "title": "Discoveries about CKD-MBD in Europe and Middle East countries",
                         "date": "March 18, 2022",
                         "author": "CKD-MBD working group"
                       }

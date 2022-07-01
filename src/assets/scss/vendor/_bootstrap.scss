@@ -130,6 +130,7 @@ $utilities: map-merge(
         2: tokenSpacer(2),
         6: tokenSpacer(6),
         circle: 50%,
+        100: 100px
       ),
     ),
   )
@@ -152,7 +153,14 @@ $utilities: map-merge(
 $utilities: map-merge(
   $utilities,
   (
-    "rounded-bottom": null,
+    "rounded-bottom": (
+    responsive: false,
+    property: border-bottom-right-radius,
+    class: rounded-bottom,
+    values: (
+      100: 100px
+     )
+    )
   )
 );
 

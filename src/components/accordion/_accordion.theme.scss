@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+@import "../../assets/scss/components/base";
+
+$component: componentClass("accordion");
+
+.#{$component} {
+  @include media-breakpoint-down(xl) {
+    border: 2px solid #343b43;
+    border-radius: 8px;
+  }
+
+  &.highlight {
+    border: 2px solid #343b43;
+    border-radius: 8px;
+  }
+
+  &__head--details {
+    // color: $zaux-color-set1-darkblue;
+  }
+}
