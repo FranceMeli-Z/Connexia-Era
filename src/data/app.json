@@ -5,12 +5,12 @@
   "title": "Era",
   "slogan": "",
   "lang": "en",
+  "misc": {
+    "htmlAttrsAosAnim1": " data-aos=\"fade-up\" data-aos-offset=\"200\" data-aos-delay=\"50\" data-aos-duration=\"600\" data-aos-easing=\"ease-in-out-quad\""
+  },
   "fonts": {
     "icozaux1": {
       "url": "assets/icon/icozaux1/symbol-defs.svg"
     }
-  },
-  "misc": {
-    "htmlAttrsAosAnim1": " data-aos=\"fade-up\" data-aos-offset=\"200\" data-aos-delay=\"50\" data-aos-duration=\"600\" data-aos-easing=\"ease-in-out-quad\""
   }
 }

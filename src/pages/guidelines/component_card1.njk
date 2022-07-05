@@ -7,6 +7,7 @@
 {% import 'components/card1/card1.njk' as Card1 %}
 {% import 'components/card1/card1_profile.njk' as CardProfile %}
 {% import 'components/card1/card1_overview.njk' as CardOverview %}
+{% import 'components/card1/card1_story.njk' as CardStory %}
 
 
 {% set componentName = "Card 1" %}
@@ -151,6 +152,36 @@
                 "className": ["img-fluid"]
               },
               "title": "CKD-MBD"
+              }
+            )}}
+          </div>
+      {% endfor %}
+      </div>
+
+    </div>
+
+    <div class="container-l g-3 g-lg-7 py-4">
+
+      <div class="row gx-3">
+          {% for decoVariation in _decoVariations %}
+          <div class="col-12 col-lg-4 pb-2">
+            {{CardStory.content(
+              {
+              "className": ["shadow--grey rounded-2"],
+              "variations": [],
+              "innerClassName": [""],
+              "contentClassName": ["py-7 text-center"],
+              "img": {
+                "isLazy": true,
+                "src": "media/Profile.png",
+                "src2x": "media/Profile@2x.png",
+                "width": 40,
+                "height": 40,
+                "alt": "Cover alternative text",
+                "className": ["img-fluid"]
+              },
+              "nome": "Marc Vervloet",
+              "cit": "“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.”"
               }
             )}}
           </div>

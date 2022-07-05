@@ -15,7 +15,7 @@
 
   {% if obj.newsletter %}
     <div class="{{_className | join(" ")}}">
-      <form class="{{componentClassName}}--light d-flex justify-content-center">
+      <form class="{{componentClassName}}--light {{componentClassName}}--newsletter d-flex justify-content-center">
         <div class="form-group">
           <input id="newsletterEmailAddress" type="email" class="form-control h-100 mb-2" placeholder="Il tuo indirizzo email">
         </div>
@@ -33,21 +33,65 @@
     {% endif %}
     {% if obj.searchfilter %}
       <div class="{{_className | join(" ")}}">
-        <form class="{{componentClassName}}--light">
-          <div class="form-group ">
-            <select class="form-control">
-              <option selected>Topic</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-            </select>
-
-            <select class="form-control">
-              <option selected>Seleziona</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-            </select>
+        <form class="{{componentClassName}}--light {{componentClassName}}__search d-flex flex-column flex-lg-row">
+          <div class="d-flex {{componentClassName}}__search--grp pb-6 pb-lg-0">
+            <div class="form-group">
+              <select class="form-control">
+                <option style="display:none;" selected>Topic</option>
+                <optgroup label="Diseases">
+                  <option>1</option>
+                  <option>2</option>
+                </optgroup>
+                <optgroup label="Treatments">
+                  <option>1</option>
+                  <option>2</option>
+                </optgroup>
+              </select>
+            </div>
+            <div class="form-group">
+              <select class="form-control">
+                <option selected>Series</option>
+                <optgroup label="Diseases">
+                  <option>1</option>
+                  <option>2</option>
+                </optgroup>
+              <optgroup label="Treatments">
+                  <option>1</option>
+                  <option>2</option>
+                </optgroup>
+              </select>
+              </div>
+              <div class="form-group">
+              <select class="form-control">
+                <option selected>Year</option>
+                <optgroup label="Diseases">
+                  <option>1</option>
+                  <option>2</option>
+                </optgroup>
+              <optgroup label="Treatments">
+                  <option>1</option>
+                  <option>2</option>
+                </optgroup>
+              </select>
+              </div>
+              <div class="form-group">
+              <select class="form-control">
+                <option selected>Filtered by</option>
+                <optgroup label="Diseases">
+                  <option>1</option>
+                  <option>2</option>
+                </optgroup>
+              <optgroup label="Treatments">
+                  <option>1</option>
+                  <option>2</option>
+                </optgroup>
+              </select>
+            </div>
+          </div>
+          <div class="{{componentClassName}}__search--input">
+            <div class="form-group">
+              <input id="search" type="search" class="form-control">
+            </div>
           </div>
         </form>
     </div>

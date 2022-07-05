@@ -13,11 +13,17 @@
   {# Creates new arrays for manipulation) #}
   {% set _className = [componentClassName] | mergeArray(obj.className or configDefault.className) %}
 
-  {% set _className = (_className.push(_iconFullName + "-" + "wrapper"), _className) %}
+  {# {% set _className = (_className.push(_iconFullName + "-" + "wrapper"), _className) %} #}
 
-  <{{obj.tag}} class="{{_className | join(" ")}}" {% if not obj.ariaHidden %} aria-hidden="true"{% endif %}>
+  {# <{{obj.tag}} class="{{_className | join(" ")}}" {% if not obj.ariaHidden %} aria-hidden="true"{% endif %}>
     <svg class="{{_iconFullName}}">
       <use xlink:href="{{app.fonts[obj.iconFamily].url}}#{{_iconFullName}}"></use>
+    </svg>
+  </{{obj.tag}}> #}
+
+    <{{obj.tag}} class="{{_className | join(" ")}}" {% if not obj.ariaHidden %} aria-hidden="true"{% endif %}>
+    <svg class="{{obj.iconName}} {{obj.iconClass}}">
+      <use xlink:href="{{obj.iconSvgUrl}}#{{obj.iconName}}"></use>
     </svg>
   </{{obj.tag}}>
 

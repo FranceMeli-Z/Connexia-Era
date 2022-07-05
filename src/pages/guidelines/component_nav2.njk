@@ -1,0 +1,58 @@
+{# Sets the layout to be extended #}
+{% extends "layouts/lite.njk" %}
+
+{# Imports components #}
+{% import 'components/icon/icon.njk' as Icon %}
+{% import 'components/cta/ctaIcon.njk' as CtaIcon %}
+{% import 'components/card1/card1.njk' as Card1 %}
+{% import 'components/card2/card2_news.njk' as Card2 %}
+{% import 'components/boxcontent/boxcontent.njk' as BoxContent %}
+{% import 'components/form/form.njk' as Form %}
+{% import 'components/breadcrumbs/breadcrumbs.njk' as Breadcrumbs %}
+{% import 'components/nav2/nav2.njk' as Nav2 %}
+
+{% set componentName = "Button" %}
+
+{# Sets page-specific variables #}
+{% set page = {
+  "data": {},
+  "title": componentName + " - Components"
+} %}
+
+{% block head_css %}
+  <link rel="stylesheet" href="../assets/css/general.bundle.css">
+{% endblock %}
+
+{% block content %}
+  <main class="pt-4">
+     <div class="">
+        <div class="row m-0">
+          <div class="zaux-bg-set1-grey p-box rounded-bottom-100 col-12 col-lg-8 pb-11 pb-lg-12 pt-3 pt-lg-6">
+            <div class="pb-2 pb-lg-4">
+              {{ Breadcrumbs.content() }}
+            </div>
+            <div class="zaux-theme--light1">
+              <h6 class="pb-1 c-typo-fs-10 c-typo-fs-lg-13"><strong>Title</strong></h6>
+            </div>
+            <div class="maw-f768px">
+              <p>A Europe where kidney health is prioritised, kidney care is accessible, the kidney community is thriving.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 d-none d-lg-block">
+          </div>
+        </div>
+      </div>
+    <div class="">
+     {{Nav2.content(
+              {
+                "className": ["p-box", "zaux-bg-set1-red1", "py-3"]
+              }
+            )}}
+    </div>
+
+  </main>
+{% endblock %}
+
+{% block foot_js %}
+  <script defer src="assets/js/general.bundle.js"></script>
+{% endblock %}

@@ -25,10 +25,10 @@
   <article class="{{_className | join(" ")}}">
     <div class="{{_innerClassName | join(" ")}}">
         <div class="{{_contentClassName | join(" ")}}">
-            <div class="{{componentClassName}}__content--title zaux-theme--light1 pb-3">
-             <h6 class="c-typo-fs-8 c-typo-fs-lg-10"><a href="#"> {{obj.content.title|safe}} </a></h6>
+            <div class="{{componentClassName}}__content--title font-zaux2 zaux-theme--light1 pb-3">
+             <h6 class="fw-demi c-typo-fs-8 c-typo-fs-lg-10"><a href="#"> {{obj.content.title|safe}} </a></h6>
             </div>
-            <div class="{{componentClassName}}__content--dc zaux-color-set1-grey1 pb-3 pb-lg-6">
+            <div class="{{componentClassName}}__content--dc font-zaux2 fst-italic zaux-color-set1-grey1 pb-3 pb-lg-6">
               <a>{{obj.content.date|safe}} - {{obj.content.category}}</a>
             </div>
             {% if obj.webcast %}
@@ -41,18 +41,24 @@
                 </a>
               </div>
                 {% endif %}
-              <div class="{{componentClassName}}__content--webcast">
-                <div class="pb-2">
-                  Author:
-                  {{obj.webcast.author|safe}}
+              <div class="{{componentClassName}}__content--webcast c-typo-style1-3">
+                <div class="pb-3">
+                  <span class="fw-bold">Author:</span>
+                  {% for a in obj.webcast.author %}
+                    <p>{{a|safe}}</p>
+                  {% endfor %}
                 </div>
-                <div class="pb-2">
-                  Pannelist:
-                  {{obj.webcast.pannelist|safe}}
+                <div class="pb-3">
+                  <span class="fw-bold">Pannelist:</span>
+                  {% for a in obj.webcast.pannelist %}
+                    <p>{{a|safe}}</p>
+                  {% endfor %}
                 </div>
                 <div class="">
-                  Moderators:
-                  {{obj.webcast.moderators|safe}}
+                  <span class="fw-bold">Moderators:</span>
+                  {% for a in obj.webcast.moderators %}
+                    <p>{{a|safe}}</p>
+                  {% endfor %}
                 </div>
               </div>
             {% endif %}
@@ -61,7 +67,7 @@
               <div class="pb-2">
                 <p> {{obj.text.txt|safe}}</p>
               </div>
-              <div class="">
+              <div class="text-decoration-underline font-zaux2">
                 <p>{{obj.text.author|safe}}</p>
               </div>
             </div>

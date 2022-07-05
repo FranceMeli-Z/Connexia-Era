@@ -27,7 +27,7 @@
     <div class="{{_innerClassName | join(" ")}}">
         <div class="{{_contentClassName | join(" ")}}">
              {% if obj.img %}
-              <div class="{{componentClassName}}__overview--img pb-3 pb-lg-7">
+              <div class="{{componentClassName}}__overview--img pb-4">
                 <a href="#">
                   {{
                     Img.content(obj.img)
@@ -35,8 +35,8 @@
                 </a>
               </div>
             {% endif %}
-            <div class="{{componentClassName}}__overview--title zaux-theme--light1 pb-3 pb-lg-4">
-              <h6 class="c-typo-fs-6 c-typo-fs-lg-8"> {{obj.title|safe}} </h6>
+            <div class="{{componentClassName}}__overview--title font-zaux2 zaux-theme--light1 pb-0 pb-lg-2">
+              <h6 class="fw-demi c-typo-fs-6 c-typo-fs-lg-8"> {{obj.title|safe}} </h6>
             </div>
         </div>
         <!-- .{{componentClassName}}__profile -->

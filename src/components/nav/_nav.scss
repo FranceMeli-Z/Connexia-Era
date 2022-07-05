@@ -4,129 +4,129 @@
 
 $component: componentClass("nav2");
 
-[class*="#{$component}"] {
-  ul {
-    list-style: none;
-  }
+// [class*="#{$component}"] {
+//   ul {
+//     list-style: none;
+//   }
 
-  li {
-    font-family: $zaux-font2;
-    font-size: getTypoFontsize("6");
-    line-height: getTypoLineheight("6");
+//   li {
+//     font-family: $zaux-font2;
+//     font-size: getTypoFontsize("6");
+//     line-height: getTypoLineheight("6");
 
-    &:not(:last-child) {
-      margin-bottom: getSpace("2") / 2;
+//     &:not(:last-child) {
+//       margin-bottom: getSpace("2") / 2;
 
-      @include media-breakpoint-up(lg) {
-        margin-bottom: getSpace("4");
-      }
-    }
-  }
-}
+//       @include media-breakpoint-up(lg) {
+//         margin-bottom: getSpace("4");
+//       }
+//     }
+//   }
+// }
 
-.#{$component} {
-  &__item {
-    &-wrapper {
-      position: relative;
+// .#{$component} {
+//   &__item {
+//     &-wrapper {
+//       position: relative;
 
-      display: block;
-      border-radius: $border-radius-lg;
+//       display: block;
+//       border-radius: $border-radius-lg;
 
-      padding-top: getSpace("3");
-      padding-bottom: getSpace("3");
+//       padding-top: getSpace("3");
+//       padding-bottom: getSpace("3");
 
-      // padding-left: getSpace("2");
-      // padding-right: getSpace("2");
+//       // padding-left: getSpace("2");
+//       // padding-right: getSpace("2");
 
-      @include media-breakpoint-up(lg) {
-        padding-left: getSpace("3");
-        padding-right: getSpace("3");
-      }
-    }
+//       @include media-breakpoint-up(lg) {
+//         padding-left: getSpace("3");
+//         padding-right: getSpace("3");
+//       }
+//     }
 
-    &-label,
-    &-description {
-      display: block;
-    }
+//     &-label,
+//     &-description {
+//       display: block;
+//     }
 
-    &-description {
-      padding-top: getSpace("2");
-      // pointer-events: none;
+//     &-description {
+//       padding-top: getSpace("2");
+//       // pointer-events: none;
 
-      font-family: $zaux-font1;
-      font-size: getTypoFontsize("3");
-      line-height: getTypoLineheight("3");
-    }
+//       font-family: $zaux-font1;
+//       font-size: getTypoFontsize("3");
+//       line-height: getTypoLineheight("3");
+//     }
 
-    &[class*="-has-icon"] {
-      .#{$component} {
-        &__item-wrapper {
-          display: block;
-          padding-left: getSpace("6");
-          @include media-breakpoint-up(lg) {
-            padding-left: 58px;
-          }
-        }
+//     &[class*="-has-icon"] {
+//       .#{$component} {
+//         &__item-wrapper {
+//           display: block;
+//           padding-left: getSpace("6");
+//           @include media-breakpoint-up(lg) {
+//             padding-left: 58px;
+//           }
+//         }
 
-        &__item-icon {
-          float: left;
-          margin-left: getSpace("5") * -1;
-          @include media-breakpoint-up(lg) {
-            margin-left: -43px;
-          }
+//         &__item-icon {
+//           float: left;
+//           margin-left: getSpace("5") * -1;
+//           @include media-breakpoint-up(lg) {
+//             margin-left: -43px;
+//           }
 
-          font-size: getTypoFontsize("8");
-          transform: translateY(-1px);
-        }
-      }
-    }
+//           font-size: getTypoFontsize("8");
+//           transform: translateY(-1px);
+//         }
+//       }
+//     }
 
-    &[class*="-has-child"] {
-      > .#{$component} {
-        &__item-wrapper {
-          position: relative;
-          padding-right: getSpace("4");
+//     &[class*="-has-child"] {
+//       > .#{$component} {
+//         &__item-wrapper {
+//           position: relative;
+//           padding-right: getSpace("4");
 
-          &::after {
-            transition: opacity $zaux-transition-0;
-            // src/assets/icon/icozaux1/SVG/arrow.svg
-            content: " ";
-            display: block;
-            background-image: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' width='#{10}' height='#{10}' viewBox='0 0 64 64'%3E%3Ctitle%3Earrow%3C/title%3E%3Cpath fill='%23#{'343b43'}' d='M19.2 63.961c-3.534-0.001-6.399-2.866-6.399-6.4 0-1.767 0.716-3.367 1.874-4.525l21.075-21.075-21.075-21.075c-1.112-1.15-1.797-2.718-1.797-4.446 0-3.535 2.865-6.4 6.4-6.4 1.728 0 3.296 0.685 4.448 1.798l-0.002-0.002 25.6 25.6c1.158 1.158 1.874 2.758 1.874 4.525s-0.716 3.367-1.874 4.525l-25.6 25.6c-1.158 1.158-2.758 1.875-4.525 1.875h-0z'%3E%3C/path%3E%3C/svg%3E%0A");
+//           &::after {
+//             transition: opacity $zaux-transition-0;
+//             // src/assets/icon/icozaux1/SVG/arrow.svg
+//             content: " ";
+//             display: block;
+//             background-image: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' width='#{10}' height='#{10}' viewBox='0 0 64 64'%3E%3Ctitle%3Earrow%3C/title%3E%3Cpath fill='%23#{'343b43'}' d='M19.2 63.961c-3.534-0.001-6.399-2.866-6.399-6.4 0-1.767 0.716-3.367 1.874-4.525l21.075-21.075-21.075-21.075c-1.112-1.15-1.797-2.718-1.797-4.446 0-3.535 2.865-6.4 6.4-6.4 1.728 0 3.296 0.685 4.448 1.798l-0.002-0.002 25.6 25.6c1.158 1.158 1.874 2.758 1.874 4.525s-0.716 3.367-1.874 4.525l-25.6 25.6c-1.158 1.158-2.758 1.875-4.525 1.875h-0z'%3E%3C/path%3E%3C/svg%3E%0A");
 
-            width: 10px;
-            height: 10px;
+//             width: 10px;
+//             height: 10px;
 
-            position: absolute;
-            top: 50%;
-            right: 11px;
+//             position: absolute;
+//             top: 50%;
+//             right: 11px;
 
-            transform: translateY(-50%);
-          }
-        }
-      }
-    }
+//             transform: translateY(-50%);
+//           }
+//         }
+//       }
+//     }
 
-    &[class*="--type-micro"] {
-      margin-bottom: 16px !important;
-      @include media-breakpoint-up(lg) {
-        margin-bottom: 36px !important;
-      }
-      .#{$component} {
-        &__item-wrapper {
-          width: 40px;
-          height: 40px;
-          padding: 0;
+//     &[class*="--type-micro"] {
+//       margin-bottom: 16px !important;
+//       @include media-breakpoint-up(lg) {
+//         margin-bottom: 36px !important;
+//       }
+//       .#{$component} {
+//         &__item-wrapper {
+//           width: 40px;
+//           height: 40px;
+//           padding: 0;
 
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        &__item-icon {
-          float: none;
-          margin: 0;
-        }
-      }
-    }
-  }
-}
+//           display: flex;
+//           justify-content: center;
+//           align-items: center;
+//         }
+//         &__item-icon {
+//           float: none;
+//           margin: 0;
+//         }
+//       }
+//     }
+//   }
+// }

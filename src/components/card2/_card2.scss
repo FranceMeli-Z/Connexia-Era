@@ -6,6 +6,11 @@ $component: componentClass("card2");
 
 .#{$component} {
 
+&__inner {
+  border-left-width: 2px;
+  border-left-style: solid;
+  border-image: linear-gradient(to bottom ,#b827fc 0%, #fd1892 25%, #fec837 50%,  #b8fd33 75%, #2c90fc 100%) 1;
+}
 
   &__content{
     padding-left: 13px;
@@ -28,6 +33,18 @@ $component: componentClass("card2");
       text-decoration: underline;
     }
   }
+  }
+
+  &__related {
+
+    &--list {
+      ul {
+        list-style: none;
+        li:not(:last-child) {
+          padding-bottom: 20px;
+        }
+      }
+    }
   }
   // &--lg-size1 {
   //   .#{$component} {

@@ -15,8 +15,8 @@ a[class*="#{$component}"] {
 
 .#{$component} {
   &1 {
-    font-family: $zaux-font1;
-    font-weight: $zaux-typo-fw-semibold;
+    font-family: $zaux-font2;
+    font-weight: $zaux-typo-fw-bold;
 
     &--sm {
       line-height: rem(14px);
@@ -39,7 +39,6 @@ a[class*="#{$component}"] {
 
   &2 {
     font-family: $zaux-font1;
-    font-weight: $zaux-typo-fw-semibold;
     border-radius: 25px;
 
     &--sm {

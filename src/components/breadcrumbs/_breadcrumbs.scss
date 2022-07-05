@@ -5,13 +5,13 @@
 $component: componentClass("breadcrumbs");
 
 .#{$component} {
-  > span, a{
+  > span, a {
   font-family: $zaux-font2;
   color: tokenColor("set1", "red1");
-  font-size: tokenTypo("1");
+  font-size: 10px;
   text-transform: uppercase;
   @include media-breakpoint-up(lg) {
-    font-size: tokenTypo("2");
+    font-size: 12px;
     }
   }
 }

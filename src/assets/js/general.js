@@ -13,3 +13,19 @@ Component.register("Slider", Slider);
 Component.register("HeroVideo", HeroVideo);
 
 init();
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  //Accordion
+  $(".c-accordion__head").click(function() {
+    console.log("AAA");
+    $(this).parents(".c-accordion").toggleClass("closed");
+    $(this).parents(".c-accordion").toggleClass("open");
+    // $(".c-accordion").toggleClass("closed");
+    // $(".c-accordion").toggleClass("open");
+  });
+
+
+
+
+});

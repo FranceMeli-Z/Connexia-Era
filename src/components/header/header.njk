@@ -18,29 +18,38 @@
   <header class="{{_className | join(" ")}}">
     <div class="{{componentClassName}}__inner p-box">
 
-      <div class="d-flex align-items-center justify-content-between h-100">
+      <div class="font-zaux2 d-flex align-items-center justify-content-between h-100">
         <div class="d-lg-none">
-        </div>
-        <div class="d-none d-lg-block">
-          <a href="#" class="pe-9">
-          {# {{
+           <a href="#" class="pe-9">
+          {{
             Icon.content({
-              "className": "c-typo-fs-8",
-              "iconName": "icozaux1-burger",
-              "iconSvgUrl": app.fonts.icozaux1.burger
+              "className": "",
+              "iconName": "icozaux1-menu",
+              "iconSvgUrl": app.fonts.icozaux1.url
             })
-          }} #}
-          <span>Menu</span>
+          }}
+        </a>
+        </div>
+        <div class="fst-italic d-none d-lg-block">
+          <a href="#" class="pe-9">
+          {{
+            Icon.content({
+              "className": "",
+              "iconName": "icozaux1-menu",
+              "iconSvgUrl": app.fonts.icozaux1.url
+            })
+          }}
+          <span class="ps-2">Menu</span>
         </a>
           <a href="#" class="ps-2">
-          {# {{
+          {{
             Icon.content({
-              "className": "c-typo-fs-8",
-              "iconName": "icozaux1-burger",
-              "iconSvgUrl": app.fonts.icozaux1.burger
+              "className": "",
+              "iconName": "icozaux1-search",
+              "iconSvgUrl": app.fonts.icozaux1.url
             })
-          }} #}
-          <span>Search</span>
+          }}
+          <span class="ps-2">Search</span>
         </a>
         </div>
 
@@ -69,7 +78,7 @@
         <!-- .{{componentClassName}}__section -->
 
         <div class="d-none d-lg-block">
-          <a href="#" class="pe-7"><strong>My Era</strong></a>
+          <a href="#" class="fw-bold pe-7">My Era</a>
           <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">JOIN</a>
         </div>
 

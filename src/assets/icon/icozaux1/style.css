@@ -15,26 +15,35 @@ Single-colored icons can be modified like so:
 }
 ========================================== */
 
-.icozaux1-gecko {
-  width: 0.9970703125em;
+.icozaux1-menu {
+  font-size: 26px;
+  width: 1.625em !important;
 }
 
-.icozaux1-social_instagram {
-  width: 0.998046875em;
+.icozaux1-arrowL {
+  width: 0.892578125em;
 }
 
-.icozaux1-arrow3 {
-  width: 2.5859375em;
+.icozaux1-youtube {
+  width: 1.3916015625em;
 }
 
-.icozaux1-doc {
-  width: 0.7890625em;
+.icozaux1-arrowR {
+  width: 0.857421875em;
 }
 
-.icozaux1-phone {
-  width: 0.6845703125em;
+.icozaux1-instagram {
+  width: 1.03125em;
 }
 
-.icozaux1-bulb {
-  width: 1.001953125em;
+.icozaux1-twitter {
+  width: 1.25em;
+}
+
+.icozaux1-facebook {
+  width: 0.484375em;
+}
+
+.icozaux1-linkedin {
+  width: 1.0322265625em;
 }

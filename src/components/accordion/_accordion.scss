@@ -4,47 +4,51 @@
 
 $component: componentClass("accordion");
 
+
 .#{$component} {
+  width: 100%;
+  @include media-breakpoint-up(lg) {
+    width: 825px;
+    margin: auto;
+}
 
-  &__head {
-
-    &--title {
-        // border-bottom: 2px solid $zaux-color-set1-onyx !important;
-        height: 45px;
-
-      @include media-breakpoint-up(xl) {
-          height: 70px;
-          }
-    }
-
-    &--subtitle {
-
-      & p {
-        margin-bottom: 0 !important;
+  // &.closed {
+  //   & .#{$component}__head::after {
+  //     content: '+';
+  //   }
+  // }
+    &.closed {
+      & .#{$component}__inner {
+        &:hover {
+          background-color: #F9F9F9 !important;
+        }
       }
     }
 
-    &--details {
-      cursor: pointer;
+  &__inner {
 
+    & .#{$component}__head {
+          height: 60px;
+        @include media-breakpoint-up(lg) {
+            height: 90px;
+      }
+      // &::after {
+      //   content: '-';
+      //   position: absolute;
+      //   right: 25px;
+      //   top:20px;
+      //   font-size: 30px;
+
+      // }
     }
-
+    & ul {
+      list-style: none;
+    }
   }
 
-  &.closed .#{$component}__head--details {
-    & svg {
-      transform: rotateZ(90deg);
-      margin-left: 4px;
-    }
+  &.open  .#{$component}__head {
+   border-bottom: 5px solid #F1F1F1;
   }
-
-  &.open .#{$component}__head--details {
-    & svg {
-      transform: rotateZ(270deg);
-      margin-left: 4px;
-    }
-  }
-
   &.open  .#{$component}__show {
     display: block !important;
   }

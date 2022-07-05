@@ -8,19 +8,52 @@ $zaux-footer-last-h:50px;
 
 .#{$component} {
   min-height: 330px;
-  // &__container {
-  //   // padding: $column-padding-box;
-  // }
+
+  &__container {
+    &--img {
+    padding-bottom: 40px;
+      picture {
+        @include media-breakpoint-down(lg) {
+          text-align: center;
+        }
+      }
+    }
+    &--list {
+      @include media-breakpoint-down(lg) {
+        text-align: center;
+      }
+    }
+    &--social {
+      @include media-breakpoint-down(lg) {
+        text-align: center;
+      }
+    & [class^="icozaux1-"], [class*=" icozaux1-"] {
+        display: inline-block;
+        width: 2em;
+        height: 2em;
+        stroke-width: 0;
+        stroke: currentColor;
+        fill: tokenColor("set1","red1");
+      }
+    }
+  }
 
   & ul {
   list-style-type: none;
   & li:first-child {
-    font-weight: 700;
+    font-weight: bold;
   }
    & li a {
     text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
    }
   }
+  // & .c-icon {
+  //     width: 30px;
+  // }
+
 }
 .#{$component}__last {
   min-height: $zaux-footer-last-h;

@@ -2,11 +2,49 @@
 
 $component: componentClass("form");
 
+$form-select-arrow : url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='#ACACAC' class='bi bi-caret-down-fill' viewBox='0 0 16 16'> <path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>");
+
 .#{$component} {
   &--light {
-    input {
+    input[type="email"] {
       background-color: tokenColor("default", "white");
     }
+    & select {
+      background-image: escape-svg($form-select-arrow);
+      background-repeat: no-repeat;
+      background-size: 10px;
+      background-position: calc(100% - 15px) center;
+      &:hover {
+        border: 1px solid #D8D8D8;
+      }
+      &:active, &:focus {
+        border-color: tokenColor(set1, red1);
+        box-shadow: none;
+      }
+
+    }
+
+    & .#{$component}__search--input {
+      .form-group {
+      & input {
+      background-image: url("../../assets/icon/icozaux1/SVG/search.svg");
+      background-repeat: no-repeat;
+      background-size: 18px;
+      background-position: calc(100% - 10px) center;
+      &:placeholder-shown {
+      background-image: url("../../assets/icon/icozaux1/SVG/search.svg");
+      background-repeat: no-repeat;
+      // background-size: 16px 16px;
+      // background-position: 25px center;
+      }
+    }
+    [type="search"]::-webkit-search-cancel-button,
+    [type="search"]::-webkit-search-decoration {
+      -webkit-appearance: none;
+       appearance: none;
+    }
   }
+  }
+}
 
 }

@@ -28,12 +28,12 @@
       <!-- First box -->
       <div class="">
         <div class="row m-0">
-          <div class="zaux-bg-set1-grey p-box rounded-bottom-100 col-12 col-lg-8 pb-11 pb-lg-12 pt-3 pt-lg-6">
+          <div class="zaux-bg-set1-grey p-box rounded-bottom-100  col-12 col-lg-8 mih-boxtitle pt-3 pt-lg-6">
             <div class="pb-2 pb-lg-4">
               {{ Breadcrumbs.content() }}
             </div>
-            <div class="zaux-theme--light1">
-              <h6 class="pb-1 c-typo-fs-10 c-typo-fs-lg-13"><strong>Title</strong></h6>
+            <div class="font-zaux2 zaux-theme--light1 pb-2 pb-lg-4">
+              <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Publications</h6>
             </div>
             <div class="maw-f768px">
               <p>A Europe where kidney health is prioritised, kidney care is accessible, the kidney community is thriving.</p>
@@ -49,8 +49,14 @@
       <div class="p-box">
 
         <!-- Box ricerca -->
-        <div class="pt-6 pt-lg-8">
-          <div>
+        <div class="pt-6 pt-lg-8 border-bottom-box">
+          <div class="pb-5 pb-lg-6">
+            {{
+            Form.content({
+              "searchfilter": "y",
+              "className": ""
+            })
+           }}
           </div>
           <div class="pb-5 pb-lg-8">
               <a class="c-cta2 c-cta2--sm c-cta1--grey" href="#" title="button title">Optimising care</a>
@@ -60,20 +66,20 @@
               <a class="c-cta2 c-cta2--sm c-cta1--grey" href="#" title="button title">Tag___5</a>
               <a class="c-cta2 c-cta2--sm c-cta1--grey" href="#" title="button title">...</a>
           </div>
-          <div class="pb-2">
-            4/67 publications
+          <div class="zaux-color-set1-grey1 c-typo-style1-3">
+            <p>4/67 publications</p>
           </div>
         </div>
        <!-- Fine Box ricerca -->
         {# <hr> #}
         <!-- Inizio Archivio -->
-        <div class="pt-6 pb-7 pb-lg-12">
+        <div class="pb-7 pb-lg-12">
           <!-- start row -->
           <div class="row">
             <div class="col-12">
                     {{BoxContent.content(
                       {
-                        "className": ["pb-6","pb-lg-8"],
+                        "className": ["pt-6","pb-6","border-bottom-box"],
                         "innerClassName": ["row"],
                         "contentClassName": ["col-12", "col-lg-8","pe-4"],
                         "content": {
@@ -91,7 +97,7 @@
                             "className": ["img-fluid"]
                           },
                         "webcast" : {
-                          "author": "Francesca Mallamaci",
+                          "author": ["Francesca Mallamaci"],
                           "pannelist": ["Carmine Zoccali, Italy", "Mehmet Kanbay, Turkey"],
                           "moderators": ["Will Herrington, United Kingdom", "Maria Josè Soler, Spain"]
                         }
@@ -103,7 +109,7 @@
             <div class="col-12">
                     {{BoxContent.content(
                       {
-                        "className": ["pb-6","pb-lg-8"],
+                        "className": ["pt-6","pb-6","border-bottom-box"],
                         "innerClassName": ["row"],
                         "contentClassName": ["col-12", "col-lg-8","pe-4"],
                         "content": {
@@ -125,7 +131,7 @@
             <div class="col-12">
                     {{BoxContent.content(
                       {
-                        "className": ["pb-6","pb-lg-8"],
+                        "className": ["pt-6","pb-6","border-bottom-box"],
                         "innerClassName": ["row"],
                         "contentClassName": ["col-12", "col-lg-8","pe-4"],
                         "content": {
@@ -143,7 +149,7 @@
                             "className": ["img-fluid"]
                           },
                         "webcast" : {
-                          "author": "Francesca Mallamaci",
+                          "author": ["Francesca Mallamaci"],
                           "pannelist": ["Carmine Zoccali, Italy", "Mehmet Kanbay, Turkey"],
                           "moderators": ["Will Herrington, United Kingdom", "Maria Josè Soler, Spain"]
                         }
@@ -155,7 +161,7 @@
             <div class="col-12">
                     {{BoxContent.content(
                       {
-                        "className": ["pb-6","pb-lg-8"],
+                        "className": ["pt-6","pb-6","border-bottom-box"],
                         "innerClassName": ["row"],
                         "contentClassName": ["col-12", "col-lg-8","pe-4"],
                         "content": {
@@ -177,7 +183,7 @@
 
           </div>
           <!-- end row -->
-          <div class="text-center">
+          <div class="text-center pt-4 pt-lg-6">
            <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">Load more</a>
           </div>
         </div>
@@ -186,6 +192,9 @@
     <!-- end archive + search -->
 
     {% include "partials/ui/news.njk" %}
+
+
+     {% include "partials/ui/related_cont.njk" %}
 
   </main>
 

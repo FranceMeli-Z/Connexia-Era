@@ -1,0 +1,125 @@
+{% extends "layouts/default.njk" %}
+
+{# Imports components #}
+{% import 'components/img/img.njk' as Img %}
+{% import 'components/icon/icon.njk' as Icon %}
+{% import 'components/btn/btnIcon.njk' as BtnIcon %}
+{% import 'components/card1/card1.njk' as Card1 %}
+{% import 'components/card2/card2_news.njk' as Card2 %}
+{% import 'components/card2/card2_related.njk' as CardRelated %}
+{% import 'components/breadcrumbs/breadcrumbs.njk' as Breadcrumbs %}
+
+{# Sets page-specific variables #}
+{% set page = {
+  "data": page_page_archive,
+  "title": "Page Archive",
+  "isHome": false
+} %}
+
+{% block head_css %}
+  <link rel="stylesheet" href="assets/css/general.bundle.css">
+{% endblock %}
+
+{% block content %}
+  <main>
+
+     <!-- First box -->
+      <div class="mb-7 mb-lg-10">
+        <div class="row m-0">
+          <div class="zaux-bg-set1-grey p-box rounded-bottom-100 col-12 col-lg-8 mih-boxtitle pt-3 pt-lg-6">
+            <div class="pb-2 pb-lg-4">
+              {{ Breadcrumbs.content() }}
+            </div>
+            <div class="font-zaux2 zaux-theme--light1 pb-2 pb-lg-4">
+              <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Desease & Treatments</h6>
+            </div>
+            <div class="maw-f768px">
+              <p>The new section of ERA dedicated to all that concerns pathologies and their cures and treatments</p>
+            </div>
+          </div>
+          <div class="col-lg-4 d-none d-lg-block">
+          </div>
+        </div>
+      </div>
+      <!-- end First box -->
+
+      <div class="p-box pb-2 pb-lg-7">
+        <div class="row gx-3">
+              {%
+                set _decoVariations = [
+                  "deco1-l-t",
+                  "deco1-r-t"
+                ]
+              %}
+
+              {% for decoVariation in _decoVariations %}
+
+                <div class="col-12 col-md-6 pb-6">
+                  {{CardRelated.content(
+                    {
+                      "className": ["d-lg-flex", "justify-content-center"],
+                      "innerClassName": ["border-all-gradient", "miw-f397", "py-8", "px-2", "px-lg-6"],
+                      "contentClassName": ["text-center"],
+                      "content": {
+                        "title": "Diseases",
+                        "list": ["Acute Kidney Injury", "CKD-MBD", "Diabetes", "Fabry nephropathy", "Hyponatraemia", "Obesity"]
+                      }
+                    }
+                  )}}
+
+                </div>
+                <!-- .col-* -->
+              {% endfor %}
+        </div>
+      </div>
+
+  {% include "partials/ui/news.njk" %}
+
+  <hr>
+
+   {% include "partials/ui/news.njk" %}
+
+  <hr>
+  <div class="p-box pb-2 pb-lg-8">
+    <div class="zaux-theme--light2 pb-6 pb-md-9">
+      <h6 class="c-typo-fs-10 c-typo-fs-lg-16"><strong>You may also like</strong></h6>
+    </div>
+    <div class="row gx-3">
+              {%
+                set _decoVariations = [
+                  "deco1-l-t",
+                  "deco1-r-t",
+                  "deco1-r-b",
+                  "deco1-l-b"
+                ]
+              %}
+
+              {% for decoVariation in _decoVariations %}
+
+                <div class="col-12 col-md-6 pb-6">
+                  {{CardRelated.content(
+                    {
+                      "className": ["h-100"],
+                      "innerClassName": ["border-all-gradient py-8 px-2 px-lg-7"],
+                      "contentClassName": ["text-center"],
+                      "content": {
+                        "cta": "Profile",
+                        "title": "CKD-MBD Newsletter #23",
+                        "text": "As a member of the ERA-EDTA, Oxford University Press is pleased to be able to offer you a 35% discount on our Nephrology books."
+                      }
+                    }
+                  )}}
+
+                </div>
+                <!-- .col-* -->
+              {% endfor %}
+    </div>
+  </div>
+
+  </main>
+
+{% endblock %}
+
+{% block foot_js %}
+  <script defer src="assets/js/general.bundle.js"></script>
+{% endblock %}

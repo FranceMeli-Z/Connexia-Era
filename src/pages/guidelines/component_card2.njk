@@ -107,7 +107,7 @@
 
             </div>
 
-             <div class="row">
+             <div class="row mb-5">
               {%
                 set _decoVariations = [
                   "deco1-l-t",
@@ -123,13 +123,41 @@
                   {{CardRelated.content(
                     {
                       "className": [],
-                      "innerClassName": ["border-all-gradient py-8"],
-                      "contentClassName": [""],
+                      "innerClassName": ["border-all-gradient py-8 px-2 px-lg-7"],
+                      "contentClassName": ["text-center"],
                       "content": {
-                        "category": "Report",
+                        "cta": "Profile",
                         "title": "CKD-MBD Newsletter #23",
-                        "date": "March 18, 2022",
-                        "author": "CKD-MBD working group"
+                        "text": "As a member of the ERA-EDTA, Oxford University Press is pleased to be able to offer you a 35% discount on our Nephrology books."
+                      }
+                    }
+                  )}}
+
+                </div>
+                <!-- .col-* -->
+              {% endfor %}
+
+            </div>
+
+             <div class="row gx-3">
+              {%
+                set _decoVariations = [
+                  "deco1-l-t",
+                  "deco1-r-t"
+                ]
+              %}
+
+              {% for decoVariation in _decoVariations %}
+
+                <div class="col-12 col-md-6 mb-3">
+                  {{CardRelated.content(
+                    {
+                      "className": ["d-lg-flex", "justify-content-center"],
+                      "innerClassName": ["border-all-gradient", "py-8", "px-2", "px-lg-6"],
+                      "contentClassName": ["text-center"],
+                      "content": {
+                        "title": "Diseases",
+                        "list": ["Acute Kidney Injury", "CKD-MBD", "Diabetes", "Fabry nephropathy", "Hyponatraemia", "Obesity"]
                       }
                     }
                   )}}

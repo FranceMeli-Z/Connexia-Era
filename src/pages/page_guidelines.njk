@@ -1,0 +1,204 @@
+{# Sets the layout to be extended #}
+{% extends "layouts/default.njk" %}
+
+{# Imports components #}
+{% import 'components/img/img.njk' as Img %}
+{% import 'components/icon/icon.njk' as Icon %}
+{% import 'components/btn/btnIcon.njk' as BtnIcon %}
+{% import 'components/card1/card1.njk' as Card1 %}
+{% import 'components/card2/card2_news.njk' as Card2 %}
+{% import 'components/boxcontent/boxcontent.njk' as BoxContent %}
+{% import 'components/form/form.njk' as Form %}
+{% import 'components/breadcrumbs/breadcrumbs.njk' as Breadcrumbs %}
+
+{# Sets page-specific variables #}
+{% set page = {
+  "data": page_page_guidelines,
+  "title": "Page Guidelines",
+  "isHome": false
+} %}
+
+{% block head_css %}
+  <link rel="stylesheet" href="assets/css/general.bundle.css">
+{% endblock %}
+
+{% block content %}
+
+  <main>
+      <!-- First box -->
+      <div class="">
+        <div class="row m-0">
+          <div class="zaux-bg-set1-grey p-box rounded-bottom-100  col-12 col-lg-8 mih-boxtitle pt-3 pt-lg-6">
+            <div class="pb-2 pb-lg-4">
+              {{ Breadcrumbs.content() }}
+            </div>
+            <div class="font-zaux2 zaux-theme--light1 pb-2 pb-lg-4">
+              <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Guidelines & Best Practises</h6>
+            </div>
+            <div class="maw-f768px">
+              <p>Updated and reviewed guideliens for clinical practice.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 d-none d-lg-block">
+          </div>
+        </div>
+      </div>
+      <!-- end First box -->
+
+      <!-- Archvio con ricerca-->
+      <div class="p-box">
+
+        <!-- Box ricerca -->
+        <div class="pt-6 pt-lg-8 border-bottom-box">
+          <div class="pb-5 pb-lg-6">
+            {{
+            Form.content({
+              "searchfilter": "y",
+              "className": ""
+            })
+           }}
+          </div>
+          <div class="pb-5 pb-lg-8">
+              <a class="c-cta2 c-cta2--sm c-cta1--grey" href="#" title="button title">Optimising care</a>
+              <a class="c-cta2 c-cta2--sm c-cta1--grey" href="#" title="button title">Covid-19</a>
+              <a class="c-cta2 c-cta2--sm c-cta1--grey" href="#" title="button title">Robot assistance</a>
+              <a class="c-cta2 c-cta2--sm c-cta1--grey" href="#" title="button title">Tag___4</a>
+              <a class="c-cta2 c-cta2--sm c-cta1--grey" href="#" title="button title">Tag___5</a>
+              <a class="c-cta2 c-cta2--sm c-cta1--grey" href="#" title="button title">...</a>
+          </div>
+          <div class="zaux-color-set1-grey1 c-typo-style1-3">
+            <p>4/67 publications</p>
+          </div>
+        </div>
+       <!-- Fine Box ricerca -->
+        {# <hr> #}
+        <!-- Inizio Archivio -->
+        <div class="pb-7 pb-lg-12">
+          <!-- start row -->
+          <div class="row">
+            <div class="col-12">
+                    {{BoxContent.content(
+                      {
+                        "className": ["pt-6","pb-6","border-bottom-box"],
+                        "innerClassName": ["row"],
+                        "contentClassName": ["col-12", "col-lg-8","pe-4"],
+                        "content": {
+                          "title": "5th European Renal Osteodystrophy (EUROD) Winter Meeting",
+                          "category": "Report",
+                          "date": "March 18, 2022"
+                        },
+                          "img": {
+                            "isLazy": true,
+                            "src": "media/ProvaContent.png",
+                            "src2x": "media/ProvaContent@2x.png",
+                            "width": 396,
+                            "height": 223,
+                            "alt": "Cover alternative text",
+                            "className": ["img-fluid"]
+                          },
+                        "webcast" : {
+                          "author": ["Francesca Mallamaci"],
+                          "pannelist": ["Carmine Zoccali, Italy", "Mehmet Kanbay, Turkey"],
+                          "moderators": ["Will Herrington, United Kingdom", "Maria Josè Soler, Spain"]
+                        }
+
+                      }
+                    )}}
+
+            </div>
+            <div class="col-12">
+                    {{BoxContent.content(
+                      {
+                        "className": ["pt-6","pb-6","border-bottom-box"],
+                        "innerClassName": ["row"],
+                        "contentClassName": ["col-12", "col-lg-8","pe-4"],
+                        "content": {
+                          "title": "5th European Renal Osteodystrophy (EUROD) Winter Meeting",
+                          "category": "Report",
+                          "date": "March 18, 2022"
+                        },
+                        "text" : {
+                          "author": "CKD-MBD working group",
+                          "txt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                                  in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                        }
+
+                      }
+                    )}}
+
+            </div>
+            <div class="col-12">
+                    {{BoxContent.content(
+                      {
+                        "className": ["pt-6","pb-6","border-bottom-box"],
+                        "innerClassName": ["row"],
+                        "contentClassName": ["col-12", "col-lg-8","pe-4"],
+                        "content": {
+                          "title": "5th European Renal Osteodystrophy (EUROD) Winter Meeting",
+                          "category": "Report",
+                          "date": "March 18, 2022"
+                        },
+                          "img": {
+                            "isLazy": true,
+                            "src": "media/ProvaContent.png",
+                            "src2x": "media/ProvaContent@2x.png",
+                            "width": 396,
+                            "height": 223,
+                            "alt": "Cover alternative text",
+                            "className": ["img-fluid"]
+                          },
+                        "webcast" : {
+                          "author": ["Francesca Mallamaci"],
+                          "pannelist": ["Carmine Zoccali, Italy", "Mehmet Kanbay, Turkey"],
+                          "moderators": ["Will Herrington, United Kingdom", "Maria Josè Soler, Spain"]
+                        }
+
+                      }
+                    )}}
+
+            </div>
+            <div class="col-12">
+                    {{BoxContent.content(
+                      {
+                        "className": ["pt-6","pb-6","border-bottom-box"],
+                        "innerClassName": ["row"],
+                        "contentClassName": ["col-12", "col-lg-8","pe-4"],
+                        "content": {
+                          "title": "5th European Renal Osteodystrophy (EUROD) Winter Meeting",
+                          "category": "Report",
+                          "date": "March 18, 2022"
+                        },
+                        "text" : {
+                          "author": "CKD-MBD working group",
+                          "txt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                                  in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                        }
+
+                      }
+                    )}}
+
+            </div>
+
+          </div>
+          <!-- end row -->
+          <div class="text-center pt-4 pt-lg-6">
+           <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">Load more</a>
+          </div>
+        </div>
+        <!-- end archive -->
+      </div>
+    <!-- end archive + search -->
+
+    {% include "partials/ui/news.njk" %}
+
+     {% include "partials/ui/related_cont.njk" %}
+
+  </main>
+
+{% endblock %}
+
+{% block foot_js %}
+  <script defer src="assets/js/general.bundle.js"></script>
+{% endblock %}

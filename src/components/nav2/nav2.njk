@@ -1,0 +1,64 @@
+{# Imports components #}
+{% import 'components/icon/icon.njk' as Icon %}
+
+{% macro content(obj) %}
+
+  {% set componentClassName = 'c-nav2' %}
+
+  {% set configDefault = {
+    "wrapperElement" : "nav"
+  }%}
+
+  {% set obj = configDefault | merge(obj or {}) %}
+
+  {% set _className = [componentClassName] | mergeArray(obj.className or configDefault.className) %}
+
+  <div class="{{_className | join(" ")}}">
+     <div class="" aria-hidden="true">
+        <!-- `aria-hidden="true"` because the content already exists in the side nav (mobile first)  -->
+          <nav class="c-nav1--layout1 c-nav1--fh {{componentClassName}}__nav-top zaux-theme--dark1">
+            <!-- BEGIN WP NAV -->
+            <ul class="d-flex justify-content-between">
+              <li>
+                <a href="#" title="Generale Information">
+                  General information
+                </a>
+              </li>
+              <li>
+                <a href="#" title="Scientific Programme">
+                  Scientific Pogramme
+                </a>
+              </li>
+              <li>
+                <a href="#" title="Registration">
+                  Registration
+                </a>
+              </li>
+              <li>
+                <a href="#" title="Abstract">
+                 Abstract
+                </a>
+              </li>
+               <li>
+                <a href="#" title="Sponsors">
+                 Sponsors
+                </a>
+              </li>
+              <li>
+                <a href="#" title="Hotel Accomodation">
+                 Hotel Accomodation
+                </a>
+              </li>
+              <li>
+                <a href="#" title="Covid-19">
+                 Covid-19
+                </a>
+              </li>
+            </ul>
+            <!-- END WP NAV -->
+          </nav>
+      </div>
+    <!-- .{{componentClassName}} -->
+  </div>
+
+{% endmacro %}

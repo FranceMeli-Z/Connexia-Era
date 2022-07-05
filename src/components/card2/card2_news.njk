@@ -25,16 +25,16 @@
   <article class="{{_className | join(" ")}}">
     <div class="{{_innerClassName | join(" ")}}">
         <div class="{{_contentClassName | join(" ")}}">
-            <div class="{{componentClassName}}__content--cat zaux-color-set1-grey1 pb-2">
+            <div class="{{componentClassName}}__content--cat fw-bold c-typo-fs-8 zaux-color-set1-grey1 pb-2">
               <a>{{obj.content.category}}</a>
             </div>
-            <div class="{{componentClassName}}__content--title pb-4">
-              <h6 class="c-typo-fs-8 c-typo-fs-lg-10"> {{obj.content.title|safe}} </h6>
+            <div class="{{componentClassName}}__content--title font-zaux2 pb-4">
+              <h6 class="fw-demi c-typo-fs-8 c-typo-fs-lg-10"> {{obj.content.title|safe}} </h6>
             </div>
-             <div class="{{componentClassName}}__content--date zaux-color-set1-grey1 pb-0 pb-md-2">
+             <div class="{{componentClassName}}__content--date font-zaux2 fst-italic zaux-color-set1-grey1 pb-0 pb-md-2">
               <a>{{obj.content.date|safe}}</a>
             </div>
-            <div class="{{componentClassName}}__content--author d-none d-md-block">
+            <div class="{{componentClassName}}__content--author font-zaux2 d-none d-md-block">
               <a>{{obj.content.author|safe}}</a>
             </div>
         </div>

@@ -9,15 +9,15 @@
  <footer class="{{componentClassName}}">
     <div class="c-footer__container zaux-bg-set1-grey p-box pb-4 pt-6 pt-lg-7 pb-lg-6">
       <nav>
-        <div class="c-footer__container__row row gx-0 zaux-theme--light1">
+        <div class="row gx-3 zaux-theme--light1">
           <div class="col-12 col-lg-3">
-            <div>
+            <div class="c-footer__container--img">
               {{
               Img.content(component_footer.props.logo.img)
               }}
             </div>
           </div>
-          <div class="col-6 col-lg-3 c-typo-style1-4 c-typo-style1-lg-8">
+          <div class="c-footer__container--list col-6 col-lg-3 c-typo-style1-4 c-typo-style1-lg-8">
               <ul>
                 <li><a href="">Networking</a></li>
                 <li><a href="">EKHA</a></li>
@@ -27,7 +27,7 @@
                 <li><a href="">ASB ERA ISN</a></li>
               </ul>
           </div>
-          <div class="col-6 col-lg-3 c-typo-style1-4 c-typo-style1-lg-8">
+          <div class="c-footer__container--list col-6 col-lg-3 c-typo-style1-4 c-typo-style1-lg-8">
               <ul>
                 <li><a href="">Membership</a></li>
                 <li><a href="">Join / Renew</a></li>
@@ -35,57 +35,52 @@
                 <li><a href="">Q&A</a></li>
               </ul>
           </div>
-          <div class="col-12 col-lg-3">
-            <div class="d-flex pb-6">
+          <div class="c-footer__container--social col-12 col-lg-3">
+            <div class="d-flex pb-7 justify-content-between px-8 px-lg-0 pb-lg-6 pt-lg-0 pt-7">
               <a href="#" title="Twitter">
-                T
-                {# {{
+                {{
                     Icon.content({
-                      "className": "d-inline-block $zaux-color-set1-azure1 c-typo-fs-2 pe-4",
-                      "iconName": "icozaux1-instagram",
+                      "className": "",
+                      "iconName": "icozaux1-twitter",
                       "iconSvgUrl": app.fonts.icozaux1.url
                     })
-                  }} #}
+                  }}
               </a>
               <a href="#" title="Instagram">
-                I
-                {# {{
+                {{
                     Icon.content({
-                      "className": "d-inline-block $zaux-color-set1-azure1 c-typo-fs-2 pe-4",
+                      "className": "",
                       "iconName": "icozaux1-instagram",
                       "iconSvgUrl": app.fonts.icozaux1.url
                     })
-                  }} #}
+                  }}
               </a>
               <a href="#" title="Facebook">
-                F
-                {# {{
+                {{
                     Icon.content({
-                      "className": "d-inline-block $zaux-color-set1-azure1 c-typo-fs-2 pe-4",
+                      "className": "",
                       "iconName": "icozaux1-facebook",
                       "iconSvgUrl": app.fonts.icozaux1.url
                     })
-                  }} #}
+                  }}
               </a>
               <a href="#" title="Linkedin">
-                L
-                {# {{
+                {{
                     Icon.content({
-                      "className": "d-inline-block $zaux-color-set1-azure1 c-typo-fs-2  pe-4",
+                      "className": "",
                       "iconName": "icozaux1-linkedin",
                       "iconSvgUrl": app.fonts.icozaux1.url
                     })
-                  }} #}
+                  }}
               </a>
               <a href="#" title="YouTube">
-                Y
-                {# {{
+                {{
                     Icon.content({
-                      "className": "d-inline-block $zaux-color-set1-azure1 c-typo-fs-2",
+                      "className": "",
                       "iconName": "icozaux1-youtube",
                       "iconSvgUrl": app.fonts.icozaux1.url
                     })
-                  }} #}
+                  }}
               </a>
             </div>
             <div class="pb-6">
@@ -101,11 +96,15 @@
         </div>
       </nav>
     </div>
-    <div class="c-footer__last p-box zaux-bg-set1-darkgrey zaux-theme--dark1 c-typo-fs-3">
-     <a href="#">© Copyright - Era</a>
-     <a href="#">Terms and condition</a>
-     <a href="#">Cookie Policy</a>
-     <a href="#">Privcy Policy</a>
+    <div class="c-footer__last p-box zaux-bg-set1-darkgrey zaux-theme--dark1 p-box c-typo-fs-3 py-4 py-lg-0">
+     <div class="pb-6 pb-lg-0">
+      <a href="#" class="">© Copyright - Era</a>
+     </div>
+     <div class="d-flex flex-column flex-lg-row align-items-center">
+      <a href="#" class="pe-0 pe-lg-9 pb-6 pb-lg-0">Terms and condition</a>
+      <a href="#" class="pe-0 pe-lg-9 pb-6 pb-lg-0">Cookie Policy</a>
+      <a href="#" class="pb-2 pb-lg-0">Privcy Policy</a>
+     </div>
     </div>
 
   </footer>

@@ -7,52 +7,42 @@
 
   {% set componentClassName = 'c-accordion' %}
 
+  {% set configDefault = {
+    "className": [],
+    "innerClassName": [],
+    "contentClassName": []
+  }%}
+
+  {% set obj = configDefault | overwriteMerge(obj or {}) %}
+
+  {# Creates new arrays for manipulation) #}
+  {% set _className = [componentClassName] | mergeArray(obj.className or configDefault.className) %}
+  {% set _innerClassName = [componentClassName + "__inner"] | mergeArray(obj.innerClassName or configDefault.innerClassName) %}
 
 
-      <div class="{{componentClassName}} {{obj.className}} closed p-4">
-          <div class="{{componentClassName}}__head zaux-theme--light4">
-            <div class="c-typo-texts-6">
-              <p><strong>€ 8,00</strong> + IVA al mese</p>
-            </div>
-            <div class="{{componentClassName}}__head--title pb-2 pb-xl-5">
-              <h6 class="c-typo-fs-8 c-typo-fs-xl-10 c-typo-ff-2">
-                Standard
+      <div class="{{_className | join(" ")}} closed">
+        <div class="{{_innerClassName | join(" ")}}">
+
+          <div class="{{componentClassName}}__head ps-4 ps-lg-6 py-4 py-lg-6">
+
+            <div class="{{componentClassName}}__head--title font-zaux2">
+              <h6 class="fw-demi c-typo-fs-8 c-typo-fs-lg-10">
+                {{obj.title|safe}}
               </h6>
-
-              <div class="{{componentClassName}}__head--subtitle c-typo-texts-6">
-                <p>
-                   Il più venduto
-                </p>
-              </div>
-
             </div>
-             <div class="{{componentClassName}}__head--details d-block d-xl-none c-typo-texts-6 pt-4">
-                <strong>Dettagli</strong>
-                {{
-                    Icon.content({
-                      "className": "d-inline-block c-typo-fs-8 me-2",
-                      "iconName": "icozaux1-arrow",
-                      "iconSvgUrl": app.fonts.icozaux1.url
-                    })
-                  }}
-            </div>
-          </div>
-        <div class="{{componentClassName}}__show c-typo-texts-3 c-typo-texts-xl-6 pt-4 d-none d-xl-block zaux-theme--light1">
-          <p><strong>Questo piano di abbonamento comprende:</strong></p>
-          <ul>
-            <li>Fino a 400 documenti all’anno</li>
-            <li>Esporta un archivio ZIP dei tuoi documenti con un giorno di attesa</li>
-          </ul>
-           {% if obj.className %}
-             <button value="{{obj.value}}" class="{{componentClassName}}__button c-btn1 c-btn1--sm c-btn1--dark mb-4"> Acquista </button> {# c-btn1--size-l #}
-          {% else %}
-             <button value="{{obj.value}}" class="{{componentClassName}}__button c-btn1 c-btn1--sm c-btn1--light mb-4"> Acquista </button> {# c-btn1--size-l #}
-          {% endif %}
 
-          {# c-btn1--dark #}
-          <div class="c-typo-ff-2 c-typo-fw-medium text-center zaux-theme--light4">
-            <p>Compilando il form in questa pagina</p>
           </div>
+
+            <div class="{{componentClassName}}__show d-none c-typo-style1-3 p-4 p-lg-6">
+              {# <p>{{obj.txt|safe}}</p> #}
+              <ul>
+                <li>Albania</li>
+                <li>Bosnia</li>
+                <li>Bulgaria</li>
+                <li>...</li>
+              </ul>
+            </div>
+
         </div>
       </div>
 

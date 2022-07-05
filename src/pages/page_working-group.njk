@@ -1,0 +1,106 @@
+{# Sets the layout to be extended #}
+{% extends "layouts/default.njk" %}
+
+{# Imports components #}
+{% import 'components/img/img.njk' as Img %}
+{% import 'components/icon/icon.njk' as Icon %}
+{% import 'components/btn/btnIcon.njk' as BtnIcon %}
+{% import 'components/card1/card1.njk' as Card1 %}
+{% import 'components/card2/card2_news.njk' as Card2 %}
+{% import 'components/card1/card1_overview.njk' as CardOverview %}
+
+{% import 'components/breadcrumbs/breadcrumbs.njk' as Breadcrumbs %}
+
+{# Sets page-specific variables #}
+{% set page = {
+  "data": page_page_working-group,
+  "title": "Page Working Group Overview",
+  "isHome": false
+} %}
+
+{% block head_css %}
+  <link rel="stylesheet" href="assets/css/general.bundle.css">
+{% endblock %}
+
+{% block content %}
+
+  <main>
+      <!-- First box -->
+      <div class="">
+        <div class="row m-0">
+          <div class="zaux-bg-set1-grey p-box rounded-bottom-100  col-12 col-lg-8 mih-boxtitle pt-3 pt-lg-6">
+            <div class="pb-2 pb-lg-4">
+              {{ Breadcrumbs.content() }}
+            </div>
+            <div class="font-zaux2 zaux-theme--light1 pb-2 pb-lg-4">
+              <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Working Group</h6>
+            </div>
+            <div class="maw-f768px">
+              <p>ERA is committed to increase and to enhance the offer of Science and Education through its working groups.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 d-none d-lg-block">
+          </div>
+        </div>
+      </div>
+      <!-- end First box -->
+
+        <!-- Inizio Archivio -->
+        <div class="p-box border-bottom-box mb-8 pt-5 pt-lg-7 pb-4 pb-lg-2">
+          <!-- start row -->
+          <div class="row">
+             {%
+                set _workingGroups = [
+                  "deco1-l-t",
+                  "deco1-r-t",
+                  "deco1-r-b",
+                  "deco1-l-b",
+                  "deco1-l-t",
+                  "deco1-r-t",
+                  "deco1-r-b",
+                  "deco1-l-b"
+                ]
+              %}
+
+              {% for w_group in _workingGroups %}
+
+               <div class="col-6 col-lg-3 pb-7 pb-lg-9">
+            {{CardOverview.content(
+              {
+              "className": [""],
+              "variations": [],
+              "innerClassName": [""],
+              "contentClassName": ["text-center"],
+              "img": {
+                "isLazy": true,
+                "src": "media/LogoOverview.png",
+                "src2x": "media/LogoOverview@2x.png",
+                "width": 200,
+                "height": 90,
+                "alt": "Cover alternative text",
+                "className": ["img-fluid"]
+              },
+              "title": "CKD-MBD"
+              }
+            )}}
+          </div>
+      {% endfor %}
+
+          </div>
+          <!-- end row -->
+        </div>
+        <!-- end archive -->
+
+     {% include "partials/ui/news.njk" %}
+
+     <div class="text-center text-lg-end pb-9 pb-lg-12">
+        <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">See all working groups publications</a>
+      </div>
+
+  </main>
+
+{% endblock %}
+
+{% block foot_js %}
+  <script defer src="assets/js/general.bundle.js"></script>
+{% endblock %}

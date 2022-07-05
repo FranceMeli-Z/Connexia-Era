@@ -13,5 +13,17 @@ $component: componentClass("boxcontent");
         text-decoration: underline;
       }
     }
+    &--webcast{
+      span {
+        font-size: 14px;
+        @include media-breakpoint-down(lg) {
+        font-size: 12px;
+      }
+    }
+    p {
+      margin-bottom: 0 !important;
+      line-height: 1 !important;
+    }
   }
+}
 }

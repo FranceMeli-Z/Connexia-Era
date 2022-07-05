@@ -246,7 +246,7 @@ function exportJSONtoScsss() {
     .pipe(exec(file => {
       const filenameNoExt = path.parse(file.history[0]).name;
       const prefix = "zaux-token";
-      return `npx json-to-scss ${file.path} ${pathSrc}/assets/scss/tokens/_${filenameNoExt}.scss --p='$${prefix}-${filenameNoExt}: '`;
+      return `npx json-to-scss ${file.path} ${pathSrc}/assets/scss/tokens/_${filenameNoExt}.scss --p=$${prefix}-${filenameNoExt}: `;
     }, options))
     .pipe(exec.reporter(reportOptions));
 }

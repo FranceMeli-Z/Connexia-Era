@@ -11,3 +11,16 @@
 @import "bootstrap/scss/utilities";
 
 $zaux-helper-name: "size";
+
+.miw-f397 {
+  min-width: 397px;
+}
+
+
+//// Box Title ///
+.mih-boxtitle {
+  min-height: 155px;
+  @include media-breakpoint-up(lg) {
+    min-height: 212px;
+  }
+}

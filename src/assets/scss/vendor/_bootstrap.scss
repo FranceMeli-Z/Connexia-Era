@@ -27,12 +27,26 @@ $utilities: map-merge(
       property: font-weight,
       class: fw,
       values: (
-        normal: $zaux-typo-fw-regular,
+        "regular": $zaux-typo-fw-regular,
+        "demi": 600,
         bold: $zaux-typo-fw-bold,
       ),
     ),
   )
 );
+
+// $utilities: map-merge(
+//   $utilities,
+//   (
+//     "font-style": (
+//       property: font-weight,
+//       class: fst,
+//       values: (
+//         "italic": $zaux-typo-fw-regular,
+//       ),
+//     ),
+//   )
+// );
 
 $utilities: map-merge(
   $utilities,
@@ -69,12 +83,12 @@ $utilities: map-merge(
   )
 );
 
-$utilities: map-merge(
-  $utilities,
-  (
-    "border": null,
-  )
-);
+// $utilities: map-merge(
+//   $utilities,
+//   (
+//     "border": null,
+//   )
+// );
 
 // $utilities: map-merge(
 //   $utilities,
@@ -83,12 +97,17 @@ $utilities: map-merge(
 //   )
 // );
 
-// $utilities: map-merge(
-//   $utilities,
-//   (
-//     "border-bottom": null,
-//   )
-// );
+$utilities: map-merge(
+  $utilities,
+  (
+  "border-bottom": (
+  property: border-bottom,
+  values: (
+    "box": 2px solid #D8D8D8,
+  )
+  )
+  )
+);
 
 $utilities: map-merge(
   $utilities,
@@ -241,6 +260,21 @@ $utilities: map-merge(
     ),
   )
 );
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "shadow": (
+      responsive: true,
+      property: box-shadow,
+      class: shadow,
+      values: (
+      "-grey": 5px 5px 20px 5px rgba(#F1F1F1, 0.8),
+      ),
+    ),
+  )
+);
+
 
 ////////////////////////////////////////////////////
 // Layout & components

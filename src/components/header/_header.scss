@@ -35,4 +35,15 @@ $zaux-header-lg-h: 158px !default;
       height: $zaux-header-lg-h;
     }
   }
+
+  & .c-icon {
+    & .icozaux1-menu {
+      width: 26px;
+      height: 20px;
+    }
+    & .icozaux1-search {
+     width: 24px;
+     height: 24px;
+    }
+  }
 }
