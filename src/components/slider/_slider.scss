@@ -9,4 +9,24 @@ $component: componentClass("slider");
     overflow: hidden;
     position: relative;
   }
+  & .swiper-slide div {
+    border: 1px solid #F1F1F1;
+  }
+
+  & .swiper-pagination {
+    @include media-breakpoint-down(lg) {
+      bottom: 30px;
+     }
+
+    &-bullet{
+      width: 15px;
+      height: 15px;
+      background-color: white;
+      border: 2px solid #979797;
+    }
+    &-bullet-active{
+      background-color: #979797;
+    }
+  }
+
 }

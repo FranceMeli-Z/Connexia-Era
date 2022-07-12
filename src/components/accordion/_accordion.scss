@@ -7,16 +7,17 @@ $component: componentClass("accordion");
 
 .#{$component} {
   width: 100%;
+  position: relative;
   @include media-breakpoint-up(lg) {
     width: 825px;
     margin: auto;
 }
 
-  // &.closed {
-  //   & .#{$component}__head::after {
-  //     content: '+';
-  //   }
-  // }
+  &.closed {
+    & .#{$component}__head::after {
+      content: '+';
+    }
+  }
     &.closed {
       & .#{$component}__inner {
         &:hover {
@@ -32,14 +33,18 @@ $component: componentClass("accordion");
         @include media-breakpoint-up(lg) {
             height: 90px;
       }
-      // &::after {
-      //   content: '-';
-      //   position: absolute;
-      //   right: 25px;
-      //   top:20px;
-      //   font-size: 30px;
-
-      // }
+      &::after {
+        content: '-';
+        position: absolute;
+        right: 25px;
+        top:24px;
+        font-size: 30px;
+        font-family: $zaux-font2;
+        font-weight: 600;
+        @include media-breakpoint-down(lg) {
+        top:8px;
+    }
+      }
     }
     & ul {
       list-style: none;
@@ -48,6 +53,13 @@ $component: componentClass("accordion");
 
   &.open  .#{$component}__head {
    border-bottom: 5px solid #F1F1F1;
+   &::after {
+    top:20px;
+    @include media-breakpoint-down(lg) {
+      top:4px;
+  }
+   }
+
   }
   &.open  .#{$component}__show {
     display: block !important;

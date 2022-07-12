@@ -1,0 +1,80 @@
+{% import 'components/img/img.njk' as Img %}
+
+<div class="c-slider flex-grow-1"  data-config='{{component_slider.demo.slider1.config | dump | safe}}' data-js-component="Slider">
+  {# mb-lg-8 #}
+  <div class="c-slider__wrapper">
+    <div class="c-slider__instance swiper swiper-container d-flex flex-column">
+
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide mb-4">
+          <div class="zaux-bg-default-white py-6 py-lg-10 px-4 px-lg-8">
+            {# mih-lg-f350vh #}
+                {{
+                  Img.content({
+                  "isLazy": false,
+                  "src": "media/Chart1.png",
+                  "src2x": "media/Chart1@2x.png",
+                  "width": 940,
+                  "height": 392,
+                  "className": ["img-fluid"],
+                  "title": "title",
+                  "alt": "alt",
+                  "wrapperTag": ["picture"],
+                  "wrapperClassName": ["d-block text-center"]
+                  })
+                }}
+          </div>
+        </div>
+
+        <div class="swiper-slide mb-4">
+          <div class="zaux-bg-default-white py-6 py-lg-10 px-4 px-lg-8">
+            {# mih-lg-f350vh #}
+                {{
+                  Img.content({
+                  "isLazy": false,
+                  "src": "media/Chart1.png",
+                  "src2x": "media/Chart1@2x.png",
+                  "width": 940,
+                  "height": 392,
+                  "className": ["img-fluid"],
+                  "title": "title",
+                  "alt": "alt",
+                  "wrapperTag": ["picture"],
+                  "wrapperClassName": ["d-block text-center"]
+                  })
+                }}
+          </div>
+        </div>
+
+      </div>
+      <div class="d-flex justify-content-between mb-10">
+            <div class="w-70 c-typo-style1-1 c-typo-style1-lg-3">
+              <p>Transplantation decision flow chart for patients with type 1 diabetes.</p>
+            </div>
+            <div class="zaux-theme--light1">
+              <a href="#" class="pe-3 pe-lg-5"> {{
+              Icon.content({
+                "className": "",
+                "iconName": "icozaux1-Print",
+                "iconSvgUrl": app.fonts.icozaux1.url
+                })
+              }}
+            </a>
+            <a href="#"> {{
+              Icon.content({
+                "className": "",
+                "iconName": "icozaux1-Download",
+                "iconSvgUrl": app.fonts.icozaux1.url
+                })
+              }}
+            </a>
+            </div>
+          </div>
+      <div class="swiper-pagination"></div>
+
+    </div>
+    <!-- .c-slider__instance -->
+  </div>
+  <!-- .c-slider__wrapper -->
+</div>

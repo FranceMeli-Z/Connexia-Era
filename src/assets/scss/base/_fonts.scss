@@ -31,6 +31,36 @@
   fill: currentColor;
 }
 
+[class^="-share"],
+[class*="-share"] {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+  @include media-breakpoint-down(lg) {
+    width: 30px;
+    height: 30px;
+  }
+}
+.icozaux1-arrowL {
+  width: 30px !important;
+  height: 25px;
+  fill: #f1f1f1
+
+}
+.icozaux1-arrowR {
+  width: 30px;
+  height: 25px;
+  fill: tokenColor("set1","red1");
+}
+
+.icozaux1-Print, .icozaux1-Download {
+  width: 30px;
+  height: 30px;
+}
+
 @font-face {
   font-family: 'Work Sans';
   src: url('../fonts/WorkSans/WorkSans-Bold.eot');

@@ -5,7 +5,7 @@
 {% import 'components/img/img.njk' as Img %}
 {% import 'components/icon/icon.njk' as Icon %}
 {% import 'components/btn/btnIcon.njk' as BtnIcon %}
-{% import 'components/card1/card1.njk' as Card1 %}
+{% import 'components/card1/card1_highlight.njk' as CardHighlight %}
 {% import 'components/card2/card2_news.njk' as Card2 %}
 {% import 'components/boxcontent/boxcontent.njk' as BoxContent %}
 {% import 'components/form/form.njk' as Form %}
@@ -27,12 +27,28 @@
 
     {# {{ HeroVideo.content(page.data.blocks.videoHero1) }} #}
 
-     <div class="zaux-bg-set1-grey p-box">
-        <div class="pb-4 pt-9 py-lg-8">
-          <div class="zaux-theme--light1 font-zaux2 pb-2 pb-lg-4">
+     <div class="zaux-bg-set1-grey position-relative">
+        <div class="position-absolute w-lg-40 end-0">
+           {{
+        Img.content({
+          "isLazy": false,
+          "src": "media/Homebox.png",
+          "src2x": "media/Homebox.png",
+          "width": 573,
+          "height": 375,
+          "className": ["img-fluid","w-size-200"],
+          "title": "title",
+          "alt": "alt",
+          "wrapperElement": "",
+          "wrapperClassName": ""
+        })
+      }}
+        </div>
+        <div class="p-box pb-4 pt-9 py-lg-8">
+          <div class="zaux-theme--light1 font-zaux2 pb-5 maw-size-custom1">
             <h6 class="fw-demi c-typo-fs-8 c-typo-fs-lg-13">Leading European Nephrology</h6>
           </div>
-          <div class="maw-f768px">
+          <div class="maw-f550 c-typo-style1-4">
             <p>A Europe where kidney health is prioritised, kidney care is accessible, the kidney community is thriving.</p>
           </div>
         </div>
@@ -43,6 +59,8 @@
         <div class="font-zaux2 pb-4 pt-6 pb-lg-9 pt-lg-11">
           <h6 class="fw-demi  c-typo-fs-10 c-typo-fs-lg-16">What we do</h6>
         </div>
+
+        <!-- start row -->
         <div class="row gx-3">
            {% set total = 6 %}
            {% set _htmlCardContent %}
@@ -62,12 +80,12 @@
           {% endset %}
            {# "c-ratio--square", "c-ratio--md-none" #}
           {% for i in range(0, total) %}
-            {{Card1.content(
+            {{CardHighlight.content(
               {
-                "className": ["col-12", "col-md-6","col-lg-4", "h-100", "pb-6"],
+                "className": ["col-12", "col-md-6","col-lg-4", "h-100", "pb-6","c-card1--theme--light"],
                 "variations": ["lg-size1"],
                 "innerClassName": [],
-                "contentClassName": ["d-flex", "justify-content-between", "flex-column", "p-6","zaux-bg-set1-darkgrey"],
+                "contentClassName": ["d-flex", "justify-content-between", "flex-column", "p-6"],
                 "content": _htmlCardContent,
                 "img": {
                 "isShaped": true,
@@ -87,6 +105,8 @@
             )}}
           {% endfor %}
         </div>
+      <!-- end row -->
+
       </div>
     </div>
 
@@ -96,10 +116,24 @@
         <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16 mb-3">Latest Tweets</h6>
       </div>
       <div class="pb-9 m-auto">
-        <div class="text-center">
-          <div class="">
+        <div class="d-flex align-items-center justify-content-center position-relative">
+         <div class="d-none d-lg-block position-absolute zaux-pos-twitter1">
+             {{
+                  Img.content({
+                  "isLazy": false,
+                  "src": "media/ProvaTwitter.png",
+                  "src2x": "media/ProvaTwitter.png",
+                  "width": 274,
+                  "height": 287,
+                  "className": ["img-fluid"],
+                  "title": "title",
+                  "alt": "alt",
+                  "wrapperElement": ["figure"],
+                  "wrapperClassName": [""]
+                  })
+                }}
           </div>
-          <div class="">
+          <div class="zaux-zi-1 position relative">
              {{
                   Img.content({
                   "isLazy": false,
@@ -107,15 +141,29 @@
                   "src2x": "media/ProvaTwitter.png",
                   "width": 396,
                   "height": 415,
-                  "className": "img-fluid",
+                  "className": ["img-fluid"],
                   "title": "title",
                   "alt": "alt",
-                  "wrapperElement": "figure",
+                  "wrapperElement": ["figure"],
                   "wrapperClassName": ""
                   })
                 }}
           </div>
-          <div class="">
+         <div class="d-none d-lg-block position-absolute zaux-pos-twitter2">
+             {{
+                  Img.content({
+                  "isLazy": false,
+                  "src": "media/ProvaTwitter.png",
+                  "src2x": "media/ProvaTwitter.png",
+                  "width": 274,
+                  "height": 287,
+                  "className": ["img-fluid"],
+                  "title": "title",
+                  "alt": "alt",
+                  "wrapperElement": ["figure"],
+                  "wrapperClassName": [""]
+                  })
+                }}
           </div>
         </div>
       </div>
@@ -143,7 +191,7 @@
       <div class="font-zaux2 pb-5">
         <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Join our newsletter</h6>
       </div>
-      <div class="c-typo-style1-8 maw-f768px m-auto pb-7 pb-lg-8">
+      <div class="c-typo-style1-8 maw-f825 m-auto pb-7 pb-lg-8">
        <p>Nephrology News Flash is the official ERA e-newsletter. It is circulated bi-weekly and serve the nephrological community by publishing ERA‘s initiatives,
         reporting on ongoing activities and sharing new hot papers from ERA Journals. </p>
       </div>
@@ -157,12 +205,28 @@
     </div>
    </div>
 
-   <div class="">
-    <div class="zaux-bg-set1-grey p-box">
+   <div class="mb-9 position-relative mih-560 overflow-hidden">
+    <div class="position-absolute zaux-zi--1 zaux-pos-custom1">
+       {{
+        Img.content({
+          "isLazy": false,
+          "src": "assets/img/CombinedShape.svg",
+          "src2x": "assets/img/CombinedShape.svg",
+          "width": 1440,
+          "height": 562,
+          "className": [""],
+          "title": "title",
+          "alt": "alt",
+          "wrapperElement": "",
+          "wrapperClassName": ""
+        })
+      }}
+    </div>
+    <div class="p-box">
       <div class="font-zaux2 py-6 zaux-theme--light2 text-center">
         <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16 mb-3">Our Pillars</h6>
       </div>
-      <div class="row pb-7 pb-lg-10">
+      <div class="row pb-lg-9">
         <div class="col-12 col-lg-4 pb-7 pb-lg-0">
           <div class="pillars-t1 font-zaux2 text-center pb-2 pb-lg-4">
              <h6 class="fw-demi c-typo-fs-8 c-typo-fs-lg-13 mb-3"><a class="zaux-color-set1-green1" href="#">EDUCATION</a></h6>
@@ -196,14 +260,11 @@
 
   {% include "partials/ui/news.njk" %}
 
-  <hr>
-
   {% include "partials/ui/mostpopular.njk" %}
 
-  <hr>
 
   <div class="p-box pb-8">
-    <div class="py-6 zaux-theme--light2 pb-6 pb-md-9">
+    <div class="zaux-theme--light2 pb-6 pb-md-9">
       <h6 class="c-typo-fs-10 c-typo-fs-lg-16"><strong>Latest Webcast</strong></h6>
     </div>
     <div class="row">

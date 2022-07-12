@@ -4,7 +4,7 @@
 {# Imports components #}
 {% import 'components/icon/icon.njk' as Icon %}
 {% import 'components/btn/btnIcon.njk' as BtnIcon %}
-{% import 'components/card1/card1.njk' as Card1 %}
+{% import 'components/card1/card1_highlight.njk' as CardHighlight %}
 {% import 'components/card1/card1_profile.njk' as CardProfile %}
 {% import 'components/card1/card1_overview.njk' as CardOverview %}
 {% import 'components/card1/card1_story.njk' as CardStory %}
@@ -66,7 +66,7 @@
               {% for decoVariation in _decoVariations %}
 
                 <div class="col-12 col-md-6 col-lg-4 mb-3">
-                  {{Card1.content(
+                  {{CardHighlight.content(
               {
                 "className": ["h-100", "pb-6"],
                 "variations": ["lg-size1"],

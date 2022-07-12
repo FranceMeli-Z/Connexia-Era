@@ -8,15 +8,23 @@ $component: componentClass("card1");
 // Theme: Light1
 ////////////////////////////////////////////////////
 
-.zaux-theme--light1 .#{$component}__inner {
+.#{$component} {
+
+  &--theme--light {
+
+  & .#{$component}__content {
+    background-color: #3F3F3FBF;
+
+    &:hover {
+      background-color: #3F3F3FF2;
+    }
+  }
+
+}
+
 }
 
 ////////////////////////////////////////////////////
 // Theme: Dark1
 ////////////////////////////////////////////////////
 
-.zaux-theme--dark1 .#{$component} {
-  &__title {
-    color: tokenColor("set1", "white1");
-  }
-}

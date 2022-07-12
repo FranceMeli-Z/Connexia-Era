@@ -36,19 +36,19 @@ $component: componentClass("form");
         @include media-breakpoint-down(lg) {
           font-size: 14px;
         }
-        optgroup {
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+      &  optgroup {
           font-style: italic;
           font-size: 13px;
           font-weight: 400;
           padding-left: 20px;
         }
-        option {
+      &  option {
           font-size: 13px;
-          &:hover {
-            text-decoration: underline;
-          }
-          &:active {
-            background-color: #951616;
+          &:focus {
+            text-decoration: underline !important;
           }
         }
         // &:not(optgroup) {

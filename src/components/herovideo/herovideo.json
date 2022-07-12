@@ -1,0 +1,52 @@
+{
+  "body": {
+    "className": ""
+  },
+  "blocks": {
+    "videoHero1": {
+      "innerClassName": [
+        "zaux-bg-set1-darkgray1",
+        "vh-100-nHeaderHeight",
+        "vh-lg-100-nHeaderHeightLg"
+      ],
+      "isAutoplay": true,
+      "imgCover": {
+        "isLazy": false,
+        "_sources": {
+          "maxMd": [
+            {
+              "src": "media/ProvaContent1.webp",
+              "src2x": "media/ProvaContent1.webp"
+            }
+          ],
+          "minLg": [
+            {
+              "src": "media/ProvaContent1.webp",
+              "src2x": "media/ProvaContent1.webp"
+            }
+          ]
+        },
+        "src": "media/ProvaContent.png",
+        "width": 1254,
+        "height": 705,
+        "className": [
+          "c-herovideo__cover-img",
+          "zaux-fit-cover-center-center",
+          "img-fluid"
+
+        ],
+        "wrapperClassName": [
+          "c-herovideo__cover",
+          "h-100"
+        ]
+      },
+      "sources": [
+        {
+          "mime": "video/mp4",
+          "src": ""
+        }
+      ],
+      "showPlayBtn":"y"
+    }
+  }
+}

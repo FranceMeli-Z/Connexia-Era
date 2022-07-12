@@ -12,6 +12,32 @@
 
 $zaux-helper-name: "pos";
 
-.maw-f768px {
-  max-width: 768px;
+// Custom
+
+.zaux-#{$zaux-helper-name}-custom1 {
+  @include media-breakpoint-down(lg) {
+    left: -150px;
+  }
 }
+.zaux-#{$zaux-helper-name}-custom2 {
+  top:30px;
+  @include media-breakpoint-down(lg) {
+    top:15px;
+    left: -300px;
+  }
+}
+
+// Custom Twitter Box
+.zaux-#{$zaux-helper-name}-twitter1 {
+    position: absolute;
+    left: 188px;
+
+}
+.zaux-#{$zaux-helper-name}-twitter2 {
+    position: absolute;
+    right: 188px;
+
+}
+
+
+

@@ -16,11 +16,62 @@ $zaux-helper-name: "size";
   min-width: 397px;
 }
 
-
 //// Box Title ///
 .mih-boxtitle {
   min-height: 155px;
   @include media-breakpoint-up(lg) {
     min-height: 212px;
+  }
+}
+
+.mih-200 {
+  min-height: 200px;
+}
+.mih-215 {
+  min-height: 215px;
+}
+.mih-560 {
+  min-height: 560px;
+}
+.mih-625 {
+  min-height: 625px;
+}
+
+
+//max width
+.maw-f400 {
+  max-width: 400px;
+}
+
+.maw-f550 {
+  max-width: 550px;
+}
+
+.maw-f768 {
+  max-width: 768px;
+}
+
+.maw-f825 {
+  max-width: 825px;
+}
+
+.maw-1040 {
+  max-width: 1040px;
+}
+
+
+//Width
+.w-#{$zaux-helper-name}-200 {
+  @include media-breakpoint-down(lg) {
+    width: 200px;
+  }
+}
+
+
+//Custom
+.maw-#{$zaux-helper-name}-custom1 {
+  max-width: 550px;
+  @include media-breakpoint-down(lg) {
+    max-width: 200px;
   }
 }

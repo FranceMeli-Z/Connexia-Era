@@ -16,8 +16,38 @@
   }
 }
 
-hr {
-  height: 2px !important;
-  color: tokenColor("set1", "grey2");
-  margin: 0 93px;
+// Home Pillars misc
+[class^="pillars-"],
+[class*="pillars-"] {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.pillars-t1 {
+  & a:hover{
+  color: #09731C !important;
+  }
+}
+.pillars-t2 {
+  & a:hover {
+    color: #DEB114 !important;
+  }
+}
+.pillars-t3 {
+  & a:hover {
+    color: #003D80 !important;
+  }
+}
+
+.zaux-zi--1 {
+  z-index: -1;
+}
+.zaux-zi-1 {
+  z-index: 1;
+}
+
+.border-gradient {
+  border-width: 2px;
+  border-style: solid;
+  border-image: linear-gradient(to right ,#b827fc 0%, #fd1892 25%, #fec837 50%,  #b8fd33 75%, #2c90fc 100%) 1;
 }

@@ -5,7 +5,6 @@
 {% import 'components/img/img.njk' as Img %}
 {% import 'components/icon/icon.njk' as Icon %}
 {% import 'components/btn/btnIcon.njk' as BtnIcon %}
-{% import 'components/card1/card1.njk' as Card1 %}
 {% import 'components/card2/card2_news.njk' as Card2 %}
 {% import 'components/boxcontent/boxcontent.njk' as BoxContent %}
 {% import 'components/form/form.njk' as Form %}
@@ -35,7 +34,7 @@
             <div class="font-zaux2 zaux-theme--light1 pb-2 pb-lg-4">
               <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Guidelines & Best Practises</h6>
             </div>
-            <div class="maw-f768px">
+            <div class="maw-f768px c-typo-style1-3 c-typo-style1-lg-4">
               <p>Updated and reviewed guideliens for clinical practice.</p>
             </div>
           </div>
@@ -58,7 +57,7 @@
             })
            }}
           </div>
-          <div class="pb-5 pb-lg-8">
+          <div class="pb-5 pb-lg-8 overflow-auto text-nowrap">
               <a class="c-cta2 c-cta2--sm c-cta1--grey" href="#" title="button title">Optimising care</a>
               <a class="c-cta2 c-cta2--sm c-cta1--grey" href="#" title="button title">Covid-19</a>
               <a class="c-cta2 c-cta2--sm c-cta1--grey" href="#" title="button title">Robot assistance</a>
@@ -186,6 +185,7 @@
           <div class="text-center pt-4 pt-lg-6">
            <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">Load more</a>
           </div>
+
         </div>
         <!-- end archive -->
       </div>
@@ -193,7 +193,7 @@
 
     {% include "partials/ui/news.njk" %}
 
-     {% include "partials/ui/related_cont.njk" %}
+    {% include "partials/ui/related_cont.njk" %}
 
   </main>
 

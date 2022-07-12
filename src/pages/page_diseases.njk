@@ -4,7 +4,6 @@
 {% import 'components/img/img.njk' as Img %}
 {% import 'components/icon/icon.njk' as Icon %}
 {% import 'components/btn/btnIcon.njk' as BtnIcon %}
-{% import 'components/card1/card1.njk' as Card1 %}
 {% import 'components/card2/card2_news.njk' as Card2 %}
 {% import 'components/card2/card2_related.njk' as CardRelated %}
 {% import 'components/breadcrumbs/breadcrumbs.njk' as Breadcrumbs %}
@@ -25,7 +24,7 @@
 
      <!-- First box -->
       <div class="mb-7 mb-lg-10">
-        <div class="row m-0">
+        <div class="row gx-3 m-0">
           <div class="zaux-bg-set1-grey p-box rounded-bottom-100 col-12 col-lg-8 mih-boxtitle pt-3 pt-lg-6">
             <div class="pb-2 pb-lg-4">
               {{ Breadcrumbs.content() }}
@@ -33,7 +32,7 @@
             <div class="font-zaux2 zaux-theme--light1 pb-2 pb-lg-4">
               <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Desease & Treatments</h6>
             </div>
-            <div class="maw-f768px">
+            <div class="maw-f768px c-typo-style1-3 c-typo-style1-lg-4">
               <p>The new section of ERA dedicated to all that concerns pathologies and their cures and treatments</p>
             </div>
           </div>
@@ -45,41 +44,44 @@
 
       <div class="p-box pb-2 pb-lg-7">
         <div class="row gx-3">
-              {%
-                set _decoVariations = [
-                  "deco1-l-t",
-                  "deco1-r-t"
-                ]
-              %}
-
-              {% for decoVariation in _decoVariations %}
-
                 <div class="col-12 col-md-6 pb-6">
                   {{CardRelated.content(
                     {
-                      "className": ["d-lg-flex", "justify-content-center"],
+                      "className": ["d-lg-flex", "justify-content-center","maw-f400","m-auto","h-100"],
                       "innerClassName": ["border-all-gradient", "miw-f397", "py-8", "px-2", "px-lg-6"],
                       "contentClassName": ["text-center"],
                       "content": {
                         "title": "Diseases",
-                        "list": ["Acute Kidney Injury", "CKD-MBD", "Diabetes", "Fabry nephropathy", "Hyponatraemia", "Obesity"]
+                        "list": ["Acute Kidney Injury", "CKD-MBD", "Diabetes", "Fabry nephropathy", "Hyponatraemia", "Obesity","Inherited Kidney Disorders","Nephropathic cystinosis","Autosomal dominant polycystic kidney disease"]
                       }
                     }
                   )}}
 
                 </div>
                 <!-- .col-* -->
-              {% endfor %}
+                <div class="col-12 col-md-6 pb-6">
+                  {{CardRelated.content(
+                    {
+                      "className": ["d-lg-flex", "justify-content-center","maw-f400","m-auto","h-100"],
+                      "innerClassName": ["border-all-gradient", "miw-f397", "py-8", "px-2", "px-lg-6"],
+                      "contentClassName": ["text-center"],
+                      "content": {
+                        "title": "Treatments",
+                        "list": ["Acute Kidney Injury", "CKD-MBD", "Diabetes", "Fabry nephropathy", "Hyponatraemia", "Obesity","Nephroprotection"]
+                      }
+                    }
+                  )}}
+
+                </div>
+                <!-- .col-* -->
+
         </div>
       </div>
 
   {% include "partials/ui/news.njk" %}
 
-  <hr>
+  {% include "partials/ui/news.njk" %}
 
-   {% include "partials/ui/news.njk" %}
-
-  <hr>
   <div class="p-box pb-2 pb-lg-8">
     <div class="zaux-theme--light2 pb-6 pb-md-9">
       <h6 class="c-typo-fs-10 c-typo-fs-lg-16"><strong>You may also like</strong></h6>

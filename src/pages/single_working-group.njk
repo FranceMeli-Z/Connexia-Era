@@ -1,0 +1,585 @@
+{# Sets the layout to be extended #}
+{% extends "layouts/default.njk" %}
+
+{# Imports components #}
+{% import 'components/img/img.njk' as Img %}
+{% import 'components/icon/icon.njk' as Icon %}
+{% import 'components/btn/btnIcon.njk' as BtnIcon %}
+{% import 'components/card1/card1_highlight.njk' as CardHighlight %}
+{% import 'components/card2/card2_news.njk' as Card2 %}
+{% import 'components/card1/card1_overview.njk' as CardOverview %}
+{% import 'components/card1/card1_profile.njk' as CardProfile %}
+{% import 'components/boxcontent/boxcontent.njk' as BoxContent %}
+{% import 'components/breadcrumbs/breadcrumbs.njk' as Breadcrumbs %}
+
+{# Sets page-specific variables #}
+{% set page = {
+  "data": page_single_e-seminars,
+  "title": "Page Single Seminars",
+  "isHome": false
+} %}
+
+{% block head_css %}
+  <link rel="stylesheet" href="assets/css/general.bundle.css">
+{% endblock %}
+
+{% block content %}
+
+  <main>
+      <!-- First box -->
+      <div class="mb-lg-8 mb-5">
+        <div class="row m-0">
+          <div class="zaux-bg-set1-grey p-box rounded-bottom-100 mb-lg-0 mb-7 col-12 col-lg-8 mih-boxtitle pt-3 pt-lg-6">
+            <div class="pb-2 pb-lg-4">
+              {{ Breadcrumbs.content() }}
+            </div>
+            <div class="font-zaux2 zaux-theme--light1 pb-2 pb-lg-4">
+              <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">CKD-MBD Working Group</h6>
+            </div>
+             <div class="c-typo-style1-3 c-typo-style1-lg-4 maw-f768px">
+              <p>Chronic Kidney Disease and Metabolic Bone Disease Working Group</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4 d-flex align-items-center justify-content-center">
+            {{
+                  Img.content({
+                  "isLazy": false,
+                  "src": "media/LogoOverview.png",
+                  "src2x": "media/LogoOverview.png",
+                  "width": 200,
+                  "height": 90,
+                  "className": ["img-fluid"],
+                  "title": "title",
+                  "alt": "alt",
+                  "wrapperElement": ["figure"],
+                  "wrapperClassName": [""]
+                  })
+            }}
+          </div>
+        </div>
+      </div>
+      <!-- end First box -->
+
+       <!-- Testo Works-->
+      <div class="pb-7 pb-lg-10 p-box">
+
+        <div class="row gx-3">
+          <div class="col-12 col-lg-8">
+              <div class="font-zaux2 zaux-theme--light2 pb-3 pb-lg-4 maw-f768px">
+                  <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">Our works</h6>
+              </div>
+              <div class="c-typo-style1-4 c-typo-style1-lg-8">
+                <p>The clinical “syndrome” of CKD-MBD has been recognized as an important contributor to morbidity and mortality throughout all stages of CKD. In the past, research centers have traditionally and individually focused on some isolated aspects of this newly recognized entity. Nevertheless, CKD-MBD is a complex interaction of multiple disturbances finally resulting in heterogeneous sequelae. Thus, a common platform for educational, intellectual and personal-fellow exchange needed facilitate research in a field where many efforts are still needed.
+                  It was felt that large scale cooperation between centers with special interest in these matters needed improvement in order to achieve a global and translational approach to pathophysiology, prevention and treatment of CKD-MBD. Research targets have not always met clinical needs and some urgent research targets have not still been adequately addressed, specially referring to important hard end-points.</p>
+                <p>Part of this kind of cooperation, such as exchange of expertise including fellow scholar and exchange programs started in 2010 as an international cooperative structure for centers with both scientific as well as clinical interests in CKD-MBD.
+                </p>
+                <p>
+                  As a first step, four scientific symposia (Amsterdam 2010, Prague EDTA 2011, Barcelona 2011, Paris EDTA 2012), two Fellow Days – where young fellows had the opportunity to meet and interact with experts in CKD-MBD) and an additional Fellow Training Day 2011 at UDETMA (Atherothrombotic Disease Detection and Treatment Unit), Lleida (Spain), have already been organized.
+                </p>
+              </div>
+          </div>
+          <div class="col-lg-4 pt-9">
+           <div class="maw-f400 m-auto">
+              <div class="border-gradient p-4">
+                <div class="zaux-theme--light1">
+                  <div class="font-zaux2 pb-3">
+                    <h6 class="fw-demi c-typo-fs-8 c-typo-fs-lg-10">Tool & Resouces</h6>
+                  </div>
+                  <div class="c-typo-style1-4 c-typo-style1-lg-8">
+                    <p><strong>Contacts</strong><p>
+                    <p>ckd-mbd@era-online.org</p>
+                    <br>
+                     <p><strong>Guidelines</strong><p>
+                     <ul class="text-decoration-underline ps-3">
+                      <li class="pb-2"><a href="#">KDIGO 2017 Clinical Practice Guideline 		Update for the Diagnosis, Evaluation, 			Prevention,	and Treatment of CKD-MBD</a></li>
+                      <li class="pb-2"><a href="#">ERBP endorsement of KDIGO guidelines</a></li>
+                      <li class="pb-2"><a href="#">KDOQI US Commentary on the 2009 KDIGO</a></li>
+                      <li class="pb-2"><a href="#">CARI 2006 (Caring for Australasians with Renal Impairment).</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- end row -->
+
+      </div>
+       <!-- Fine Testo Works -->
+
+       <!--Box Join WorkingGroup -->
+      <div class="mb-lg-8 mb-5 zaux-bg-set1-grey">
+        <div class="row">
+           <div class="col-12 col-lg-4 order-lg-2">
+            {{
+            Img.content({
+              "isLazy": false,
+              "src": "media/Homebox.png",
+              "src2x": "media/Homebox.png",
+              "width": 573,
+              "height": 375,
+              "className": ["img-fluid","float-end"],
+              "title": "title",
+              "alt": "alt",
+              "wrapperElement": "",
+              "wrapperClassName": ""
+            })
+            }}
+          </div>
+          <div class="p-box mb-lg-0 mb-7 col-12 col-lg-8 pt-3 pt-lg-6 order-lg-1">
+            <div class="font-zaux2 zaux-theme--light1 pb-2 pb-lg-4">
+              <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">CKD-MBD Working Group</h6>
+            </div>
+             <div class="pb-4 c-typo-style1-3 c-typo-style1-lg-4 maw-f768px">
+              <p>Being a ordinary member of the CKD-MBD Working Group means being part of a network which facilitates exchanges of in the field of interest of CKD-MBD and Bone Mineral disorders in CKD.</p>
+              <p>Becoming an ordinary member of the CKD-MBD Working Group is FREE OF CHARGE. Ordinary members must be ERA members and be persons with a proven interest in the research area covered by the WG. Exceptions are possible only for non-nephrologists.</p>
+              <p>By joining the CKD-MBD Working Group you will receive constant updates on the Working Group initiatives be included in the Directory of CKD-MBD Working Groups’ ordinary members and start networking with colleagues from all over the world.</p>
+            </div>
+            <div class="text-center text-lg-start pb-4 pb-lg-5">
+              <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">Join CKD-MBD</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+       <!-- End Box Join WorkingGroup -->
+
+    <!-- Start Latest Publication of Working Group -->
+    <div class="p-box mb-6 mb-lg-9">
+      <div class="pb-9 border-bottom-box">
+        <div class="d-flex justify-content-between align-items-center pb-6 pb-md-9">
+          <div class="font-zaux2 zaux-theme--light2 maw-f825">
+            <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">Latest Publications from CKD-MBD Working Group</h6>
+          </div>
+          <div class="d-none d-lg-block">
+            <a href="#" class="pe-8"> {{
+                      Icon.content({
+                        "className": "",
+                        "iconName": "icozaux1-arrowL",
+                        "iconSvgUrl": app.fonts.icozaux1.url
+                        })
+                      }}
+            </a>
+            <a href="#"> {{
+                      Icon.content({
+                        "className": "",
+                        "iconName": "icozaux1-arrowR",
+                        "iconSvgUrl": app.fonts.icozaux1.url
+                        })
+                      }}
+            </a>
+          </div>
+        </div>
+        <div class="row flex-nowrap flex-lg-wrap overflow-auto mb-6 mb-lg-9">
+                    {%
+                      set _decoVariations = [
+                        "deco1-l-t",
+                        "deco1-r-t",
+                        "deco1-r-b",
+                        "deco1-l-b"
+                      ]
+                    %}
+
+                    {% for decoVariation in _decoVariations %}
+
+                      <div class="col-12 col-md-3 col-lg-3">
+                        {{Card2.content(
+                          {
+                            "className": ["mih-215","h-100"],
+                            "innerClassName": ["h-100"],
+                            "contentClassName": ["d-flex", "justify-content-between", "flex-column","h-100"],
+                            "content": {
+                              "category": "Report",
+                              "title": "CKD-MBD Newsletter #23",
+                              "date": "March 18, 2022",
+                              "author": "CKD-MBD working group"
+                            }
+                          }
+                        )}}
+
+                      </div>
+                      <!-- .col-* -->
+                    {% endfor %}
+
+          </div>
+          <!-- end row-* -->
+          <div class="text-center text-lg-end">
+            <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">See all CKD-MBD publications</a>
+          </div>
+
+      </div>
+    </div>
+    <!-- End Latest Publication of Working Group -->
+
+
+    <!-- Start Card Profile  -->
+    <div class="p-box mb-3 mb-lg-7">
+      <div class="border-bottom-lg-box border-bottom-none ">
+        <div class="font-zaux2 zaux-theme--light2 mb-4">
+          <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16 mb-3">CKD-MBD Board</h6>
+        </div>
+         <div class="maw-f825 c-typo-style1-4 c-typo-style1-lg-8 mb-4 mb-lg-7">
+            <p>The CKD-MDB Board provides strategic direction to the working group. Board members enchance exchange of expertise and international cooperation.</p>
+          </div>
+          <div class="row gx-3 flex-nowrap flex-lg-wrap overflow-auto pb-0 pb-lg-8">
+                {%
+                  set _decoVariations = [
+                    "deco1-l-t",
+                    "deco1-r-t",
+                    "deco1-r-b",
+                    "deco1-l-b",
+                    "deco1-r-b",
+                    "deco1-l-b"
+                  ]
+                %}
+
+                {% for decoVariation in _decoVariations %}
+
+                  <div class="col-12 col-md-6 col-lg-4 pb-0 pb-lg-6">
+                    {{CardProfile.content(
+                      {
+                      "className": [],
+                      "variations": [],
+                      "innerClassName": ["zaux-bg-set1-grey py-8"],
+                      "contentClassName": ["text-center"],
+                      "img": {
+                        "isLazy": true,
+                        "src": "media/Profile.png",
+                        "src2x": "media/Profile@2x.png",
+                        "width": 120,
+                        "height": 120,
+                        "alt": "Cover alternative text",
+                        "className": ["img-fluid"]
+                      },
+                      "nome": "Marc Vervloet",
+                      "ruolo": "Chair"
+                      }
+                     )}}
+                  </div>
+                  <!-- .col-* -->
+                {% endfor %}
+
+        </div>
+        <!-- end row-* -->
+      </div>
+    </div>
+    <!-- End Card Profile  -->
+
+    <div class="p-box pb-8">
+      <div class="border-bottom-box mb-6">
+        <div class="font-zaux2 zaux-theme--light2 pb-4">
+          <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">Webcast</h6>
+        </div>
+        <div class="pb-6 c-typo-style1-4 c-typo-style1-lg-8 maw-f768">
+          <p>Watch up-to-date and cutting edge webcasts on Chronic Kidney Disease - Mineral Bone Disorder</p>
+        </div>
+        <div class="zaux-color-set1-grey1 c-typo-style1-3">
+            <p>4/67 publications</p>
+        </div>
+      </div>
+      <div class="row gx-3">
+
+                <div class="col-12">
+                  {{BoxContent.content(
+                    {
+                      "className": ["mb-6","pb-6","pb-lg-8","border-bottom-box"],
+                      "innerClassName": ["row"],
+                      "contentClassName": ["col-12", "col-lg-8","pe-4"],
+                      "content": {
+                        "title": "5th European Renal Osteodystrophy (EUROD) Winter Meeting",
+                        "category": "Report",
+                        "date": "March 18, 2022"
+                      },
+                        "img": {
+                          "isLazy": true,
+                          "src": "media/ProvaContent.png",
+                          "src2x": "media/ProvaContent@2x.png",
+                          "width": 396,
+                          "height": 223,
+                          "alt": "Cover alternative text",
+                          "className": ["img-fluid"]
+                        },
+                      "webcast" : {
+                         "author": ["Francesca Mallamaci"],
+                         "pannelist": ["Carmine Zoccali, Italy", "Mehmet Kanbay, Turkey"],
+                         "moderators": ["Will Herrington, United Kingdom", "Maria Josè Soler, Spain"]
+                      }
+
+                    }
+                  )}}
+
+                </div>
+                <div class="col-12">
+                  {{BoxContent.content(
+                    {
+                      "className": ["pb-6","pb-lg-8","border-bottom-box"],
+                      "innerClassName": ["row"],
+                      "contentClassName": ["col-12", "col-lg-8","pe-4"],
+                      "content": {
+                        "title": "5th European Renal Osteodystrophy (EUROD) Winter Meeting",
+                        "category": "Report",
+                        "date": "March 18, 2022"
+                      },
+                        "img": {
+                          "isLazy": true,
+                          "src": "media/ProvaContent.png",
+                          "src2x": "media/ProvaContent@2x.png",
+                          "width": 396,
+                          "height": 223,
+                          "alt": "Cover alternative text",
+                          "className": ["img-fluid"]
+                        },
+                      "webcast" : {
+                         "author": ["Francesca Mallamaci"],
+                         "pannelist": ["Carmine Zoccali, Italy", "Mehmet Kanbay, Turkey"],
+                         "moderators": ["Will Herrington, United Kingdom", "Maria Josè Soler, Spain"]
+                      }
+
+                    }
+                  )}}
+
+                </div>
+      </div>
+        <div class="text-center pt-4 pt-lg-6">
+            <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">Load more</a>
+          </div>
+    </div>
+
+
+    <div class="mb-6 position-relative mih-625 overflow-hidden">
+       <div class="position-absolute zaux-zi--1 zaux-pos-custom2">
+        {{
+          Img.content({
+            "isLazy": false,
+            "src": "assets/img/CombinedShape.svg",
+            "src2x": "assets/img/CombinedShape.svg",
+            "width": 1440,
+            "height": 595,
+            "className": [""],
+            "title": "title",
+            "alt": "alt",
+            "wrapperElement": "",
+            "wrapperClassName": ""
+          })
+        }}
+      </div>
+      <div class="p-box position-relative">
+         <div class="zaux-theme--light2 font-zaux2 text-center pb-6 pb-md-9">
+          <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">News about CKD-MBD Ongoing Projects</h6>
+        </div>
+
+         <!-- start row -->
+        <div class="row gx-3">
+           {% set total = 3 %}
+           {% set _htmlCardContent %}
+          <div class="card1__head zaux-theme--dark1">
+            <div class="card1__head--title font-zaux2 pb-2">
+              <h6 class="fw-bold c-typo-fs-8 c-typo-fs-lg-10">Open Call: NDT Editor in Chief</h6>
+            </div>
+          </div>
+          <div class="card1__button text-end">
+            <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">Read more</a>
+          </div>
+
+          {% endset %}
+           {# "c-ratio--square", "c-ratio--md-none" #}
+          {% for i in range(0, total) %}
+            {{CardHighlight.content(
+              {
+                "className": ["col-12","col-md-4", "h-100", "pb-6","c-card1--theme--light"],
+                "variations": ["lg-size1"],
+                "innerClassName": [],
+                "contentClassName": ["d-flex", "justify-content-between", "flex-column", "p-6"],
+                "content": _htmlCardContent,
+                "img": {
+                "isShaped": true,
+                "className": ["rounded-2", "overflow-hidden"],
+                "variations": ["style1", decoVariation],
+                "img": {
+                "isLazy": true,
+                "src": "media/backCard1.png",
+                "src2x": "media/backCard1.png",
+                "width": 396,
+                "height": 380,
+                "alt": "Cover alternative text",
+                "className": ["zaux-fit-cover-center-center", "w-100"]
+                }
+                }
+              }
+            )}}
+          {% endfor %}
+        </div>
+      <!-- end row -->
+
+
+      </div>
+    </div>
+
+    <div class="p-box mb-6 mb-lg-9">
+      <div class="row gx-3 border-bottom-box">
+        <div class="col-12 col-lg-6">
+              <div class="font-zaux2 zaux-theme--light2 pb-6 pb-lg-7 maw-f768px">
+                  <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">Ongoing projects</h6>
+              </div>
+              <!-- List of projects -->
+              <div class="mb-6 pb-6 border-bottom-box">
+                <div class="font-zaux2 zaux-theme--light1 pb-3 pb-lg-4">
+                  <h6 class="fw-demi c-typo-fs-8 c-typo-fs-lg-10">European Renal OsteoDystrophy (EUROD)</h6>
+                </div>
+                <div class="pb-4 c-typo-style1-4 c-typo-style1-lg-8">
+                  <p>This bone-biopsy network aims at joining nephrologists, endocrinologists and pathologists (Coordinator: Pieter Evenepoel). It is expected to collect the largest possible bone samples to be examined homogeneously, in order to improve knowledge on the role of bone in systemic disease CKD-MBD risk prediction score development. A web based registry, educational activities, training fellowships are part of the activities carried out by the group. Steering Committee: P. Evenepoel, M. Vervloet, S. Mazzaferro,
+                    P. D’Haese, J. Bacchetta, J. Cannata-Andia, A. Ferreira, M. Haarhaus, MH Lafage Proust, S. Salam S, G. Spasovski.</p>
+                </div>
+                <div class="card1__button">
+                  <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">Read more</a>
+                </div>
+              </div>
+              <div class="mb-6 pb-6 border-bottom-box">
+                <div class="font-zaux2 zaux-theme--light1 pb-3 pb-lg-4">
+                  <h6 class="fw-demi c-typo-fs-8 c-typo-fs-lg-10">Concerted Action in Renal Osteosdystrophy (CAiRO)</h6>
+                </div>
+                <div class="pb-4 c-typo-style1-4 c-typo-style1-lg-8">
+                  <p>This project consists of a population-based cohort study and a pilot biomarker study. It builds on unique
+                    epidemiological resources and cutting-edge analytical expertise, already available within the European-ROD (EUROD) initiative.</p>
+                </div>
+                <div class="card1__button">
+                  <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">Go to Project</a>
+                </div>
+              </div>
+              <div class="mb-6 pb-6">
+                <div class="font-zaux2 zaux-theme--light1 pb-3 pb-lg-4">
+                  <h6 class="fw-demi c-typo-fs-8 c-typo-fs-lg-10">European Renal OsteoDystrophy (EUROD)</h6>
+                </div>
+                <div class="pb-4 c-typo-style1-4 c-typo-style1-lg-8">
+                  <p>This bone-biopsy network aims at joining nephrologists, endocrinologists and pathologists (Coordinator: Pieter Evenepoel). It is expected to collect the largest possible bone samples to be examined homogeneously, in order to improve knowledge on the role of bone in systemic disease CKD-MBD risk prediction score development. A web based registry, educational activities, training fellowships are part of the activities carried out by the group. Steering Committee: P. Evenepoel, M. Vervloet, S. Mazzaferro,
+                    P. D’Haese, J. Bacchetta, J. Cannata-Andia, A. Ferreira, M. Haarhaus, MH Lafage Proust, S. Salam S, G. Spasovski.</p>
+                </div>
+                <div class="card1__button">
+                  <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">Read more</a>
+                </div>
+              </div>
+          </div>
+          <div class="col-12 col-lg-6 pb-6">
+            <div class="font-zaux2 zaux-theme--light2 pb-3 pb-lg-4 maw-f768px">
+              <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">Updates from recent publications in the field</h6>
+            </div>
+            <div class="row gx-3 flex-nowrap flex-lg-wrap overflow-auto">
+                {%
+                  set _decoVariations = [
+                    "deco1-l-t",
+                    "deco1-r-t",
+                    "deco1-r-b",
+                    "deco1-l-b"
+                  ]
+                %}
+
+                {% for decoVariation in _decoVariations %}
+
+                  <div class="col-12 col-md-6 pb-6">
+                    {{Card2.content(
+                      {
+                        "className": ["mih-215","h-100"],
+                        "innerClassName": ["h-100"],
+                        "contentClassName": ["d-flex", "justify-content-between", "flex-column","h-100"],
+                        "content": {
+                          "category": "Report",
+                          "title": "CKD-MBD Newsletter #23",
+                          "date": "March 18, 2022",
+                          "author": "CKD-MBD working group"
+                        }
+                      }
+                    )}}
+
+                  </div>
+                  <!-- .col-* -->
+                {% endfor %}
+
+            </div>
+            <!-- end row-* -->
+            <div class="card1__button text-center text-lg-end">
+              <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">See all CKD-MBD related publications</a>
+            </div>
+          </div>
+      </div>
+        <!-- end row -->
+    </div>
+
+    <div class="mb-6 p-box">
+      <div class="">
+        <div class="font-zaux2 zaux-theme--light2 pb-6 pb-lg-7 maw-f768px">
+          <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">Guidelines related to CKD-MBD</h6>
+        </div>
+        <div class="row gx-3">
+          <div class="col-12 col-lg-6">
+            <div class="row gx-3 flex-nowrap flex-lg-wrap overflow-auto">
+                {%
+                  set _decoVariations = [
+                    "deco1-l-t",
+                    "deco1-r-t",
+                    "deco1-r-b",
+                    "deco1-l-b"
+                  ]
+                %}
+
+                {% for decoVariation in _decoVariations %}
+
+                  <div class="col-12 col-md-6 pb-6">
+                    {{Card2.content(
+                      {
+                        "className": ["mih-215","h-100"],
+                        "innerClassName": ["h-100"],
+                        "contentClassName": ["d-flex", "justify-content-between", "flex-column","h-100"],
+                        "content": {
+                          "category": "Report",
+                          "title": "CKD-MBD Newsletter #23",
+                          "date": "March 18, 2022",
+                          "author": "CKD-MBD working group"
+                        }
+                      }
+                    )}}
+
+                  </div>
+                  <!-- .col-* -->
+                {% endfor %}
+
+            </div>
+          <!-- end row -->
+           </div>
+          <!-- end col -->
+          <div class="col-12 col-lg-6">
+
+            <div class="maw-f400 m-auto m-lg-0 float-lg-end">
+              <div class="border-gradient p-4">
+                <div class="zaux-theme--light1">
+                  <div class="font-zaux2 pb-3">
+                    <h6 class="fw-demi c-typo-fs-8 c-typo-fs-lg-10">Selected Past Events</h6>
+                  </div>
+                  <div class="c-typo-style1-4 c-typo-style1-lg-8">
+                     <ul class="text-decoration-underline ps-3">
+                      <li class="pb-2"><a href="#">5th European Renal Osteodystrophy (EUROD) 	Winter Meeting – January 20-21, 2022</a></li>
+                      <li class="pb-2"><a href="#">Nephrology Virtual Preceptorship: Fracture Prevention in CKD–  December 4, 2020</a></li>
+                      <li class="pb-2"><a href="#">3rd European Renal Osteodystrophy (EUROD) 	Winter meeting – January 18, 2020 – Leuven, Belgium</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      <!-- end row -->
+
+      </div>
+    </div>
+
+
+
+  </main>
+
+{% endblock %}
+
+{% block foot_js %}
+  <script defer src="assets/js/general.bundle.js"></script>
+{% endblock %}

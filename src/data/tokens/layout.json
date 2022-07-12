@@ -45,9 +45,10 @@
     }
   },
   "container-max-widths": {
-    "s": "906px",
-    "m": "1208px",
-    "l": "1920px"
+    "s": "492px",
+    "m": "762px",
+    "l": "992px",
+    "max":"1440px"
   },
   "grid-gutter-width-px": 10,
   "gutters": {

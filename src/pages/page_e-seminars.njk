@@ -5,8 +5,8 @@
 {% import 'components/img/img.njk' as Img %}
 {% import 'components/icon/icon.njk' as Icon %}
 {% import 'components/btn/btnIcon.njk' as BtnIcon %}
-{% import 'components/card1/card1.njk' as Card1 %}
 {% import 'components/card2/card2_news.njk' as Card2 %}
+{% import 'components/card2/card2_related.njk' as CardRelated %}
 {% import 'components/boxcontent/boxcontent.njk' as BoxContent %}
 {% import 'components/form/form.njk' as Form %}
 {% import 'components/breadcrumbs/breadcrumbs.njk' as Breadcrumbs %}
@@ -35,7 +35,7 @@
             <div class="font-zaux2 zaux-theme--light1 pb-2 pb-lg-4">
               <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">E-Seminars</h6>
             </div>
-            <div class="maw-f768px">
+            <div class="maw-f768px c-typo-style1-3 c-typo-style1-lg-4">
               <p>All webcast series in one place</p>
             </div>
           </div>
@@ -58,7 +58,7 @@
             })
            }}
           </div>
-          <div class="pb-5 pb-lg-8">
+          <div class="pb-5 pb-lg-8 overflow-auto text-nowrap">
               <a class="c-cta2 c-cta2--sm c-cta1--grey" href="#" title="button title">Optimising care</a>
               <a class="c-cta2 c-cta2--sm c-cta1--grey" href="#" title="button title">Covid-19</a>
               <a class="c-cta2 c-cta2--sm c-cta1--grey" href="#" title="button title">Robot assistance</a>
@@ -193,7 +193,41 @@
 
     {% include "partials/ui/news.njk" %}
 
-     {% include "partials/ui/related_cont.njk" %}
+     <div class="p-box pb-2 pb-lg-8">
+    <div class="zaux-theme--light2 pb-6 pb-md-9">
+      <h6 class="c-typo-fs-10 c-typo-fs-lg-16"><strong>Related Content</strong></h6>
+    </div>
+    <div class="row gx-3">
+              {%
+                set _decoVariations = [
+                  "deco1-l-t",
+                  "deco1-r-t",
+                  "deco1-r-b",
+                  "deco1-l-b"
+                ]
+              %}
+
+              {% for decoVariation in _decoVariations %}
+
+                <div class="col-12 col-md-6 pb-6">
+                  {{CardRelated.content(
+                    {
+                      "className": ["h-100"],
+                      "innerClassName": ["border-all-gradient py-8 px-2 px-lg-7"],
+                      "contentClassName": ["text-center"],
+                      "content": {
+                        "cta": "Profile",
+                        "title": "CKD-MBD Newsletter #23",
+                        "text": "As a member of the ERA-EDTA, Oxford University Press is pleased to be able to offer you a 35% discount on our Nephrology books."
+                      }
+                    }
+                  )}}
+
+                </div>
+                <!-- .col-* -->
+              {% endfor %}
+    </div>
+  </div>
 
   </main>
 

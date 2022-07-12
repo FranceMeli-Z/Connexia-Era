@@ -15,9 +15,12 @@ Single-colored icons can be modified like so:
 }
 ========================================== */
 
+.icozaux1-Download {
+  width: 0.7001953125em;
+}
+
 .icozaux1-menu {
-  font-size: 26px;
-  width: 1.625em !important;
+  width: 1.2998046875em;
 }
 
 .icozaux1-arrowL {

@@ -35,13 +35,15 @@
                 </a>
               </div>
             {% endif %}
-            <div class="zaux-theme--light1 pb-3 pb-lg-4">
-              <h6 class="c-typo-fs-8 c-typo-fs-lg-10"> {{obj.nome|safe}} </h6>
+            <div class=" font-zaux2 zaux-theme--light1 pb-3 pb-lg-4">
+              <h6 class="fw-demi c-typo-fs-8 c-typo-fs-lg-10"> {{obj.nome|safe}} </h6>
             </div>
             <div class="pb-8 pb-lg-9">
                {{obj.ruolo|safe}}
             </div>
-          <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">Profile</a>
+          <div class="{{componentClassName}}__profile--cta">
+            <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">Profile</a>
+          </div>
         </div>
         <!-- .{{componentClassName}}__profile -->
     </div>

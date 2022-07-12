@@ -1,0 +1,514 @@
+{# Sets the layout to be extended #}
+{% extends "layouts/default.njk" %}
+
+{# Imports components #}
+{% import 'components/img/img.njk' as Img %}
+{% import 'components/icon/icon.njk' as Icon %}
+{% import 'components/btn/btnIcon.njk' as BtnIcon %}
+{% import 'components/card1/card1_highlight.njk' as CardHighlight %}
+{% import 'components/card2/card2_news.njk' as Card2 %}
+{% import 'components/card1/card1_overview.njk' as CardOverview %}
+{% import 'components/card2/card2_related.njk' as CardRelated %}
+{% import 'components/card1/card1_profile.njk' as CardProfile %}
+{% import 'components/boxcontent/boxcontent.njk' as BoxContent %}
+{% import 'components/breadcrumbs/breadcrumbs.njk' as Breadcrumbs %}
+
+{# Sets page-specific variables #}
+{% set page = {
+  "data": page_single_committees,
+  "title": "Page Single Committees",
+  "isHome": false
+} %}
+
+{% block head_css %}
+  <link rel="stylesheet" href="assets/css/general.bundle.css">
+{% endblock %}
+
+{% block content %}
+
+  <main>
+      <!-- First box -->
+      <div class="mb-lg-8 mb-5">
+        <div class="row m-0">
+          <div class="zaux-bg-set1-grey p-box rounded-bottom-100 mb-lg-0 mb-7 col-12 col-lg-8 mih-boxtitle pt-3 pt-lg-6">
+            <div class="pb-2 pb-lg-4">
+              {{ Breadcrumbs.content() }}
+            </div>
+            <div class="font-zaux2 zaux-theme--light1 pb-2 pb-lg-4">
+              <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">YNP - Young Nephrologists’ Platform</h6>
+            </div>
+             <div class="c-typo-style1-3 c-typo-style1-lg-4 maw-f768px">
+              <p>ERA’s committee for the involvement of young nephrologists.</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4 d-flex align-items-center justify-content-center">
+            {{
+                  Img.content({
+                  "isLazy": false,
+                  "src": "media/Committee.png",
+                  "src2x": "media/Committee@2x.png",
+                  "width": 200,
+                  "height": 90,
+                  "className": ["img-fluid"],
+                  "title": "title",
+                  "alt": "alt",
+                  "wrapperElement": ["figure"],
+                  "wrapperClassName": [""]
+                  })
+            }}
+          </div>
+        </div>
+      </div>
+      <!-- end First box -->
+
+       <!-- Testo Works-->
+      <div class="pb-7 pb-lg-10 p-box">
+
+        <div class="row gx-3">
+          <div class="col-12 col-lg-8">
+              <div class="font-zaux2 zaux-theme--light2 pb-3 pb-lg-4 maw-f768px">
+                  <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">Our work</h6>
+              </div>
+              <div class="c-typo-style1-4 c-typo-style1-lg-8">
+                <p>The Young Nephrologists’ Platform (YNP) is a platform which aims to involve young nephrologists (40 years of age or younger) in all the activities of the ERA .
+                  All ERA Junior Members automatically become YNP Members.</p>
+              </div>
+          </div>
+          <div class="col-lg-4 pt-9">
+           <div class="maw-f400 m-auto">
+              <div class="border-gradient p-4">
+                <div class="zaux-theme--light1">
+                  <div class="font-zaux2 pb-3">
+                    <h6 class="fw-demi c-typo-fs-8 c-typo-fs-lg-10">Tool & Resouces</h6>
+                  </div>
+                  <div class="c-typo-style1-4 c-typo-style1-lg-8">
+                    <p><strong>Contacts</strong><p>
+                    <a>ckd-mbd@era-online.org</a>
+                    <br>
+                    <ul>
+                    <li><a href="#"><span>YNP on Twitter</span></a></li>
+                    <li><a href="#"><span>YNP on Facebook</span></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- end row -->
+
+      </div>
+       <!-- Fine Testo Works -->
+
+    <div class="p-box pb-8">
+      <div class="font-zaux2 zaux-theme--light2 pb-6 pb-md-9">
+        <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">Latest e-seminars</h6>
+      </div>
+      <div class="row">
+        <div class="col-12">
+                  {{BoxContent.content(
+                    {
+                      "className": [],
+                      "innerClassName": ["row"],
+                      "contentClassName": ["col-12", "col-lg-8","pe-4"],
+                      "content": {
+                        "title": "Autosomal Dominant Polycystic Kidney Disease (ADPKD) from childhood to adulthood, including a patient’s perspective",
+                        "category": "Webcast",
+                        "date": "March 18, 2022"
+                      },
+                        "img": {
+                          "isLazy": true,
+                          "src": "media/ProvaContent.png",
+                          "src2x": "media/ProvaContent@2x.png",
+                          "width": 396,
+                          "height": 223,
+                          "alt": "Cover alternative text",
+                          "className": ["img-fluid"]
+                        },
+                      "webcast" : {
+                         "author": ["Francesca Mallamaci"],
+                         "pannelist": ["Carmine Zoccali, Italy", "Mehmet Kanbay, Turkey"],
+                         "moderators": ["Will Herrington, United Kingdom", "Maria Josè Soler, Spain"]
+                      }
+
+                    }
+                  )}}
+        </div>
+    </div>
+  </div>
+
+
+      <div class="mb-lg-8 mb-5 zaux-bg-set1-grey">
+        <div class="row">
+           <div class="col-12 col-lg-6 order-lg-2">
+            {{
+            Img.content({
+              "isLazy": false,
+              "src": "media/Homebox.png",
+              "src2x": "media/Homebox.png",
+              "width": 573,
+              "height": 375,
+              "className": ["img-fluid","float-end"],
+              "title": "title",
+              "alt": "alt",
+              "wrapperElement": "",
+              "wrapperClassName": ""
+            })
+            }}
+          </div>
+          <div class="p-box mb-lg-0 mb-7 col-12 col-lg-6 pt-3 pt-lg-6 order-lg-1">
+            <div class="font-zaux2 zaux-theme--light1 pb-2 pb-lg-4">
+              <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Join the YNP committee</h6>
+            </div>
+             <div class="pb-4 c-typo-style1-3 c-typo-style1-lg-4 maw-f768">
+              <p>Enjoy the exclusive benefits reserved to ERA members. Young members automatically are YNP Members: nephrologists,
+                40 years of age or younger, working in the areas of interest of the ERA.</p>
+              </div>
+              <div class="text-center text-lg-start pb-4 pb-lg-5">
+                <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">Join CKD-MBD</a>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- National representative -->
+      <div class="p-box mb-8 mb-lg-9">
+        <div>
+          <div class="mb-7">
+             <div class="font-zaux2 zaux-theme--light2 text-center pb-2 pb-lg-4">
+              <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">National representatives</h6>
+            </div>
+            <div class="pb-4 pb-lg-7 c-typo-style1-3 c-typo-style1-lg-4 maw-f768 m-auto">
+              <p>YNP aims to keep close contact with the national societies of all countries. In order to achieve this close collaboration,
+                 YNP intends to have one representative per country.</p>
+              <p>If you wish to get in contact with the National Representatives, contact the YNP Office.
+                If you do not see your country in the link above and you wish to become a YNP representative,
+                then please send your CV to ynp@era-online.org.</p>
+            </div>
+            <div class="text-center">
+              <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">Download list of national representatives</a>
+            </div>
+          </div>
+          <div class="maw-1040 text-center m-auto mb-9 mb-lg-11 zaux-bg-set1-grey p-4 p-lg-9">
+            {{
+            Img.content({
+              "isLazy": false,
+              "src": "media/Mappa.png",
+              "src2x": "media/Mappa@2x.png",
+              "width": 909,
+              "height": 461,
+              "className": ["img-fluid"],
+              "title": "title",
+              "alt": "alt",
+              "wrapperElement": "",
+              "wrapperClassName": "zaux-bg-set1-grey p-9"
+            })
+            }}
+          </div>
+                 <!-- Testo Works-->
+      <div class="">
+        <div class="row gx-3">
+          <div class="col-12 col-lg-6 pb-8 pb-lg-0">
+              <div class="font-zaux2 zaux-theme--light1 text-center pb-3 pb-lg-4 maw-f768px">
+                  <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">YNP Speaker Database</h6>
+              </div>
+              <div class="text-center c-typo-style1-4 c-typo-style1-lg-8 pb-6">
+                <p>Are you interested in being a speaker at the ERA Annual Congress or an exchange speaker
+                  at other important and international congresses? Submit your candidature to the new YNP speaker database!</p>
+                  <br>
+                <p> Apply now or contact the YNP Office at ynp@era-online.org for more information.
+                  You will be notified well in advance if you will be selected to participate in one of ERA’s exciting initiatives.</p>
+              </div>
+              <div class="text-center">
+              <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">Apply now</a>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="font-zaux2 zaux-theme--light1 text-center pb-3">
+              <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Mentorship Programme</h6>
+            </div>
+             <div class="text-center c-typo-style1-4 c-typo-style1-lg-8 pb-6">
+                <p>The YNP Board is pleased to present the ERA YNP Mentorship Program.</p>
+                <p> This program aims to support young professionals to improve and build a successful career in Nephrology. It consists of an exchange of experiences between the participants.
+                   The mentee is a developing junior professional or trainee, and is paired with a mentor,
+                   a senior professional who has experience in the area that the mentee is interested.</p>
+                   <br>
+                <p>Both the mentor and the mentee should be ERA members, and the mentee should also be member of the YNP. Mentors and mentees can apply for the ERA YNP Mentorship Program year-round.
+                   The length of the program should not exceed twelve months with a time commitment of approximately 3-4 hours per month.
+                   Communication will be maintained via electronic means.</p>
+              </div>
+              <div class="text-center">
+              <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">download regulations</a>
+            </div>
+          </div>
+        </div>
+        <!-- end row -->
+      </div>
+        </div>
+      </div>
+       <!-- End National representative -->
+
+      <div class="mb-lg-8 mb-5 zaux-bg-set1-grey">
+        <div class="row">
+           <div class="col-12 col-lg-6">
+            {{
+            Img.content({
+              "isLazy": false,
+              "src": "media/Homebox2.png",
+              "src2x": "media/Homebox2.png",
+              "width": 573,
+              "height": 375,
+              "className": ["img-fluid","float-start"],
+              "title": "title",
+              "alt": "alt",
+              "wrapperElement": "",
+              "wrapperClassName": ""
+            })
+            }}
+          </div>
+          <div class="p-box mb-lg-0 mb-7 col-12 col-lg-6 pt-3 pt-lg-6">
+            <div class="font-zaux2 zaux-theme--light1 pb-2 pb-lg-4">
+              <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Free membership programme</h6>
+            </div>
+             <div class="pb-4 c-typo-style1-3 c-typo-style1-lg-4 maw-f768px">
+              <p>To encourage young nephrologists to submit abstracts to the ERA congresses and to publish in ERA affiliated journals (NDT, CKJ),
+                a merit-based free-membership program was accepted by the ERA Council in 2013.</p>
+                <p>There are two tracks: the first is based on abstracts accepted at an ERA congress; the second requires an original or review
+                  publication accepted in NDT or CKJ in the current or past year.</p>
+              </div>
+              <div class="text-center text-lg-start pb-4 pb-lg-5">
+                <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">download regulations</a>
+              </div>
+          </div>
+        </div>
+      </div>
+
+    <div class="p-box mb-6">
+      <div class="border-bottom-box pb-5 pb-lg-8">
+      <div class="row gx-3">
+        <div class="col-12 col-lg-6 text-center pb-4 pb-lg-0">
+          <div class="d-flex flex-column h-100">
+              <div class="font-zaux2 zaux-theme--light1 pb-6 pb-lg-7 maw-f768px">
+                  <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Collaboration with NDT & CKJ</h6>
+              </div>
+              <div class="d-flex flex-column h-100">
+                <div class="flex-grow-1 pb-6 pb-lg-7">
+                  {{
+                    Img.content({
+                    "isLazy": false,
+                    "src": "media/Collaboration.png",
+                    "src2x": "media/Collaboration.png",
+                    "width": 320,
+                    "height": 175,
+                    "className": ["img-fluid"],
+                    "title": "title",
+                    "alt": "alt",
+                    "wrapperElement": ["figure"],
+                    "wrapperClassName": ["h-100"]
+                    })
+                  }}
+              </div>
+            </div>
+            <div class="c-typo-style1-4 c-typo-style1-lg-8">
+               <p>Would you like to experience reviewing articles as a YNP member, then please contact us at ynp@era-online.org.
+                Taking part in this initiative can open other opportunities including reviewing and scoring annual congress abstracts.</p>
+             </div>
+            <div class="c-typo-style1-4 c-typo-style1-lg-8">
+                  {# <p><strong>YNP REPRESENTATIVE AT JSN 2022:</strong></p>
+                  <p>REBECCA HERZOG</p> #}
+              </div>
+          </div>
+          </div>
+          <div class="col-12 col-lg-6 text-center">
+            <div class="d-flex flex-column h-100">
+              <div class="font-zaux2 zaux-theme--light1 pb-6 pb-lg-7 maw-f768px">
+                <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Exchange speakers initiatives</h6>
+              </div>
+              <div class="d-flex flex-column h-100">
+                <div class="flex-grow-1 pb-6 pb-lg-7">
+                    {{
+                      Img.content({
+                      "isLazy": false,
+                      "src": "media/Collaboration2.png",
+                      "src2x": "media/Collaboration2.png",
+                      "width": 320,
+                      "height": 175,
+                      "className": ["img-fluid"],
+                      "title": "title",
+                      "alt": "alt",
+                      "wrapperElement": ["figure"],
+                      "wrapperClassName": ["h-100","d-flex","align-items-center","justify-content-center"]
+                      })
+                    }}
+                  </div>
+              </div>
+               <div class="c-typo-style1-4 c-typo-style1-lg-8">
+                    <p>This collaboration is to facilitate an exchange of young, outstanding nephrologists to speak during sessions at the annual meetings of ASN|ERA and JSN|ERA.
+                      Each organization will suggest two potential speakers from their membership.</p>
+                  </div>
+              {# <div class="c-typo-style1-4 c-typo-style1-lg-8">
+                    <p><strong>YNP REPRESENTATIVE AT JSN 2022:</strong></p>
+                    <p>REBECCA HERZOG</p>
+                </div> #}
+            </div>
+          </div>
+      </div>
+        <!-- end row -->
+      </div>
+    </div>
+
+
+      <!-- Start e-Newsletter -->
+      <div class="mb-6 mb-lg-9 p-box">
+        <div class="border-bottom-box pb-7 pb-lg-10">
+              <div class="font-zaux2 zaux-theme--light2 pb-3 pb-lg-4 maw-f768px">
+                  <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">YNP e-Newsletters</h6>
+              </div>
+              <div class="maw-f825 pb-6 pb-lg-9 c-typo-style1-4 c-typo-style1-lg-8">
+                <p>The Young Nephrologists’ Platform (YNP) is a platform which aims to involve young nephrologists (40 years of age or younger) in all the activities of the ERA .
+                  All ERA Junior Members automatically become YNP Members.</p>
+              </div>
+          <div class="mb-8 mb-lg-9">
+           <div class="row flex-nowrap flex-lg-wrap overflow-auto">
+                {%
+                  set _decoVariations = [
+                    "deco1-l-t",
+                    "deco1-r-t",
+                    "deco1-r-b"
+                  ]
+                %}
+
+                {% for decoVariation in _decoVariations %}
+
+                  <div class="col-12 col-md-3 col-lg-3">
+                    {{Card2.content(
+                      {
+                        "className": ["mih-215","h-100"],
+                        "innerClassName": ["h-100"],
+                        "contentClassName": ["d-flex", "justify-content-between", "flex-column","h-100"],
+                        "content": {
+                          "category": "Report",
+                          "title": "CKD-MBD Newsletter #23",
+                          "date": "March 18, 2022",
+                          "author": "CKD-MBD working group"
+                        }
+                      }
+                    )}}
+
+                  </div>
+                  <!-- .col-* -->
+                {% endfor %}
+
+            </div>
+            <!-- end row-* -->
+          </div>
+          <div class="text-center text-lg-start">
+            <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">discover all e-newsletters</a>
+          </div>
+        </div>
+      </div>
+       <!-- Fine e-Newsletter -->
+
+           <!-- Start Card Profile -->
+    <div class="p-box mb-3 mb-lg-7">
+      <div class="border-bottom-lg-box border-bottom-none ">
+        <div class="font-zaux2 zaux-theme--light2 mb-4">
+          <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16 mb-3">CKD-MBD Board</h6>
+        </div>
+         <div class="maw-f825 c-typo-style1-4 c-typo-style1-lg-8 mb-4 mb-lg-7">
+            <p>The CKD-MDB Board provides strategic direction to the working group. Board members enchance exchange of expertise and international cooperation.</p>
+          </div>
+          <div class="row gx-3 flex-nowrap flex-lg-wrap overflow-auto pb-0 pb-lg-8">
+                {%
+                  set _decoVariations = [
+                    "deco1-l-t",
+                    "deco1-r-t",
+                    "deco1-r-b",
+                    "deco1-l-b",
+                    "deco1-r-b",
+                    "deco1-l-b"
+                  ]
+                %}
+
+                {% for decoVariation in _decoVariations %}
+
+                  <div class="col-12 col-md-6 col-lg-4 pb-0 pb-lg-6">
+                    {{CardProfile.content(
+                      {
+                      "className": [],
+                      "variations": [],
+                      "innerClassName": ["zaux-bg-set1-grey py-8"],
+                      "contentClassName": ["text-center"],
+                      "img": {
+                        "isLazy": true,
+                        "src": "media/Profile.png",
+                        "src2x": "media/Profile@2x.png",
+                        "width": 120,
+                        "height": 120,
+                        "alt": "Cover alternative text",
+                        "className": ["img-fluid"]
+                      },
+                      "nome": "Marc Vervloet",
+                      "ruolo": "Chair"
+                      }
+                     )}}
+                  </div>
+                  <!-- .col-* -->
+                {% endfor %}
+
+        </div>
+        <!-- end row-* -->
+      </div>
+    </div>
+    <!-- End Card Profile -->
+
+
+     <div class="p-box pb-2 pb-lg-8">
+      <div class="zaux-theme--light2 zaux-font2 pb-6 pb-md-9">
+        <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">Resources</h6>
+      </div>
+      <div class="row gx-3">
+              {%
+                set _decoVariations = [
+                  "deco1-l-t",
+                  "deco1-r-t",
+                  "deco1-r-b",
+                  "deco1-l-b",
+                  "deco1-l-t",
+                  "deco1-r-t",
+                  "deco1-r-b",
+                  "deco1-l-b"
+                ]
+              %}
+
+              {% for decoVariation in _decoVariations %}
+
+                <div class="col-12 col-md-6 pb-6">
+
+                  {{CardRelated.content(
+                    {
+                      "className": ["h-100","mih-200"],
+                      "innerClassName": ["border-all-gradient","h-100", "py-7", "px-2", "px-lg-7"],
+                      "contentClassName": ["text-center","d-flex","flex-column","justify-content-between","h-100"],
+                      "content": {
+                        "cta": "Download",
+                        "title": "Our book list"
+                      }
+                    }
+                  )}}
+                </div>
+                <!-- .col-* -->
+              {% endfor %}
+      </div>
+    </div>
+
+
+
+  </main>
+
+{% endblock %}
+
+{% block foot_js %}
+  <script defer src="assets/js/general.bundle.js"></script>
+{% endblock %}

@@ -27,4 +27,7 @@ body {
 
 main {
   min-height: calc( 100vh - 500px );
+  ::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
 }

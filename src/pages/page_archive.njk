@@ -5,7 +5,6 @@
 {% import 'components/img/img.njk' as Img %}
 {% import 'components/icon/icon.njk' as Icon %}
 {% import 'components/btn/btnIcon.njk' as BtnIcon %}
-{% import 'components/card1/card1.njk' as Card1 %}
 {% import 'components/card2/card2_news.njk' as Card2 %}
 {% import 'components/boxcontent/boxcontent.njk' as BoxContent %}
 {% import 'components/form/form.njk' as Form %}
@@ -35,7 +34,7 @@
             <div class="font-zaux2 zaux-theme--light1 pb-2 pb-lg-4">
               <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Publications</h6>
             </div>
-            <div class="maw-f768px">
+            <div class="maw-f768px c-typo-style1-3 c-typo-style1-lg-4">
               <p>A Europe where kidney health is prioritised, kidney care is accessible, the kidney community is thriving.</p>
             </div>
           </div>
@@ -51,6 +50,16 @@
         <!-- Box ricerca -->
         <div class="pt-6 pt-lg-8 border-bottom-box">
           <div class="pb-5 pb-lg-6">
+            {# <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown button
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div> #}
             {{
             Form.content({
               "searchfilter": "y",
@@ -58,7 +67,7 @@
             })
            }}
           </div>
-          <div class="pb-5 pb-lg-8">
+          <div class="pb-5 pb-lg-8 overflow-auto text-nowrap">
               <a class="c-cta2 c-cta2--sm c-cta1--grey" href="#" title="button title">Optimising care</a>
               <a class="c-cta2 c-cta2--sm c-cta1--grey" href="#" title="button title">Covid-19</a>
               <a class="c-cta2 c-cta2--sm c-cta1--grey" href="#" title="button title">Robot assistance</a>

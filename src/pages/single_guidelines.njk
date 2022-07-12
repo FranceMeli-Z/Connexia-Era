@@ -5,7 +5,6 @@
 {% import 'components/img/img.njk' as Img %}
 {% import 'components/icon/icon.njk' as Icon %}
 {% import 'components/btn/btnIcon.njk' as BtnIcon %}
-{% import 'components/card1/card1.njk' as Card1 %}
 {% import 'components/card2/card2_news.njk' as Card2 %}
 {% import 'components/card2/card2_related.njk' as CardRelated %}
 {% import 'components/breadcrumbs/breadcrumbs.njk' as Breadcrumbs %}
@@ -43,18 +42,21 @@
       <!-- end First box -->
 
       <!-- Testo Scope Guidelines-->
-      <div class="mb-6 pb-7 pb-lg-10 p-box border-bottom-box">
+      <div class="mb-7 mb-lg-9 p-box">
+        <div class="border-bottom-box pb-8 pb-lg-10">
          <div class="font-zaux2 fst-italic c-typo-style1-4 zaux-color-set1-grey1 pb-3 pb-lg-5">
             <p>March 18, 2022</p>
           </div>
           <div class="font-zaux2 zaux-theme--light2 pb-3 pb-lg-4 maw-f768px">
               <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">Scope</h6>
           </div>
-          <div class="c-typo-style1-4 c-typo-style1-lg-8">
+          <div class="maw-f825 c-typo-style1-4 c-typo-style1-lg-8">
             <p>To facilitate informed decision-making on the management of adult individuals with diabetes mellitus and CKD stage 3b or higher (eGFR 45 mL/min).</p>
             <p> Including adults with diabetes mellitus and CKD stage 3b or higher. </p>
+            <br>
             <p>Does not apply to: adults with diabetes and CKD stages 1–2 to
               prevent or delay development of micro- or macro-albuminuria, nor children.</p>
+              <br>
             <p>Focus on 3 major areas:</p>
             <ul>
               <li>selection of renal replacement modality</li>
@@ -63,6 +65,7 @@
           </ul>
           </div>
         </div>
+      </div>
        <!-- Fine Testo Scope Guidelines -->
 
     <div class="p-box pb-2 pb-lg-8">
@@ -82,34 +85,76 @@
               {% for decoVariation in _decoVariations %}
 
                 <div class="col-12 col-md-6 pb-6">
+
                   {{CardRelated.content(
                     {
-                      "className": ["h-100"],
-                      "innerClassName": ["border-all-gradient py-8 px-2 px-lg-7"],
-                      "contentClassName": ["text-center"],
+                      "className": ["h-100","mih-200"],
+                      "innerClassName": ["border-all-gradient","h-100", "py-7", "px-2", "px-lg-7"],
+                      "contentClassName": ["text-center","d-flex","flex-column","justify-content-between","h-100"],
                       "content": {
                         "cta": "How to order",
                         "title": "Our book list"
                       }
                     }
                   )}}
-
                 </div>
                 <!-- .col-* -->
               {% endfor %}
       </div>
     </div>
 
+    <!-- Charts Box -->
+     <div class="mb-6 position-relative mih-560 overflow-hidden">
+       <div class="position-absolute zaux-zi--1 zaux-pos-custom2">
+       {{
+        Img.content({
+          "isLazy": false,
+          "src": "assets/img/CombinedShape.svg",
+          "src2x": "assets/img/CombinedShape.svg",
+          "width": 1440,
+          "height": 595,
+          "className": [""],
+          "title": "title",
+          "alt": "alt",
+          "wrapperElement": "",
+          "wrapperClassName": ""
+        })
+      }}
+    </div>
+      <div class="p-box position-relative">
+        <div class="maw-1040 m-auto">
+
+        <div class="zaux-theme--light2 zaux-font2 text-center pb-6 pb-md-9">
+        <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">Flowcharts and figures</h6>
+        </div>
+
+          <div class="mb-2 mb-lg-4">
+            {% include "components/slider/slider_charts.njk" %}
+          </div>
+
+        <div class="fst-italic m-auto text-center c-typo-style1-1 c-typo-style1-lg-2 maw-f550">
+          <p>© The Author. Published by Oxford University Press on behalf of ERA-EDTA. All rights reserved. <br>
+          Nephrology Dialysis Transplantation, Volume 30, Issue suppl_2, 1 May 2015, Pages ii1–ii142, https://doi.org/10.1093/ndt/gfv100 </p>
+        </div>
+
+      </div>
+      </div>
+    </div>
+
+
+    <!-- End Charts Box -->
+
+    <!--Accordion Box -->
     <div class="mb-2 mb-lg-6">
       <div class="zaux-bg-set1-grey p-box py-8 py-lg-10">
          <div class="mb-3 mb-lg-6">
-     {{Accordion.content(
-              {
-                "className": ["zaux-bg-default-white","rounded-2"],
-                "innerClassName": [],
-                "title": "Summary version translation"
-              }
-            )}}
+          {{Accordion.content(
+                    {
+                      "className": ["zaux-bg-default-white","rounded-2"],
+                      "innerClassName": [],
+                      "title": "Summary version translation"
+                    }
+           )}}
       </div>
       <div class="">
      {{Accordion.content(
@@ -123,6 +168,7 @@
 
       </div>
     </div>
+    <!-- End Accordion Box -->
 
   </main>
 

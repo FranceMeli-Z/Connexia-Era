@@ -15,18 +15,18 @@
         "_sources": {
           "maxMd": [
             {
-              "src": "media/photo1_480p.webp",
-              "src2x": "media/photo1_720p.webp"
+              "src": "media/ProvaContent1.webp",
+              "src2x": "media/ProvaContent1.webp"
             }
           ],
           "minLg": [
             {
-              "src": "media/photo1_1080p.webp",
-              "src2x": "media/photo1_2160p.webp"
+              "src": "media/ProvaContent1.webp",
+              "src2x": "media/ProvaContent1.webp"
             }
           ]
         },
-        "src": "//lab.zaki.it/clienti/geckosoft/2022/website/video/vid2-desktop-frame0.png",
+        "src": "media/ProvaContent.png",
         "width": 1920,
         "height": 1080,
         "className": [
@@ -48,7 +48,8 @@
           "mime": "video/mp4",
           "src": "//lab.zaki.it/clienti/geckosoft/2022/website/video/vid2-desktop.mp4"
         }
-      ]
+      ],
+      "showPlayBtn":"y"
     }
   }
 }

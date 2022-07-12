@@ -101,9 +101,11 @@ $utilities: map-merge(
   $utilities,
   (
   "border-bottom": (
+    responsive: true,
   property: border-bottom,
   values: (
     "box": 2px solid #D8D8D8,
+    "none": none,
   )
   )
   )
@@ -233,6 +235,18 @@ $utilities: map-merge(
 $utilities: map-merge(
   $utilities,
   (
+    "top": (
+  property: top,
+  values: (
+    "35": 35px,
+  )
+      ),
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
     "viewport-height": (
       responsive: true,
       property: height,
@@ -256,6 +270,8 @@ $utilities: map-merge(
       values: (
         100: 100%,
         auto: auto,
+        40: 40%,
+        70: 70%,
       ),
     ),
   )
@@ -406,7 +422,7 @@ $utilities: map-merge(
 // @import "bootstrap/scss/modal";
 // @import "bootstrap/scss/tables";
 // @import "bootstrap/scss/buttons";
-// @import "bootstrap/scss/dropdown";
+@import "bootstrap/scss/dropdown";
 // @import "bootstrap/scss/button-group";
 // @import "bootstrap/scss/nav";
 // @import "bootstrap/scss/navbar";
