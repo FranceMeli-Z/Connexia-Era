@@ -46,4 +46,9 @@ $zaux-header-lg-h: 158px !default;
      height: 24px;
     }
   }
+
+  & a {
+    color: tokenColor("set1","darkgrey");
+  }
+
 }

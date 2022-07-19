@@ -1,6 +1,7 @@
 {# Imports components #}
 {% import 'components/img/img.njk' as Img %}
 {% import 'components/icon/icon.njk' as Icon %}
+{% import 'components/modale/modale.njk' as Modal %}
 
 {% macro content(obj) %}
 
@@ -41,7 +42,7 @@
           }}
           <span class="ps-2">Menu</span>
         </a>
-          <a href="#" class="ps-2">
+          <button type="button" class="btn btn-primary ps-2" data-bs-toggle="modal" data-bs-target="#EraModal">
           {{
             Icon.content({
               "className": "",
@@ -50,7 +51,8 @@
             })
           }}
           <span class="ps-2">Search</span>
-        </a>
+
+        </button>
         </div>
 
         <div>
@@ -82,23 +84,11 @@
           <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">JOIN</a>
         </div>
 
-        {# {% if not obj.isLite %}
-          <div class="{{componentClassName}}__section d-flex align-items-center">
-            (nav)
-          </div> #}
-          <!-- .{{componentClassName}}__section -->
-
-          {# <div class="{{componentClassName}}__section d-flex align-items-center">
-            (nav tools)
-          </div>
-          <!-- .{{componentClassName}}__section -->
-        {% endif %} #}
-
       </div>
-      <!-- .container-xxl -->
-
+      {{ Modal.content() }}
     </div>
     <!-- .{{componentClassName}}__inner -->
+
   </header>
   <!-- .{{componentClassName}} -->
 {% endmacro %}

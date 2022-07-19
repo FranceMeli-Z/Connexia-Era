@@ -1,0 +1,450 @@
+{# Sets the layout to be extended #}
+{% extends "layouts/default.njk" %}
+
+{# Imports components #}
+{% import 'components/img/img.njk' as Img %}
+{% import 'components/icon/icon.njk' as Icon %}
+{% import 'components/btn/btnIcon.njk' as BtnIcon %}
+{% import 'components/card1/card1_highlight.njk' as CardHighlight %}
+{% import 'components/card2/card2_news.njk' as Card2 %}
+{% import 'components/card2/card2_related.njk' as CardRelated %}
+{% import 'components/card1/card1_story.njk' as CardStory %}
+{% import 'components/card1/card1_benefits.njk' as CardBenefits %}
+{% import 'components/boxcontent/boxcontent.njk' as BoxContent %}
+{% import 'components/breadcrumbs/breadcrumbs.njk' as Breadcrumbs %}
+{% import 'components/form/form.njk' as Form %}
+
+{# Sets page-specific variables #}
+{% set page = {
+  "data": page_page_benefits,
+  "title": "Benefits",
+  "isHome": false
+} %}
+
+{% block head_css %}
+  <link rel="stylesheet" href="assets/css/general.bundle.css">
+{% endblock %}
+
+{% block content %}
+
+  <main>
+
+    {# {{ HeroVideo.content(page.data.blocks.videoHero1) }} #}
+
+    <div class="mb-9 position-relative mih-625 overflow-hidden">
+       <div class="position-absolute zaux-zi--1 zaux-pos-custom1">
+       {{
+        Img.content({
+          "isLazy": false,
+          "src": "media/HeroBen.png",
+          "src2x": "media/HeroBen.png",
+          "width": 1440,
+          "height": 634,
+          "className": ["img-fluid","zaux-fit-cover-center-center"],
+          "title": "title",
+          "alt": "alt",
+          "wrapperElement": "",
+          "wrapperClassName": ""
+        })
+      }}
+    </div>
+    <div class="p-box position-relative">
+      <div class="pb-2 pb-lg-4 pt-6 d-none d-lg-block">
+        {{ Breadcrumbs.content() }}
+      </div>
+      <div class="text-center">
+        <div class="font-zaux2 zaux-theme--dark1 py-6 maw-f550 m-auto">
+          <h6 class="fw-demi c-typo-fs-13 c-typo-fs-lg-16 mb-3">Enjoy the ERA Membership benefits</h6>
+        </div>
+        <div class="zaux-theme--dark1 maw-f768 m-auto c-typo-style1-6 c-typo-style1-lg-8 pb-lg-9 pb-12">
+          <p>For 2022 we wish to have you on board to enhance Science, Education and Networking together</p>
+        </div>
+        <div class="text-center pt-4 pt-lg-6">
+           <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">Join era today</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+    <div class="p-box mb-9 overflow-hidden">
+      <div class="font-zaux2 py-6 zaux-theme--light2 text-center">
+        <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16 mb-3">Enhancing</h6>
+      </div>
+      <div class="row pb-lg-9">
+        <div class="col-12 col-lg-4 pb-4 pb-lg-0">
+          <div class="pillars-t1 font-zaux2 text-center ">
+             <h6 class="fw-demi c-typo-fs-8 c-typo-fs-lg-13 mb-3"><a class="zaux-color-set1-green1" href="#">EDUCATION</a></h6>
+          </div>
+        </div>
+         <div class="col-12 col-lg-4 pb-4 pb-lg-0">
+           <div class="pillars-t2 font-zaux2 text-center ">
+             <h6 class="fw-demi c-typo-fs-8 c-typo-fs-lg-13 mb-3"><a class="zaux-color-set1-yellow1" href="#">SCIENCE</a></h6>
+          </div>
+        </div>
+         <div class="col-12 col-lg-4 pb-4 pb-lg-0">
+           <div class="pillars-t3 font-zaux2 text-center">
+             <h6 class="fw-demi c-typo-fs-8 c-typo-fs-lg-13 mb-3"><a href="#" class="zaux-color-set1-blue1">NETWORKING</a></h6>
+          </div>
+        </div>
+      </div>
+      <div class="c-typo-style1-6 maw-f825 m-auto c-typo-style1-lg-8 text-center">
+        <p>ERA's purpose is to: <br>
+            Provide the best knowledge and the latest updates on hot topics in nephrology;
+            Carry on cutting edge research through programmes, journals and congress;
+            Connect members, associations and patients to create the largest nephrology community of the Mediterranean.</p>
+      </div>
+    </div>
+
+
+     <div class="p-box mb-lg-8 mb-5 zaux-bg-set1-grey">
+        <div class="py-4">
+          <div class="font-zaux2 zaux-theme--light2 pb-2 pb-lg-4">
+            <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">Membership Categories</h6>
+          </div>
+          <div class="c-typo-style1-6 maw-f768 c-typo-style1-lg-8">
+            <p>Choose your membership category from Free to EUR 170 and enjoy all benefits!</p>
+          </div>
+
+          <div>
+            <div>TABLE</div>
+            <div class="c-typo-style1-3 maw-f550">
+            <p>* Problematic deliveries of the hard copies of NDT due to COVID19 pandemic: some countries are temporarily affected by late delivery of the journal,
+             thus before selecting the membership fee which also includes hard copies of NDT, please check with the NDT Editorial Office ( ndt@era-online.org )
+             if your country is temporarily affected by the delays.</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 col-lg-6">
+              <div class="c-typo-style1-3 maw-f550">
+            <p><strong>Important notes:</strong></p>
+            <ul>
+              <li>Once payment of the membership fee has been processed, there cannot be any reimbursement.</li>
+              <li>Membership follows the calendar year, January – December, and must be renewed on a yearly basis.</li>
+              <li>We accept bank transfer and credit cards (Visa and MasterCard only, exclusively submitted using the online
+                payment system) as payment methods. Cash is only accepted at the ERA membership</li>
+            </ul>
+            </div>
+            </div>
+            <div class="col-12 col-lg-6">
+
+               <div class="maw-f400 m-auto">
+                  <div class="border-gradient p-4">
+                    <div class="zaux-theme--light1">
+                      <div class="font-zaux2 pb-3">
+                        <h6 class="fw-demi c-typo-fs-4">Era bank details</h6>
+                      </div>
+                      <div class="c-typo-style1-4">
+                        <ul>
+                         <li>   European Renal Association </li>
+                          <li>  Account number: 236-473242.61M  </li>
+                          <li>  Bank: UBS SA; 45, Bahnhofstrasse;  </li>
+                         <li>   CH-8098 Zürich; Switzerland  </li>
+                         <li>   IBAN: CH69 0023 6236 4732 4261 M  </li>
+                         <li>   BIC/SWIFT: UBSWCHZH80A  </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+
+
+
+    <div class="p-box mb-lg-8 mb-5">
+        <div class="row gx-3">
+          <div class="col-12 col-lg-6">
+            <div class="d-flex justify-content-center flex-column h-100">
+              {{
+              Img.content({
+                "isLazy": false,
+                "src": "media/Benefitsimg.png",
+                "src2x": "media/Benefitsimg.png",
+                "width": 610,
+                "height": 343,
+                "className": ["img-fluid","float-start"],
+                "title": "title",
+                "alt": "alt",
+                "wrapperElement": "",
+                "wrapperClassName": [""]
+              })
+              }}
+            </div>
+          </div>
+          <div class="mb-lg-0 mb-7 col-12 col-lg-6">
+            {# <div class="d-flex flex-column justify-content-center h-100"> #}
+              <div class="font-zaux2 zaux-theme--light1 pb-2 pb-lg-4">
+                <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Exclusive Congress discounts</h6>
+              </div>
+              <div class="pb-4 c-typo-style1-4 c-typo-style1-lg-8 maw-f768px">
+                <p>ERA members benefit from special discounts up to 220€ over the Annual Congress free, which this year will take place in Paris. The congress membership fee includes:</p><br>
+                <ul>
+                  <li>Access / live streaming to the scientific sessions and mini-oral presentations held on May 19-22, 2022, including Q&A with speakers;</li><br>
+                  <li> Exclusive access to the Congress webcasts and digital content until August 22, 2022; </li><br>
+                  <li> CME and hands-on courses held on May 19, 2022 (on-site places available on a “first come, first served” basis). </li>
+                </ul>
+              </div>
+            </diV>
+          </div>
+
+        {# </div> #}
+      </div>
+
+
+  <div class="mb-9 position-relative mih-560 overflow-hidden">
+    <div class="position-absolute zaux-zi--1 zaux-pos-custom1">
+       {# {{
+        Img.content({
+          "isLazy": false,
+          "src": "assets/img/CombinedShape.svg",
+          "src2x": "assets/img/CombinedShape.svg",
+          "width": 1440,
+          "height": 562,
+          "className": [""],
+          "title": "title",
+          "alt": "alt",
+          "wrapperElement": "",
+          "wrapperClassName": ""
+        })
+      }} #}
+    </div>
+    <div class="p-box position-relative">
+      <div class="font-zaux2 py-6 zaux-theme--light2 text-center">
+        <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16 mb-3">Era Stories</h6>
+      </div>
+       <div class="pb-9 m-auto position-relative">
+        <div class="row gx-3">
+          <div class="col-12 col-lg-4 pb-6 pb-lg-0">
+            {{CardStory.content(
+              {
+              "className": ["shadow--grey rounded-2"],
+              "variations": [],
+              "innerClassName": [""],
+              "contentClassName": ["py-7 text-center"],
+              "img": {
+                "isLazy": true,
+                "src": "media/Story.png",
+                "src2x": "media/Story@2x.png",
+                "width": 40,
+                "height": 40,
+                "alt": "Cover alternative text",
+                "className": ["img-fluid"]
+              },
+              "nome": "Marc Vervloet",
+              "cit": "“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.”"
+              }
+            )}}
+          </div>
+           <div class="col-12 col-lg-4 pb-6 pb-lg-0">
+            <div class="position-relative">
+            {{CardStory.content(
+              {
+              "className": ["shadow--grey rounded-2","zaux-pos-story1"],
+              "variations": [],
+              "innerClassName": [""],
+              "contentClassName": ["py-7 text-center"],
+              "img": {
+                "isLazy": true,
+                "src": "media/Story.png",
+                "src2x": "media/Story@2x.png",
+                "width": 40,
+                "height": 40,
+                "alt": "Cover alternative text",
+                "className": ["img-fluid"]
+              },
+              "nome": "Marc Vervloet",
+              "cit": "“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.”"
+              }
+            )}}
+            </div>
+          </div>
+           <div class="col-12 col-lg-4">
+            {{CardStory.content(
+              {
+              "className": ["shadow--grey rounded-2"],
+              "variations": [],
+              "innerClassName": [""],
+              "contentClassName": ["py-7 text-center"],
+              "img": {
+                "isLazy": true,
+                "src": "media/Story.png",
+                "src2x": "media/Story@2x.png",
+                "width": 40,
+                "height": 40,
+                "alt": "Cover alternative text",
+                "className": ["img-fluid"]
+              },
+              "nome": "Marc Vervloet",
+              "cit": "“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.”"
+              }
+            )}}
+          </div>
+        </div>
+      </div>
+      </div>
+  </div>
+
+
+{% include "partials/ui/benefits_card.njk" %}
+
+
+     <div class="p-box mb-8 mb-lg-9">
+        <div>
+          <div class="mb-7">
+             <div class="font-zaux2 zaux-theme--light2 maw-f825 text-center m-auto pb-2 pb-lg-4">
+              <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">What does it mean to be an ERA member?</h6>
+            </div>
+            <div class="pb-4 pb-lg-7 c-typo-style1-4 c-typo-style1-lg-8 maw-f825 m-auto text-center">
+              <p>Being a Member of ERA means being part of one of the most important and prestigious international Medical Associations.
+                One of the main goals of the ERA is to encourage and report advances in the field of clinical nephrology,
+                dialysis, renal transplantation, and other related subjects.</p>
+            </div>
+          </div>
+          <div class="maw-1040 text-center m-auto mb-9 mb-lg-11 zaux-bg-set1-grey p-4 p-lg-9">
+            {{
+            Img.content({
+              "isLazy": false,
+              "src": "media/Mappa.png",
+              "src2x": "media/Mappa@2x.png",
+              "width": 909,
+              "height": 461,
+              "className": ["img-fluid"],
+              "title": "title",
+              "alt": "alt",
+              "wrapperElement": "",
+              "wrapperClassName": "zaux-bg-set1-grey p-9"
+            })
+            }}
+          </div>
+
+        <div class="">
+          <div class="row gx-3">
+          <div class="col-12 col-lg-6 pb-8 pb-lg-0">
+              <div class="font-zaux2 zaux-theme--light1 text-center pb-3 pb-lg-4 maw-f768px">
+                  <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Full Members</h6>
+              </div>
+              <div class="text-center c-typo-style1-4 c-typo-style1-lg-8 pb-6">
+                <p>Full Members are Members who live in Europe or in the countries bordering the Mediterranean Sea.</p>
+              </div>
+          </div>
+
+          <div class="col-12 col-lg-6">
+            <div class="font-zaux2 zaux-theme--light1 text-center pb-3">
+              <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Associate Members</h6>
+            </div>
+             <div class="text-center c-typo-style1-4 c-typo-style1-lg-8 pb-6">
+              <p> Associate Members are Members living in all the other countries. They are entitled to the same benefits as the Full Members except if they apply for a certain ERA fellowship,
+                if they are elected for office in one of the ERA bodies, or if they receive certain awards or votes.</p>
+              </div>
+          </div>
+
+          <div class="col-12 col-lg-6 pb-8 pb-lg-0">
+              <div class="font-zaux2 zaux-theme--light1 text-center pb-3 pb-lg-4 maw-f768px">
+                  <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">How to become an ERA member?</h6>
+              </div>
+              <div class="text-center c-typo-style1-4 c-typo-style1-lg-8 pb-6">
+                <p>To become a Member you must first create your ‘My ERA account’ , and then complete the online application form (My Membership, Become a Member).</p>
+              </div>
+          </div>
+
+          <div class="col-12 col-lg-6 pb-8 pb-lg-0">
+              <div class="font-zaux2 zaux-theme--light1 text-center pb-3 pb-lg-4 maw-f768px">
+                  <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Renewal</h6>
+              </div>
+              <div class="text-center c-typo-style1-4 c-typo-style1-lg-8 pb-6">
+                <p>Members must pay their annual membership fee to remain active Members and to continue to receive all membership benefits.</p>
+              </div>
+          </div>
+
+        </div>
+        <!-- end row -->
+      </div>
+    </div>
+      </div>
+
+      <div class="mb-lg-8 mb-5 zaux-bg-set1-grey">
+        <div class="row">
+           <div class="col-12 col-lg-6">
+            {{
+            Img.content({
+              "isLazy": false,
+              "src": "media/Homebox2.png",
+              "src2x": "media/Homebox2.png",
+              "width": 573,
+              "height": 375,
+              "className": ["img-fluid","float-start"],
+              "title": "title",
+              "alt": "alt",
+              "wrapperElement": "",
+              "wrapperClassName": ""
+            })
+            }}
+          </div>
+          <div class="p-box mb-lg-0 mb-7 col-12 col-lg-6 pt-3 pt-lg-6">
+            <div class="d-flex flex-column justify-content-center h-100">
+              <div class="font-zaux2 zaux-theme--light1 pb-2 pb-lg-4">
+                <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Membership Card</h6>
+              </div>
+              <div class="pb-4 c-typo-style1-3 c-typo-style1-lg-4 maw-f768px">
+                <p>All active Members may view and download their membership cards, payment receipts and certificate of membership directly from My ERA.</p>
+              </div>
+            </diV>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="p-box pb-2 pb-lg-8">
+    <div class="zaux-theme--light2 pb-6 pb-md-9">
+      <h6 class="c-typo-fs-10 c-typo-fs-lg-16"><strong>Resources</strong></h6>
+    </div>
+    <div class="row gx-3">
+              {%
+                set _decoVariations = [
+                  "deco1-l-t",
+                  "deco1-r-t",
+                  "deco1-r-b",
+                  "deco1-l-b"
+                ]
+              %}
+
+              {% for decoVariation in _decoVariations %}
+
+                <div class="col-12 col-md-6 pb-6">
+                  {{CardRelated.content(
+                    {
+                      "className": ["h-100"],
+                      "innerClassName": ["border-all-gradient py-8 px-2 px-lg-7"],
+                      "contentClassName": ["text-center"],
+                      "content": {
+                        "cta": "read more",
+                        "title": "Nephrology Dialysis Transplantation",
+                        "text": "ERA’s leading nephrology journal in Europe and renowned worldwide."
+                      }
+                    }
+                  )}}
+
+                </div>
+                <!-- .col-* -->
+              {% endfor %}
+    </div>
+  </div>
+
+
+
+
+  </main>
+
+{% endblock %}
+
+{% block foot_js %}
+  <script defer src="assets/js/general.bundle.js"></script>
+{% endblock %}

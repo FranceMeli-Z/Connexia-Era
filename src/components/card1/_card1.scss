@@ -64,6 +64,14 @@ $component: componentClass("card1");
     }
   }
 
+  &__benefits {
+    &--title {
+      & h6 {
+      font-size: 26px;
+      }
+    }
+  }
+
 
   // &--lg-size1 {
   //   .#{$component} {

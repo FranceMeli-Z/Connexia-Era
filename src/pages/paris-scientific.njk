@@ -1,0 +1,206 @@
+{# Sets the layout to be extended #}
+{% extends "layouts/default.njk" %}
+
+{# Imports components #}
+{% import 'components/img/img.njk' as Img %}
+{% import 'components/icon/icon.njk' as Icon %}
+{% import 'components/btn/btnIcon.njk' as BtnIcon %}
+{% import 'components/card1/card1_highlight.njk' as CardHighlight %}
+{% import 'components/card2/card2_news.njk' as Card2 %}
+{% import 'components/boxcontent/boxcontent.njk' as BoxContent %}
+{% import 'components/breadcrumbs/breadcrumbs.njk' as Breadcrumbs %}
+{% import 'components/nav2/nav2.njk' as Nav2 %}
+
+{# Sets page-specific variables #}
+{% set page = {
+  "data": page_paris-home,
+  "title": "Paris Congress",
+  "isHome": false
+} %}
+
+{% block head_css %}
+  <link rel="stylesheet" href="assets/css/general.bundle.css">
+{% endblock %}
+
+{% block content %}
+
+  <main>
+     <!-- First box -->
+      <div class="mb-0 mb-lg-4 pe-0">
+        <div class="row gx-3 m-0">
+          <div class="zaux-bg-set1-grey p-box rounded-bottom-100 col-12 col-lg-8 mih-boxtitle pt-3 pt-lg-6">
+            <div class="pb-2 pb-lg-4">
+              {{ Breadcrumbs.content() }}
+            </div>
+            <div class="font-zaux2 zaux-theme--light1 pb-2 pb-lg-4">
+              <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Paris Congress 2022</h6>
+            </div>
+             <div class="c-typo-style1-3 c-typo-style1-lg-4 maw-f768px">
+              <p>ERA organizes the largest annual Nephrology Congress in Europe, welcoming thousands of attendees coming from all over the world,
+                focusing on key learning features both in the clinical field as well as the scientific and latest innovations.</p>
+            </div>
+          </div>
+          <div class="pe-box col-12 col-lg-4 d-flex align-items-center mih-boxtitle justify-content-center justify-content-lg-end">
+            {{
+                  Img.content({
+                  "isLazy": false,
+                  "src": "media/ParisLogo.png",
+                  "src2x": "media/ParisLogo@2x.png",
+                  "width": 300,
+                  "height": 51,
+                  "className": ["img-fluid"],
+                  "title": "title",
+                  "alt": "alt",
+                  "wrapperElement": ["figure"],
+                  "wrapperClassName": [""]
+                  })
+            }}
+          </div>
+        </div>
+      </div>
+      <!-- end First box -->
+
+       {{ Nav2.content({
+        "className": [""]
+       })
+       }}
+
+       <!-- Testo Innovation-->
+      <div class="pb-7 pb-lg-10 p-box pb-11 pt-6 pt-lg-8">
+        <div class="mb-7 mb-lg-9">
+        <div class="row gx-3">
+          <div class="col-12 col-lg-6 pb-lg-0 pb-6">
+              <div class="text-lg-start text-center font-zaux2 zaux-theme--light2 pb-3 pb-lg-4">
+                  <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">Innovation, Prevention, Preparedness</h6>
+              </div>
+              <div class="c-typo-style1-4 c-typo-style1-lg-8">
+                <p>The ERA 2022 Congress in Paris will take place from May 19 to 22, 2022 as a hybrid event, thus being both live and virtual, with speakers, chairs and delegates attending live and remotely.</p>
+                <p>The Congress programme is now online and guarantees, both live and virtual, top-quality presentations,
+                  and a close interaction with the attendees.</p>
+                <p>For any queries regarding the programme, please send an e-mail to <strong>program@era-online.or</strong></p>
+              </div>
+          </div>
+          <div class="col-12 col-lg-6 d-flex">
+           <div class="maw-f400 m-auto">
+              <div class="border-gradient px-4">
+                <div class="text-center zaux-theme--light1 pt-7 pb-8">
+                  <div class="font-zaux2 pb-4">
+                    <h6 class="fw-demi c-typo-fs-8 c-typo-fs-lg-10">Programme at a glance</h6>
+                  </div>
+                  <div class="c-typo-style1-4 c-typo-style1-lg-8 pb-6">
+                    <p>The preliminary programme is now availble for download.<p>
+                  </div>
+                  <div class="">
+                    <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">Download</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- end row -->
+        </div>
+
+
+      <div class="zaux-theme--light2">
+
+        <!-- start row -->
+        <div class="row gx-3">
+           {% set total = 4 %}
+           {% set _htmlCardContent %}
+          <div class="card1__head zaux-theme--dark1">
+            <div class="card1__head--title font-zaux2 pb-2">
+              <h6 class="fw-bold c-typo-fs-8 c-typo-fs-lg-10">Hands on Courses</h6>
+            </div>
+            <div class="card1__head--abstract c-typo-style1-6 c-typo-style1-lg-8">
+              <p>Explore practical educational activities which will be held the first day of the 59th ERA Congress.</p>
+            </div>
+          </div>
+
+          <div class="card1__button text-end">
+            <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">go to Hands on courses</a>
+          </div>
+
+          {% endset %}
+           {# "c-ratio--square", "c-ratio--md-none" #}
+          {% for i in range(0, total) %}
+          <div class="col-12 col-md-5 h-100 pb-6 ">
+            {{CardHighlight.content(
+              {
+                "className": ["c-card1--theme--light"],
+                "variations": ["lg-size1"],
+                "innerClassName": [],
+                "contentClassName": ["d-flex", "justify-content-between", "flex-column", "p-6"],
+                "content": _htmlCardContent,
+                "img": {
+                "isShaped": true,
+                "className": ["rounded-2", "overflow-hidden"],
+                "variations": ["style1", decoVariation],
+                "img": {
+                "isLazy": true,
+                "src": "media/backCard1.png",
+                "src2x": "media/backCard1.png",
+                "width": 396,
+                "height": 380,
+                "alt": "Cover alternative text",
+                "className": ["zaux-fit-cover-center-center", "w-100"]
+                }
+                }
+              }
+            )}}
+            </div>
+            <div class="col-md-1 d-none d-lg-block">
+            </div>
+          {% endfor %}
+        </div>
+      <!-- end row -->
+
+      </div>
+
+    </div>
+       <!-- Fine Testo Innovation -->
+
+
+    <div class="mb-lg-8 mb-5 zaux-bg-set1-grey">
+        <div class="row">
+           <div class="col-12 col-lg-6">
+            {{
+            Img.content({
+              "isLazy": false,
+              "src": "media/Homebox2.png",
+              "src2x": "media/Homebox2.png",
+              "width": 573,
+              "height": 375,
+              "className": ["img-fluid","float-start"],
+              "title": "title",
+              "alt": "alt",
+              "wrapperElement": "",
+              "wrapperClassName": ""
+            })
+            }}
+          </div>
+          <div class="p-box mb-lg-0 mb-7 col-12 col-lg-6 ps-lg-0 pt-3 pt-lg-6">
+            <div class="d-flex flex-column justify-content-center h-100">
+              <div class="font-zaux2 zaux-theme--light1 pb-2 pb-lg-4">
+                <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Subscribe to ERA for exclusive discounts!</h6>
+              </div>
+              <div class="pb-4 c-typo-style1-3 c-typo-style1-lg-4 maw-f768">
+                <p>Choose your membership category from Free to EUR 170 and enjoy all benefits!</p>
+              </div>
+              <div class="text-center text-lg-start">
+                <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">Discover all benefits</a>
+              </div>
+            </diV>
+          </div>
+
+        </div>
+      </div>
+
+  </main>
+
+{% endblock %}
+
+{% block foot_js %}
+  <script defer src="assets/js/general.bundle.js"></script>
+{% endblock %}

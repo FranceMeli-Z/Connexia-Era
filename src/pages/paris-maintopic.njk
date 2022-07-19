@@ -1,0 +1,184 @@
+{# Sets the layout to be extended #}
+{% extends "layouts/default.njk" %}
+
+{# Imports components #}
+{% import 'components/img/img.njk' as Img %}
+{% import 'components/icon/icon.njk' as Icon %}
+{% import 'components/btn/btnIcon.njk' as BtnIcon %}
+{% import 'components/card1/card1_highlight.njk' as CardHighlight %}
+{% import 'components/card2/card2_news.njk' as Card2 %}
+{% import 'components/card2/card2_related.njk' as CardRelated %}
+{% import 'components/breadcrumbs/breadcrumbs.njk' as Breadcrumbs %}
+{% import 'components/nav2/nav2.njk' as Nav2 %}
+{% import 'components/nav3/nav3.njk' as Nav3 %}
+
+{# Sets page-specific variables #}
+{% set page = {
+  "data": page_paris-home,
+  "title": "Paris Congress",
+  "isHome": false
+} %}
+
+{% block head_css %}
+  <link rel="stylesheet" href="assets/css/general.bundle.css">
+{% endblock %}
+
+{% block content %}
+
+  <main>
+     <!-- First box -->
+      <div class="mb-0 mb-lg-4 pe-0">
+        <div class="row gx-3 m-0">
+          <div class="zaux-bg-set1-grey p-box rounded-bottom-100 col-12 col-lg-8 mih-boxtitle pt-3 pt-lg-6">
+            <div class="pb-2 pb-lg-4">
+              {{ Breadcrumbs.content() }}
+            </div>
+            <div class="font-zaux2 zaux-theme--light1 pb-2 pb-lg-4">
+              <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Paris Congress 2022</h6>
+            </div>
+             <div class="c-typo-style1-3 c-typo-style1-lg-4 maw-f768px">
+              <p>ERA organizes the largest annual Nephrology Congress in Europe, welcoming thousands of attendees coming from all over the world,
+                focusing on key learning features both in the clinical field as well as the scientific and latest innovations.</p>
+            </div>
+          </div>
+          <div class="pe-box col-12 col-lg-4 d-flex align-items-center mih-boxtitle justify-content-center justify-content-lg-end">
+            {{
+                  Img.content({
+                  "isLazy": false,
+                  "src": "media/ParisLogo.png",
+                  "src2x": "media/ParisLogo@2x.png",
+                  "width": 300,
+                  "height": 51,
+                  "className": ["img-fluid"],
+                  "title": "title",
+                  "alt": "alt",
+                  "wrapperElement": ["figure"],
+                  "wrapperClassName": [""]
+                  })
+            }}
+          </div>
+        </div>
+      </div>
+      <!-- end First box -->
+
+       {{ Nav2.content({
+        "className": [""]
+       })
+       }}
+
+      <div class="mb-8 mb-lg-9">
+        <div class="d-flex flex-column flex-lg-row">
+
+          {{ Nav3.content({
+            "className": [""]
+            })
+          }}
+
+          <div class="ps-lg-12 p-box maw-f1025 pt-lg-12">
+            <div class="pb-8 pb-lg-12">
+              <div class="font-zaux2 zaux-theme--light2 pt-lg-12 pb-3 pb-lg-4">
+                <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">Plenary Lectures</h6>
+              </div>
+              <div class="c-typo-style1-4 c-typo-style1-lg-8">
+                      <ol>
+                        <li>Equity, sustainability, and ethics in kidney health Valerie Luyckx, Switzerland</li>
+                        <li>PCSK9: a journey of discovery from genetics to clinical trials Catherine Boileau, France</li>
+                        <li> Bioelectronic Medicine, hypertension and inflammation Tracey Kevin, USA</li>
+                      </ol>
+              </div>
+            </div>
+            <div class="">
+                  <div class="font-zaux2 zaux-theme--light2 pb-5 pb-lg-6">
+                      <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">Congress sessions</h6>
+                  </div>
+                  <div class="c-typo-style1-4 c-typo-style1-lg-8 pb-7">
+                    <p>Add conferences, seminars and CME courses directly to your congress plan</p>
+                  </div>
+                    <!-- start row -->
+                    <div class="row gx-3">
+                      {% set total = 4 %}
+                      {% set _htmlCardContent %}
+                      <div class="card1__head zaux-theme--dark1">
+                        <div class="card1__head--title font-zaux2 pb-2">
+                          <h6 class="fw-bold c-typo-fs-8 c-typo-fs-lg-10">Hands on Courses</h6>
+                        </div>
+                      </div>
+                      <div class="card1__button text-end">
+                        <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">add to planner</a>
+                      </div>
+                      {% endset %}
+                      {% for i in range(0, total) %}
+                      <div class="col-12 col-md-6 h-100 pb-6">
+                        {{CardHighlight.content(
+                          {
+                            "className": ["c-card1--theme--light"],
+                            "variations": ["lg-size1"],
+                            "innerClassName": [],
+                            "contentClassName": ["d-flex", "justify-content-between", "flex-column", "p-6"],
+                            "content": _htmlCardContent,
+                            "img": {
+                            "isShaped": true,
+                            "className": ["rounded-2", "overflow-hidden"],
+                            "variations": ["style1", decoVariation],
+                            "img": {
+                            "isLazy": true,
+                            "src": "media/backCard1.png",
+                            "src2x": "media/backCard1.png",
+                            "width": 396,
+                            "height": 380,
+                            "alt": "Cover alternative text",
+                            "className": ["zaux-fit-cover-center-center"]
+                            }
+                            }
+                          }
+                        )}}
+                        </div>
+                      {% endfor %}
+                    </div>
+                    <!-- end row -->
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+     <div class="p-box pb-2 pb-lg-8">
+      <div class="zaux-theme--light2 zaux-font2 pb-6 pb-md-9">
+        <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">Plan your congress</h6>
+      </div>
+      <div class="row gx-3">
+              {%
+                set _decoVariations = [
+                  "deco1-l-t",
+                  "deco1-r-t"
+                ]
+              %}
+
+              {% for decoVariation in _decoVariations %}
+
+                <div class="col-12 col-md-6 pb-6">
+
+                  {{CardRelated.content(
+                    {
+                      "className": ["h-100","mih-200"],
+                      "innerClassName": ["border-all-gradient","h-100", "py-7", "px-2", "px-lg-7"],
+                      "contentClassName": ["text-center","d-flex","flex-column","justify-content-between","h-100"],
+                      "content": {
+                        "cta": "Go",
+                        "title": "Programme Planner"
+                      }
+                    }
+                  )}}
+                </div>
+                <!-- .col-* -->
+              {% endfor %}
+      </div>
+    </div>
+
+  </main>
+
+{% endblock %}
+
+{% block foot_js %}
+  <script defer src="assets/js/general.bundle.js"></script>
+{% endblock %}

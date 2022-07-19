@@ -10,4 +10,8 @@ $component: componentClass("header");
 
 .#{$component} {
 
+  &__inner a {
+    color: tokenColor("set1","darkgrey");
+  }
+
 }

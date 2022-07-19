@@ -1,3 +1,6 @@
+//Vendors
+import { Modal } from "bootstrap";
+
 // Common
 import { default as init } from "./common/base";
 

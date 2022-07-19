@@ -2,15 +2,17 @@
 
 @import "../../assets/scss/components/base";
 
-$component: componentClass("nav2");
+$component: componentClass("nav3");
 
 ////////////////////////////////////////////////////
 // Theme: Light1
 ////////////////////////////////////////////////////
 
 .#{$component} {
-
-  background-color: tokenColor("set1","red1");
+  @include media-breakpoint-up(lg) {
+    border-right: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+  }
 
 }
 //   // &__item {

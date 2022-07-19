@@ -61,6 +61,18 @@
   height: 30px;
 }
 
+.icozaux1-facebook, .icozaux1-twitter, .icozaux1-instagram, .icozaux1-youtube, .icozaux1-linkedin {
+  fill: tokenColor("set1","red1");
+}
+
+.icozaux1-twitter :hover {
+  color: tokenColor("set1","darkred");
+}
+
+// .icozaux1-facebook:visited, .icozaux1-twitter:hover, .icozaux1-instagram:hover, .icozaux1-youtube:hover, .icozaux1-linkedin:hover {
+//   fill: tokenColor("set1","darkred");
+// }
+
 @font-face {
   font-family: 'Work Sans';
   src: url('../fonts/WorkSans/WorkSans-Bold.eot');

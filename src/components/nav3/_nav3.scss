@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+@import "../../assets/scss/components/base";
+
+$component: componentClass("nav3");
+
+.#{$component} {
+  min-width: 415px;
+
+  ul {
+
+    list-style: none;
+  }
+  li {
+
+  }
+   a {
+      white-space: nowrap;
+      &:hover {
+        font-weight: bold;
+        text-decoration: none;
+      }
+    }
+  }

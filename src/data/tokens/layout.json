@@ -45,8 +45,8 @@
     }
   },
   "container-max-widths": {
-    "s": "492px",
-    "m": "762px",
+    "s": "428px",
+    "m": "768px",
     "l": "992px",
     "max":"1440px"
   },

@@ -5,28 +5,35 @@ $component: componentClass("modale");
 .#{$component} {
 
   & .modal-dialog {
-    max-width: 900px;
-    @include media-breakpoint-down(lg) {
-      margin: 50px auto;
-    }
+    max-width: 100% !important;
+    margin: 0 !important;
   }
 
-  &__content--footer {
-    z-index: 999;
-    position: relative;
-  }
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    & .form-group {
+      border-bottom: 2px solid #3F3F3F;
+      padding-bottom: 10px;
+      width: 610px;
+      @include media-breakpoint-down(md) {
+      width: 349px;
+      }
 
-  & .row {
-    @include media-breakpoint-down(lg) {
-      display: block;
+      & input {
+        background-color: transparent;
+        border: none;
+      }
+
     }
-
   }
 
 }
 
 .btn.btn-primary {
   white-space: nowrap;
-  color: $zaux-color-set1-darkblue;
+  // color: $zaux-color-set1-darkblue;
   text-decoration: none;
 }

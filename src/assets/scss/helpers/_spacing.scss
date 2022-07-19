@@ -18,3 +18,17 @@ $zaux-helper-name: "spacing";
   padding: $column-padding-lg-box;
   }
 }
+
+.pe-box {
+  padding-right: 20px;
+  @include media-breakpoint-up(lg) {
+  padding-right: 93px;
+  }
+}
+
+.ps-box {
+  padding-left: 20px;
+  @include media-breakpoint-up(lg) {
+  padding-left: 93px;
+  }
+}

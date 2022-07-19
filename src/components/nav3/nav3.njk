@@ -1,0 +1,48 @@
+{# Imports components #}
+{% import 'components/icon/icon.njk' as Icon %}
+
+{% macro content(obj) %}
+
+  {% set componentClassName = 'c-nav3' %}
+
+  {% set configDefault = {
+    "wrapperElement" : "nav"
+  }%}
+
+  {% set obj = configDefault | merge(obj or {}) %}
+
+  {% set _className = [componentClassName] | mergeArray(obj.className or configDefault.className) %}
+
+  <div class="{{_className | join(" ")}}">
+     <div class="ps-box zaux-bg-set1-grey h-100 d-none d-lg-block" aria-hidden="true">
+       <div class="text-lg-start text-center font-zaux2 zaux-theme--light2 pt-lg-8 pb-lg-12">
+          <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">Main Topics</h6>
+        </div>
+        <!-- `aria-hidden="true"` because the content already exists in the side nav (mobile first)  -->
+        <nav class="c-nav3--layout1 zaux-theme--light1 c-typo-style1-8">
+            <!-- BEGIN WP NAV -->
+                <ul class="list-unstyled">
+                  <li><a>Plenary Lectures</a></li>
+                  <li><a>Plenary Lectures</a></li>
+                  <li><a>Plenary Lectures</a></li>
+                  <li><a>Plenary Lectures</a></li>
+                  <li><a>Plenary Lectures</a></li>
+                <ul>
+            <!-- END WP NAV -->
+          </nav>
+      </div>
+    <div class="p-box d-block d-lg-none pb-6">
+      <div class="text-lg-start text-center font-zaux2 zaux-theme--light2 pt-6 pb-6">
+          <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">Main Topics</h6>
+      </div>
+      <div>
+        <select class="form-select" aria-label="Default select example">
+          <option value="1">Plenary Lectures</option>
+          <option value="2">Institutional</option>
+          <option value="3">Fluid electrolytes, tubular transport, renal physiology</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+{% endmacro %}

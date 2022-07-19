@@ -14,11 +14,11 @@
   {% set _className = [componentClassName] | mergeArray(obj.className or configDefault.className) %}
 
   <div class="{{_className | join(" ")}}">
-     <div class="" aria-hidden="true">
+     <div class="p-box" aria-hidden="true">
         <!-- `aria-hidden="true"` because the content already exists in the side nav (mobile first)  -->
-          <nav class="c-nav1--layout1 c-nav1--fh {{componentClassName}}__nav-top zaux-theme--dark1">
+          <nav class="c-nav2--layout1 zaux-theme--dark1 ">
             <!-- BEGIN WP NAV -->
-            <ul class="d-flex justify-content-between">
+            <ul class="d-flex c-typo-style1-2 c-typo-style1-lg-4 justify-content-between align-items-center h-100">
               <li>
                 <a href="#" title="Generale Information">
                   General information
@@ -26,7 +26,7 @@
               </li>
               <li>
                 <a href="#" title="Scientific Programme">
-                  Scientific Pogramme
+                  Scientific Programme
                 </a>
               </li>
               <li>

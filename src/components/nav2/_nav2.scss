@@ -5,18 +5,29 @@
 $component: componentClass("nav2");
 
 [class*="#{$component}"] {
+  height: 50px;
+  overflow: auto;
+
   ul {
+
     list-style: none;
   }
   li {
+    margin-bottom: 0 !important;
+    &:not(:last-child) {
+    @include media-breakpoint-down(lg) {
+      margin-right: 30px;
+    }
+  }
     &:first-child {
-      font-weight: 600;
+      font-weight: bold;
     }
     // font-size: getTypoFontsize("6");
     // line-height: getTypoLineheight("6");
     a {
+      white-space: nowrap;
       &:hover {
-        font-weight: 600;
+        font-weight: bold;
         text-decoration: none;
       }
     }

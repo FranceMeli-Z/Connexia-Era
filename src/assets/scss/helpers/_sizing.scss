@@ -47,6 +47,10 @@ $zaux-helper-name: "size";
   max-width: 550px;
 }
 
+.maw-f640 {
+  max-width: 640px;
+}
+
 .maw-f768 {
   max-width: 768px;
 }
@@ -55,15 +59,22 @@ $zaux-helper-name: "size";
   max-width: 825px;
 }
 
-.maw-1040 {
-  max-width: 1040px;
+.maw-f1025 {
+  max-width: 1025px;
 }
+
 
 
 //Width
 .w-#{$zaux-helper-name}-200 {
   @include media-breakpoint-down(lg) {
     width: 200px;
+  }
+}
+.w-#{$zaux-helper-name}-custom183 {
+  width: 183px;
+  @include media-breakpoint-down(lg) {
+    width: 105px;
   }
 }
 
@@ -74,4 +85,24 @@ $zaux-helper-name: "size";
   @include media-breakpoint-down(lg) {
     max-width: 200px;
   }
+}
+
+.maw-#{$zaux-helper-name}-custom2 {
+  max-width: 300px;
+  @include media-breakpoint-down(lg) {
+  max-width: 100%;
+  }
+}
+
+
+//Custom Time Box
+
+.zaux-#{$zaux-helper-name}-timebox {
+  max-width: 183px;
+  max-height: 183px;
+  @include media-breakpoint-down(lg) {
+    max-width: 105px;
+    max-height: 105px;
+  }
+
 }

@@ -13,6 +13,7 @@
 
  {% set _className = [componentClassName] | mergeArray(obj.className or configDefault.className) %}
 
+
   {% if obj.newsletter %}
     <div class="{{_className | join(" ")}}">
       <form class="{{componentClassName}}--light {{componentClassName}}--newsletter d-flex justify-content-center">
