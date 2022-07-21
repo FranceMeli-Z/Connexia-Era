@@ -11,7 +11,8 @@
     "innerWrapperClassName": [],
     "innerClassName": [],
     "contentClassName": [],
-    "variations": []
+    "variations": [],
+    "ctaClassName": ["text-end"]
   }%}
 
   {% set obj = configDefault | overwriteMerge(obj or {}) %}
@@ -20,6 +21,7 @@
   {% set _className = [componentClassName] | mergeArray(obj.className or configDefault.className) %}
   {% set _innerClassName = [componentClassName + "__inner"] | mergeArray(obj.innerClassName or configDefault.innerClassName) %}
   {% set _contentClassName = [componentClassName + "__content"] | mergeArray(obj.contentClassName or configDefault.contentClassName) %}
+  {% set _ctaClassName = [componentClassName + "__content__cta"] | mergeArray(obj.ctaClassName or configDefault.ctaClassName) %}
 
   {# Pushes every variation into class attribute (prepending the base class) #}
   {% for variation in ([] | mergeArray(obj.variations or configDefault.variations)) %}
@@ -44,7 +46,21 @@
       {% if obj.content %}
         <div class="{{_contentClassName | join(" ")}}">
 
-            {{obj.content|safe}}
+          {{obj.content|safe}}
+
+        {% if obj.ctaAbsolute %}
+        <div class="{{_ctaClassName | join(" ")}}">
+          <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">{{obj.ctaValue|safe}}</a>
+        </div>
+        {% elif obj.cta100 %}
+        <div class="{{_ctaClassName | join(" ")}}">
+          <a class="c-cta1 c-cta1--sm c-cta1--red w-100 text-center" href="#" title="button title">{{obj.ctaValue|safe}}</a>
+        </div>
+        {% else %}
+        <div class="{{_ctaClassName | join(" ")}}">
+          <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">{{obj.ctaValue|safe}}</a>
+        </div>
+        {% endif %}
 
       </div>
         <!-- .{{componentClassName}}__cover -->

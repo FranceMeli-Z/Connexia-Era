@@ -8,7 +8,8 @@
 <div class="{{componentClassName}} modal fade" id="EraModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog h-100">
     <div class="{{componentClassName}}--light h-100 p-box">
-        <button type="button" class="{{componentClassName}}__btn  float-end pt-4 pt-md-8" data-bs-dismiss="modal" aria-label="Close">
+        <div class="{{componentClassName}}__content h-100">
+          <button type="button" class="{{componentClassName}}__btn--close  float-end pt-4 pt-md-8" data-bs-dismiss="modal" aria-label="Close">
           {{
             Icon.content({
               "className": "",
@@ -17,12 +18,11 @@
             })
           }}
         </button>
-        <div class="{{componentClassName}}__content h-100">
-          <div>
-            <div class="{{componentClassName}}__content--search pb-5">
+          <div class="{{componentClassName}}__content--search">
+            <div class="{{componentClassName}}__content--search--form pb-5">
                 <form class="c-form" role="search" method="get" autocomplete="off">
                   <div class="form-group">
-                    <input class="{{componentClassName}}__search-field m-0" type="search" name="s" value="" placeholder="Search ERA..."/>
+                    <input class="{{componentClassName}}__search-field w-100 p-2" type="search" name="s" value="" placeholder="Search ERA..."/>
                     {# <button type="submit" class="{{componentClassName}}__search-btn">
                       {{
                         Icon.content({
@@ -36,22 +36,42 @@
                 </form>
               </div>
               <div class="">
-                <div class="pb-8 c-typo-style1-4">
-                  <ul class="list-unstyled">
-                    <li><a>Chronic <strong>Kidney Disease</strong></a></li>
-                    <li><a>Chronic <strong>Kidney Disease</strong></a></li>
-                    <li><a>Chronic <strong>Kidney Disease</strong></a></li>
-                    <li><a>Chronic <strong>Kidney Disease</strong></a></li>
+                <div class="{{componentClassName}}__content--search--result pb-8 c-typo-style1-4">
+                  <ul class="list-unstyled ps-0">
+                    <li><a href="#">Chronic <strong>Kidney Disease</strong></a></li>
+                    <li><a href="#">Chronic <strong>Kidney Disease</strong><span>in Publications </span></a></li>
+                    <li><a href="#">Chronic <strong>Kidney Disease</strong><span>in Webcasts </span></a></li>
+                    <li><a href="#">Chronic <strong>Kidney Disease</strong><span>in Guideline </span></a></li>
                   <ul>
                 </div>
-                <div>
+                <div class="{{componentClassName}}__content--search--suggestion">
                   <div class="zaux-theme--light2 font-zaux2 pb-5">
                     <h6 class="fw-demi c-typo-fs-8">Suggestions</h6>
                   </div>
                   <div class="c-typo-style1-4">
-                    <ul class="list-unstyled text-decoration-underline">
-                      <li><a><strong>CKD-MBD working group</a></strong></li>
-                      <li><a><strong>CKD-MBD disease portal</strong></a></li>
+                    <ul class="list-unstyled ps-0">
+                      <li class="pb-2">
+                        <a href="#"><span>CKD-MBD working group</span>
+                        {{
+                          Icon.content({
+                            "className": ["ps-2","align-txt-bottom"],
+                            "iconName": "icozaux1-littlearrow",
+                            "iconSvgUrl": app.fonts.icozaux1.url
+                          })
+                        }}
+                        </a>
+                      </li>
+                      <li class="pb-2">
+                        <a href="#"><span>CKD-MBD disease portal</span>
+                        {{
+                          Icon.content({
+                            "className": ["ps-2","align-txt-bottom"],
+                            "iconName": "icozaux1-littlearrow",
+                            "iconSvgUrl": app.fonts.icozaux1.url
+                          })
+                        }}
+                        </a>
+                        </li>
                     </ul>
                 </div>
               </div>

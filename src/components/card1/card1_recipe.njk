@@ -1,6 +1,4 @@
-{# Imports components #}
 {% import 'components/img/img.njk' as Img %}
-{% import 'components/shapedimg/shapedimg.njk' as ShapedImg %}
 
 {% macro content(obj) %}
 
@@ -10,8 +8,7 @@
     "className": [],
     "innerWrapperClassName": [],
     "innerClassName": [],
-    "contentClassName": [],
-    "variations": []
+    "contentClassName": []
   }%}
 
   {% set obj = configDefault | overwriteMerge(obj or {}) %}
@@ -19,7 +16,7 @@
   {# Creates new arrays for manipulation) #}
   {% set _className = [componentClassName] | mergeArray(obj.className or configDefault.className) %}
   {% set _innerClassName = [componentClassName + "__inner"] | mergeArray(obj.innerClassName or configDefault.innerClassName) %}
-  {% set _contentClassName = [componentClassName + "__content"] | mergeArray(obj.contentClassName or configDefault.contentClassName) %}
+  {% set _contentClassName = [componentClassName + "__recipe"] | mergeArray(obj.contentClassName or configDefault.contentClassName) %}
 
   {# Pushes every variation into class attribute (prepending the base class) #}
   {% for variation in ([] | mergeArray(obj.variations or configDefault.variations)) %}
@@ -28,28 +25,31 @@
 
   <div class="{{_className | join(" ")}}">
     <div class="{{_innerClassName | join(" ")}}">
-
-      {% if obj.img.isShaped %}
-        {{
-          ShapedImg.content(obj.img| merge({
-            className:[componentClassName + "__cover"]
-          }))
-        }}
-      {% else %}
-        {{
-          Img.content(obj.img)
-        }}
-      {% endif %}
-
-      {% if obj.content %}
         <div class="{{_contentClassName | join(" ")}}">
-
-            {{obj.content|safe}}
-
+             {% if obj.img %}
+              <div class="{{componentClassName}}__recipe--img pb-3">
+                <a href="#">
+                  {{
+                    Img.content(obj.img)
+                  }}
+                </a>
+              </div>
+            {% endif %}
+              <div class="">
+                <div class="font-zaux2 zaux-theme--light1 pb-2">
+                  <h6 class="fw-demi c-typo-fs-8 c-typo-fs-lg-10"> {{obj.name|safe}} </h6>
+                </div>
+                <div class="font-zaux2 fst-italic c-typo-style-4">
+                  <p>{{obj.nation|safe}}</p>
+                </div>
+              </div>
+              <div class="position-absolute bottom-0">
+                <div class="{{componentClassName}}__recipe--time font-zaux2 fst-italic c-typo-style-6">
+                  <p>{{obj.time|safe}}</p>
+                </div>
+              </div>
         </div>
-        <!-- .{{componentClassName}}__cover -->
-      {% endif %}
-
+        <!-- .{{componentClassName}}__profile -->
     </div>
     <!-- .{{componentClassName}}__inner -->
   </div>

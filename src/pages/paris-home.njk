@@ -61,7 +61,8 @@
       <!-- end First box -->
 
        {{ Nav2.content({
-        "className": [""]
+        "className": [""],
+        "parisCongress": "y"
        })
        }}
 
@@ -142,7 +143,16 @@
                 </ul>
               </div>
               <div class="">
-                 <a class="c-cta1 c-cta1--txt c-cta1--onlyred" href="#" title="button title">Submit your abstract</a>
+                 <a class="c-cta1 c-cta1--txt c-cta1--onlyred" href="#" title="button title">
+                  <span class="pe-3">Submit your abstract</span>
+                   {{
+                    Icon.content({
+                      "className": ["align-txt-bottom"],
+                      "iconName": "icozaux1-littlearrow",
+                      "iconSvgUrl": app.fonts.icozaux1.url
+                    })
+                  }}
+                  </a>
               </div>
           </div>
 
@@ -153,8 +163,17 @@
               <div class="c-typo-style1-4 c-typo-style1-lg-8 pb-6">
                 <p>The Congress programme is now online and guarantees, both live and virtual, top-quality presentations, and a close interaction with the attendees.</p>
               </div>
-              <div class="">
-                <a class="c-cta1 c-cta1--txt c-cta1--onlyred" href="#" title="button title">Scienitfic programme</a>
+              <div class="zaux-theme--light2">
+                <a class="c-cta1 c-cta1--txt c-cta1--onlyred" href="#" title="button title">
+                  <span class="pe-3">Scienitfic programme</span>
+                  {{
+                    Icon.content({
+                      "className": ["align-txt-bottom"],
+                      "iconName": "icozaux1-littlearrow",
+                      "iconSvgUrl": app.fonts.icozaux1.url
+                    })
+                  }}
+                  </a>
               </div>
           </div>
 
@@ -163,7 +182,7 @@
       </div>
 
 
-      <div class="mb-lg-8 mb-5 zaux-bg-set1-grey">
+      <div class="mb-lg-8 mb-5 zaux-bg-set1-grey mih-380">
         <div class="row">
            <div class="col-12 col-lg-6">
             {{
@@ -231,7 +250,7 @@
                 <p>Follow ERA on Social Media and read all the official information about the 59th ERA Congress.</p>
                 <p>Our Social Media profile links are:</p>
               </div>
-              <div class="c-typo-style1-10 maw-size-custom2">
+              <div class="c-typo-style1-10 maw-size-custom2 zaux-theme--light2">
                   <ul class="list-unstyled ps-0 d-flex justify-content-between">
                   <li><a href="#" title="Twitter">
                     {{

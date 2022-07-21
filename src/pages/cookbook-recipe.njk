@@ -1,0 +1,717 @@
+{# Sets the layout to be extended #}
+{% extends "layouts/default.njk" %}
+
+{# Imports components #}
+{% import 'components/img/img.njk' as Img %}
+{% import 'components/icon/icon.njk' as Icon %}
+{% import 'components/btn/btnIcon.njk' as BtnIcon %}
+{% import 'components/card1/card1_recipe.njk' as CardRecipe %}
+{% import 'components/card2/card2_news.njk' as Card2 %}
+{% import 'components/boxcontent/boxcontent.njk' as BoxContent %}
+{% import 'components/breadcrumbs/breadcrumbs.njk' as Breadcrumbs %}
+{% import 'components/nav2/nav2.njk' as Nav2 %}
+
+{# Sets page-specific variables #}
+{% set page = {
+  "data": page_paris-home,
+  "title": "Paris Congress",
+  "isHome": false
+} %}
+
+{% block head_css %}
+  <link rel="stylesheet" href="assets/css/general.bundle.css">
+{% endblock %}
+
+{% block content %}
+
+  <main>
+     <!-- First box -->
+      <div class="mb-0 mb-lg-4 pe-0">
+        <div class="row gx-3 m-0">
+          <div class="zaux-bg-set1-grey p-box rounded-bottom-100 col-12 col-lg-8 mih-boxtitle pt-3 pt-lg-6">
+            <div class="pb-2 pb-lg-4">
+              {{ Breadcrumbs.content() }}
+            </div>
+            <div class="font-zaux2 zaux-theme--light1 pb-2 pb-lg-4">
+              <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Paris Congress 2022</h6>
+            </div>
+             <div class="c-typo-style1-3 c-typo-style1-lg-4 maw-f768px">
+              <p>ERA organizes the largest annual Nephrology Congress in Europe, welcoming thousands of attendees coming from all over the world,
+                focusing on key learning features both in the clinical field as well as the scientific and latest innovations.</p>
+            </div>
+          </div>
+          <div class="pe-box col-12 col-lg-4 d-flex align-items-center mih-boxtitle justify-content-center justify-content-lg-end">
+            {{
+                  Img.content({
+                  "isLazy": false,
+                  "src": "media/CookbookLogo.png",
+                  "src2x": "media/CookbookLogo@2x.png",
+                  "width": 340,
+                  "height": 156,
+                  "className": ["img-fluid"],
+                  "title": "title",
+                  "alt": "alt",
+                  "wrapperElement": ["figure"],
+                  "wrapperClassName": [""]
+                  })
+            }}
+          </div>
+        </div>
+      </div>
+      <!-- end First box -->
+
+       {{ Nav2.content({
+        "className": [""]
+       })
+       }}
+
+      <div class="pt-5 pt-lg-9">
+        <div class="">
+
+        </div>
+        <div class="p-box maw-f825 m-auto">
+          <div class="c-typo-style1-4 c-typo-style1-lg-6 pb-2">
+            <p>
+              Many people also enjoy watching cooking programs and perhaps even cooking itself!</p><br>
+            <p>As renal patients we have to try to maintain our body’s needs as well as our social ones, whilst navigating our, often complex, dietary restrictions.
+              The way food tastes can also change with renal failure, so it is important to try food that you may have previously not liked.</p><br>
+            <p>The truth is, a lot of dietary advice is negative, focusing on what we cannot have. It is also common to receive one size fits all advice. This means we often end up eating bland and uninteresting
+              food because we are not sure what is allowed and this leaves many of us feeling awkward whilst eating away from home.</p><br>
+            <p>This project aims to bring some great tasting food back to the renal diet, with the help of everyone in the renal community. Just because we have restrictions this does not mean that we always
+              have to compromise on the variety and quantity of tasty food that we want.</p>
+          </div>
+          <div class="c-typo-style1-3">
+            <p><strong>William Withers</strong></p>
+            <p><i>Lifelong Renal Patient and on dialysis since 1992</i></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="pb-6 pb-lg-9">Form Select</div>
+
+      <!-- All recipe -->
+      <div class="p-box">
+
+        <!-- New recipe -->
+        <div class="mb-7 mb-lg-10">
+          <div class="">
+            <div class="d-flex justify-content-between align-items-center pb-4 pb-md-7">
+              <div class="font-zaux2 zaux-theme--light2">
+                <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">New Recipes</h6>
+              </div>
+              <div class="d-none d-lg-block">
+                <a href="#" class="pe-8"> {{
+                          Icon.content({
+                            "className": "",
+                            "iconName": "icozaux1-arrowL",
+                            "iconSvgUrl": app.fonts.icozaux1.url
+                            })
+                          }}
+                </a>
+                <a href="#"> {{
+                          Icon.content({
+                            "className": "",
+                            "iconName": "icozaux1-arrowR",
+                            "iconSvgUrl": app.fonts.icozaux1.url
+                            })
+                          }}
+                </a>
+              </div>
+            </div>
+            <div class="row gx-3 flex-nowrap flex-lg-wrap overflow-auto">
+                        {%
+                          set _decoVariations = [
+                            "deco1-l-t",
+                            "deco1-r-t",
+                            "deco1-r-b"
+                          ]
+                        %}
+
+                        {% for decoVariation in _decoVariations %}
+
+                          <div class="col-12 col-md-6 col-lg-4">
+                            {{CardRecipe.content(
+                              {
+                                "className": ["mih-recipe","h-100"],
+                                "variations": [],
+                                "innerClassName": ["zaux-bg-set1-grey p-3 h-100"],
+                                "contentClassName": ["h-100","position-relative"],
+                                "img": {
+                                  "isLazy": true,
+                                  "src": "media/Recipe.png",
+                                  "src2x": "media/Recipe@2x.png",
+                                  "width": 368,
+                                  "height": 207,
+                                  "alt": "Cover alternative text",
+                                  "className": ["img-fluid","w-100"]
+                                },
+                                "name": "Vegetable croquettes",
+                                "nation": "Italy",
+                                "time": "Easy, 40 minutes"
+                              }
+                            )}}
+
+                          </div>
+                          <!-- .col-* -->
+                        {% endfor %}
+
+              </div>
+              <!-- end row-* -->
+          </div>
+        </div>
+        <!-- End New recipe -->
+
+
+        <div class="mb-7 mb-lg-10">
+          <div class="">
+            <div class="d-flex justify-content-between align-items-center pb-4 pb-md-7">
+              <div class="font-zaux2 zaux-theme--light2">
+                <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">Most Voted</h6>
+              </div>
+              <div class="d-none d-lg-block">
+                <a href="#" class="pe-8"> {{
+                          Icon.content({
+                            "className": "",
+                            "iconName": "icozaux1-arrowL",
+                            "iconSvgUrl": app.fonts.icozaux1.url
+                            })
+                          }}
+                </a>
+                <a href="#"> {{
+                          Icon.content({
+                            "className": "",
+                            "iconName": "icozaux1-arrowR",
+                            "iconSvgUrl": app.fonts.icozaux1.url
+                            })
+                          }}
+                </a>
+              </div>
+            </div>
+            <div class="row gx-3 flex-nowrap flex-lg-wrap overflow-auto">
+                        {%
+                          set _decoVariations = [
+                            "deco1-l-t",
+                            "deco1-r-t",
+                            "deco1-r-b"
+                          ]
+                        %}
+
+                        {% for decoVariation in _decoVariations %}
+
+                          <div class="col-12 col-md-6 col-lg-4">
+                            {{CardRecipe.content(
+                              {
+                                "className": ["mih-recipe","h-100"],
+                                "variations": [],
+                                "innerClassName": ["zaux-bg-set1-grey p-3 h-100"],
+                                "contentClassName": ["h-100","position-relative"],
+                                "img": {
+                                  "isLazy": true,
+                                  "src": "media/Recipe.png",
+                                  "src2x": "media/Recipe@2x.png",
+                                  "width": 368,
+                                  "height": 207,
+                                  "alt": "Cover alternative text",
+                                  "className": ["img-fluid"]
+                                },
+                                "name": "Vegetable croquettes",
+                                "nation": "Italy",
+                                "time": "Easy, 40 minutes"
+                              }
+                            )}}
+
+                          </div>
+                          <!-- .col-* -->
+                        {% endfor %}
+
+              </div>
+              <!-- end row-* -->
+          </div>
+        </div>
+
+
+         <div class="mb-7 mb-lg-10">
+          <div class="">
+            <div class="d-flex justify-content-between align-items-center pb-4 pb-md-7">
+              <div class="font-zaux2 zaux-theme--light2">
+                <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">Recipes of the day</h6>
+              </div>
+              <div class="d-none d-lg-block">
+                <a href="#" class="pe-8"> {{
+                          Icon.content({
+                            "className": "",
+                            "iconName": "icozaux1-arrowL",
+                            "iconSvgUrl": app.fonts.icozaux1.url
+                            })
+                          }}
+                </a>
+                <a href="#"> {{
+                          Icon.content({
+                            "className": "",
+                            "iconName": "icozaux1-arrowR",
+                            "iconSvgUrl": app.fonts.icozaux1.url
+                            })
+                          }}
+                </a>
+              </div>
+            </div>
+            <div class="row gx-3 flex-nowrap flex-lg-wrap overflow-auto">
+                        {%
+                          set _decoVariations = [
+                            "deco1-l-t",
+                            "deco1-r-t",
+                            "deco1-r-b"
+                          ]
+                        %}
+
+                        {% for decoVariation in _decoVariations %}
+
+                          <div class="col-12 col-md-6 col-lg-4">
+                            {{CardRecipe.content(
+                              {
+                                "className": ["mih-recipe","h-100"],
+                                "variations": [],
+                                "innerClassName": ["zaux-bg-set1-grey p-3 h-100"],
+                                "contentClassName": ["h-100","position-relative"],
+                                "img": {
+                                  "isLazy": true,
+                                  "src": "media/Recipe.png",
+                                  "src2x": "media/Recipe@2x.png",
+                                  "width": 368,
+                                  "height": 207,
+                                  "alt": "Cover alternative text",
+                                  "className": ["img-fluid"]
+                                },
+                                "name": "Vegetable croquettes",
+                                "nation": "Italy",
+                                "time": "Easy, 40 minutes"
+                              }
+                            )}}
+
+                          </div>
+                          <!-- .col-* -->
+                        {% endfor %}
+
+              </div>
+              <!-- end row-* -->
+          </div>
+        </div>
+
+
+         <div class="mb-7 mb-lg-10">
+          <div class="">
+            <div class="d-flex justify-content-between align-items-center pb-4 pb-md-7">
+              <div class="font-zaux2 zaux-theme--light2">
+                <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">Suggested for you</h6>
+              </div>
+              <div class="d-none d-lg-block">
+                <a href="#" class="pe-8"> {{
+                          Icon.content({
+                            "className": "",
+                            "iconName": "icozaux1-arrowL",
+                            "iconSvgUrl": app.fonts.icozaux1.url
+                            })
+                          }}
+                </a>
+                <a href="#"> {{
+                          Icon.content({
+                            "className": "",
+                            "iconName": "icozaux1-arrowR",
+                            "iconSvgUrl": app.fonts.icozaux1.url
+                            })
+                          }}
+                </a>
+              </div>
+            </div>
+            <div class="row gx-3 flex-nowrap flex-lg-wrap overflow-auto">
+                        {%
+                          set _decoVariations = [
+                            "deco1-l-t",
+                            "deco1-r-t",
+                            "deco1-r-b"
+                          ]
+                        %}
+
+                        {% for decoVariation in _decoVariations %}
+
+                          <div class="col-12 col-md-6 col-lg-4">
+                            {{CardRecipe.content(
+                              {
+                                "className": ["mih-recipe","h-100"],
+                                "variations": [],
+                                "innerClassName": ["zaux-bg-set1-grey p-3 h-100"],
+                                "contentClassName": ["h-100","position-relative"],
+                                "img": {
+                                  "isLazy": true,
+                                  "src": "media/Recipe.png",
+                                  "src2x": "media/Recipe@2x.png",
+                                  "width": 368,
+                                  "height": 207,
+                                  "alt": "Cover alternative text",
+                                  "className": ["img-fluid"]
+                                },
+                                "name": "Vegetable croquettes",
+                                "nation": "Italy",
+                                "time": "Easy, 40 minutes"
+                              }
+                            )}}
+
+                          </div>
+                          <!-- .col-* -->
+                        {% endfor %}
+
+              </div>
+              <!-- end row-* -->
+          </div>
+        </div>
+
+
+         <div class="mb-7 mb-lg-10">
+          <div class="">
+            <div class="d-flex justify-content-between align-items-center pb-4 pb-md-7">
+              <div class="font-zaux2 zaux-theme--light2">
+                <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">Quick and easy</h6>
+              </div>
+              <div class="d-none d-lg-block">
+                <a href="#" class="pe-8"> {{
+                          Icon.content({
+                            "className": "",
+                            "iconName": "icozaux1-arrowL",
+                            "iconSvgUrl": app.fonts.icozaux1.url
+                            })
+                          }}
+                </a>
+                <a href="#"> {{
+                          Icon.content({
+                            "className": "",
+                            "iconName": "icozaux1-arrowR",
+                            "iconSvgUrl": app.fonts.icozaux1.url
+                            })
+                          }}
+                </a>
+              </div>
+            </div>
+            <div class="row gx-3 flex-nowrap flex-lg-wrap overflow-auto">
+                        {%
+                          set _decoVariations = [
+                            "deco1-l-t",
+                            "deco1-r-t",
+                            "deco1-r-b"
+                          ]
+                        %}
+
+                        {% for decoVariation in _decoVariations %}
+
+                          <div class="col-12 col-md-6 col-lg-4">
+                            {{CardRecipe.content(
+                              {
+                                "className": ["mih-recipe","h-100"],
+                                "variations": [],
+                                "innerClassName": ["zaux-bg-set1-grey p-3 h-100"],
+                                "contentClassName": ["h-100","position-relative"],
+                                "img": {
+                                  "isLazy": true,
+                                  "src": "media/Recipe.png",
+                                  "src2x": "media/Recipe@2x.png",
+                                  "width": 368,
+                                  "height": 207,
+                                  "alt": "Cover alternative text",
+                                  "className": ["img-fluid"]
+                                },
+                                "name": "Vegetable croquettes",
+                                "nation": "Italy",
+                                "time": "Easy, 40 minutes"
+                              }
+                            )}}
+
+                          </div>
+                          <!-- .col-* -->
+                        {% endfor %}
+
+              </div>
+              <!-- end row-* -->
+          </div>
+        </div>
+
+
+         <div class="mb-7 mb-lg-10">
+          <div class="">
+            <div class="d-flex justify-content-between align-items-center pb-4 pb-md-7">
+              <div class="font-zaux2 zaux-theme--light2">
+                <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">Starters</h6>
+              </div>
+              <div class="d-none d-lg-block">
+                <a href="#" class="pe-8"> {{
+                          Icon.content({
+                            "className": "",
+                            "iconName": "icozaux1-arrowL",
+                            "iconSvgUrl": app.fonts.icozaux1.url
+                            })
+                          }}
+                </a>
+                <a href="#"> {{
+                          Icon.content({
+                            "className": "",
+                            "iconName": "icozaux1-arrowR",
+                            "iconSvgUrl": app.fonts.icozaux1.url
+                            })
+                          }}
+                </a>
+              </div>
+            </div>
+            <div class="row gx-3 flex-nowrap flex-lg-wrap overflow-auto">
+                        {%
+                          set _decoVariations = [
+                            "deco1-l-t",
+                            "deco1-r-t",
+                            "deco1-r-b"
+                          ]
+                        %}
+
+                        {% for decoVariation in _decoVariations %}
+
+                          <div class="col-12 col-md-6 col-lg-4">
+                            {{CardRecipe.content(
+                              {
+                                "className": ["mih-recipe","h-100"],
+                                "variations": [],
+                                "innerClassName": ["zaux-bg-set1-grey p-3 h-100"],
+                                "contentClassName": ["h-100","position-relative"],
+                                "img": {
+                                  "isLazy": true,
+                                  "src": "media/Recipe.png",
+                                  "src2x": "media/Recipe@2x.png",
+                                  "width": 368,
+                                  "height": 207,
+                                  "alt": "Cover alternative text",
+                                  "className": ["img-fluid"]
+                                },
+                                "name": "Vegetable croquettes",
+                                "nation": "Italy",
+                                "time": "Easy, 40 minutes"
+                              }
+                            )}}
+
+                          </div>
+                          <!-- .col-* -->
+                        {% endfor %}
+
+              </div>
+              <!-- end row-* -->
+          </div>
+        </div>
+
+
+         <div class="mb-7 mb-lg-10">
+          <div class="">
+            <div class="d-flex justify-content-between align-items-center pb-4 pb-md-7">
+              <div class="font-zaux2 zaux-theme--light2">
+                <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">Firts courses</h6>
+              </div>
+              <div class="d-none d-lg-block">
+                <a href="#" class="pe-8"> {{
+                          Icon.content({
+                            "className": "",
+                            "iconName": "icozaux1-arrowL",
+                            "iconSvgUrl": app.fonts.icozaux1.url
+                            })
+                          }}
+                </a>
+                <a href="#"> {{
+                          Icon.content({
+                            "className": "",
+                            "iconName": "icozaux1-arrowR",
+                            "iconSvgUrl": app.fonts.icozaux1.url
+                            })
+                          }}
+                </a>
+              </div>
+            </div>
+            <div class="row gx-3 flex-nowrap flex-lg-wrap overflow-auto">
+                        {%
+                          set _decoVariations = [
+                            "deco1-l-t",
+                            "deco1-r-t",
+                            "deco1-r-b"
+                          ]
+                        %}
+
+                        {% for decoVariation in _decoVariations %}
+
+                          <div class="col-12 col-md-6 col-lg-4">
+                            {{CardRecipe.content(
+                              {
+                                "className": ["mih-recipe","h-100"],
+                                "variations": [],
+                                "innerClassName": ["zaux-bg-set1-grey p-3 h-100"],
+                                "contentClassName": ["h-100","position-relative"],
+                                "img": {
+                                  "isLazy": true,
+                                  "src": "media/Recipe.png",
+                                  "src2x": "media/Recipe@2x.png",
+                                  "width": 368,
+                                  "height": 207,
+                                  "alt": "Cover alternative text",
+                                  "className": ["img-fluid"]
+                                },
+                                "name": "Vegetable croquettes",
+                                "nation": "Italy",
+                                "time": "Easy, 40 minutes"
+                              }
+                            )}}
+
+                          </div>
+                          <!-- .col-* -->
+                        {% endfor %}
+
+              </div>
+              <!-- end row-* -->
+          </div>
+        </div>
+
+
+         <div class="mb-7 mb-lg-10">
+          <div class="">
+            <div class="d-flex justify-content-between align-items-center pb-4 pb-md-7">
+              <div class="font-zaux2 zaux-theme--light2">
+                <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">Second courses</h6>
+              </div>
+              <div class="d-none d-lg-block">
+                <a href="#" class="pe-8"> {{
+                          Icon.content({
+                            "className": "",
+                            "iconName": "icozaux1-arrowL",
+                            "iconSvgUrl": app.fonts.icozaux1.url
+                            })
+                          }}
+                </a>
+                <a href="#"> {{
+                          Icon.content({
+                            "className": "",
+                            "iconName": "icozaux1-arrowR",
+                            "iconSvgUrl": app.fonts.icozaux1.url
+                            })
+                          }}
+                </a>
+              </div>
+            </div>
+            <div class="row gx-3 flex-nowrap flex-lg-wrap overflow-auto">
+                        {%
+                          set _decoVariations = [
+                            "deco1-l-t",
+                            "deco1-r-t",
+                            "deco1-r-b"
+                          ]
+                        %}
+
+                        {% for decoVariation in _decoVariations %}
+
+                          <div class="col-12 col-md-6 col-lg-4">
+                            {{CardRecipe.content(
+                              {
+                                "className": ["mih-recipe","h-100"],
+                                "variations": [],
+                                "innerClassName": ["zaux-bg-set1-grey p-3 h-100"],
+                                "contentClassName": ["h-100","position-relative"],
+                                "img": {
+                                  "isLazy": true,
+                                  "src": "media/Recipe.png",
+                                  "src2x": "media/Recipe@2x.png",
+                                  "width": 368,
+                                  "height": 207,
+                                  "alt": "Cover alternative text",
+                                  "className": ["img-fluid"]
+                                },
+                                "name": "Vegetable croquettes",
+                                "nation": "Italy",
+                                "time": "Easy, 40 minutes"
+                              }
+                            )}}
+
+                          </div>
+                          <!-- .col-* -->
+                        {% endfor %}
+
+              </div>
+              <!-- end row-* -->
+          </div>
+        </div>
+
+
+         <div class="mb-7 mb-lg-10">
+          <div class="">
+            <div class="d-flex justify-content-between align-items-center pb-4 pb-md-7">
+              <div class="font-zaux2 zaux-theme--light2">
+                <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">Dessert</h6>
+              </div>
+              <div class="d-none d-lg-block">
+                <a href="#" class="pe-8"> {{
+                          Icon.content({
+                            "className": "",
+                            "iconName": "icozaux1-arrowL",
+                            "iconSvgUrl": app.fonts.icozaux1.url
+                            })
+                          }}
+                </a>
+                <a href="#"> {{
+                          Icon.content({
+                            "className": "",
+                            "iconName": "icozaux1-arrowR",
+                            "iconSvgUrl": app.fonts.icozaux1.url
+                            })
+                          }}
+                </a>
+              </div>
+            </div>
+            <div class="row gx-3 flex-nowrap flex-lg-wrap overflow-auto">
+                        {%
+                          set _decoVariations = [
+                            "deco1-l-t",
+                            "deco1-r-t",
+                            "deco1-r-b"
+                          ]
+                        %}
+
+                        {% for decoVariation in _decoVariations %}
+
+                          <div class="col-12 col-md-6 col-lg-4">
+                            {{CardRecipe.content(
+                              {
+                                "className": ["mih-recipe","h-100"],
+                                "variations": [],
+                                "innerClassName": ["zaux-bg-set1-grey p-3 h-100"],
+                                "contentClassName": ["h-100","position-relative"],
+                                "img": {
+                                  "isLazy": true,
+                                  "src": "media/Recipe.png",
+                                  "src2x": "media/Recipe@2x.png",
+                                  "width": 368,
+                                  "height": 207,
+                                  "alt": "Cover alternative text",
+                                  "className": ["img-fluid"]
+                                },
+                                "name": "Vegetable croquettes",
+                                "nation": "Italy",
+                                "time": "Easy, 40 minutes"
+                              }
+                            )}}
+
+                          </div>
+                          <!-- .col-* -->
+                        {% endfor %}
+
+              </div>
+              <!-- end row-* -->
+          </div>
+        </div>
+
+      </div>
+      <!-- End All recipe -->
+
+  </main>
+
+{% endblock %}
+
+{% block foot_js %}
+  <script defer src="assets/js/general.bundle.js"></script>
+{% endblock %}

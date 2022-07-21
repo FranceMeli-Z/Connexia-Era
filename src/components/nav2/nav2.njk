@@ -19,6 +19,7 @@
           <nav class="c-nav2--layout1 zaux-theme--dark1 ">
             <!-- BEGIN WP NAV -->
             <ul class="d-flex c-typo-style1-2 c-typo-style1-lg-4 justify-content-between align-items-center h-100">
+              {% if obj.parisCongress %}
               <li>
                 <a href="#" title="Generale Information">
                   General information
@@ -54,6 +55,28 @@
                  Covid-19
                 </a>
               </li>
+              {% else %}
+               <li>
+                <a href="#" title="Recipe">
+                Recipe
+                </a>
+              </li>
+              <li>
+                <a href="#" title="About the project">
+                  About the project
+                </a>
+              </li>
+              <li>
+                <a href="#" title="Nutritional information">
+                  Nutritional information
+                </a>
+              </li>
+              <li>
+                <a href="#" title=" Submit your recipe">
+                 Submit your recipe
+                </a>
+              </li>
+              {% endif %}
             </ul>
             <!-- END WP NAV -->
           </nav>

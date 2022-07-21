@@ -16,6 +16,11 @@ $component: componentClass("form");
     @include media-breakpoint-down(lg) {
       width: 250px;
     }
+    &:focus {
+      outline: none;
+      border: none;
+      box-shadow: none;
+    }
   }
   & button {
     height:50px;

@@ -1,0 +1,51 @@
+{# Imports components #}
+{% import 'components/img/img.njk' as Img %}
+{% import 'components/icon/icon.njk' as Icon %}
+{% import 'components/nav2/nav2.njk' as Nav2 %}
+
+{% macro content(obj) %}
+
+  {% set componentClassName = 'c-accordion' %}
+
+  {% set configDefault = {
+    "className": [],
+    "innerClassName": [],
+    "contentClassName": []
+  }%}
+
+  {% set obj = configDefault | overwriteMerge(obj or {}) %}
+
+  {# Creates new arrays for manipulation) #}
+  {% set _className = [componentClassName] | mergeArray(obj.className or configDefault.className) %}
+  {% set _innerClassName = [componentClassName + "__inner"] | mergeArray(obj.innerClassName or configDefault.innerClassName) %}
+
+
+      <div class="{{_className | join(" ")}} closed">
+        <div class="{{_innerClassName | join(" ")}}">
+
+          <div class="{{componentClassName}}__head ps-4 ps-lg-6 py-4 py-lg-6">
+
+            <div class="{{componentClassName}}__head--title font-zaux2">
+              <h6 class="fw-demi c-typo-fs-8 c-typo-fs-lg-10">
+                {{obj.title|safe}}
+              </h6>
+            </div>
+
+          </div>
+
+            <div class="{{componentClassName}}__show d-none c-typo-style1-3 p-4 p-lg-6">
+              {# <p>{{obj.txt|safe}}</p> #}
+              <ul>
+                <li>Albania</li>
+                <li>Bosnia</li>
+                <li>Bulgaria</li>
+                <li>...</li>
+              </ul>
+            </div>
+
+        </div>
+      </div>
+
+
+
+{% endmacro %}

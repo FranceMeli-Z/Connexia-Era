@@ -34,6 +34,10 @@ a[class*="#{$component}"] {
   &--txt {
     line-height: rem(14px);
     font-size: rem(14px);
+    @include media-breakpoint-up(lg) {
+      line-height: rem(16px);
+      font-size: rem(16px);
+    }
     }
   }
 

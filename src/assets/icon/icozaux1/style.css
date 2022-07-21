@@ -15,6 +15,10 @@ Single-colored icons can be modified like so:
 }
 ========================================== */
 
+.icozaux1-littlearrow {
+  width: 0.75em;
+}
+
 .icozaux1-Download {
   width: 0.7001953125em;
 }

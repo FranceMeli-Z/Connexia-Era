@@ -31,8 +31,8 @@
 
     {# {{ HeroVideo.content(page.data.blocks.videoHero1) }} #}
 
-    <div class="mb-9 position-relative mih-625 overflow-hidden">
-       <div class="position-absolute zaux-zi--1 zaux-pos-custom1">
+    <div class="mb-8 mb-lg-9 position-relative h-size-635 overflow-hidden">
+       <div class="position-absolute zaux-zi--1 zaux-pos-custom1 h-100">
        {{
         Img.content({
           "isLazy": false,
@@ -40,17 +40,19 @@
           "src2x": "media/HeroBen.png",
           "width": 1440,
           "height": 634,
-          "className": ["img-fluid","zaux-fit-cover-center-center"],
+          "className": ["img-fluid","zaux-fit-cover-center-center","h-100"],
           "title": "title",
           "alt": "alt",
           "wrapperElement": "",
-          "wrapperClassName": ""
+          "wrapperClassName": ["h-100"]
         })
       }}
     </div>
     <div class="p-box position-relative">
       <div class="pb-2 pb-lg-4 pt-6 d-none d-lg-block">
-        {{ Breadcrumbs.content() }}
+        {{ Breadcrumbs.content({
+          "className": ["theme-white"]
+        }) }}
       </div>
       <div class="text-center">
         <div class="font-zaux2 zaux-theme--dark1 py-6 maw-f550 m-auto">
@@ -64,28 +66,27 @@
         </div>
       </div>
     </div>
-
   </div>
 
 
     <div class="p-box mb-9 overflow-hidden">
-      <div class="font-zaux2 py-6 zaux-theme--light2 text-center">
+      <div class="font-zaux2 pb-6 zaux-theme--light2 text-center">
         <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16 mb-3">Enhancing</h6>
       </div>
       <div class="row pb-lg-9">
         <div class="col-12 col-lg-4 pb-4 pb-lg-0">
-          <div class="pillars-t1 font-zaux2 text-center ">
-             <h6 class="fw-demi c-typo-fs-8 c-typo-fs-lg-13 mb-3"><a class="zaux-color-set1-green1" href="#">EDUCATION</a></h6>
+          <div class="pillars-t1 font-zaux2 text-center">
+             <h6 class="fw-demi c-typo-fs-8 c-typo-fs-lg-13 text-underline mb-3"><a class="zaux-color-set1-green1" href="#">EDUCATION</a></h6>
           </div>
         </div>
          <div class="col-12 col-lg-4 pb-4 pb-lg-0">
-           <div class="pillars-t2 font-zaux2 text-center ">
-             <h6 class="fw-demi c-typo-fs-8 c-typo-fs-lg-13 mb-3"><a class="zaux-color-set1-yellow1" href="#">SCIENCE</a></h6>
+           <div class="pillars-t2 font-zaux2 text-center">
+             <h6 class="fw-demi c-typo-fs-8 c-typo-fs-lg-13 text-underline mb-3"><a class="zaux-color-set1-yellow1" href="#">SCIENCE</a></h6>
           </div>
         </div>
          <div class="col-12 col-lg-4 pb-4 pb-lg-0">
            <div class="pillars-t3 font-zaux2 text-center">
-             <h6 class="fw-demi c-typo-fs-8 c-typo-fs-lg-13 mb-3"><a href="#" class="zaux-color-set1-blue1">NETWORKING</a></h6>
+             <h6 class="fw-demi c-typo-fs-8 c-typo-fs-lg-13 text-underline mb-3"><a href="#" class="zaux-color-set1-blue1">NETWORKING</a></h6>
           </div>
         </div>
       </div>
@@ -103,12 +104,14 @@
           <div class="font-zaux2 zaux-theme--light2 pb-2 pb-lg-4">
             <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">Membership Categories</h6>
           </div>
-          <div class="c-typo-style1-6 maw-f768 c-typo-style1-lg-8">
+          <div class="c-typo-style1-6 maw-f768 c-typo-style1-lg-8 pb-7">
             <p>Choose your membership category from Free to EUR 170 and enjoy all benefits!</p>
           </div>
 
           <div>
-            <div>TABLE</div>
+            <div class="pb-8">
+              {% include "partials/ui/benefits_table.njk" %}
+            </div>
             <div class="c-typo-style1-3 maw-f550">
             <p>* Problematic deliveries of the hard copies of NDT due to COVID19 pandemic: some countries are temporarily affected by late delivery of the journal,
              thus before selecting the membership fee which also includes hard copies of NDT, please check with the NDT Editorial Office ( ndt@era-online.org )
@@ -370,7 +373,7 @@
     </div>
       </div>
 
-      <div class="mb-lg-8 mb-5 zaux-bg-set1-grey">
+      <div class="mb-lg-8 mb-5 zaux-bg-set1-grey mih-380">
         <div class="row">
            <div class="col-12 col-lg-6">
             {{

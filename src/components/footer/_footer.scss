@@ -27,13 +27,20 @@ $zaux-footer-last-h:50px;
       @include media-breakpoint-down(lg) {
         text-align: center;
       }
-    & [class^="icozaux1-"], [class*=" icozaux1-"] {
+      // &--icon a:visited {
+      //   color: tokenColor("set1","red1") !important;
+      // }
+      // &--icon a:hover {
+      //   color: #BD2910 !important;
+      // }
+
+    &--icon [class^="icozaux1-"], [class*=" icozaux1-"] {
         display: inline-block;
         width: 2em;
         height: 2em;
         stroke-width: 0;
         stroke: currentColor;
-        fill: tokenColor("set1","red1");
+        // fill: tokenColor("set1","red1");
       }
     }
   }

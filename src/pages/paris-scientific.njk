@@ -61,7 +61,8 @@
       <!-- end First box -->
 
        {{ Nav2.content({
-        "className": [""]
+        "className": [""],
+        "parisCongress": "y"
        })
        }}
 
@@ -117,15 +118,10 @@
               <p>Explore practical educational activities which will be held the first day of the 59th ERA Congress.</p>
             </div>
           </div>
-
-          <div class="card1__button text-end">
-            <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">go to Hands on courses</a>
-          </div>
-
           {% endset %}
            {# "c-ratio--square", "c-ratio--md-none" #}
           {% for i in range(0, total) %}
-          <div class="col-12 col-md-5 h-100 pb-6 ">
+          <div class="col-12 col-md-5 h-100 pb-6">
             {{CardHighlight.content(
               {
                 "className": ["c-card1--theme--light"],
@@ -133,6 +129,9 @@
                 "innerClassName": [],
                 "contentClassName": ["d-flex", "justify-content-between", "flex-column", "p-6"],
                 "content": _htmlCardContent,
+                "ctaAbsolute": "y",
+                "ctaClassName": ["c-card1__content__cta--absolute"],
+                "ctaValue": "go to hand courses",
                 "img": {
                 "isShaped": true,
                 "className": ["rounded-2", "overflow-hidden"],
@@ -162,7 +161,7 @@
        <!-- Fine Testo Innovation -->
 
 
-    <div class="mb-lg-8 mb-5 zaux-bg-set1-grey">
+    <div class="mb-lg-8 mb-5 zaux-bg-set1-grey mih-380">
         <div class="row">
            <div class="col-12 col-lg-6">
             {{

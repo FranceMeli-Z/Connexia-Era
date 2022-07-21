@@ -14,4 +14,9 @@ $component: componentClass("breadcrumbs");
     font-size: 12px;
     }
   }
+  &.theme-white {
+    > span, a {
+      color: white !important;
+    }
+  }
 }

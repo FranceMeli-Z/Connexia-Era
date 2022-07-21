@@ -34,8 +34,8 @@
 [class^="-share"],
 [class*="-share"] {
   display: inline-block;
-  width: 40px;
-  height: 40px;
+  // width: 40px;
+  // height: 40px;
   stroke-width: 0;
   stroke: currentColor;
   fill: currentColor;
@@ -53,7 +53,10 @@
 .icozaux1-arrowR {
   width: 30px;
   height: 25px;
-  fill: tokenColor("set1","red1");
+  // fill: tokenColor("set1","red1");
+}
+.icozaux1-littlearrow {
+ font-size: 14px;
 }
 
 .icozaux1-Print, .icozaux1-Download {
@@ -61,13 +64,13 @@
   height: 30px;
 }
 
-.icozaux1-facebook, .icozaux1-twitter, .icozaux1-instagram, .icozaux1-youtube, .icozaux1-linkedin {
-  fill: tokenColor("set1","red1");
-}
+// .icozaux1-facebook, .icozaux1-twitter, .icozaux1-instagram, .icozaux1-youtube, .icozaux1-linkedin {
+//   fill: tokenColor("set1","red1");
+// }
 
-.icozaux1-twitter :hover {
-  color: tokenColor("set1","darkred");
-}
+// .icozaux1-twitter :hover {
+//   color: tokenColor("set1","darkred");
+// }
 
 // .icozaux1-facebook:visited, .icozaux1-twitter:hover, .icozaux1-instagram:hover, .icozaux1-youtube:hover, .icozaux1-linkedin:hover {
 //   fill: tokenColor("set1","darkred");

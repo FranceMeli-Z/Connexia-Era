@@ -27,8 +27,23 @@ document.addEventListener('DOMContentLoaded', () => {
     // $(".c-accordion").toggleClass("closed");
     // $(".c-accordion").toggleClass("open");
   });
+  $(".divRow__click").click(function() {
+    console.log("AAA");
+    $(this).parents(".divAcc").toggleClass("closed");
+    $(this).parents(".divAcc").toggleClass("open");
+    // $(".c-accordion").toggleClass("closed");
+    // $(".c-accordion").toggleClass("open");
+  });
+
+});
 
 
-
-
+//Menu
+$(".hamburger").click(function() {
+  $(".c-nav").toggleClass("closed");
+  $(".c-nav").toggleClass("open");
+  $(this).toggleClass("closed");
+  $(this).toggleClass("open");
+  // $(".c-accordion").toggleClass("closed");
+  // $(".c-accordion").toggleClass("open");
 });

@@ -109,7 +109,7 @@
        <!-- Fine Testo Works -->
 
        <!--Box Join WorkingGroup -->
-      <div class="mb-lg-8 mb-5 zaux-bg-set1-grey">
+      <div class="mb-lg-8 mb-5 zaux-bg-set1-grey mih-380">
         <div class="row">
            <div class="col-12 col-lg-4 order-lg-2">
             {{
@@ -129,7 +129,7 @@
           </div>
           <div class="p-box mb-lg-0 mb-7 col-12 col-lg-8 pt-3 pt-lg-6 order-lg-1">
             <div class="font-zaux2 zaux-theme--light1 pb-2 pb-lg-4">
-              <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">CKD-MBD Working Group</h6>
+              <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Join this working group</h6>
             </div>
              <div class="pb-4 c-typo-style1-3 c-typo-style1-lg-4 maw-f768">
               <p>Being a ordinary member of the CKD-MBD Working Group means being part of a network which facilitates exchanges of in the field of interest of CKD-MBD and Bone Mineral disorders in CKD.</p>
@@ -241,7 +241,7 @@
                       {
                       "className": [],
                       "variations": [],
-                      "innerClassName": ["zaux-bg-set1-grey py-8"],
+                      "innerClassName": ["zaux-bg-set1-grey py-8 shadow-h"],
                       "contentClassName": ["text-center"],
                       "img": {
                         "isLazy": true,
@@ -371,27 +371,26 @@
 
          <!-- start row -->
         <div class="row gx-3">
-           {% set total = 3 %}
+           {% set total = 2 %}
            {% set _htmlCardContent %}
           <div class="card1__head zaux-theme--dark1">
             <div class="card1__head--title font-zaux2 pb-2">
               <h6 class="fw-bold c-typo-fs-8 c-typo-fs-lg-10">Open Call: NDT Editor in Chief</h6>
             </div>
           </div>
-          <div class="card1__button text-end">
-            <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">Read more</a>
-          </div>
 
           {% endset %}
-           {# "c-ratio--square", "c-ratio--md-none" #}
-          {% for i in range(0, total) %}
+
+           <div class="col-12 col-md-4">
             {{CardHighlight.content(
               {
-                "className": ["col-12","col-md-4", "h-100", "pb-6","c-card1--theme--light"],
+                "className": ["h-100", "pb-6","c-card1--theme--light"],
                 "variations": ["lg-size1"],
                 "innerClassName": [],
                 "contentClassName": ["d-flex", "justify-content-between", "flex-column", "p-6"],
                 "content": _htmlCardContent,
+                "cta100": "y",
+                "ctaValue": "More updates will be posted soon",
                 "img": {
                 "isShaped": true,
                 "className": ["rounded-2", "overflow-hidden"],
@@ -408,6 +407,34 @@
                 }
               }
             )}}
+            </div>
+          {% for i in range(0, total) %}
+            <div class="col-12 col-md-4">
+            {{CardHighlight.content(
+              {
+                "className": ["h-100", "pb-6","c-card1--theme--light"],
+                "variations": ["lg-size1"],
+                "innerClassName": [],
+                "contentClassName": ["d-flex", "justify-content-between", "flex-column", "p-6"],
+                "content": _htmlCardContent,
+                "ctaValue": "read more",
+                "img": {
+                "isShaped": true,
+                "className": ["rounded-2", "overflow-hidden"],
+                "variations": ["style1", decoVariation],
+                "img": {
+                "isLazy": true,
+                "src": "media/backCard1.png",
+                "src2x": "media/backCard1.png",
+                "width": 396,
+                "height": 380,
+                "alt": "Cover alternative text",
+                "className": ["zaux-fit-cover-center-center", "w-100"]
+                }
+                }
+              }
+            )}}
+            </div>
           {% endfor %}
         </div>
       <!-- end row -->

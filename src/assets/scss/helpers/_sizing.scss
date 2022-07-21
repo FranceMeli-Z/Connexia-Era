@@ -12,11 +12,13 @@
 
 $zaux-helper-name: "size";
 
+
+//min-width
 .miw-f397 {
   min-width: 397px;
 }
 
-//// Box Title ///
+//// Box Custom ///
 .mih-boxtitle {
   min-height: 155px;
   @include media-breakpoint-up(lg) {
@@ -24,11 +26,22 @@ $zaux-helper-name: "size";
   }
 }
 
+.mih-recipe {
+  min-height: 378px;
+  @include media-breakpoint-up(lg) {
+    min-height: 415px;
+  }
+}
+
+//min height
 .mih-200 {
   min-height: 200px;
 }
 .mih-215 {
   min-height: 215px;
+}
+.mih-380 {
+  min-height: 380px;
 }
 .mih-560 {
   min-height: 560px;
@@ -63,6 +76,10 @@ $zaux-helper-name: "size";
   max-width: 1025px;
 }
 
+//height
+.h-#{$zaux-helper-name}-635 {
+  height: 635px;
+}
 
 
 //Width

@@ -1,0 +1,1217 @@
+{
+  "props": {
+    "panels": [
+      {
+        "level": "1",
+        "id": "1",
+        "nav": {
+          "items": [
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "About Us",
+              "labelClassName": "zaux-show-on-sidebar-active",
+              "href": "#"
+            },
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Events",
+              "labelClassName": "zaux-show-on-sidebar-active",
+              "href": "#",
+              "targetPanelId": "2",
+              "childId": "2"
+            },
+            {
+              "className": "",
+              "icon": "professionist",
+              "showLabel": true,
+              "label": "Membership",
+              "labelClassName": "zaux-show-on-sidebar-active",
+              "href": "#",
+              "targetPanelId": "9",
+              "childId": "9"
+            },
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Research & Education",
+              "labelClassName": "zaux-show-on-sidebar-active",
+              "href": "#",
+              "targetPanelId": "16",
+              "childId": "16"
+            },
+            {
+              "className": "",
+              "icon": "store",
+              "showLabel": true,
+              "label": "Papers & Publications",
+              "labelClassName": "zaux-show-on-sidebar-active",
+              "href": "#",
+              "targetPanelId": "20",
+              "childId": "20"
+            },
+            {
+              "className": "",
+              "icon": "web",
+              "showLabel": true,
+              "label": "Soluzioni web",
+              "labelClassName": "zaux-show-on-sidebar-active",
+              "href": "#",
+              "targetPanelId": "21",
+              "childId": "21"
+            },
+            {
+              "className": "",
+              "icon": "consulting",
+              "showLabel": true,
+              "label": "Consulenza e formazione",
+              "labelClassName": "zaux-show-on-sidebar-active",
+              "href": "#",
+              "targetPanelId": "23",
+              "childId": "23"
+            },
+            {
+              "className": "d-block d-lg-none",
+              "icon": "whatsapp",
+              "showLabel": true,
+              "label": "Assistenza WhatsApp",
+              "labelClassName": "zaux-show-on-sidebar-active",
+              "href": "#"
+            },
+            {
+              "className": "d-block d-lg-none",
+              "icon": "login",
+              "showLabel": true,
+              "label": "Area riservata",
+              "labelClassName": "zaux-show-on-sidebar-active",
+              "href": "#"
+            }
+          ]
+        },
+        "foot": {
+          "nav": {
+            "items": [
+              {
+                "className": "",
+                "icon": "whatsapp",
+                "showLabel": true,
+                "label": "Assistenza WhatsApp",
+                "labelClassName": "zaux-show-on-sidebar-active",
+                "href": "#",
+                "ariaHidden": true
+              },
+              {
+                "className": "",
+                "icon": "login",
+                "showLabel": true,
+                "label": "Area riservata",
+                "labelClassName": "zaux-show-on-sidebar-active",
+                "href": "#",
+                "ariaHidden": true
+              }
+            ]
+          }
+        }
+      },
+      {
+        "level": "2",
+        "id": "2",
+        "breadcrumbTitle": "Software per le aziende",
+        "nav": {
+          "items": [
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Gestionale ERP - software aziendale",
+              "labelClassName": "",
+              "href": "#",
+              "targetPanelId": "3",
+              "childId": "3"
+            },
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "myAlpha",
+              "labelClassName": "",
+              "href": "#",
+              "targetPanelId": "4",
+              "childId": "4"
+            },
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Fatturazione elettronica e Prodotti Digital",
+              "labelClassName": "",
+              "href": "#",
+              "targetPanelId": "5",
+              "childId": "5"
+            },
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Gestione risorse umane",
+              "labelClassName": "",
+              "href": "#",
+              "targetPanelId": "6",
+              "childId": "6"
+            },
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Archiviazione documentale",
+              "labelClassName": "",
+              "href": "#",
+              "targetPanelId": "7",
+              "childId": "7"
+            },
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Analisi finanziaria e controllo",
+              "labelClassName": "",
+              "href": "#",
+              "targetPanelId": "8",
+              "childId": "8"
+            }
+          ]
+        },
+        "foot": {
+          "btns": [
+            {
+              "label": "Tutto su software per le aziende"
+            }
+          ]
+        }
+      },
+      {
+        "level": "3",
+        "id": "3",
+        "breadcrumbTitle": "Software per le aziende",
+        "nav": {
+          "items": [
+            {
+              "className": "zaux-show-on-sidebar-active",
+              "showLabel": true,
+              "label": "TeamSystem Azienda",
+              "labelClassName": "",
+              "description": "",
+              "descriptionClassName": "",
+              "href": "#productLink"
+            },
+            {
+              "className": "zaux-show-on-sidebar-active",
+              "showLabel": true,
+              "label": "TeamSystem Azienda Cloud",
+              "labelClassName": "",
+              "description": "",
+              "descriptionClassName": "",
+              "href": "#productLink"
+            },
+            {
+              "className": "zaux-show-on-sidebar-active",
+              "showLabel": true,
+              "label": "TeamSystem Enterprise",
+              "labelClassName": "",
+              "description": "",
+              "descriptionClassName": "",
+              "href": "#productLink"
+            },
+            {
+              "className": "zaux-show-on-sidebar-active",
+              "showLabel": true,
+              "label": "TeamSystem Enterprise Cloud",
+              "labelClassName": "",
+              "description": "",
+              "descriptionClassName": "",
+              "href": "#productLink"
+            },
+            {
+              "className": "zaux-show-on-sidebar-active",
+              "showLabel": true,
+              "label": "TeamSystem HR",
+              "labelClassName": "",
+              "description": "",
+              "descriptionClassName": "",
+              "href": "#productLink"
+            }
+          ]
+        },
+        "foot": {
+          "btns": [
+            {
+              "label": "Tutto su Gestionale ERP - sotware aziendale"
+            }
+          ]
+        }
+      },
+      {
+        "level": "3",
+        "id": "4",
+        "breadcrumbTitle": "Software per le aziende",
+        "nav": {
+          "items": [
+            {
+              "className": "zaux-show-on-sidebar-active",
+              "showLabel": true,
+              "label": "AlphaCRM",
+              "labelClassName": "",
+              "description": "",
+              "descriptionClassName": "",
+              "href": "#productLink"
+            },
+            {
+              "className": "zaux-show-on-sidebar-active",
+              "showLabel": true,
+              "label": "AlphaGourmet",
+              "labelClassName": "",
+              "description": "",
+              "descriptionClassName": "",
+              "href": "#productLink"
+            },
+            {
+              "className": "zaux-show-on-sidebar-active",
+              "showLabel": true,
+              "label": "AlphaPick",
+              "labelClassName": "",
+              "description": "",
+              "descriptionClassName": "",
+              "href": "#productLink"
+            },
+            {
+              "className": "zaux-show-on-sidebar-active",
+              "showLabel": true,
+              "label": "AlphaProject",
+              "labelClassName": "",
+              "description": "",
+              "descriptionClassName": "",
+              "href": "#productLink"
+            },
+            {
+              "className": "zaux-show-on-sidebar-active",
+              "showLabel": true,
+              "label": "AlphaRetail",
+              "labelClassName": "",
+              "description": "",
+              "descriptionClassName": "",
+              "href": "#productLink"
+            },
+            {
+              "className": "zaux-show-on-sidebar-active",
+              "showLabel": true,
+              "label": "AlphaSales",
+              "labelClassName": "",
+              "description": "",
+              "descriptionClassName": "",
+              "href": "#productLink"
+            }
+          ]
+        },
+        "foot": {
+          "btns": [
+            {
+              "label": "Tutto su myAlpha"
+            }
+          ]
+        }
+      },
+      {
+        "level": "3",
+        "id": "5",
+        "breadcrumbTitle": "Software per le aziende",
+        "nav": {
+          "items": [
+            {
+              "className": "zaux-show-on-sidebar-active",
+              "showLabel": true,
+              "label": "Bilancio in Cloud",
+              "labelClassName": "",
+              "description": "",
+              "descriptionClassName": "",
+              "href": "#productLink"
+            },
+            {
+              "className": "zaux-show-on-sidebar-active",
+              "showLabel": true,
+              "label": "Team System Digital Invoice",
+              "labelClassName": "",
+              "description": "",
+              "descriptionClassName": "",
+              "href": "#productLink"
+            },
+            {
+              "className": "zaux-show-on-sidebar-active",
+              "showLabel": true,
+              "label": "TeamSystem Digital Signature",
+              "labelClassName": "",
+              "description": "",
+              "descriptionClassName": "",
+              "href": "#productLink"
+            },
+            {
+              "className": "zaux-show-on-sidebar-active",
+              "showLabel": true,
+              "label": "TeamSystem Incassa Subito",
+              "labelClassName": "",
+              "description": "",
+              "descriptionClassName": "",
+              "href": "#productLink"
+            },
+            {
+              "className": "zaux-show-on-sidebar-active",
+              "showLabel": true,
+              "label": "TS Pay",
+              "labelClassName": "",
+              "description": "",
+              "descriptionClassName": "",
+              "href": "#productLink"
+            }
+          ]
+        },
+        "foot": {
+          "btns": [
+            {
+              "label": "Tutto su Fatturazione Elettronica"
+            }
+          ]
+        }
+      },
+      {
+        "level": "3",
+        "id": "6",
+        "breadcrumbTitle": "Software per le aziende",
+        "nav": {
+          "items": [
+            {
+              "className": "zaux-show-on-sidebar-active",
+              "showLabel": true,
+              "label": "Dipendenti in Cloud",
+              "labelClassName": "",
+              "description": "",
+              "descriptionClassName": "",
+              "href": "#productLink"
+            },
+            {
+              "className": "zaux-show-on-sidebar-active",
+              "showLabel": true,
+              "label": "Team System HR",
+              "labelClassName": "",
+              "description": "",
+              "descriptionClassName": "",
+              "href": "#productLink"
+            },
+            {
+              "className": "zaux-show-on-sidebar-active",
+              "showLabel": true,
+              "label": "TeamSystem HR All in One",
+              "labelClassName": "",
+              "description": "",
+              "descriptionClassName": "",
+              "href": "#productLink"
+            },
+            {
+              "className": "zaux-show-on-sidebar-active",
+              "showLabel": true,
+              "label": "TeamSystem HR Welfare",
+              "labelClassName": "",
+              "description": "",
+              "descriptionClassName": "",
+              "href": "#productLink"
+            },
+            {
+              "className": "zaux-show-on-sidebar-active",
+              "showLabel": true,
+              "label": "Team System PeopleApp",
+              "labelClassName": "",
+              "description": "",
+              "descriptionClassName": "",
+              "href": "#productLink"
+            }
+          ]
+        },
+        "foot": {
+          "btns": [
+            {
+              "label": "Tutto su Gestione risorse umane"
+            }
+          ]
+        }
+      },
+      {
+        "level": "3",
+        "id": "7",
+        "breadcrumbTitle": "Software per le aziende",
+        "nav": {
+          "items": [
+            {
+              "className": "zaux-show-on-sidebar-active",
+              "showLabel": true,
+              "label": "Team System Digital Archive",
+              "labelClassName": "",
+              "description": "",
+              "descriptionClassName": "",
+              "href": "#productLink"
+            },
+            {
+              "className": "zaux-show-on-sidebar-active",
+              "showLabel": true,
+              "label": "TeamSystem DMS",
+              "labelClassName": "",
+              "description": "",
+              "descriptionClassName": "",
+              "href": "#productLink"
+            }
+          ]
+        },
+        "foot": {
+          "btns": [
+            {
+              "label": "Tutto su Archiviazione Documentale"
+            }
+          ]
+        }
+      },
+      {
+        "level": "3",
+        "id": "8",
+        "breadcrumbTitle": "Software per le aziende",
+        "nav": {
+          "items": [
+            {
+              "className": "zaux-show-on-sidebar-active",
+              "showLabel": true,
+              "label": "Team System Check Up Impresa",
+              "labelClassName": "",
+              "description": "",
+              "descriptionClassName": "",
+              "href": "#productLink"
+            },
+            {
+              "className": "zaux-show-on-sidebar-active",
+              "showLabel": true,
+              "label": "TeamSystem Gestione Tesoreria",
+              "labelClassName": "",
+              "description": "",
+              "descriptionClassName": "",
+              "href": "#productLink"
+            }
+          ]
+        },
+        "foot": {
+          "btns": [
+            {
+              "label": "Tutto su Analisi Finanziaria e controllo"
+            }
+          ]
+        }
+      },
+      {
+        "level": "2",
+        "id": "9",
+        "breadcrumbTitle": "Software per i professionisti",
+        "nav": {
+          "items": [
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Software Gestionali",
+              "labelClassName": "",
+              "href": "#",
+              "targetPanelId": "10",
+              "childId": "10"
+            },
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Studio Digitale",
+              "labelClassName": "",
+              "href": "#",
+              "targetPanelId": "11",
+              "childId": "11"
+            },
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Fatturazione Elettronica",
+              "labelClassName": "",
+              "href": "#",
+              "targetPanelId": "12",
+              "childId": "12"
+            },
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Gestione risorse umane",
+              "labelClassName": "",
+              "href": "#",
+              "targetPanelId": "13",
+              "childId": "13"
+            },
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Archiviazione Documentale",
+              "labelClassName": "",
+              "href": "#",
+              "targetPanelId": "14",
+              "childId": "14"
+            },
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Analisi finanziaria e controllo",
+              "labelClassName": "",
+              "href": "#",
+              "targetPanelId": "15",
+              "childId": "15"
+            }
+          ]
+        },
+        "foot": {
+          "btns": [
+            {
+              "label": "Tutti i software per i professionisti"
+            }
+          ]
+        }
+      },
+      {
+        "level": "3",
+        "id": "10",
+        "breadcrumbTitle": "Software per i professionisti",
+        "nav": {
+          "items": [
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Team System Antiriciclaggio",
+              "labelClassName": "",
+              "href": "#"
+            },
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Team System Studio",
+              "labelClassName": "",
+              "href": "#"
+            },
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Team System Studio Cloud",
+              "labelClassName": "",
+              "href": "#"
+            },
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Team System Studio Manager",
+              "labelClassName": "",
+              "href": "#"
+            }
+          ]
+        },
+        "foot": {
+          "btns": [
+            {
+              "label": "Tutto su Software gestionale"
+            }
+          ]
+        }
+      },
+      {
+        "level": "3",
+        "id": "11",
+        "breadcrumbTitle": "Software per i professionisti",
+        "nav": {
+          "items": [
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Fatture in Cloud",
+              "labelClassName": "",
+              "href": "#"
+            },
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Team System Digital Box",
+              "labelClassName": "",
+              "href": "#"
+            },
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Team System Digital Signature",
+              "labelClassName": "",
+              "href": "#"
+            },
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Team System Ecobonus",
+              "labelClassName": "",
+              "href": "#"
+            },
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Team System Incassa subito",
+              "labelClassName": "",
+              "href": "#"
+            },
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Team System Servizi Camerali",
+              "labelClassName": "",
+              "href": "#"
+            },
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Ts Pay",
+              "labelClassName": "",
+              "href": "#"
+            }
+          ]
+        },
+        "foot": {
+          "btns": [
+            {
+              "label": "Tutto su Studio digitale"
+            }
+          ]
+        }
+      },
+      {
+        "level": "3",
+        "id": "12",
+        "breadcrumbTitle": "Software per i professionisti",
+        "nav": {
+          "items": [
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Team System Digital Invoice",
+              "labelClassName": "",
+              "href": "#"
+            }
+          ]
+        },
+        "foot": {
+          "btns": [
+            {
+              "label": "Tutto su Fatturazione elettronica"
+            }
+          ]
+        }
+      },
+      {
+        "level": "3",
+        "id": "13",
+        "breadcrumbTitle": "Software per i professionisti",
+        "nav": {
+          "items": [
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Dipendenti in Cloud",
+              "labelClassName": "",
+              "href": "#"
+            },
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Team System HR",
+              "labelClassName": "",
+              "href": "#"
+            },
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Team System HR All in One",
+              "labelClassName": "",
+              "href": "#"
+            },
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Team System HR Welfare",
+              "labelClassName": "",
+              "href": "#"
+            },
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Team System People App",
+              "labelClassName": "",
+              "href": "#"
+            }
+          ]
+        },
+        "foot": {
+          "btns": [
+            {
+              "label": "Tutto su gestione risorse umane"
+            }
+          ]
+        }
+      },
+      {
+        "level": "3",
+        "id": "14",
+        "breadcrumbTitle": "Software per i professionisti",
+        "nav": {
+          "items": [
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Digital Archive",
+              "labelClassName": "",
+              "href": "#"
+            }
+          ]
+        },
+        "foot": {
+          "btns": [
+            {
+              "label": "Tutto su Archiviazione Documentale"
+            }
+          ]
+        }
+      },
+      {
+        "level": "3",
+        "id": "15",
+        "breadcrumbTitle": "Software per i professionisti",
+        "nav": {
+          "items": [
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Team System Check Up Impresa",
+              "labelClassName": "",
+              "href": "#"
+            }
+          ]
+        },
+        "foot": {
+          "btns": [
+            {
+              "label": "Tutto su Analisi finanziaria e controllo"
+            }
+          ]
+        }
+      },
+      {
+        "level": "2",
+        "id": "16",
+        "breadcrumbTitle": "IT & Alpha",
+        "nav": {
+          "items": [
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Alpha Maintenace",
+              "labelClassName": "",
+              "href": "#",
+              "targetPanelId": "17",
+              "childId": "17"
+            },
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Information Technology",
+              "labelClassName": "",
+              "href": "#",
+              "targetPanelId": "18",
+              "childId": "18"
+            },
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Sicurezza e privacy",
+              "labelClassName": "",
+              "href": "#",
+              "targetPanelId": "19",
+              "childId": "19"
+            }
+          ]
+        },
+        "foot": {
+          "btns": [
+            {
+              "label": "Tutto su IT & Alpha"
+            }
+          ]
+        }
+      },
+      {
+        "level": "3",
+        "id": "17",
+        "breadcrumbTitle": "IT & Alpha",
+        "nav": {
+          "items": [
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "AlphaBackup",
+              "labelClassName": "",
+              "href": "#"
+            },{
+              "className": "",
+              "showLabel": true,
+              "label": "Antivirus",
+              "labelClassName": "",
+              "href": "#"
+            },{
+              "className": "",
+              "showLabel": true,
+              "label": "Remote Management Monitoring",
+              "labelClassName": "",
+              "href": "#"
+            },{
+              "className": "",
+              "showLabel": true,
+              "label": "Web Protection Alphateam",
+              "labelClassName": "",
+              "href": "#"
+            }
+          ]
+        },
+        "foot": {
+          "btns": [
+            {
+              "label": "Tutto su Alpha Maintenance"
+            }
+          ]
+        }
+      },
+      {
+        "level": "3",
+        "id": "18",
+        "breadcrumbTitle": "IT & Alpha",
+        "nav": {
+          "items": [
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Certificati SSL",
+              "labelClassName": "",
+              "href": "#"
+            },{
+              "className": "",
+              "showLabel": true,
+              "label": "Domini e posta elettronica",
+              "labelClassName": "",
+              "href": "#"
+            },{
+              "className": "",
+              "showLabel": true,
+              "label": "Progettazione infrastrutture e virtualizzazione",
+              "labelClassName": "",
+              "href": "#"
+            },
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Server - PC - Reti - Firewall",
+              "labelClassName": "",
+              "href": "#"
+            },
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "VOIP VOISpeed",
+              "labelClassName": "",
+              "href": "#"
+            }
+          ]
+        },
+        "foot": {
+          "btns": [
+            {
+              "label": "Tutto su Information Technology"
+            }
+          ]
+        }
+      },
+      {
+        "level": "3",
+        "id": "19",
+        "breadcrumbTitle": "IT & Alpha",
+        "nav": {
+          "items": [
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Analisi dei rischi AlphaTeam",
+              "labelClassName": "",
+              "href": "#"
+            }
+          ]
+        },
+        "foot": {
+          "btns": [
+            {
+              "label": "Tutto su Sicurezza e Privacy"
+            }
+          ]
+        }
+      },
+      {
+        "level": "2",
+        "id": "20",
+        "breadcrumbTitle": "Store",
+        "nav": {
+          "items": [
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Fatture in Cloud",
+              "labelClassName": "",
+              "href": "#"
+            },
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Dipendenti in Cloud",
+              "labelClassName": "",
+              "href": "#"
+            }
+          ]
+        },
+        "foot": {
+          "btns": [
+            {
+              "label": "Tutto su Store"
+            }
+          ]
+        }
+      },
+      {
+        "level": "2",
+        "id": "21",
+        "breadcrumbTitle": "Soluzioni web",
+        "nav": {
+          "items": [
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Web marketing",
+              "labelClassName": "",
+              "href": "#",
+              "targetPanelId": "17",
+              "childId": "17"
+            },
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "E-Commerce",
+              "labelClassName": "",
+              "href": "#"
+            },
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Siti Web",
+              "labelClassName": "",
+              "href": "#"
+            }
+          ]
+        },
+        "foot": {
+          "btns": [
+            {
+              "label": "Tutto su Soluzioni Web"
+            }
+          ]
+        }
+      },
+      {
+        "level": "3",
+        "id": "22",
+        "breadcrumbTitle": "Soluzioni Web",
+        "nav": {
+          "items": [
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "SEA - Search Engine Advertising",
+              "labelClassName": "",
+              "href": "#"
+            },
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "SEO - Search Engine Optimization",
+              "labelClassName": "",
+              "href": "#"
+            },
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Social Media",
+              "labelClassName": "",
+              "href": "#"
+            }
+          ]
+        },
+        "foot": {
+          "btns": [
+            {
+              "label": "Tutto su Web Marketing"
+            }
+          ]
+        }
+      },
+      {
+        "level": "2",
+        "id": "23",
+        "breadcrumbTitle": "Consulenza e formazione",
+        "nav": {
+          "items": [
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Formazione",
+              "labelClassName": "",
+              "href": "#",
+              "targetPanelId": "24",
+              "childId": "24"
+            },
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Consulenza",
+              "labelClassName": "",
+              "href": "#",
+              "targetPanelId": "25",
+              "childId": "25"
+            }
+          ]
+        },
+        "foot": {
+          "btns": [
+            {
+              "label": "Tutto su Consulenza e formazione"
+            }
+          ]
+        }
+      },
+      {
+        "level": "3",
+        "id": "24",
+        "breadcrumbTitle": "Consulenza e formazione",
+        "nav": {
+          "items": [
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Cresci un corso alla volta",
+              "labelClassName": "",
+              "href": "#"
+            }
+          ]
+        },
+        "foot": {
+          "btns": [
+            {
+              "label": "Tutto su Formazione"
+            }
+          ]
+        }
+      },
+      {
+        "level": "3",
+        "id": "25",
+        "breadcrumbTitle": "Consulenza e formazione",
+        "nav": {
+          "items": [
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Consulenza informatica e specialistica",
+              "labelClassName": "",
+              "href": "#"
+            }
+          ]
+        },
+        "foot": {
+          "btns": [
+            {
+              "label": "Tutto su Consulenza"
+            }
+          ]
+        }
+      }
+    ],
+    "panelInternalSideNav": {
+      "items": [
+        {
+          "className": "",
+          "type": "micro",
+          "icon": "business",
+          "label": "Software per le aziende",
+          "href": "#",
+          "targetPanelId": "2"
+        },
+        {
+          "className": "",
+          "type": "micro",
+          "icon": "professionist",
+          "label": "Software per i professionisti",
+          "href": "#",
+          "targetPanelId": "5"
+        },
+        {
+          "className": "",
+          "type": "micro",
+          "icon": "it",
+          "label": "IT & Alpha 4.0",
+          "href": "#",
+          "targetPanelId": "5"
+        },
+        {
+          "className": "",
+          "type": "micro",
+          "icon": "store",
+          "label": "Store",
+          "href": "#",
+          "targetPanelId": "20"
+        },
+        {
+          "className": "",
+          "type": "micro",
+          "icon": "web",
+          "label": "Soluzioni web",
+          "href": "#",
+          "targetPanelId": "21"
+        },
+        {
+          "className": "",
+          "type": "micro",
+          "icon": "consulting",
+          "label": "Consulenza e formazione",
+          "href": "#",
+          "targetPanelId": "23"
+        },
+        {
+          "className": "",
+          "type": "micro",
+          "icon": "whatsapp",
+          "label": "Assistenza WhatsApp",
+          "href": "#"
+        },
+        {
+          "className": "",
+          "type": "micro",
+          "icon": "login",
+          "label": "Area riservata",
+          "href": "#"
+        }
+      ]
+    }
+  }
+}

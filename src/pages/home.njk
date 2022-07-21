@@ -72,21 +72,18 @@
               <p>Submit your application by e-mail by January 31, 2022</p>
             </div>
           </div>
-
-          <div class="card1__button text-end">
-            <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">APPLY NOW</a>
-          </div>
-
           {% endset %}
            {# "c-ratio--square", "c-ratio--md-none" #}
           {% for i in range(0, total) %}
+          <div class="col-12 col-md-6 col-lg-4">
             {{CardHighlight.content(
               {
-                "className": ["col-12", "col-md-6","col-lg-4", "h-100", "pb-6","c-card1--theme--light"],
+                "className": ["h-100", "pb-6","c-card1--theme--light"],
                 "variations": ["lg-size1"],
                 "innerClassName": [],
                 "contentClassName": ["d-flex", "justify-content-between", "flex-column", "p-6"],
                 "content": _htmlCardContent,
+                "ctaValue": "apply now",
                 "img": {
                 "isShaped": true,
                 "className": ["rounded-2", "overflow-hidden"],
@@ -103,6 +100,7 @@
                 }
               }
             )}}
+          </div>
           {% endfor %}
         </div>
       <!-- end row -->

@@ -62,7 +62,8 @@
       <!-- end First box -->
 
        {{ Nav2.content({
-        "className": [""]
+        "className": [""],
+        "parisCongress": "y"
        })
        }}
 
@@ -103,9 +104,6 @@
                           <h6 class="fw-bold c-typo-fs-8 c-typo-fs-lg-10">Hands on Courses</h6>
                         </div>
                       </div>
-                      <div class="card1__button text-end">
-                        <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">add to planner</a>
-                      </div>
                       {% endset %}
                       {% for i in range(0, total) %}
                       <div class="col-12 col-md-6 h-100 pb-6">
@@ -116,6 +114,7 @@
                             "innerClassName": [],
                             "contentClassName": ["d-flex", "justify-content-between", "flex-column", "p-6"],
                             "content": _htmlCardContent,
+                            "ctaValue": "add to planner",
                             "img": {
                             "isShaped": true,
                             "className": ["rounded-2", "overflow-hidden"],
@@ -127,7 +126,7 @@
                             "width": 396,
                             "height": 380,
                             "alt": "Cover alternative text",
-                            "className": ["zaux-fit-cover-center-center"]
+                            "className": ["zaux-fit-cover-center-center","w-100"]
                             }
                             }
                           }

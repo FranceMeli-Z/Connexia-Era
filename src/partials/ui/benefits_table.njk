@@ -1,0 +1,64 @@
+<div class="divTable">
+
+    <div class="headRow">
+      <div class="divCell" align="center">Category</div>
+      <div  class="divCell">Qualification</div>
+      <div  class="divCell">Fee</div>
+      <div  class="divCell">NDT Hard Copies</div>
+      <div  class="divCell">NDT Online</div>
+      <div  class="divCell">Congress discount</div>
+    </div>
+     {%
+                  set _decoVariations = [
+                    "deco1-l-t",
+                    "deco1-r-t",
+                    "deco1-r-b",
+                    "deco1-l-b",
+                    "deco1-l-t",
+                    "deco1-r-t",
+                    "deco1-r-b",
+                    "deco1-l-b"
+                  ]
+                %}
+
+    {% for decoVariation in _decoVariations %}
+    <div class="divRow closed">
+        <div class="divCell">Regular*</div>
+        <div class="divCell">Professional nephrologists</div>
+        <div class="divCell">€ 130 /year</div>
+        <div class="divCell">{{
+                Img.content({
+                  "isLazy": false,
+                  "src": "media/SpuntaTabella.png",
+                  "src2x": "media/SpuntaTabella.png",
+                  "width": 40,
+                  "height": 40,
+                  "className": ["img-fluid"],
+                  "title": "title",
+                  "alt": "alt",
+                  "wrapperElement": "",
+                  "wrapperClassName": ""
+                })
+                }}</div>
+        <div class="divCell">{{
+                Img.content({
+                  "isLazy": false,
+                  "src": "media/SpuntaTabella.png",
+                  "src2x": "media/SpuntaTabella.png",
+                  "width": 40,
+                  "height": 40,
+                  "className": ["img-fluid"],
+                  "title": "title",
+                  "alt": "alt",
+                  "wrapperElement": "",
+                  "wrapperClassName": ""
+                })
+                }}</div>
+        <div class="divCell">Up to 150€</div>
+      {# <div class="divRow__show d-none">
+        <div class="divCell">Contenuto da mostrare come accordion</div>
+      </div> #}
+    </div>
+    {% endfor %}
+
+</div>

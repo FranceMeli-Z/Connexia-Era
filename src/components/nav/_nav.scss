@@ -2,8 +2,20 @@
 
 @import "../../assets/scss/components/base";
 
-$component: componentClass("nav2");
+$component: componentClass("nav");
 
+.#{$component} {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  background-color: white;
+  &.closed {
+    display: none;
+  }
+  &.open {
+    display: block;
+  }
+}
 // [class*="#{$component}"] {
 //   ul {
 //     list-style: none;

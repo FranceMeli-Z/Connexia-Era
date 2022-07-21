@@ -35,6 +35,19 @@ $utilities: map-merge(
   )
 );
 
+$utilities: map-merge(
+  $utilities,
+  (
+    "align": (
+      property: vertical-align,
+      class: align,
+      values: (
+        "txt-bottom": text-bottom,
+      ),
+    ),
+  )
+);
+
 // $utilities: map-merge(
 //   $utilities,
 //   (
@@ -76,12 +89,12 @@ $utilities: map-merge(
   )
 );
 
-$utilities: map-merge(
-  $utilities,
-  (
-    "align": null,
-  )
-);
+// $utilities: map-merge(
+//   $utilities,
+//   (
+//     "align": null,
+//   )
+// );
 
 // $utilities: map-merge(
 //   $utilities,

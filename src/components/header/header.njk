@@ -2,6 +2,7 @@
 {% import 'components/img/img.njk' as Img %}
 {% import 'components/icon/icon.njk' as Icon %}
 {% import 'components/modale/modale.njk' as Modal %}
+{% import 'components/nav/nav.njk' as NavMenu %}
 
 {% macro content(obj) %}
 
@@ -20,39 +21,50 @@
     <div class="{{componentClassName}}__inner p-box">
 
       <div class="font-zaux2 d-flex align-items-center justify-content-between h-100">
-        <div class="d-lg-none">
+        <div class="hamburger closed d-lg-none">
            <a href="#" class="pe-9 d-flex justify-content-center">
           {{
             Icon.content({
-              "className": "",
+              "className": [""],
               "iconName": "icozaux1-menu",
               "iconSvgUrl": app.fonts.icozaux1.url
             })
           }}
         </a>
         </div>
-        <div class="fst-italic d-none d-lg-block">
-          <a href="#" class="pe-9">
-          {{
-            Icon.content({
-              "className": "",
-              "iconName": "icozaux1-menu",
-              "iconSvgUrl": app.fonts.icozaux1.url
-            })
-          }}
-          <span class="ps-2">Menu</span>
-        </a>
-          <button type="button" class="btn btn-primary ps-2" data-bs-toggle="modal" data-bs-target="#EraModal">
-          {{
-            Icon.content({
-              "className": "",
-              "iconName": "icozaux1-search",
-              "iconSvgUrl": app.fonts.icozaux1.url
-            })
-          }}
-          <span class="ps-2">Search</span>
+        <div class="fst-italic d-none d-lg-flex">
+          <div class="hamburger closed">
+            <a href="#" class="pe-9">
+            {{
+              Icon.content({
+                "className": ["hamburger--menu", "align-txt-bottom"],
+                "iconName": "icozaux1-menu",
+                "iconSvgUrl": app.fonts.icozaux1.url
+              })
+            }}
+            {{
+              Icon.content({
+                "className": ["hamburger--close","align-txt-bottom"],
+                "iconName": "icozaux1-close",
+                "iconSvgUrl": app.fonts.icozaux1.url
+              })
+            }}
+            <span class="ps-1">Menu</span>
+            </a>
+          </div>
+          <div>
+            <button type="button" class="btn btn-primary ps-2" data-bs-toggle="modal" data-bs-target="#EraModal">
+            {{
+              Icon.content({
+                "className": ["align-txt-bottom"],
+                "iconName": "icozaux1-search",
+                "iconSvgUrl": app.fonts.icozaux1.url
+              })
+            }}
+            <span class="ps-1">Search</span>
 
-        </button>
+          </button>
+          </div>
         </div>
 
         <div>
@@ -88,6 +100,10 @@
       {{ Modal.content() }}
     </div>
     <!-- .{{componentClassName}}__inner -->
+
+    {{
+      NavMenu.content()
+    }}
 
   </header>
   <!-- .{{componentClassName}} -->

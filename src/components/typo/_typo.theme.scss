@@ -89,7 +89,7 @@ $component: componentClass("typo");
 
   p,
   li {
-    color: tokenColor(set1, darkgrey);
+    color: tokenColor(set1, red1);
   }
 
   a {
@@ -99,12 +99,12 @@ $component: componentClass("typo");
 
     &:link,
     &:visited {
-      color: tokenColor(set1, darkgrey);
+      color: tokenColor(set1, red1);
     }
 
     &:hover,
     &:active {
-      color: tokenColor(set1, darkgrey);
+      color: tokenColor(set1, darkred);
       // text-decoration: underline;
       text-decoration: none;
     }

@@ -2,7 +2,15 @@
 
   {% set componentClassName = 'c-breadcrumbs' %}
 
-  <div class="c-breadcrumbs">
+  {% set configDefault = {
+    "className": []
+  }%}
+
+  {% set obj = configDefault | overwriteMerge(obj or {}) %}
+
+ {% set _className = [componentClassName] | mergeArray(obj.className or configDefault.className) %}
+
+  <div class="{{_className | join(" ")}}">
     <span>
       <span>
         <a href="#home">Home</a> / <span>

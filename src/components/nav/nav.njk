@@ -6,6 +6,7 @@
   {% set componentClassName = 'c-nav' %}
 
   {% set configDefault = {
+    "className": ["closed"],
     "wrapperElement" : "nav"
   }%}
 
@@ -14,21 +15,41 @@
   {% set _className = [componentClassName] | mergeArray(obj.className or configDefault.className) %}
 
   <div class="{{_className | join(" ")}}">
-    <{{obj.wrapperElement}} class="{{componentClassName}}">
-    <div class="row">
-      <div class="col-4 zaux-color-set1-darkgrey2">
-      <ul>
-          <li>
-            <a href="{{item.href|safe}}" class="{{componentClassName}}__item-wrapper">About Us</a>
-          </li>
-      </ul>
+    {# <{{obj.wrapperElement}} class="{{componentClassName}}"> #}
+    <div class="{{componentClassName}}__inner">
+
+      <div class="zaux-color-set1-darkgrey2">
+        <nav>
+          <ul>
+              <li>
+                <a href="{{item.href|safe}}" class="{{componentClassName}}__item-wrapper">About Us</a>
+              </li>
+              <li>
+                <a href="{{item.href|safe}}" class="{{componentClassName}}__item-wrapper">Membership</a>
+              </li>
+              <li>
+                <a href="{{item.href|safe}}" class="{{componentClassName}}__item-wrapper">Events</a>
+              </li>
+              <li>
+                <a href="{{item.href|safe}}" class="{{componentClassName}}__item-wrapper">Research & Education</a>
+              </li>
+              <li>
+                <a href="{{item.href|safe}}" class="{{componentClassName}}__item-wrapper">Papers & Publicattions</a>
+              </li>
+              <li>
+                <a href="{{item.href|safe}}" class="{{componentClassName}}__item-wrapper">Clinical Guidance</a>
+              </li>
+              <li>
+                <a href="{{item.href|safe}}" class="{{componentClassName}}__item-wrapper">For Patients</a>
+              </li>
+          </ul>
+        </nav>
       </div>
-      <div class="col-4">
+      <div>
       </div>
-      <div class="col-4">
       </div>
     </div>
-    </{{obj.wrapperElement}}>
+    {# </{{obj.wrapperElement}}> #}
     <!-- .{{componentClassName}} -->
   </div>
 
