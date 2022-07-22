@@ -27,6 +27,14 @@ $zaux-helper-name: "pos";
   }
 }
 
+.zaux-#{$zaux-helper-name}-custom3 {
+  @include media-breakpoint-up(lg) {
+   position: absolute;
+   left: 0;
+   }
+ }
+
+
 // Custom Twitter Box
 .zaux-#{$zaux-helper-name}-twitter1 {
     position: absolute;

@@ -1,0 +1,440 @@
+{# Sets the layout to be extended #}
+{% extends "layouts/default.njk" %}
+
+{# Imports components #}
+{% import 'components/img/img.njk' as Img %}
+{% import 'components/icon/icon.njk' as Icon %}
+{% import 'components/btn/btnIcon.njk' as BtnIcon %}
+{% import 'components/card1/card1_recipe.njk' as CardRecipe %}
+{% import 'components/card2/card2_news.njk' as Card2 %}
+{% import 'components/boxcontent/boxcontent.njk' as BoxContent %}
+{% import 'components/breadcrumbs/breadcrumbs.njk' as Breadcrumbs %}
+{% import 'components/nav2/nav2.njk' as Nav2 %}
+{% import 'components/form/form.njk' as Form %}
+
+{# Sets page-specific variables #}
+{% set page = {
+  "data": page_paris-home,
+  "title": "Paris Congress",
+  "isHome": false
+} %}
+
+{% block head_css %}
+  <link rel="stylesheet" href="assets/css/general.bundle.css">
+{% endblock %}
+
+{% block content %}
+
+  <main>
+     <!-- First box -->
+      <div class="mb-8 mb-lg-10 pe-0">
+        <div class="row gx-3 m-0">
+          <div class="zaux-bg-set1-grey p-box rounded-bottom-100 col-12 col-lg-8 mih-boxtitle pt-3 pt-lg-6">
+            <div class="pb-2 pb-lg-4">
+              {{ Breadcrumbs.content() }}
+            </div>
+            <div class="font-zaux2 zaux-theme--light1 pb-2 pb-lg-4">
+              <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Pasta with clams</h6>
+            </div>
+             <div class="c-typo-style1-3 c-typo-style1-lg-4 maw-f768px">
+              <p>First course</p>
+            </div>
+          </div>
+          <div class="pe-box col-12 col-lg-4">
+
+          </div>
+        </div>
+      </div>
+      <!-- end First box -->
+
+      <!-- Info recipe box -->
+      <div class="p-box mb-8 mb-lg-9">
+        <div class="row gx-3">
+          <div class="col-12 col-lg-8 pb-lg-0 pb-6">
+             {{
+                  Img.content({
+                  "isLazy": false,
+                  "src": "media/CookbookPasta.png",
+                  "src2x": "media/CookbookPasta@2x.png",
+                  "width": 824,
+                  "height": 463,
+                  "className": ["img-fluid"],
+                  "title": "title",
+                  "alt": "alt",
+                  "wrapperElement": ["figure"],
+                  "wrapperClassName": [""]
+                  })
+            }}
+          </div>
+          <div class="col-12 col-lg-4">
+            <div class="d-flex flex-column justify-content-between h-100">
+              <div class="c-typo-style1-4 c-typo-style1-lg-6 pb-4">
+                <p>Level: <strong>Easy</strong></p>
+                <p>Preparation: <strong>20 minutes</strong></p>
+                <p>Cooking Time: <strong>20 minutes</strong></p>
+                <p>Yelds: <strong>4 people</strong></p>
+                <p>Country: <strong>Italy</strong></p>
+              </div>
+              <div>
+                  {{
+                    Img.content({
+                    "isLazy": false,
+                    "src": "media/CookbookPastaLogo.png",
+                    "src2x": "media/CookbookPastaLogo.png",
+                    "width": 92,
+                    "height": 58,
+                    "className": ["img-fluid"],
+                    "title": "title",
+                    "alt": "alt",
+                    "wrapperElement": ["figure"],
+                    "wrapperClassName": [""]
+                    })
+              }}
+                <div class="c-typo-style1-1 fst-italic">
+                <p>cRecipe submitted by Lara Caldiroli on behalf of Società Italiana di Nefrologia
+                   https://sinitaly.org/ </p>
+                </div>
+              </div>
+            </div>
+        </div>
+        </div>
+      </div>
+      <!-- End recipe box -->
+
+
+      <!-- Presentation box -->
+      <div class="p-box mb-8 mb-lg-9">
+        <div class="mb-5 mb-lg-10">
+          <div class="font-zaux2 zaux-theme--light2 pb-3 pb-lg-4">
+            <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">Presentation</h6>
+          </div>
+           <div class="c-typo-style1-6 c-typo-style1-lg-8 maw-f768">
+            <p>Straight from the culinary tradition of Campania, spaghetti with clams is definitely one of the most important dishes of Italian cuisine and one of the most popular first courses with seafood. A very simple recipe with the wonderful flavor of the sea, with a few little secrets for perfect results. Clams sprinkled with parsley and the delicious cream naturally
+              created with the starch from the pasta, make spaghetti with clams a real delicacy. It's an ideal recipe for any occasion, from dinner with friends to Sunday meals, or the perfect dish for New Year's.</p>
+            </div>
+        </div>
+        <div class="row gx-3">
+          <div class="col-12 col-lg-7 pb-lg-0 pb-9">
+
+             <div class="maw-f400 m-auto m-lg-0">
+              <div class="border-gradient ps-7 pt-4 pb-6 pb-lg-8">
+                <div class="zaux-theme--light1">
+
+                  <div class="font-zaux2 pb-6">
+                    <h6 class="fw-demi c-typo-fs-8 c-typo-fs-lg-10">Ingredients</h6>
+                  </div>
+                  <div class="c-typo-style1-4 c-typo-style1-lg-8">
+
+                      <ul class="list-unstyled ps-0">
+                        <li class="pb-5">
+                          1 kg of clams
+                        </li>
+                        <li class="pb-5">
+                          300 g spaghetti
+                        </li>
+                        <li class="pb-5">
+                          100 ml white wine
+                        </li>
+                        <li class="pb-5">
+                          Chili pepper
+                        </li>
+                        <li class="pb-5">
+                          Oil
+                        </li>
+                         <li class="pb-5">
+                          Garlic
+                        </li>
+                         <li class="pb-5">
+                          Black pepper
+                        </li>
+                      </ul>
+                    </div>
+
+                </div>
+              </div>
+            </div>
+
+            </div>
+            <div class="col-12 col-lg-5">
+              <div class="divTable__cookbook">
+
+                <div class="divRow--head">
+                  <div class="divCell font-zaux2 c-typo-style1-8 c-typo-style1-lg-10"><p><b>Calories per serving</b></p></div>
+                  <div class="divCell font-zaux2 c-typo-style1-8 zaux-color-set1-red1"><p>420kcal</p></div>
+                </div>
+                <div class="divRow c-typo-style1-4 c-typo-style1-lg-8">
+                  <div class="divCell"><p>Carbohydrates</p></div>
+                  <div  class="divCell"><p>g  <strong>67,8</strong></p></div>
+                </div>
+                <div class="divRow c-typo-style1-4 c-typo-style1-lg-8">
+                  <div class="divCell ps-7"><p>of which sugars</p></div>
+                  <div class="divCell"><p>g  <strong>67,8</strong></p></div>
+                </div>
+                <div class="divRow c-typo-style1-4 c-typo-style1-lg-8">
+                  <div class="divCell"><p>Protein</p></div>
+                  <div  class="divCell"><p>g  <strong>67,8</strong></p></div>
+                </div>
+                <div class="divRow c-typo-style1-4 c-typo-style1-lg-8">
+                  <div class="divCell"><p>Fats</p></div>
+                  <div  class="divCell"><p>g  <strong>67,8</strong></p></div>
+                </div>
+                <div class="divRow c-typo-style1-4 c-typo-style1-lg-8">
+                  <div class="divCell ps-7"><p>of which sugars</p></div>
+                  <div  class="divCell"><p>g  <strong>67,8</strong></p></div>
+                </div>
+                <div class="divRow c-typo-style1-4 c-typo-style1-lg-8">
+                  <div class="divCell"><p>Fiber</p></div>
+                  <div  class="divCell"><p>g  <strong>67,8</strong></p></div>
+                </div>
+                <div class="divRow c-typo-style1-4 c-typo-style1-lg-8">
+                  <div class="divCell"><p>Sodium</p></div>
+                  <div  class="divCell"><p>g  <strong>67,8</strong></p></div>
+                </div>
+                <div class="divRow c-typo-style1-4 c-typo-style1-lg-8">
+                  <div class="divCell"><p>Cholesterol</p></div>
+                  <div class="divCell"><p>g  <strong>67,8</strong></p></div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+      <!--End Presentation box -->
+
+      <!-- Preparation box -->
+      <div class="p-box mb-8 mb-lg-9">
+        <div class="mb-5 mb-lg-10">
+          <div class="font-zaux2 zaux-theme--light2 pb-3 pb-lg-4">
+            <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">Preparation</h6>
+          </div>
+           <div class="c-typo-style1-6 c-typo-style1-lg-8 maw-f768">
+            <ol>
+              <li class="pb-lg-6 pb-4">Put the clams in a pan with the garlic and white wine over high heat,  evaporate the alcohol, then close with a lid until the clams are fully open.
+                 It will take about 3 minutes. Drain them and retrieve the sauce you will go to filter and set aside.
+              </li>
+              <li class="pb-lg-6 pb-4">
+                Sauté the garlic over low heat with chilli and add the clams, previously filtered water and brown for a few minutes.
+              </li>
+              <li class="pb-lg-6 pb-4">
+                To cook pasta: boil 2 liters of water in a metal pot and when the water is boiling add salt.
+                Then when the water starts boiling again add pasta and let it cook for the minutes indicated on the package. Drain pasta in a colander.
+              </li>
+              <li class="pb-lg-6 pb-4">
+                Stir in the spaghetti in the pot with the clams, mix for a few seconds, serve hot with a turn of pepper.
+              </li>
+            </ol>
+            </div>
+        </div>
+      </div>
+      <!-- end Preparation box -->
+
+    <div class="p-box">
+       <div class="mb-7 mb-lg-10">
+          <div class="">
+            <div class="d-flex justify-content-between align-items-center pb-4 pb-md-7">
+              <div class="font-zaux2 zaux-theme--light2">
+                <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">Suggested for you</h6>
+              </div>
+              <div class="d-none d-lg-block zaux-theme--light2">
+                <a href="#" class="pe-8"> {{
+                          Icon.content({
+                            "className": "",
+                            "iconName": "icozaux1-arrowL",
+                            "iconSvgUrl": app.fonts.icozaux1.url
+                            })
+                          }}
+                </a>
+                <a href="#"> {{
+                          Icon.content({
+                            "className": "",
+                            "iconName": "icozaux1-arrowR",
+                            "iconSvgUrl": app.fonts.icozaux1.url
+                            })
+                          }}
+                </a>
+              </div>
+            </div>
+            <div class="row gx-3 flex-nowrap flex-lg-wrap overflow-auto">
+                        {%
+                          set _decoVariations = [
+                            "deco1-l-t",
+                            "deco1-r-t",
+                            "deco1-r-b"
+                          ]
+                        %}
+
+                        {% for decoVariation in _decoVariations %}
+
+                          <div class="col-12 col-md-6 col-lg-4">
+                            {{CardRecipe.content(
+                              {
+                                "className": ["mih-recipe","h-100"],
+                                "variations": [],
+                                "innerClassName": ["zaux-bg-set1-grey p-3 h-100"],
+                                "contentClassName": ["h-100","position-relative"],
+                                "img": {
+                                  "isLazy": true,
+                                  "src": "media/Recipe.png",
+                                  "src2x": "media/Recipe@2x.png",
+                                  "width": 368,
+                                  "height": 207,
+                                  "alt": "Cover alternative text",
+                                  "className": ["img-fluid","w-100"]
+                                },
+                                "name": "Vegetable croquettes",
+                                "nation": "Italy",
+                                "time": "Easy, 40 minutes"
+                              }
+                            )}}
+
+                          </div>
+                          <!-- .col-* -->
+                        {% endfor %}
+
+              </div>
+              <!-- end row-* -->
+          </div>
+        </div>
+
+
+         <div class="mb-7 mb-lg-10">
+          <div class="">
+            <div class="d-flex justify-content-between align-items-center pb-4 pb-md-7">
+              <div class="font-zaux2 zaux-theme--light2">
+                <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">Quick and easy</h6>
+              </div>
+              <div class="d-none d-lg-block zaux-theme--light2">
+                <a href="#" class="pe-8"> {{
+                          Icon.content({
+                            "className": "",
+                            "iconName": "icozaux1-arrowL",
+                            "iconSvgUrl": app.fonts.icozaux1.url
+                            })
+                          }}
+                </a>
+                <a href="#"> {{
+                          Icon.content({
+                            "className": "",
+                            "iconName": "icozaux1-arrowR",
+                            "iconSvgUrl": app.fonts.icozaux1.url
+                            })
+                          }}
+                </a>
+              </div>
+            </div>
+            <div class="row gx-3 flex-nowrap flex-lg-wrap overflow-auto">
+                        {%
+                          set _decoVariations = [
+                            "deco1-l-t",
+                            "deco1-r-t",
+                            "deco1-r-b"
+                          ]
+                        %}
+
+                        {% for decoVariation in _decoVariations %}
+
+                          <div class="col-12 col-md-6 col-lg-4">
+                            {{CardRecipe.content(
+                              {
+                                "className": ["mih-recipe","h-100"],
+                                "variations": [],
+                                "innerClassName": ["zaux-bg-set1-grey p-3 h-100"],
+                                "contentClassName": ["h-100","position-relative"],
+                                "img": {
+                                  "isLazy": true,
+                                  "src": "media/Recipe.png",
+                                  "src2x": "media/Recipe@2x.png",
+                                  "width": 368,
+                                  "height": 207,
+                                  "alt": "Cover alternative text",
+                                  "className": ["img-fluid","w-100"]
+                                },
+                                "name": "Vegetable croquettes",
+                                "nation": "Italy",
+                                "time": "Easy, 40 minutes"
+                              }
+                            )}}
+
+                          </div>
+                          <!-- .col-* -->
+                        {% endfor %}
+
+              </div>
+              <!-- end row-* -->
+          </div>
+        </div>
+
+         <div class="mb-7 mb-lg-10">
+          <div class="">
+            <div class="d-flex justify-content-between align-items-center pb-4 pb-md-7">
+              <div class="font-zaux2 zaux-theme--light2">
+                <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">More first courses</h6>
+              </div>
+              <div class="d-none d-lg-block zaux-theme--light2">
+                <a href="#" class="pe-8"> {{
+                          Icon.content({
+                            "className": "",
+                            "iconName": "icozaux1-arrowL",
+                            "iconSvgUrl": app.fonts.icozaux1.url
+                            })
+                          }}
+                </a>
+                <a href="#"> {{
+                          Icon.content({
+                            "className": "",
+                            "iconName": "icozaux1-arrowR",
+                            "iconSvgUrl": app.fonts.icozaux1.url
+                            })
+                          }}
+                </a>
+              </div>
+            </div>
+            <div class="row gx-3 flex-nowrap flex-lg-wrap overflow-auto">
+                        {%
+                          set _decoVariations = [
+                            "deco1-l-t",
+                            "deco1-r-t",
+                            "deco1-r-b"
+                          ]
+                        %}
+
+                        {% for decoVariation in _decoVariations %}
+
+                          <div class="col-12 col-md-6 col-lg-4">
+                            {{CardRecipe.content(
+                              {
+                                "className": ["mih-recipe","h-100"],
+                                "variations": [],
+                                "innerClassName": ["zaux-bg-set1-grey p-3 h-100"],
+                                "contentClassName": ["h-100","position-relative"],
+                                "img": {
+                                  "isLazy": true,
+                                  "src": "media/Recipe.png",
+                                  "src2x": "media/Recipe@2x.png",
+                                  "width": 368,
+                                  "height": 207,
+                                  "alt": "Cover alternative text",
+                                  "className": ["img-fluid","w-100"]
+                                },
+                                "name": "Vegetable croquettes",
+                                "nation": "Italy",
+                                "time": "Easy, 40 minutes"
+                              }
+                            )}}
+
+                          </div>
+                          <!-- .col-* -->
+                        {% endfor %}
+
+              </div>
+              <!-- end row-* -->
+          </div>
+        </div>
+    </div>
+
+  </main>
+
+{% endblock %}
+
+{% block foot_js %}
+  <script defer src="assets/js/general.bundle.js"></script>
+{% endblock %}

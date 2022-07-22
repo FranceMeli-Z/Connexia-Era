@@ -48,7 +48,8 @@
         })
       }}
     </div>
-    <div class="p-box position-relative">
+    <div class="p-box position-relative ">
+      {# zaux-bg-set1-darkgrey h-100 #}
       <div class="pb-2 pb-lg-4 pt-6 d-none d-lg-block">
         {{ Breadcrumbs.content({
           "className": ["theme-white"]
@@ -159,10 +160,49 @@
       </div>
 
 
+        <div class="p-box">
+          <div class="position-relative">
+            <div class="float-lg-end w-lg-50 mb-lg-8 mb-5">
+            {# <div class="d-flex flex-column justify-content-center h-100"> #}
+              <div class="font-zaux2 zaux-theme--light1 pb-2 pb-lg-4">
+                <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Exclusive Congress discounts</h6>
+              </div>
+              <div class="zaux-pos-custom3 w-lg-50 pe-lg-6">
+              {{
+              Img.content({
+                "isLazy": false,
+                "src": "media/Benefitsimg.png",
+                "src2x": "media/Benefitsimg.png",
+                "width": 610,
+                "height": 343,
+                "className": ["img-fluid","float-start"],
+                "title": "title",
+                "alt": "alt",
+                "wrapperElement": "",
+                "wrapperClassName": [""]
+              })
+              }}
+            </div>
+              <div class="pb-4 c-typo-style1-4 c-typo-style1-lg-8 maw-f768px">
+                <p>ERA members benefit from special discounts up to 220€ over the Annual Congress free, which this year will take place in Paris. The congress membership fee includes:</p><br>
+                <ul>
+                  <li>Access / live streaming to the scientific sessions and mini-oral presentations held on May 19-22, 2022, including Q&A with speakers;</li><br>
+                  <li> Exclusive access to the Congress webcasts and digital content until August 22, 2022; </li><br>
+                  <li> CME and hands-on courses held on May 19, 2022 (on-site places available on a “first come, first served” basis). </li>
+                </ul>
+              </div>
+              <div class="">
+                <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">Register now</a>
+              </div>
+          </div>
+        </div>
+      </div>
 
 
 
-    <div class="p-box mb-lg-8 mb-5">
+
+
+    {# <div class="p-box mb-lg-8 mb-5">
         <div class="row gx-3">
           <div class="col-12 col-lg-6">
             <div class="d-flex justify-content-center flex-column h-100">
@@ -183,7 +223,6 @@
             </div>
           </div>
           <div class="mb-lg-0 mb-7 col-12 col-lg-6">
-            {# <div class="d-flex flex-column justify-content-center h-100"> #}
               <div class="font-zaux2 zaux-theme--light1 pb-2 pb-lg-4">
                 <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Exclusive Congress discounts</h6>
               </div>
@@ -197,12 +236,10 @@
               </div>
             </diV>
           </div>
-
-        {# </div> #}
-      </div>
+      </div> #}
 
 
-  <div class="mb-9 position-relative mih-560 overflow-hidden">
+  <div style="clear:both" class="mb-9 position-relative mih-560 overflow-hidden ">
     <div class="position-absolute zaux-zi--1 zaux-pos-custom1">
        {# {{
         Img.content({

@@ -9,8 +9,10 @@ $component: componentClass("slider");
     overflow: hidden;
     position: relative;
   }
-  & .swiper-slide div {
-    border: 1px solid #F1F1F1;
+  & .swiper-slide {
+    &--charts {
+      border: 1px solid #F1F1F1;
+    }
   }
 
   & .swiper-pagination {
@@ -28,5 +30,46 @@ $component: componentClass("slider");
       background-color: #979797;
     }
   }
+
+  & .swiper-navigation {
+    @include media-breakpoint-down(md) {
+      display: flex;
+      justify-content: center;
+      padding-top: 30px;
+     }
+
+  & .swiper-button-prev {
+    top: 5%;
+    right: 100px;
+    left: auto;
+    @include media-breakpoint-down(md) {
+      position: static;
+      padding-right: 50px;
+      width: auto;
+      height: auto;
+     }
+
+    &::after {
+      content: none;
+    }
+  }
+  & .swiper-button-next {
+    color: tokenColor("set1","red1");
+    top: 5%;
+    @include media-breakpoint-down(md) {
+      position: static;
+      width: auto;
+      height: auto;
+    }
+
+    &:hover {
+      color: #BD2910;
+    }
+
+    &::after {
+      content: none;
+    }
+  }
+}
 
 }

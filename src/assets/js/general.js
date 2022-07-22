@@ -13,6 +13,7 @@ import { HeroVideo } from "../../components/herovideo/herovideo";
 
 // Registering components
 Component.register("Slider", Slider);
+Component.register("Slider1", Slider);
 Component.register("HeroVideo", HeroVideo);
 
 init();
@@ -27,10 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // $(".c-accordion").toggleClass("closed");
     // $(".c-accordion").toggleClass("open");
   });
-  $(".divRow__click").click(function() {
-    console.log("AAA");
-    $(this).parents(".divAcc").toggleClass("closed");
-    $(this).parents(".divAcc").toggleClass("open");
+  $(".divTable").click(function() {
+    $(this).toggleClass("closed");
+    $(this).toggleClass("open");
     // $(".c-accordion").toggleClass("closed");
     // $(".c-accordion").toggleClass("open");
   });

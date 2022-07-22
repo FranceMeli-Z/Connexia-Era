@@ -1,4 +1,4 @@
-<div class="divTable">
+{# <div class="divTable__benefits">
 
     <div class="headRow">
       <div class="divCell" align="center">Category</div>
@@ -55,10 +55,125 @@
                 })
                 }}</div>
         <div class="divCell">Up to 150€</div>
-      {# <div class="divRow__show d-none">
-        <div class="divCell">Contenuto da mostrare come accordion</div>
-      </div> #}
     </div>
     {% endfor %}
 
+</div> #}
+
+{# <div>
+  <div class="d-flex flex-column">
+    <div class="d-flex justify-content-between">
+      <div>Category</div>
+      <div>Category</div>
+      <div>Category</div>
+      <div>Category</div>
+      <div>Category</div>
+    </div>
+    <div class="d-flex justify-content-between">
+      <div>Regular*</div>
+      <div>Regular*</div>
+      <div>Professional nephrologists</div>
+      <div>Professional nephrologists</div>
+      <div>Professional nephrologists</div>
+    </div>
+  </div>
+</div> #}
+
+<div class="table-container" role="table" aria-label="Table Benefits">
+  <div class="flex-table header d-none d-lg-flex" role="rowgroup">
+    <div class="flex-row first"><p>Category</p></div>
+    <div class="flex-row second" >Qualification</div>
+    <div class="flex-row" >Fee</div>
+    <div class="flex-row" >NDT Hard Copies</div>
+    <div class="flex-row" >NDT Online</div>
+    <div class="flex-row" ><p>Congress discount</p></div>
+</div>
+<div class="divTable flex-table closed" role="rowgroup">
+  <div class="flex-row" role="cell"> Regular*</div>
+  <div class="flex-row" role="cell">Professional nephrologists </div>
+  <div class="flex-row" role="cell">€ 170 /year</div>
+  <div class="flex-row" role="cell">{{
+                Img.content({
+                  "isLazy": false,
+                  "src": "media/SpuntaTabella.png",
+                  "src2x": "media/SpuntaTabella.png",
+                  "width": 40,
+                  "height": 40,
+                  "className": ["img-fluid"],
+                  "title": "title",
+                  "alt": "alt",
+                  "wrapperElement": "",
+                  "wrapperClassName": ""
+                })
+                }}</div>
+  <div class="flex-row" role="cell">{{
+                Img.content({
+                  "isLazy": false,
+                  "src": "media/SpuntaTabella.png",
+                  "src2x": "media/SpuntaTabella.png",
+                  "width": 40,
+                  "height": 40,
+                  "className": ["img-fluid"],
+                  "title": "title",
+                  "alt": "alt",
+                  "wrapperElement": "",
+                  "wrapperClassName": ""
+                })
+                }}</div>
+  <div class="flex-row" role="cell">Up to 150€</div>
+  <div class="divTable--show d-none">
+      <div class="d-flex justify-content-between">
+        <div class="maw-f550">
+          <p>Members receive <strong>all benefits including</strong> online access and hard copies of the journal ‘Nephrology, Dialysis and Transplantation’ (NDT).</p>
+        </div>
+        <div class="">
+          <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">Discover membership benefits</a>
+        </div>
+      </div>
+  </div>
+</div>
+<div class="divTable flex-table closed" role="rowgroup">
+  <div class="flex-row" role="cell"> Special Discount Regular*</div>
+  <div class="flex-row" role="cell">Only for members living in Low Income Countries </div>
+  <div class="flex-row" role="cell">€ 110 /year</div>
+  <div class="flex-row" role="cell">{{
+                Img.content({
+                  "isLazy": false,
+                  "src": "media/SpuntaTabella.png",
+                  "src2x": "media/SpuntaTabella.png",
+                  "width": 40,
+                  "height": 40,
+                  "className": ["img-fluid"],
+                  "title": "title",
+                  "alt": "alt",
+                  "wrapperElement": "",
+                  "wrapperClassName": ""
+                })
+                }}</div>
+  <div class="flex-row" role="cell">{{
+                Img.content({
+                  "isLazy": false,
+                  "src": "media/SpuntaTabella.png",
+                  "src2x": "media/SpuntaTabella.png",
+                  "width": 40,
+                  "height": 40,
+                  "className": ["img-fluid"],
+                  "title": "title",
+                  "alt": "alt",
+                  "wrapperElement": "",
+                  "wrapperClassName": ""
+                })
+                }}</div>
+  <div class="flex-row" role="cell">Up to 180€</div>
+   <div class="divTable--show d-none">
+      <div class="d-flex justify-content-between">
+        <div class="maw-f550">
+          <p>Members receive <strong>all benefits including</strong> online access and hard copies of the journal ‘Nephrology, Dialysis and Transplantation’ (NDT).</p>
+        </div>
+        <div class="">
+          <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">Discover membership benefits</a>
+        </div>
+      </div>
+  </div>
+</div>
 </div>

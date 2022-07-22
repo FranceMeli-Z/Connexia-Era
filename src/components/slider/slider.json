@@ -26,6 +26,44 @@
           "delay": 5000
           }
       }
+    },
+    "slider2": {
+      "config": {
+      "slidesPerView": 1,
+      "spaceBetween": 30,
+      "freeMode": true,
+      "navigation": {
+        "nextEl": ".swiper-button-next",
+        "prevEl": ".swiper-button-prev"
+      },
+      "breakpoints": {
+        "768": {
+          "slidesPerView": 2
+        },
+        "992": {
+          "slidesPerView": 3
+        }
+      }
     }
+  },
+  "slider3": {
+    "config": {
+    "slidesPerView": 1,
+    "spaceBetween": 30,
+    "freeMode": true,
+    "navigation": {
+      "nextEl": ".swiper-button-next1",
+      "prevEl": ".swiper-button-prev1"
+    },
+    "breakpoints": {
+      "768": {
+        "slidesPerView": 2
+      },
+      "992": {
+        "slidesPerView": 3
+      }
+    }
+  }
+}
   }
 }

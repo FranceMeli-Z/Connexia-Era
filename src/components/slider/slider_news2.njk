@@ -1,0 +1,63 @@
+<div class="c-slider h-100"  data-config='{{component_slider.demo.slider3.config | dump | safe}}' data-js-component="Slider">
+  <div class="c-slider__wrapper">
+    <div class="c-slider__instance swiper swiper-container d-flex flex-column h-100">
+
+      <div class="swiper-wrapper">
+          {%
+                  set _decoVariations = [
+                    "deco1-l-t",
+                    "deco1-r-t",
+                    "deco1-r-b",
+                    "deco1-l-b",
+                    "deco1-l-b",
+                    "deco1-l-b",
+                    "deco1-l-b"
+                  ]
+                %}
+
+                {% for decoVariation in _decoVariations %}
+
+                   <div class="swiper-slide">
+
+                    {{Card2.content(
+                      {
+                        "className": [],
+                        "innerClassName": [],
+                        "contentClassName": ["d-flex", "justify-content-between", "flex-column","mih-215","h-100"],
+                        "content": {
+                          "category": "Report",
+                          "title": "CKD-MBD Newsletter #23",
+                          "date": "March 18, 2022",
+                          "author": "CKD-MBD working group"
+                        }
+                      }
+                    )}}
+
+                  </div>
+                  <!-- .col-* -->
+                {% endfor %}
+        </div>
+    </div>
+    <!-- .c-slider__instance -->
+  </div>
+  <!-- .c-slider__wrapper -->
+  <div class="swiper-navigation1">
+        <div class="swiper-button-prev1"> {{
+                    Icon.content({
+                      "className": "",
+                      "iconName": "icozaux1-arrowL",
+                      "iconSvgUrl": app.fonts.icozaux1.url
+                      })
+                    }}
+        </div>
+        <div class="swiper-button-next1">
+          {{
+              Icon.content({
+                "className": "",
+                "iconName": "icozaux1-arrowR",
+                "iconSvgUrl": app.fonts.icozaux1.url
+              })
+          }}
+        </div>
+      </div>
+</div>

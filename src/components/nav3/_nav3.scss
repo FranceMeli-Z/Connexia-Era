@@ -11,13 +11,21 @@ $component: componentClass("nav3");
     list-style: none;
   }
   li {
-
+    &.active {
+      font-weight: bold;
+    }
   }
    a {
       white-space: nowrap;
       &:hover {
-        font-weight: bold;
+        // font-weight: bold;
         text-decoration: none;
       }
     }
+
+  & select {
+    &-selected {
+      font-weight: 600;
+    }
+  }
   }

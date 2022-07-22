@@ -10,6 +10,7 @@
 {% import 'components/boxcontent/boxcontent.njk' as BoxContent %}
 {% import 'components/breadcrumbs/breadcrumbs.njk' as Breadcrumbs %}
 {% import 'components/nav2/nav2.njk' as Nav2 %}
+{% import 'components/form/form.njk' as Form %}
 
 {# Sets page-specific variables #}
 {% set page = {
@@ -33,11 +34,10 @@
               {{ Breadcrumbs.content() }}
             </div>
             <div class="font-zaux2 zaux-theme--light1 pb-2 pb-lg-4">
-              <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Paris Congress 2022</h6>
+              <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Cookbook</h6>
             </div>
              <div class="c-typo-style1-3 c-typo-style1-lg-4 maw-f768px">
-              <p>ERA organizes the largest annual Nephrology Congress in Europe, welcoming thousands of attendees coming from all over the world,
-                focusing on key learning features both in the clinical field as well as the scientific and latest innovations.</p>
+              <p>Healthy food for healthy kidneys</p>
             </div>
           </div>
           <div class="pe-box col-12 col-lg-4 d-flex align-items-center mih-boxtitle justify-content-center justify-content-lg-end">
@@ -87,7 +87,14 @@
         </div>
       </div>
 
-      <div class="pb-6 pb-lg-9">Form Select</div>
+      <div class="pb-6 pb-lg-9">
+            {{
+            Form.content({
+              "searchfilter": "y",
+              "className": ""
+            })
+           }}
+      </div>
 
       <!-- All recipe -->
       <div class="p-box">
