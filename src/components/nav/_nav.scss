@@ -5,21 +5,17 @@
 $component: componentClass("nav");
 
 .#{$component} {
-  position: fixed;
-  width: 100%;
-  z-index: 1;
-  background-color: white;
-  &.closed {
-    display: none;
-  }
-  &.open {
-    display: block;
+
+}
+[class*="#{$component}"] {
+  ul {
+    list-style: none;
+
+    li {
+      font-weight: normal;
+    }
   }
 }
-// [class*="#{$component}"] {
-//   ul {
-//     list-style: none;
-//   }
 
 //   li {
 //     font-family: $zaux-font2;

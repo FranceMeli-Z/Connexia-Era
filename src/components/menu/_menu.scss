@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+@import "../../assets/scss/components/base";
+
+$component: componentClass("menu");
+
+.#{$component} {
+
+  position: absolute;
+  z-index: 30;
+  width: 100%;
+  max-width: 1440px;
+  background-color: white;
+
+  @include media-breakpoint-down(lg) {
+    height: 100%;
+    top:0;
+    left: 0;
+    position: fixed;
+  }
+
+  &.closed {
+    display: none;
+  }
+  &.open {
+    display: block;
+  }
+
+  &__content {
+    font-size: 24px;
+    &__nav {
+      @include media-breakpoint-up(lg) {
+        width: 27%;
+        background-color: #676767;
+      }
+      ul {
+        list-style: none;
+        li.#{$component}__content__navlist {
+          &.active {
+            font-weight: 600;
+          }
+          @include media-breakpoint-down(lg) {
+            font-weight: 600;
+            position: relative;
+            &::after {
+              content: "+";
+              position: absolute;
+              right: 20px;
+              top: 0;
+            }
+          }
+        }
+        li.#{$component}__content__navlist.open {
+          & .#{$component}__content__navlist--show {
+            width: 100%;
+            display: block !important;
+            @include media-breakpoint-up(lg) {
+              position: absolute;
+              top: 0;
+              left: 27%;
+              display: flex !important;
+              width: 73%;
+            }
+          }
+        }
+
+      }
+    }
+
+  }
+
+}

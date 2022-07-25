@@ -8,7 +8,18 @@ $component: componentClass("nav");
 // Theme: Light1
 ////////////////////////////////////////////////////
 
-// .#{$component} {
+.#{$component} {
+  background-color: #979797 !important;
+  @include media-breakpoint-up(lg) {
+  background-color: white !important;
+  & ul li a {
+    color: #3F3F3F !important ;
+    &:hover {
+      color: #BD2910 !important;
+    }
+  }
+}
+}
 //   // &__item {
 //   //   &-wrapper {
 //   //     @at-root .#{$zaux-system-classname-components-loaded} & {

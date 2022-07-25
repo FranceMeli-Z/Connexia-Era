@@ -1,6 +1,6 @@
 <div class="c-slider h-100"  data-config='{{component_slider.demo.slider3.config | dump | safe}}' data-js-component="Slider">
   <div class="c-slider__wrapper">
-    <div class="c-slider__instance swiper swiper-container d-flex flex-column h-100">
+    <div class="c-slider__instance1 swiper swiper-container d-flex flex-column h-100">
 
       <div class="swiper-wrapper">
           {%
@@ -38,11 +38,11 @@
                 {% endfor %}
         </div>
     </div>
-    <!-- .c-slider__instance -->
+    <!-- .c-slider__instance1 -->
   </div>
   <!-- .c-slider__wrapper -->
-  <div class="swiper-navigation1">
-        <div class="swiper-button-prev1"> {{
+  <div class="swiper-navigation">
+        <div class="modal-swiper-button-prev swiper-button-prev"> {{
                     Icon.content({
                       "className": "",
                       "iconName": "icozaux1-arrowL",
@@ -50,7 +50,7 @@
                       })
                     }}
         </div>
-        <div class="swiper-button-next1">
+        <div class="modal-swiper-button-next swiper-button-next ">
           {{
               Icon.content({
                 "className": "",

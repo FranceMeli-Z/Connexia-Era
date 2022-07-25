@@ -13,8 +13,12 @@ export class Slider {
     this.defaultConfig = {};
     this.lastEffect = "slide"; // Default Swiper effect
 
+    var theClass = $("div[class^='c-slider__instance']")
+    console.log(theClass);
+
     this.$wrapper = $el.querySelector(`.${Slider.cssClass}__wrapper`);
     this.$slider = $el.querySelector(`.${Slider.cssClass}__instance`);
+    this.$slider1 = $el.querySelector(`.${Slider.cssClass}__instance1`);
 
     this.init();
   }
@@ -30,6 +34,7 @@ export class Slider {
 
     // Initializes Swiper
     this.slider = new Swiper(this.$slider, this.config);
+    this.slider1 = new Swiper(this.$slider1, this.config);
 
     this.setupEvents();
 

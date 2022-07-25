@@ -1,0 +1,83 @@
+{# Imports components #}
+{% import 'components/img/img.njk' as Img %}
+{% import 'components/nav/nav.njk' as Nav %}
+{% import 'components/icon/icon.njk' as Icon %}
+{% import 'components/card2/card2_news.njk' as Card2 %}
+
+{% macro content(obj) %}
+
+  {% set componentClassName = 'c-menu' %}
+
+  <div class="{{componentClassName}} closed" data-current-level="1" data-js-component="menu">
+    <div class="{{componentClassName}}__inner">
+       <div class="hamburger open d-lg-none zaux-bg-set1-darkgrey2 p-box py-4">
+           <a href="#" class="">
+          {{
+            Icon.content({
+              "className": ["zaux-color-default-white"],
+              "iconName": "icozaux1-close",
+              "iconSvgUrl": app.fonts.icozaux1.url
+            })
+          }}
+        </a>
+      </div>
+      <div class="{{componentClassName}}__content font-zaux2 zaux-theme--dark1 position-relative">
+        <nav class="{{componentClassName}}__content__nav mb-6 mb-lg-0 pt-lg-8 zaux-bg-set1-darkgrey2 pb-lg-12">
+          <ul>
+            {% for item in component_menu.props.panels[0].nav.items %}
+              <li class="{{componentClassName}}__content__navlist closed pb-6">
+                <div class="">
+                  <div class="{{componentClassName}}__content__navlist--click d-inline-block ps-box pb-2 w-100">
+                    <a href="#" class="">
+                      {{item.label}}
+                    </a>
+                  </div>
+                  <div class="{{componentClassName}}__content__navlist--show d-none h-100 py-0 py-lg-8">
+                    <div class="w-lg-50">
+                    {% for panel in component_menu.props.panels %}
+                      {% if panel.id !== "1" %}
+                        {% if panel.id == item.childId %}
+                          {{Nav.content(panel.nav)}}
+                        {% endif %}
+                      {% endif %}
+                    {% endfor %}
+                    </div>
+                    <div class="d-none d-lg-block w-lg-50">
+                       {{Card2.content(
+                      {
+                        "className": [""],
+                        "innerClassName": ["h-100"],
+                        "contentClassName": ["d-flex", "justify-content-between", "flex-column","h-100","mih-215"],
+                        "content": {
+                          "category": "Report",
+                          "title": "CKD-MBD Newsletter #23",
+                          "date": "March 18, 2022",
+                          "author": "CKD-MBD working group"
+                        }
+                      }
+                    )}}
+                     <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">Discover the congress</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+        {% endfor %}
+      </div>
+      <div class="{{componentClassName}}__header d-block d-lg-none p-box">
+        {# <form class="c-form" role="search" method="get" autocomplete="off">
+          <div class="form-group">
+          <input class="{{componentClassName}}__search-field w-100 p-2" type="search" name="s" value="" placeholder="Search ERA..."/>
+          </div>
+        </form> #}
+        Search input
+        <div class="d-flex justify-content-between">
+          <a href="#" class="fw-bold pe-7">My Era</a>
+          <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">JOIN</a>
+        </div>
+      </div>
+    </div>
+    <!-- .{{componentClassName}}__inner -->
+  </div>
+  <!-- .{{componentClassName}} -->
+
+{% endmacro %}

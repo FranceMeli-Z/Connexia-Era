@@ -6,51 +6,66 @@
   {% set componentClassName = 'c-nav' %}
 
   {% set configDefault = {
-    "className": ["closed"],
     "wrapperElement" : "nav"
   }%}
 
   {% set obj = configDefault | merge(obj or {}) %}
 
-  {% set _className = [componentClassName] | mergeArray(obj.className or configDefault.className) %}
+  {% if obj.items %}
+    <{{obj.wrapperElement}} class="{{componentClassName}} py-4 py-lg-0">
+      <ul>
+        {% for item in obj.items %}
 
-  <div class="{{_className | join(" ")}}">
-    {# <{{obj.wrapperElement}} class="{{componentClassName}}"> #}
-    <div class="{{componentClassName}}__inner">
+          {% set itemClassNameArr = [] %}
 
-      <div class="zaux-color-set1-darkgrey2">
-        <nav>
-          <ul>
-              <li>
-                <a href="{{item.href|safe}}" class="{{componentClassName}}__item-wrapper">About Us</a>
-              </li>
-              <li>
-                <a href="{{item.href|safe}}" class="{{componentClassName}}__item-wrapper">Membership</a>
-              </li>
-              <li>
-                <a href="{{item.href|safe}}" class="{{componentClassName}}__item-wrapper">Events</a>
-              </li>
-              <li>
-                <a href="{{item.href|safe}}" class="{{componentClassName}}__item-wrapper">Research & Education</a>
-              </li>
-              <li>
-                <a href="{{item.href|safe}}" class="{{componentClassName}}__item-wrapper">Papers & Publicattions</a>
-              </li>
-              <li>
-                <a href="{{item.href|safe}}" class="{{componentClassName}}__item-wrapper">Clinical Guidance</a>
-              </li>
-              <li>
-                <a href="{{item.href|safe}}" class="{{componentClassName}}__item-wrapper">For Patients</a>
-              </li>
-          </ul>
-        </nav>
-      </div>
-      <div>
-      </div>
-      </div>
-    </div>
-    {# </{{obj.wrapperElement}}> #}
+          {% if item.icon %}
+            {% set itemClassNameArr = (itemClassNameArr.push(componentClassName + "__item--has-icon"), itemClassNameArr) %}
+          {% endif %}
+
+          {% if item.type %}
+            {% set itemClassNameArr = (itemClassNameArr.push(componentClassName + "__item--type-" + item.type), itemClassNameArr) %}
+          {% endif %}
+
+          {% if item.childId %}
+            {% set itemClassNameArr = (itemClassNameArr.push(componentClassName + "__item--has-child"), itemClassNameArr) %}
+          {% endif %}
+
+          <li
+            class="{{componentClassName}}__item ps-box pb-5 {{ (itemClassNameArr | safe) | replace(",", " ") }} {{item.className}}"
+            {% if item.childId %} aria-owns="sidebar-panel-{{item.childId}}"{% endif %}
+            {% if item.targetPanelId %} data-sidebar-open-panel="{{item.targetPanelId|safe}}"{% endif %}
+            {% if item.label %} title="{{item.label}}"{% endif %}
+          >
+            <a href="{{item.href|safe}}" class="{{componentClassName}}__item-wrapper">
+
+              {% if item.icon %}
+                {{
+                  Icon.content({
+                    "className": componentClassName + "__item-icon",
+                    "iconName": "icozaux1-" + item.icon,
+                    "iconSvgUrl": app.fonts.icozaux1.url
+                  })
+                }}
+              {% endif %}
+
+              {% if item.showLabel and item.label %}
+                <span class="{{componentClassName}}__item-label {{item.labelClassName|safe}}">
+                  {{item.label}}
+                </span>
+              {% endif %}
+
+              {% if item.description %}
+                <span class="{{componentClassName}}__item-description {{item.descriptionClassName|safe}}">
+                  <span class="visually-hidden">- </span>
+                  {{item.description|safe}}
+                </span>
+              {% endif %}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </{{obj.wrapperElement}}>
     <!-- .{{componentClassName}} -->
-  </div>
+  {% endif %}
 
 {% endmacro %}

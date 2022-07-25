@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+@import "../../assets/scss/components/base";
+
+$component: componentClass("menu");
+
+.#{$component} {
+
+}

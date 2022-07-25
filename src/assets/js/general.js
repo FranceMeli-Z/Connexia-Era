@@ -38,12 +38,20 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-//Menu
+//Apertura- chiusura Menu principale
 $(".hamburger").click(function() {
-  $(".c-nav").toggleClass("closed");
-  $(".c-nav").toggleClass("open");
+  $(".c-menu").toggleClass("closed");
+  $(".c-menu").toggleClass("open");
   $(this).toggleClass("closed");
   $(this).toggleClass("open");
+  // $(".c-accordion").toggleClass("closed");
+  // $(".c-accordion").toggleClass("open");
+});
+
+//Accordion interno a ogni elemento del menu principale
+$(".c-menu__content__navlist--click").click(function() {
+  $(this).parents(".c-menu__content__navlist").toggleClass("closed");
+  $(this).parents(".c-menu__content__navlist").toggleClass("open");
   // $(".c-accordion").toggleClass("closed");
   // $(".c-accordion").toggleClass("open");
 });
