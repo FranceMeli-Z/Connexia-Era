@@ -12,14 +12,13 @@ export class Menu {
   setupEvents() {
     $(document).on('click', `.${Menu.cssClass}__btn-toggle`, (e) => {
       e.preventDefault();
-      const _this = $(`.${Menu.cssClass}`);
+      const _this = $(`.${Menu.cssClass}`)[0].instance;
       _this.toggleMenu();
     });
 
   }
 
   toggleMenu(doOpen) {
-    const _this = $(`.${Menu.cssClass}`);
     const $btnsToggle = $(`.${Menu.cssClass}__btn-toggle`);
     const cssClassActive = `${Utils.getVarNS()}-menu-active`;
     const bodyClassList = document.body.classList;
