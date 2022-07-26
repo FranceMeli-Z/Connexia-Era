@@ -1,4 +1,4 @@
-import Swiper, { EffectFade, Navigation, Pagination, Autoplay, FreeMode } from "swiper";
+import Swiper, { EffectFade, Navigation, Pagination, Autoplay, FreeMode, Grid } from "swiper";
 import { Lazyload } from "../../assets/js/helpers/lazyload";
 
 export class Slider {
@@ -6,7 +6,7 @@ export class Slider {
 
   constructor($el = null) {
     // Configure Swiper to use modules
-    Swiper.use([EffectFade, Navigation, Pagination, Autoplay, FreeMode]);
+    Swiper.use([EffectFade, Navigation, Pagination, Autoplay, FreeMode, Grid]);
 
     this.$el = $el;
 

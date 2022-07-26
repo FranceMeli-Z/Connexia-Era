@@ -162,6 +162,7 @@
 
   & .divTable {
     position: relative;
+    border-radius: 10px;
     &:hover {
       background-color: white;
     }
@@ -186,7 +187,6 @@
       display: block;
       margin-bottom: 20px;
       padding-top: 15px;
-      border-radius: 25px;
       background-color: white;
       text-align: center;
       &.closed::after  {

@@ -8,9 +8,10 @@
 
   {% set componentClassName = 'c-menu' %}
 
-  <div class="{{componentClassName}} closed" data-current-level="1" data-js-component="menu">
+  <div class="{{componentClassName}} closed" data-current-level="1" data-js-component="Menu">
     <div class="{{componentClassName}}__inner">
-       <div class="hamburger open d-lg-none zaux-bg-set1-darkgrey2 p-box py-4">
+
+       <div class="{{componentClassName}}__btn-toggle hamburger open d-lg-none zaux-bg-set1-darkgrey2 p-box py-4">
            <a href="#" class="">
           {{
             Icon.content({
@@ -21,13 +22,17 @@
           }}
         </a>
       </div>
-      <div class="{{componentClassName}}__content font-zaux2 zaux-theme--dark1 position-relative">
+      <div class="{{componentClassName}}__content font-zaux2 position-relative">
         <nav class="{{componentClassName}}__content__nav mb-6 mb-lg-0 pt-lg-8 zaux-bg-set1-darkgrey2 pb-lg-12">
           <ul>
             {% for item in component_menu.props.panels[0].nav.items %}
-              <li class="{{componentClassName}}__content__navlist closed pb-6">
+              {% if item.childId == "2" %}
+                <li class="{{componentClassName}}__content__navlist open pb-6">
+              {% else %}
+                <li class="{{componentClassName}}__content__navlist closed pb-6">
+                 {% endif %}
                 <div class="">
-                  <div class="{{componentClassName}}__content__navlist--click d-inline-block ps-box pb-2 w-100">
+                  <div class="{{componentClassName}}__content__navlist--click zaux-theme--dark1 d-inline-block ps-box pb-2 pe-4 w-100">
                     <a href="#" class="">
                       {{item.label}}
                     </a>
@@ -42,37 +47,41 @@
                       {% endif %}
                     {% endfor %}
                     </div>
-                    <div class="d-none d-lg-block w-lg-50">
+                    <div class="d-none d-lg-block w-lg-50 pt-4">
                        {{Card2.content(
                       {
-                        "className": [""],
+                        "className": ["pb-4","maw-f270"],
                         "innerClassName": ["h-100"],
-                        "contentClassName": ["d-flex", "justify-content-between", "flex-column","h-100","mih-215"],
+                        "contentClassName": ["d-flex", "justify-content-between", "flex-column","h-100","zaux-color-set1-darkgrey2"],
                         "content": {
-                          "category": "Report",
-                          "title": "CKD-MBD Newsletter #23",
-                          "date": "March 18, 2022",
-                          "author": "CKD-MBD working group"
+                          "category": "",
+                          "title": "Discoveries about CKD-MBD in Europe and Middle East countries",
+                          "date": "",
+                          "author": ""
                         }
                       }
                     )}}
+
                      <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">Discover the congress</a>
                     </div>
                   </div>
                 </div>
               </li>
         {% endfor %}
-      </div>
-      <div class="{{componentClassName}}__header d-block d-lg-none p-box">
-        {# <form class="c-form" role="search" method="get" autocomplete="off">
-          <div class="form-group">
-          <input class="{{componentClassName}}__search-field w-100 p-2" type="search" name="s" value="" placeholder="Search ERA..."/>
+          </ul>
+          </nav>
+        <div class="{{componentClassName}}__foot d-block d-lg-none p-box">
+          <div class="{{componentClassName}}__foot--search pb-4">
+            <form class="c-form" role="search" method="get" autocomplete="off">
+              <div class="form-group">
+              <input class="w-100" type="search" name="s" value="" placeholder="Search ERA..."/>
+              </div>
+            </form>
           </div>
-        </form> #}
-        Search input
-        <div class="d-flex justify-content-between">
-          <a href="#" class="fw-bold pe-7">My Era</a>
-          <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">JOIN</a>
+          <div class="d-flex justify-content-between">
+            <a href="#" class="fw-bold pe-7">My Era</a>
+            <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">JOIN</a>
+          </div>
         </div>
       </div>
     </div>

@@ -11,6 +11,7 @@
 {% import 'components/card1/card1_profile.njk' as CardProfile %}
 {% import 'components/boxcontent/boxcontent.njk' as BoxContent %}
 {% import 'components/breadcrumbs/breadcrumbs.njk' as Breadcrumbs %}
+{% import 'components/slider/slider_news.njk' as Slider %}
 
 {# Sets page-specific variables #}
 {% set page = {
@@ -146,70 +147,25 @@
        <!-- End Box Join WorkingGroup -->
 
     <!-- Start Latest Publication of Working Group -->
-    <div class="p-box mb-6 mb-lg-9">
-      <div class="pb-9 border-bottom-box">
-        <div class="d-flex justify-content-between align-items-center pb-6 pb-md-9">
-          <div class="font-zaux2 zaux-theme--light2 maw-f825">
-            <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">Latest Publications from CKD-MBD Working Group</h6>
-          </div>
-          <div class="d-none d-lg-block">
-            <a href="#" class="pe-8"> {{
-                      Icon.content({
-                        "className": "",
-                        "iconName": "icozaux1-arrowL",
-                        "iconSvgUrl": app.fonts.icozaux1.url
-                        })
-                      }}
-            </a>
-            <a href="#"> {{
-                      Icon.content({
-                        "className": "",
-                        "iconName": "icozaux1-arrowR",
-                        "iconSvgUrl": app.fonts.icozaux1.url
-                        })
-                      }}
-            </a>
-          </div>
-        </div>
-        <div class="row flex-nowrap flex-lg-wrap overflow-auto mb-6 mb-lg-9">
-                    {%
-                      set _decoVariations = [
-                        "deco1-l-t",
-                        "deco1-r-t",
-                        "deco1-r-b",
-                        "deco1-l-b"
-                      ]
-                    %}
+     <div class="p-box mb-6 mb-lg-9">
+  <div class="pb-6 pb-lg-8 border-bottom-box position-relative">
 
-                    {% for decoVariation in _decoVariations %}
-
-                      <div class="col-12 col-md-3 col-lg-3">
-                        {{Card2.content(
-                          {
-                            "className": ["mih-215","h-100"],
-                            "innerClassName": ["h-100"],
-                            "contentClassName": ["d-flex", "justify-content-between", "flex-column","h-100"],
-                            "content": {
-                              "category": "Report",
-                              "title": "CKD-MBD Newsletter #23",
-                              "date": "March 18, 2022",
-                              "author": "CKD-MBD working group"
-                            }
-                          }
-                        )}}
-
-                      </div>
-                      <!-- .col-* -->
-                    {% endfor %}
-
-          </div>
-          <!-- end row-* -->
-          <div class="text-center text-lg-end">
-            <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">See all CKD-MBD publications</a>
-          </div>
-
+      <div class="font-zaux2 zaux-theme--light2 pb-6 pb-md-9 maw-f825">
+        <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">Latest Publications from CKD-MBD Working Group</h6>
       </div>
-    </div>
+
+      <div class="mb-4 mb-lg-6">
+            {{
+              Slider.content({
+              })
+            }}
+      </div>
+       <div class="text-center text-lg-end">
+        <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">See all CKD-MBD publications</a>
+      </div>
+
+  </div>
+</div>
     <!-- End Latest Publication of Working Group -->
 
 
@@ -241,7 +197,7 @@
                       {
                       "className": [],
                       "variations": [],
-                      "innerClassName": ["zaux-bg-set1-grey py-8 shadow-h"],
+                      "innerClassName": ["zaux-bg-set1-grey py-8 shadow-2"],
                       "contentClassName": ["text-center"],
                       "img": {
                         "isLazy": true,

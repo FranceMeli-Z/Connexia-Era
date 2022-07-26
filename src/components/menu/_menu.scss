@@ -4,6 +4,10 @@
 
 $component: componentClass("menu");
 
+.zaux-menu-active {
+  overflow: hidden;
+}
+
 .#{$component} {
 
   position: absolute;
@@ -28,6 +32,7 @@ $component: componentClass("menu");
 
   &__content {
     font-size: 24px;
+    overflow-y: auto;
     &__nav {
       @include media-breakpoint-up(lg) {
         width: 27%;
@@ -36,17 +41,26 @@ $component: componentClass("menu");
       ul {
         list-style: none;
         li.#{$component}__content__navlist {
-          &.active {
-            font-weight: 600;
+          &.open {
+            .#{$component}__content__navlist--click {
+            font-weight: 700;
+            @include media-breakpoint-down(lg) {
+              font-weight: 600;
+            }
+            }
           }
           @include media-breakpoint-down(lg) {
-            font-weight: 600;
+
             position: relative;
             &::after {
               content: "+";
+              color: white;
               position: absolute;
               right: 20px;
               top: 0;
+            }
+            &.open::after {
+              content: "-"
             }
           }
         }
@@ -64,6 +78,19 @@ $component: componentClass("menu");
           }
         }
 
+      }
+    }
+
+    & .#{$component}__foot--search {
+      font-size: 16px;
+      & input {
+        border: 2px solid #F1F1F1;
+      }
+      & input:placeholder-shown {
+        background-image: url(../../assets/icon/icozaux1/SVG/search.svg);
+        background-repeat: no-repeat;
+        background-size: 20px 20px;
+        background-position: bottom 2px right 20px;
       }
     }
 

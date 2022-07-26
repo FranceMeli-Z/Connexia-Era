@@ -6,8 +6,8 @@
     "videoHero1": {
       "innerClassName": [
         "zaux-bg-set1-darkgray1",
-        "vh-100-nHeaderHeight",
-        "vh-lg-100-nHeaderHeightLg"
+        "position-relative",
+        "c-ratio--wide"
       ],
       "isAutoplay": true,
       "imgCover": {

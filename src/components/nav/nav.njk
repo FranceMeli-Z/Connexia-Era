@@ -12,19 +12,11 @@
   {% set obj = configDefault | merge(obj or {}) %}
 
   {% if obj.items %}
-    <{{obj.wrapperElement}} class="{{componentClassName}} py-4 py-lg-0">
+    <{{obj.wrapperElement}} class="{{componentClassName}} py-4 py-lg-0 zaux-theme--dark1">
       <ul>
         {% for item in obj.items %}
 
           {% set itemClassNameArr = [] %}
-
-          {% if item.icon %}
-            {% set itemClassNameArr = (itemClassNameArr.push(componentClassName + "__item--has-icon"), itemClassNameArr) %}
-          {% endif %}
-
-          {% if item.type %}
-            {% set itemClassNameArr = (itemClassNameArr.push(componentClassName + "__item--type-" + item.type), itemClassNameArr) %}
-          {% endif %}
 
           {% if item.childId %}
             {% set itemClassNameArr = (itemClassNameArr.push(componentClassName + "__item--has-child"), itemClassNameArr) %}
@@ -32,21 +24,11 @@
 
           <li
             class="{{componentClassName}}__item ps-box pb-5 {{ (itemClassNameArr | safe) | replace(",", " ") }} {{item.className}}"
-            {% if item.childId %} aria-owns="sidebar-panel-{{item.childId}}"{% endif %}
+            {# {% if item.childId %} aria-owns="sidebar-panel-{{item.childId}}"{% endif %}
             {% if item.targetPanelId %} data-sidebar-open-panel="{{item.targetPanelId|safe}}"{% endif %}
-            {% if item.label %} title="{{item.label}}"{% endif %}
+            {% if item.label %} title="{{item.label}}"{% endif %} #}
           >
             <a href="{{item.href|safe}}" class="{{componentClassName}}__item-wrapper">
-
-              {% if item.icon %}
-                {{
-                  Icon.content({
-                    "className": componentClassName + "__item-icon",
-                    "iconName": "icozaux1-" + item.icon,
-                    "iconSvgUrl": app.fonts.icozaux1.url
-                  })
-                }}
-              {% endif %}
 
               {% if item.showLabel and item.label %}
                 <span class="{{componentClassName}}__item-label {{item.labelClassName|safe}}">

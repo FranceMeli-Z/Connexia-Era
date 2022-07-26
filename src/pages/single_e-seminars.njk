@@ -9,6 +9,7 @@
 {% import 'components/card2/card2_news.njk' as Card2 %}
 {% import 'components/herovideo/herovideo.njk' as HeroVideo %}
 {% import 'components/breadcrumbs/breadcrumbs.njk' as Breadcrumbs %}
+{% import 'components/slider/slider_news.njk' as Slider %}
 
 {# Sets page-specific variables #}
 {% set page = {
@@ -204,11 +205,24 @@
        <!-- end Card highlight -->
 
 
-
-
-  {% include "partials/ui/swiper_news.njk" %}
-
   {% include "partials/ui/swiper_news2.njk" %}
+
+  <div class="p-box mb-6 mb-lg-7">
+    <div class="pb-6 pb-lg-8 position-relative">
+
+      <div class="font-zaux2 zaux-theme--light2 pb-6 pb-md-9">
+        <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">News from ERA</h6>
+      </div>
+
+      <div class="mb-2 mb-lg-4">
+            {{
+              Slider.content()
+            }}
+      </div>
+
+  </div>
+</div>
+
 
   {# <div class="p-box mb-6 mb-lg-7">
     <div class="pb-8">

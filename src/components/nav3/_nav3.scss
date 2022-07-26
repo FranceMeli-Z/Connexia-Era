@@ -5,18 +5,20 @@
 $component: componentClass("nav3");
 
 .#{$component} {
-  min-width: 415px;
+  width: 100%;
+  @include media-breakpoint-up(lg) {
+    max-width: 415px;
+    }
   ul {
-
     list-style: none;
   }
   li {
+    padding-bottom: 20px;
     &.active {
       font-weight: bold;
     }
   }
    a {
-      white-space: nowrap;
       &:hover {
         // font-weight: bold;
         text-decoration: none;
@@ -24,8 +26,7 @@ $component: componentClass("nav3");
     }
 
   & select {
-    &-selected {
-      font-weight: 600;
-    }
+    background-color: #F1F1F1;
+    font-weight: 600;
   }
   }

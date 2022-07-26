@@ -26,7 +26,10 @@
     </div>
 
       <div class="mb-2 mb-lg-4">
-            {% include "components/slider/slider_news.njk" %}
+            {{
+              Slider.content({
+              })
+            }}
       </div>
 
   </div>

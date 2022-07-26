@@ -13,6 +13,10 @@ $component: componentClass("nav");
 
     li {
       font-weight: normal;
+
+      a:hover {
+        text-decoration: underline;
+      }
     }
   }
 }

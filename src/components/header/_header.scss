@@ -22,24 +22,14 @@ $zaux-header-lg-h: 158px !default;
     border-image: linear-gradient(to right,#b827fc 0%, #fd1892 25%, #fec837 50%,  #b8fd33 75%, #2c90fc 100%) 1;
     // background-color: #FFFFFF;
 
-    & .hamburger.closed {
+    & .c-menu__btn-toggle.is-active {
       & .hamburger--close {
-        display: none;
-      }
-      & .hamburger--menu {
-        display: inline;
-      }
-    }
-
-    & .hamburger.open {
-      & .hamburger--close {
-        display: inline;
+        display: inline !important;
       }
       & .hamburger--menu {
         display: none;
       }
     }
-
 
   }
 

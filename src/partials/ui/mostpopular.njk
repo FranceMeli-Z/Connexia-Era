@@ -1,61 +1,14 @@
 <div class="p-box mb-6 mb-lg-7">
-  <div class="border-bottom-box pb-8">
+  <div class="border-bottom-box pb-8 position-relative">
 
     <div class="d-flex justify-content-between align-items-center pb-6 pb-md-9">
       <div class="font-zaux2 zaux-theme--light2">
         <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">Most Popular</h6>
       </div>
-      <div class="d-none d-lg-block zaux-theme--light2">
-            <a href="#" class="pe-8"> {{
-                      Icon.content({
-                        "className": "",
-                        "iconName": "icozaux1-arrowL",
-                        "iconSvgUrl": app.fonts.icozaux1.url
-                        })
-                      }}
-            </a>
-            <a href="#"> {{
-                      Icon.content({
-                        "className": "",
-                        "iconName": "icozaux1-arrowR",
-                        "iconSvgUrl": app.fonts.icozaux1.url
-                        })
-                      }}
-            </a>
-      </div>
     </div>
-    <div class="row flex-nowrap flex-lg-wrap overflow-auto">
-                {%
-                  set _decoVariations = [
-                    "deco1-l-t",
-                    "deco1-r-t",
-                    "deco1-r-b",
-                    "deco1-l-b"
-                  ]
-                %}
-
-                {% for decoVariation in _decoVariations %}
-
-                  <div class="col-12 col-md-6">
-                    {{Card2.content(
-                      {
-                        "className": ["pb-0","pb-lg-8","mih-215","h-100"],
-                        "innerClassName": ["h-100"],
-                        "contentClassName": ["d-flex", "justify-content-between", "flex-column","h-100"],
-                        "content": {
-                          "category": "Report",
-                          "title": "Discoveries about CKD-MBD in Europe and Middle East countries",
-                          "date": "March 18, 2022",
-                          "author": "CKD-MBD working group"
-                        }
-                      }
-                    )}}
-
-                  </div>
-                  <!-- .col-* -->
-                {% endfor %}
-
+    <div>
+      {% include "components/slider/slider_mostpopular.njk" %}
       </div>
-      <!-- end row-* -->
+
   </div>
 </div>

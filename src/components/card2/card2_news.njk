@@ -26,20 +26,26 @@
     <div class="{{_innerClassName | join(" ")}}">
         <div class="{{_contentClassName | join(" ")}}">
           <div>
+            {% if obj.content.category %}
             <div class="{{componentClassName}}__content--cat fw-bold c-typo-fs-8 zaux-color-set1-grey1 pb-2">
               <a>{{obj.content.category}}</a>
             </div>
+            {% endif %}
             <div class="{{componentClassName}}__content--title font-zaux2 pb-4">
               <h6 class="fw-demi c-typo-fs-10"> {{obj.content.title|safe}} </h6>
             </div>
           </div>
           <div>
+            {% if obj.content.date %}
              <div class="{{componentClassName}}__content--date font-zaux2 fst-italic zaux-color-set1-grey1 pb-0 pb-md-2">
               <a>{{obj.content.date|safe}}</a>
             </div>
+            {% endif %}
+            {% if obj.content.author %}
             <div class="{{componentClassName}}__content--author font-zaux2">
               <a>{{obj.content.author|safe}}</a>
             </div>
+            {% endif %}
           </div>
         </div>
         <!-- .{{componentClassName}}__cover -->

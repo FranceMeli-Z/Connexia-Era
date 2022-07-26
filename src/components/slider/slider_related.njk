@@ -1,13 +1,4 @@
-{% import 'components/img/img.njk' as Img %}
-{% import 'components/nav/nav.njk' as Nav %}
-{% import 'components/icon/icon.njk' as Icon %}
-{% import 'components/card2/card2_news.njk' as Card2 %}
-
-{% macro content(obj) %}
-
-  {% set componentClassName = 'c-menu' %}
-
-<div class="c-slider h-100"  data-config='{{component_slider.demo.slider1.config | dump | safe}}' data-js-component="Slider">
+<div class="c-slider h-100"  data-config='{{component_slider.demo.sliderRelated.config | dump | safe}}' data-js-component="Slider">
   <div class="c-slider__wrapper">
     <div class="c-slider__instance swiper swiper-container d-flex flex-column h-100">
 
@@ -20,6 +11,9 @@
                     "deco1-l-b",
                     "deco1-l-b",
                     "deco1-l-b",
+                    "deco1-l-b",
+                    "deco1-l-b",
+                    "deco1-l-b",
                     "deco1-l-b"
                   ]
                 %}
@@ -29,18 +23,18 @@
                    <div class="swiper-slide">
 
                     {{Card2.content(
-                      {
-                        "className": [],
-                        "innerClassName": [],
-                        "contentClassName": ["d-flex", "justify-content-between", "flex-column","mih-215","h-100"],
-                        "content": {
-                          "category": "Report",
-                          "title": "CKD-MBD Newsletter #23",
-                          "date": "March 18, 2022",
-                          "author": "CKD-MBD working group"
-                        }
+                    {
+                      "className": ["mih-215","h-100"],
+                      "innerClassName": ["h-100"],
+                      "contentClassName": ["d-flex", "justify-content-between", "flex-column","h-100"],
+                      "content": {
+                        "category": "Report",
+                        "title": "CKD-MBD Newsletter #23",
+                        "date": "March 18, 2022",
+                        "author": "CKD-MBD working group"
                       }
-                    )}}
+                    }
+                  )}}
 
                   </div>
                   <!-- .col-* -->
@@ -51,7 +45,7 @@
   </div>
   <!-- .c-slider__wrapper -->
   <div class="swiper-navigation">
-        <div class="swiper-button-prev"> {{
+        <div class="popular-swiper-button-prev"> {{
                     Icon.content({
                       "className": "",
                       "iconName": "icozaux1-arrowL",
@@ -59,7 +53,7 @@
                       })
                     }}
         </div>
-        <div class="swiper-button-next">
+        <div class="popular-swiper-button-next">
           {{
               Icon.content({
                 "className": "",
@@ -70,5 +64,3 @@
         </div>
       </div>
 </div>
-
-{% endmacro %}

@@ -301,7 +301,179 @@
             }
         ]
         }
+      },
+      {
+        "level": "6",
+        "id": "6",
+        "breadcrumbTitle": "Papers & Publications",
+        "nav": {
+          "items": [
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "All publications",
+              "labelClassName": "",
+              "href": "#"
+            },
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "NDT",
+              "labelClassName": "",
+              "href": "#"
+            },
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "CKJ",
+              "labelClassName": "",
+              "href": "#"
+            },
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Working Group publications",
+              "labelClassName": "",
+              "href": "#"
+            },
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Registry publications",
+              "labelClassName": "",
+              "href": "#"
+            },
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "NEP publications",
+              "labelClassName": "",
+              "href": "#"
+            },
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "YNP",
+              "labelClassName": "",
+              "href": "#"
+            }, {
+              "className": "",
+              "showLabel": true,
+              "label": "NEP",
+              "labelClassName": "",
+              "href": "#"
+            }, {
+              "className": "",
+              "showLabel": true,
+              "label": "Nephrology News Flash",
+              "labelClassName": "",
+              "href": "#"
+            }
+          ]
         }
+        },
+        {
+          "level": "7",
+          "id": "7",
+          "breadcrumbTitle": "Clinical Guidance",
+          "nav": {
+            "items": [
+              {
+                "className": "",
+                "showLabel": true,
+                "label": "Guidelines & Best Practices",
+                "labelClassName": "",
+                "href": "#"
+              },
+              {
+                "className": "",
+                "showLabel": true,
+                "label": "Diseases & Treatments",
+                "labelClassName": "",
+                "href": "#"
+              },
+              {
+                "className": "",
+                "showLabel": true,
+                "label": "Strong Kidneys",
+                "labelClassName": "",
+                "href": "#"
+              },
+              {
+                "className": "",
+                "showLabel": true,
+                "label": "Patent guides",
+                "labelClassName": "",
+                "href": "#"
+              },
+              {
+                "className": "",
+                "showLabel": true,
+                "label": "Covid-19 vaccination",
+                "labelClassName": "",
+                "href": "#"
+              },
+              {
+                "className": "",
+                "showLabel": true,
+                "label": "Cookbook",
+                "labelClassName": "",
+                "href": "#"
+              }
+            ]
+          }
+          },
+          {
+            "level": "8",
+            "id": "8",
+            "breadcrumbTitle": "For Patients",
+            "nav": {
+              "items": [
+                {
+                  "className": "",
+                  "showLabel": true,
+                  "label": "All About Kidneys",
+                  "labelClassName": "",
+                  "href": "#"
+                },
+                {
+                  "className": "",
+                  "showLabel": true,
+                  "label": "Patient guides",
+                  "labelClassName": "",
+                  "href": "#"
+                },
+                {
+                  "className": "",
+                  "showLabel": true,
+                  "label": "Patient associations",
+                  "labelClassName": "",
+                  "href": "#"
+                },
+                {
+                  "className": "",
+                  "showLabel": true,
+                  "label": "Strong Kidneys",
+                  "labelClassName": "",
+                  "href": "#"
+                },
+                {
+                  "className": "",
+                  "showLabel": true,
+                  "label": "News",
+                  "labelClassName": "",
+                  "href": "#"
+                },
+                {
+                  "className": "",
+                  "showLabel": true,
+                  "label": "Cookbook",
+                  "labelClassName": "",
+                  "href": "#"
+                }
+              ]
+            }
+          }
     ]
   }
 }

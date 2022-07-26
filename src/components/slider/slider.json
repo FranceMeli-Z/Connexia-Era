@@ -1,6 +1,6 @@
 {
   "demo": {
-    "slider1": {
+    "sliderFlowchart": {
       "className": "",
       "config": {
         "effect": "creative",
@@ -27,7 +27,67 @@
           }
       }
     },
-    "slider2": {
+    "sliderPopular": {
+      "config": {
+      "slidesPerView": 1,
+      "grid": {
+        "fill": "row",
+        "rows": 1
+      },
+      "spaceBetween": 30,
+      "navigation": {
+        "nextEl": ".popular-swiper-button-next",
+        "prevEl": ".popular-swiper-button-prev"
+      },
+      "breakpoints": {
+        "768": {
+          "slidesPerView": 1,
+          "grid": {
+            "fill": "row",
+            "rows": 2
+          }
+        },
+        "992": {
+          "slidesPerView": 2,
+          "grid": {
+            "fill": "row",
+            "rows": 2
+          }
+        }
+      }
+    }
+    },
+    "sliderRelated": {
+      "config": {
+      "slidesPerView": 1,
+      "grid": {
+        "fill": "row",
+        "rows": 1
+      },
+      "spaceBetween": 30,
+      "navigation": {
+        "nextEl": ".popular-swiper-button-next",
+        "prevEl": ".popular-swiper-button-prev"
+      },
+      "breakpoints": {
+        "768": {
+          "slidesPerView": 2,
+          "grid": {
+            "fill": "row",
+            "rows": 2
+          }
+        },
+        "992": {
+          "slidesPerView": 4,
+          "grid": {
+            "fill": "row",
+            "rows": 2
+          }
+        }
+      }
+    }
+    },
+    "slider1": {
       "config": {
       "slidesPerView": 1,
       "spaceBetween": 30,
@@ -41,29 +101,29 @@
           "slidesPerView": 2
         },
         "992": {
-          "slidesPerView": 3
+          "slidesPerView": 4
         }
       }
     }
   },
-  "slider3": {
+  "slider2": {
     "config": {
     "slidesPerView": 1,
     "spaceBetween": 30,
     "freeMode": true,
     "navigation": {
-      "nextEl": ".modal-swiper-button-next",
-      "prevEl": ".modal-swiper-button-prev"
+      "nextEl": ".popular-swiper-button-next",
+      "prevEl": ".popular-swiper-button-prev"
     },
     "breakpoints": {
       "768": {
         "slidesPerView": 2
       },
       "992": {
-        "slidesPerView": 3
+        "slidesPerView": 4
+      }
       }
     }
   }
-}
   }
 }

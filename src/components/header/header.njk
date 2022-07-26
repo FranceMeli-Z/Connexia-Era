@@ -21,21 +21,10 @@
     <div class="{{componentClassName}}__inner p-box">
 
       <div class="font-zaux2 d-flex align-items-center justify-content-between h-100">
-        <div class="hamburger closed d-lg-none">
-           <a href="#" class="pe-9 d-flex justify-content-center">
-          {{
-            Icon.content({
-              "className": [""],
-              "iconName": "icozaux1-menu",
-              "iconSvgUrl": app.fonts.icozaux1.url
-            })
-          }}
-        </a>
-        </div>
-        <div class="fst-italic d-none d-lg-flex">
-          <div class="hamburger closed">
-            <a href="#" class="pe-9">
-            {{
+        <div class="fst-italic d-flex">
+          <div class="c-menu__btn-toggle me-9">
+             <a href="#">
+           {{
               Icon.content({
                 "className": ["hamburger--menu", "align-txt-bottom"],
                 "iconName": "icozaux1-menu",
@@ -44,15 +33,15 @@
             }}
             {{
               Icon.content({
-                "className": ["hamburger--close","align-txt-bottom"],
+                "className": ["hamburger--close","align-txt-bottom","d-none"],
                 "iconName": "icozaux1-close",
                 "iconSvgUrl": app.fonts.icozaux1.url
               })
             }}
-            <span class="ps-1">Menu</span>
+            <span class="ps-1 d-none d-lg-inline-block">Menu</span>
             </a>
           </div>
-          <div>
+          <div class="d-none d-lg-inline-block">
             <button type="button" class="btn btn-primary ps-2" data-bs-toggle="modal" data-bs-target="#EraModal">
             {{
               Icon.content({

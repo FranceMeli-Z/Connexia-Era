@@ -13,6 +13,11 @@ $component: componentClass("card1");
       box-shadow: 5px 5px 10px 3px rgba(#F1F1F1, 0.5)
     }
   }
+  & .shadow-2 {
+    &:hover {
+        box-shadow: 0px 4px 4px 0px #00000040;
+    }
+  }
   &__inner {
     position: relative;
   }

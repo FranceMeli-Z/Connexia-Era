@@ -7,6 +7,7 @@
 {% import 'components/card2/card2_news.njk' as Card2 %}
 {% import 'components/card2/card2_related.njk' as CardRelated %}
 {% import 'components/breadcrumbs/breadcrumbs.njk' as Breadcrumbs %}
+{% import 'components/slider/slider_news.njk' as Slider %}
 
 {# Sets page-specific variables #}
 {% set page = {
@@ -48,7 +49,7 @@
                   {{CardRelated.content(
                     {
                       "className": ["d-lg-flex", "justify-content-center","maw-f400","m-auto","h-100"],
-                      "innerClassName": ["border-all-gradient", "miw-f397", "py-8", "px-2", "px-lg-6"],
+                      "innerClassName": ["border-all-gradient", "miw-f397", "py-5","py-lg-8", "px-2", "px-lg-6"],
                       "contentClassName": ["text-center"],
                       "content": {
                         "title": "Diseases",
@@ -63,7 +64,7 @@
                   {{CardRelated.content(
                     {
                       "className": ["d-lg-flex", "justify-content-center","maw-f400","m-auto","h-100"],
-                      "innerClassName": ["border-all-gradient", "miw-f397", "py-8", "px-2", "px-lg-6"],
+                      "innerClassName": ["border-all-gradient", "miw-f397", "py-5","py-lg-8", "px-2", "px-lg-6"],
                       "contentClassName": ["text-center"],
                       "content": {
                         "title": "Treatments",
