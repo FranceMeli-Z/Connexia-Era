@@ -104,14 +104,14 @@
               "showLabel": true,
               "label": "Committees",
               "labelClassName": "",
-              "href": "#"
+              "href": "single_committees.html"
             },
             {
               "className": "",
               "showLabel": true,
               "label": "Working Groups",
               "labelClassName": "",
-              "href": "#"
+              "href": "page_working-group.html"
             },
             {
               "className": "",
@@ -141,7 +141,7 @@
                     "showLabel": true,
                     "label": "Membership benefits",
                     "labelClassName": "",
-                    "href": "#"
+                    "href": "page_benefits.html"
                   },
                   {
                     "className": "",
@@ -178,7 +178,7 @@
                           "showLabel": true,
                           "label": "Congress Paris 2022",
                           "labelClassName": "",
-                          "href": "#"
+                          "href": "paris-home.html"
                         },
                         {
                           "className": "",
@@ -192,7 +192,7 @@
                           "showLabel": true,
                           "label": "E-seminars",
                           "labelClassName": "",
-                          "href": "#"
+                          "href": "page_e-seminars.html"
                         },
                         {
                           "className": "",
@@ -236,7 +236,7 @@
               "showLabel": true,
               "label": "Working Groups",
               "labelClassName": "",
-              "href": "#"
+              "href": "page_working-group.html"
             },
             {
               "className": "",
@@ -278,7 +278,7 @@
               "showLabel": true,
               "label": "YNP",
               "labelClassName": "",
-              "href": "#"
+              "href": "single_committees.html"
             }, {
               "className": "",
               "showLabel": true,
@@ -313,7 +313,7 @@
               "showLabel": true,
               "label": "All publications",
               "labelClassName": "",
-              "href": "#"
+              "href": "page_archive.html"
             },
             {
               "className": "",
@@ -383,14 +383,14 @@
                 "showLabel": true,
                 "label": "Guidelines & Best Practices",
                 "labelClassName": "",
-                "href": "#"
+                "href": "page_guidelines.html"
               },
               {
                 "className": "",
                 "showLabel": true,
                 "label": "Diseases & Treatments",
                 "labelClassName": "",
-                "href": "#"
+                "href": "page_diseases.html"
               },
               {
                 "className": "",
@@ -418,7 +418,7 @@
                 "showLabel": true,
                 "label": "Cookbook",
                 "labelClassName": "",
-                "href": "#"
+                "href": "cookbook-recipe.html"
               }
             ]
           }

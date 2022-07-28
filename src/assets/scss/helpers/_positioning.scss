@@ -28,9 +28,15 @@ $zaux-helper-name: "pos";
 }
 
 .zaux-#{$zaux-helper-name}-custom3 {
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(md) {
    position: absolute;
    left: 0;
+   }
+ }
+
+ .zaux-#{$zaux-helper-name}-custom4 {
+  @include media-breakpoint-down(lg) {
+    transform: translateY(45px) rotate(180deg);
    }
  }
 

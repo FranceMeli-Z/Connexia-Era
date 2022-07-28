@@ -14,70 +14,120 @@
   {% set _className = [componentClassName] | mergeArray(obj.className or configDefault.className) %}
 
   <div class="{{_className | join(" ")}}">
-     <div class="p-box" aria-hidden="true">
-        <!-- `aria-hidden="true"` because the content already exists in the side nav (mobile first)  -->
+     <div class="p-box">
           <nav class="c-nav2--layout1 zaux-theme--dark1 ">
             <!-- BEGIN WP NAV -->
+            {% if obj.parisCongress %}
             <ul class="d-flex c-typo-style1-2 c-typo-style1-lg-4 justify-content-between align-items-center h-100">
-              {% if obj.parisCongress %}
-              <li>
-                <a href="#" title="Generale Information">
+              <li class="{{componentClassName}}__item is-active">
+                <a href="#" title="General Information">
                   General information
                 </a>
+                {{
+                    Icon.content({
+                    "className": ["zaux-color-set1-red1"],
+                    "iconName": "icozaux1-menuarrow",
+                    "iconSvgUrl": app.fonts.icozaux1.url
+                    })
+                  }}
               </li>
-              <li>
+              <li class="{{componentClassName}}__item">
                 <a href="#" title="Scientific Programme">
                   Scientific Programme
                 </a>
+                {{
+                    Icon.content({
+                    "className": ["zaux-color-set1-red1"],
+                    "iconName": "icozaux1-menuarrow",
+                    "iconSvgUrl": app.fonts.icozaux1.url
+                    })
+                  }}
               </li>
-              <li>
+              <li class="{{componentClassName}}__item">
                 <a href="#" title="Registration">
                   Registration
                 </a>
+                {{
+                    Icon.content({
+                    "className": ["zaux-color-set1-red1"],
+                    "iconName": "icozaux1-menuarrow",
+                    "iconSvgUrl": app.fonts.icozaux1.url
+                    })
+                  }}
               </li>
-              <li>
+              <li class="{{componentClassName}}__item">
                 <a href="#" title="Abstract">
                  Abstract
                 </a>
+                {{
+                    Icon.content({
+                    "className": ["zaux-color-set1-red1"],
+                    "iconName": "icozaux1-menuarrow",
+                    "iconSvgUrl": app.fonts.icozaux1.url
+                    })
+                  }}
               </li>
-               <li>
+               <li class="{{componentClassName}}__item">
                 <a href="#" title="Sponsors">
                  Sponsors
                 </a>
+                {{
+                    Icon.content({
+                    "className": ["zaux-color-set1-red1"],
+                    "iconName": "icozaux1-menuarrow",
+                    "iconSvgUrl": app.fonts.icozaux1.url
+                    })
+                  }}
               </li>
-              <li>
+              <li class="{{componentClassName}}__item">
                 <a href="#" title="Hotel Accomodation">
                  Hotel Accomodation
                 </a>
+                {{
+                    Icon.content({
+                    "className": ["zaux-color-set1-red1"],
+                    "iconName": "icozaux1-menuarrow",
+                    "iconSvgUrl": app.fonts.icozaux1.url
+                    })
+                  }}
               </li>
-              <li>
+              <li class="{{componentClassName}}__item">
                 <a href="#" title="Covid-19">
                  Covid-19
                 </a>
+                {{
+                    Icon.content({
+                    "className": ["zaux-color-set1-red1"],
+                    "iconName": "icozaux1-menuarrow",
+                    "iconSvgUrl": app.fonts.icozaux1.url
+                    })
+                  }}
               </li>
-              {% else %}
-               <li>
-                <a href="#" title="Recipe">
-                Recipe
-                </a>
-              </li>
-              <li>
-                <a href="#" title="About the project">
-                  About the project
-                </a>
-              </li>
-              <li>
-                <a href="#" title="Nutritional information">
-                  Nutritional information
-                </a>
-              </li>
-              <li>
-                <a href="#" title=" Submit your recipe">
-                 Submit your recipe
-                </a>
-              </li>
-              {% endif %}
             </ul>
+              {% else %}
+              <ul class="d-flex c-typo-style1-2 c-typo-style1-lg-4 maw-f825 m-auto justify-content-between align-items-center h-100">
+                <li class="{{componentClassName}}__item">
+                  <a href="#" title="Recipe">
+                  Recipe
+                  </a>
+                </li>
+                <li class="{{componentClassName}}__item">
+                  <a href="#" title="About the project">
+                    About the project
+                  </a>
+                </li>
+                <li class="{{componentClassName}}__item">
+                  <a href="#" title="Nutritional information">
+                    Nutritional information
+                  </a>
+                </li>
+                <li class="{{componentClassName}}__item">
+                  <a href="#" title=" Submit your recipe">
+                  Submit your recipe
+                  </a>
+                </li>
+              </ul>
+              {% endif %}
             <!-- END WP NAV -->
           </nav>
       </div>

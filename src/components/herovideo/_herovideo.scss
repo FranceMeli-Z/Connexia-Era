@@ -5,7 +5,7 @@
 $component: componentClass("herovideo");
 
 .#{$component} {
-  overflow: hidden;
+  // overflow: hidden;
 
   &__inner {
     position: relative;
@@ -28,14 +28,14 @@ $component: componentClass("herovideo");
     transition: opacity $zaux-transition-0;
     z-index: $zaux-global-content-zindex;
 
-    .c-icon1 {
+    .c-icon {
       svg {
         transition: transform $zaux-transition-1;
       }
     }
 
     &:hover {
-      .c-icon1 {
+      .c-icon {
         svg {
           transform: scale(1.2);
         }

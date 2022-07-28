@@ -9,7 +9,7 @@
         "position-relative",
         "c-ratio--wide"
       ],
-      "isAutoplay": true,
+      "isAutoplay": false,
       "imgCover": {
         "isLazy": false,
         "_sources": {
@@ -37,13 +37,66 @@
         ],
         "wrapperClassName": [
           "c-herovideo__cover",
-          "h-100"
+          "h-100",
+          "position-absolute",
+          "top-0"
         ]
       },
       "sources": [
         {
           "mime": "video/mp4",
-          "src": ""
+          "src": "media/videoTest.mp4"
+        }
+      ],
+      "showPlayBtn":"y"
+    },
+
+
+    "videoHero2": {
+      "innerClassName": [
+        "zaux-bg-set1-darkgray1",
+        "position-relative",
+        "c-ratio--wide",
+        "m-auto",
+        "maw-f640"
+      ],
+      "isAutoplay": false,
+      "imgCover": {
+        "isLazy": false,
+        "_sources": {
+          "maxMd": [
+            {
+              "src": "media/ProvaContent1.webp",
+              "src2x": "media/ProvaContent1.webp"
+            }
+          ],
+          "minLg": [
+            {
+              "src": "media/ProvaContent1.webp",
+              "src2x": "media/ProvaContent1.webp"
+            }
+          ]
+        },
+        "src": "media/ProvaContent.png",
+        "width": 640,
+        "height": 360,
+        "className": [
+          "c-herovideo__cover-img",
+          "zaux-fit-cover-center-center",
+          "img-fluid"
+
+        ],
+        "wrapperClassName": [
+          "c-herovideo__cover",
+          "h-100",
+          "position-absolute",
+          "top-0"
+        ]
+      },
+      "sources": [
+        {
+          "mime": "video/mp4",
+          "src": "media/videoTest.mp4"
         }
       ],
       "showPlayBtn":"y"

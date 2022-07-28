@@ -10,6 +10,7 @@ export class Menu {
   }
 
   setupEvents() {
+
     $(document).on('click', `.${Menu.cssClass}__btn-toggle`, (e) => {
       e.preventDefault();
       const _this = $(`.${Menu.cssClass}`)[0].instance;
@@ -19,7 +20,7 @@ export class Menu {
   }
 
   toggleMenu(doOpen) {
-    const $btnsToggle = $(`.${Menu.cssClass}__btn-toggle`);
+    const $btns = $(`.${Menu.cssClass}__btn-toggle`);
     const cssClassActive = `${Utils.getVarNS()}-menu-active`;
     const bodyClassList = document.body.classList;
 
@@ -28,16 +29,12 @@ export class Menu {
     }
 
     if (doOpen) {
-      $btnsToggle.addClass('is-active');
+      $btns.addClass('is-active');
       bodyClassList.add(cssClassActive);
 
     } else if (!doOpen) {
-      $btnsToggle.removeClass('is-active');
+      $btns.removeClass('is-active');
       bodyClassList.remove(cssClassActive);
-      // _this.closeSubpanelsOfLevel();
-      // _this.handleBackdrop();
-      // _this.stack.pop();
-      //console.log(_this.stack);
     }
   }
 

@@ -10,6 +10,7 @@
 {% import 'components/boxcontent/boxcontent.njk' as BoxContent %}
 {% import 'components/breadcrumbs/breadcrumbs.njk' as Breadcrumbs %}
 {% import 'components/nav2/nav2.njk' as Nav2 %}
+{% import 'components/herovideo/herovideo.njk' as HeroVideo %}
 
 {# Sets page-specific variables #}
 {% set page = {
@@ -29,9 +30,11 @@
       <div class="mb-0 mb-lg-4 pe-0">
         <div class="row gx-3 m-0">
           <div class="zaux-bg-set1-grey p-box rounded-bottom-100 col-12 col-lg-8 mih-boxtitle pt-3 pt-lg-6">
+
             <div class="pb-2 pb-lg-4">
               {{ Breadcrumbs.content() }}
             </div>
+
             <div class="font-zaux2 zaux-theme--light1 pb-2 pb-lg-4">
               <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Paris Congress 2022</h6>
             </div>
@@ -219,7 +222,7 @@
 
 
 
-       <div class="p-box mb-10 mb-lg-12">
+      <div class="p-box mb-10 mb-0 mb-lg-12">
         <div class="row gx-3">
           <div class="col-12 col-lg-6 pb-8 pb-lg-0">
               <div class="font-zaux2 zaux-theme--light1 pb-3 pb-lg-4 maw-f768">
@@ -232,7 +235,7 @@
                 <ul class="">
                   <li>Procedure for non-European nationals to obtain a valid 	Covid certificate in France</li>
                   <li>Travel rules and measures whether you wish to enter	or exit France</li>
-                  <li>Isolation, testing, attending events – What are the rules in France?</strong></li>
+                  <li>Isolation, testing, attending events – What are the rules in France?</li>
                 </ul>
               </div>
               <div class="text-center text-lg-start">
@@ -240,11 +243,11 @@
               </div>
           </div>
 
-          <div class="col-12 col-lg-6 pb-8 pb-lg-0">
+          <div class="col-12 col-lg-6">
               <div class="font-zaux2 zaux-theme--light1 pb-3 pb-lg-4 maw-f768">
                   <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Innovation, Prevention, Preparedness</h6>
               </div>
-              <div class="c-typo-style1-4 c-typo-style1-lg-8">
+              <div class="c-typo-style1-4 c-typo-style1-lg-8 pb-5 pb-lg-0">
                 <p>The official hashtag of the 59th ERA Congress is #ERA22</p>
                 <p>Please use it in all tweets or posts related to the 59th ERA Congress.</p>
                 <p>Follow ERA on Social Media and read all the official information about the 59th ERA Congress.</p>
@@ -300,11 +303,10 @@
                   </a></li>
                 </ul>
               </div>
-              </div>
+            </div>
           </div>
+          <!-- end row -->
         </div>
-        <!-- end row -->
-      </div>
 
       <div class="mb-6 position-relative mih-625 overflow-hidden">
        <div class="position-absolute zaux-zi--1 zaux-pos-custom2">
@@ -328,12 +330,12 @@
           <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">Watch the presentation video</h6>
         </div>
         <div class="">
-            {# {{ HeroVideo.content(component_herovideo.blocks.videoHero1) }} #}
-            <div class="c-video m-auto maw-f640">
+            {{ HeroVideo.content(component_herovideo.blocks.videoHero2) }}
+            {# <div class="c-video m-auto maw-f640">
               <div class="c-ratio--wide position-relative">
                 <iframe class="c-video--iframe top-0 start-0 bottom-0 position-absolute w-100 h-100" width="640" height="360" src="https://www.youtube.com/embed/A7seHLMkg5Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
-            </div>
+            </div> #}
           </div>
       </div>
     </div>

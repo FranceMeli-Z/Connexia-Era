@@ -1,4 +1,4 @@
-import Swiper, { EffectFade, Navigation, Pagination, Autoplay, FreeMode, Grid } from "swiper";
+import Swiper, { EffectFade, Navigation, Pagination, Autoplay, FreeMode, Grid, EffectCoverflow } from "swiper";
 import { Lazyload } from "../../assets/js/helpers/lazyload";
 
 export class Slider {
@@ -6,7 +6,7 @@ export class Slider {
 
   constructor($el = null) {
     // Configure Swiper to use modules
-    Swiper.use([EffectFade, Navigation, Pagination, Autoplay, FreeMode, Grid]);
+    Swiper.use([EffectFade, Navigation, Pagination, Autoplay, FreeMode, Grid, EffectCoverflow]);
 
     this.$el = $el;
 
@@ -14,13 +14,14 @@ export class Slider {
     this.lastEffect = "slide"; // Default Swiper effect
 
     var theClass = $("div[class^='c-slider__instance']")
-    console.log(theClass);
+
 
     this.$wrapper = $el.querySelector(`.${Slider.cssClass}__wrapper`);
     this.$slider = $el.querySelector(`.${Slider.cssClass}__instance`);
     this.$slider1 = $el.querySelector(`.${Slider.cssClass}__instance1`);
 
-    this.init();
+    this.init()
+
   }
 
   init() {
@@ -34,7 +35,8 @@ export class Slider {
 
     // Initializes Swiper
     this.slider = new Swiper(this.$slider, this.config);
-    this.slider1 = new Swiper(this.$slider1, this.config);
+    console.log(this.slider);
+    // this.slider1 = new Swiper(this.$slider1, this.config);
 
     this.setupEvents();
 

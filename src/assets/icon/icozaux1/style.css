@@ -15,6 +15,10 @@ Single-colored icons can be modified like so:
 }
 ========================================== */
 
+.icozaux1-menuarrow {
+  width: 0.375em;
+}
+
 .icozaux1-littlearrow {
   width: 0.75em;
 }

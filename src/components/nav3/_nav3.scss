@@ -14,8 +14,21 @@ $component: componentClass("nav3");
   }
   li {
     padding-bottom: 20px;
-    &.active {
+    position: relative;
+    i {
+      display: none;
+    }
+    &.is-active {
       font-weight: bold;
+      i {
+        @include media-breakpoint-up(lg) {
+          position: absolute;
+          display: block;
+          right: -74px;
+          top: 0;
+          font-size: 32px;
+          }
+      }
     }
   }
    a {

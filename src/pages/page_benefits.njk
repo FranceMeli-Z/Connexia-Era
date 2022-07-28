@@ -29,8 +29,6 @@
 
   <main>
 
-    {# {{ HeroVideo.content(page.data.blocks.videoHero1) }} #}
-
     <div class="mb-8 mb-lg-9 position-relative h-size-635 overflow-hidden">
        <div class="position-absolute zaux-zi--1 zaux-pos-custom1 h-100">
        {{
@@ -101,7 +99,7 @@
 
 
      <div class="p-box mb-lg-8 mb-5 zaux-bg-set1-grey">
-        <div class="py-4">
+        <div class="py-7 py-lg-8">
           <div class="font-zaux2 zaux-theme--light2 pb-2 pb-lg-4">
             <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">Membership Categories</h6>
           </div>
@@ -110,7 +108,7 @@
           </div>
 
           <div>
-            <div class="pb-4 pb-lg-8">
+            <div class="pb-4 pb-lg-7">
               {% include "partials/ui/benefits_table.njk" %}
             </div>
             <div class="c-typo-style1-3 maw-f550">
@@ -162,12 +160,12 @@
 
         <div class="p-box">
           <div class="position-relative">
-            <div class="float-lg-end w-lg-50 mb-lg-8 mb-5">
+            <div class="float-md-end w-md-50 mb-lg-8 mb-5">
             {# <div class="d-flex flex-column justify-content-center h-100"> #}
               <div class="font-zaux2 zaux-theme--light1 pb-2 pb-lg-4">
                 <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Exclusive Congress discounts</h6>
               </div>
-              <div class="zaux-pos-custom3 w-lg-50 pe-lg-6">
+              <div class="zaux-pos-custom3 w-md-50 pe-md-6">
               {{
               Img.content({
                 "isLazy": false,
@@ -175,7 +173,7 @@
                 "src2x": "media/Benefitsimg.png",
                 "width": 610,
                 "height": 343,
-                "className": ["img-fluid","float-start"],
+                "className": ["img-fluid","float-start","mb-5","mb-lg-0","w-100"],
                 "title": "title",
                 "alt": "alt",
                 "wrapperElement": "",
@@ -191,61 +189,20 @@
                   <li> CME and hands-on courses held on May 19, 2022 (on-site places available on a “first come, first served” basis). </li>
                 </ul>
               </div>
-              <div class="">
+              <div class="text-center text-md-start">
                 <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">Register now</a>
               </div>
           </div>
         </div>
       </div>
 
-
-
-
-
-    {# <div class="p-box mb-lg-8 mb-5">
-        <div class="row gx-3">
-          <div class="col-12 col-lg-6">
-            <div class="d-flex justify-content-center flex-column h-100">
-              {{
-              Img.content({
-                "isLazy": false,
-                "src": "media/Benefitsimg.png",
-                "src2x": "media/Benefitsimg.png",
-                "width": 610,
-                "height": 343,
-                "className": ["img-fluid","float-start"],
-                "title": "title",
-                "alt": "alt",
-                "wrapperElement": "",
-                "wrapperClassName": [""]
-              })
-              }}
-            </div>
-          </div>
-          <div class="mb-lg-0 mb-7 col-12 col-lg-6">
-              <div class="font-zaux2 zaux-theme--light1 pb-2 pb-lg-4">
-                <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Exclusive Congress discounts</h6>
-              </div>
-              <div class="pb-4 c-typo-style1-4 c-typo-style1-lg-8 maw-f768px">
-                <p>ERA members benefit from special discounts up to 220€ over the Annual Congress free, which this year will take place in Paris. The congress membership fee includes:</p><br>
-                <ul>
-                  <li>Access / live streaming to the scientific sessions and mini-oral presentations held on May 19-22, 2022, including Q&A with speakers;</li><br>
-                  <li> Exclusive access to the Congress webcasts and digital content until August 22, 2022; </li><br>
-                  <li> CME and hands-on courses held on May 19, 2022 (on-site places available on a “first come, first served” basis). </li>
-                </ul>
-              </div>
-            </diV>
-          </div>
-      </div> #}
-
-
-  <div style="clear:both" class="mb-9 position-relative mih-560 overflow-hidden ">
-    <div class="position-absolute zaux-zi--1 zaux-pos-custom1">
-       {# {{
+  <div style="clear:both" class="mb-9 pb-0 pb-lg-8 position-relative mih-560 overflow-hidden ">
+    <div class="position-absolute zaux-zi--1 zaux-pos-custom4">
+       {{
         Img.content({
           "isLazy": false,
-          "src": "assets/img/CombinedShape.svg",
-          "src2x": "assets/img/CombinedShape.svg",
+          "src": "assets/img/BackText.svg",
+          "src2x": "assets/img/BackText.svg",
           "width": 1440,
           "height": 562,
           "className": [""],
@@ -254,18 +211,18 @@
           "wrapperElement": "",
           "wrapperClassName": ""
         })
-      }} #}
+      }}
     </div>
     <div class="p-box position-relative">
       <div class="font-zaux2 py-6 zaux-theme--light2 text-center">
         <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16 mb-3">Era Stories</h6>
       </div>
-       <div class="pb-9 m-auto position-relative">
+      <div class="pb-9 m-auto position-relative">
         <div class="row gx-3">
           <div class="col-12 col-lg-4 pb-6 pb-lg-0">
             {{CardStory.content(
               {
-              "className": ["shadow--grey rounded-2"],
+              "className": ["shadow--grey", "rounded-2", "zaux-bg-default-white"],
               "variations": [],
               "innerClassName": [""],
               "contentClassName": ["py-7 text-center"],
@@ -287,7 +244,7 @@
             <div class="position-relative">
             {{CardStory.content(
               {
-              "className": ["shadow--grey rounded-2","zaux-pos-story1"],
+              "className": ["shadow--grey", "rounded-2","zaux-pos-story1", "zaux-bg-default-white"],
               "variations": [],
               "innerClassName": [""],
               "contentClassName": ["py-7 text-center"],
@@ -309,10 +266,10 @@
            <div class="col-12 col-lg-4">
             {{CardStory.content(
               {
-              "className": ["shadow--grey rounded-2"],
+              "className": ["shadow--grey", "rounded-2", "zaux-bg-default-white"],
               "variations": [],
               "innerClassName": [""],
-              "contentClassName": ["py-7 text-center"],
+              "contentClassName": ["py-7","text-center"],
               "img": {
                 "isLazy": true,
                 "src": "media/Story.png",
@@ -329,7 +286,7 @@
           </div>
         </div>
       </div>
-      </div>
+    </div>
   </div>
 
 
@@ -367,39 +324,39 @@
 
         <div class="">
           <div class="row gx-3">
-          <div class="col-12 col-lg-6 pb-8 pb-lg-0">
+          <div class="col-12 col-lg-6 pb-8 pb-lg-6">
               <div class="font-zaux2 zaux-theme--light1 text-center pb-3 pb-lg-4 maw-f768px">
                   <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Full Members</h6>
               </div>
-              <div class="text-center c-typo-style1-4 c-typo-style1-lg-8 pb-6">
+              <div class="text-center c-typo-style1-4 c-typo-style1-lg-8">
                 <p>Full Members are Members who live in Europe or in the countries bordering the Mediterranean Sea.</p>
               </div>
           </div>
 
-          <div class="col-12 col-lg-6">
+          <div class="col-12 col-lg-6 pb-8 pb-lg-6">
             <div class="font-zaux2 zaux-theme--light1 text-center pb-3">
               <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Associate Members</h6>
             </div>
-             <div class="text-center c-typo-style1-4 c-typo-style1-lg-8 pb-6">
+             <div class="text-center c-typo-style1-4 c-typo-style1-lg-8">
               <p> Associate Members are Members living in all the other countries. They are entitled to the same benefits as the Full Members except if they apply for a certain ERA fellowship,
                 if they are elected for office in one of the ERA bodies, or if they receive certain awards or votes.</p>
               </div>
           </div>
 
-          <div class="col-12 col-lg-6 pb-8 pb-lg-0">
+          <div class="col-12 col-lg-6 pb-8 pb-lg-6">
               <div class="font-zaux2 zaux-theme--light1 text-center pb-3 pb-lg-4 maw-f768px">
                   <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">How to become an ERA member?</h6>
               </div>
-              <div class="text-center c-typo-style1-4 c-typo-style1-lg-8 pb-6">
+              <div class="text-center c-typo-style1-4 c-typo-style1-lg-8">
                 <p>To become a Member you must first create your ‘My ERA account’ , and then complete the online application form (My Membership, Become a Member).</p>
               </div>
           </div>
 
-          <div class="col-12 col-lg-6 pb-8 pb-lg-0">
+          <div class="col-12 col-lg-6 pb-8 pb-lg-6">
               <div class="font-zaux2 zaux-theme--light1 text-center pb-3 pb-lg-4 maw-f768px">
                   <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Renewal</h6>
               </div>
-              <div class="text-center c-typo-style1-4 c-typo-style1-lg-8 pb-6">
+              <div class="text-center c-typo-style1-4 c-typo-style1-lg-8">
                 <p>Members must pay their annual membership fee to remain active Members and to continue to receive all membership benefits.</p>
               </div>
           </div>
@@ -433,7 +390,7 @@
               <div class="font-zaux2 zaux-theme--light1 pb-2 pb-lg-4">
                 <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Membership Card</h6>
               </div>
-              <div class="pb-4 c-typo-style1-3 c-typo-style1-lg-4 maw-f768px">
+              <div class="c-typo-style1-3 c-typo-style1-lg-4 maw-f768px">
                 <p>All active Members may view and download their membership cards, payment receipts and certificate of membership directly from My ERA.</p>
               </div>
             </diV>

@@ -115,57 +115,73 @@
         <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16 mb-3">Latest Tweets</h6>
       </div>
       <div class="pb-9 m-auto">
-        <div class="d-flex align-items-center justify-content-center position-relative">
-         <div class="d-none d-lg-block position-absolute zaux-pos-twitter1">
-             {{
-                  Img.content({
-                  "isLazy": false,
-                  "src": "media/ProvaTwitter.png",
-                  "src2x": "media/ProvaTwitter.png",
-                  "width": 274,
-                  "height": 287,
-                  "className": ["img-fluid"],
-                  "title": "title",
-                  "alt": "alt",
-                  "wrapperElement": ["figure"],
-                  "wrapperClassName": [""]
-                  })
-                }}
+        {# <div class="d-flex align-items-center justify-content-center position-relative"> #}
+
+          <div class="c-slider h-100"  data-config='{{component_slider.demo.sliderTwitter.config | dump | safe}}' data-js-component="Slider">
+            <div class="c-slider__wrapper">
+              <div class="c-slider__instance mih-twitter swiper swiper-container d-flex flex-column h-100 justify-content-center text-center">
+                <div class="swiper-wrapper">
+
+                  <div class="swiper-slide ">
+                    {# d-none d-lg-block position-absolute zaux-pos-twitter1
+                    w:274 h:287#}
+                    {{
+                      Img.content({
+                      "isLazy": false,
+                      "src": "media/ProvaTwitter.png",
+                      "src2x": "media/ProvaTwitter.png",
+                      "width": 274,
+                      "height": 287,
+                      "className": ["img-fluid"],
+                      "title": "title",
+                      "alt": "alt",
+                      "wrapperElement": ["figure"],
+                      "wrapperClassName": [""]
+                      })
+                    }}
+                  </div>
+                  <div class="swiper-slide">
+                    {# zaux-zi-1 position relative
+                    w:396 h:415 #}
+                    {{
+                          Img.content({
+                          "isLazy": false,
+                          "src": "media/ProvaTwitter.png",
+                          "src2x": "media/ProvaTwitter.png",
+                          "width": 274,
+                          "height": 287,
+                          "className": ["img-fluid"],
+                          "title": "title",
+                          "alt": "alt",
+                          "wrapperElement": ["figure"],
+                          "wrapperClassName": ""
+                          })
+                        }}
+                  </div>
+                  <div class="swiper-slide">
+                    {# d-none d-lg-block position-absolute zaux-pos-twitter2 #}
+                      {{
+                            Img.content({
+                            "isLazy": false,
+                            "src": "media/ProvaTwitter.png",
+                            "src2x": "media/ProvaTwitter.png",
+                            "width": 274,
+                            "height": 287,
+                            "className": ["img-fluid"],
+                            "title": "title",
+                            "alt": "alt",
+                            "wrapperElement": ["figure"],
+                            "wrapperClassName": [""]
+                            })
+                          }}
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="zaux-zi-1 position relative">
-             {{
-                  Img.content({
-                  "isLazy": false,
-                  "src": "media/ProvaTwitter.png",
-                  "src2x": "media/ProvaTwitter.png",
-                  "width": 396,
-                  "height": 415,
-                  "className": ["img-fluid"],
-                  "title": "title",
-                  "alt": "alt",
-                  "wrapperElement": ["figure"],
-                  "wrapperClassName": ""
-                  })
-                }}
-          </div>
-         <div class="d-none d-lg-block position-absolute zaux-pos-twitter2">
-             {{
-                  Img.content({
-                  "isLazy": false,
-                  "src": "media/ProvaTwitter.png",
-                  "src2x": "media/ProvaTwitter.png",
-                  "width": 274,
-                  "height": 287,
-                  "className": ["img-fluid"],
-                  "title": "title",
-                  "alt": "alt",
-                  "wrapperElement": ["figure"],
-                  "wrapperClassName": [""]
-                  })
-                }}
-          </div>
+
+        {# </div> #}
         </div>
-      </div>
     </div>
   </div>
 

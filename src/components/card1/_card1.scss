@@ -73,7 +73,7 @@ $component: componentClass("card1");
       &:hover {
         cursor: pointer;
         a {
-          text-decoration: underline;
+          text-decoration: underline !important;
         }
       }
     }

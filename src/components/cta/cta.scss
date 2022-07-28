@@ -14,6 +14,16 @@ a[class*="#{$component}"] {
 }
 
 .#{$component} {
+  &__viewtag{
+    &.closed::after{
+      content: "...";
+    }
+    &.open::after{
+      content: "\2716";
+      color: #3F3F3F;
+
+    }
+  }
   &1 {
     font-family: $zaux-font2;
     font-weight: $zaux-typo-fw-bold;

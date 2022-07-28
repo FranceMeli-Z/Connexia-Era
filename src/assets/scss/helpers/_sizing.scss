@@ -33,6 +33,12 @@ $zaux-helper-name: "size";
   }
 }
 
+.mih-twitter {
+  @include media-breakpoint-up(md) {
+    min-height: 415px;
+  }
+}
+
 //min height
 .mih-200 {
   min-height: 200px;
@@ -42,6 +48,9 @@ $zaux-helper-name: "size";
 }
 .mih-380 {
   min-height: 380px;
+}
+.mih-415 {
+  min-height: 415px;
 }
 .mih-560 {
   min-height: 560px;

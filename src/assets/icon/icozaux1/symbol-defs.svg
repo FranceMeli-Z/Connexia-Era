@@ -1,5 +1,8 @@
 <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs>
+<symbol id="icozaux1-menuarrow" viewBox="0 0 12 32">
+<path d="M0.297 0l11.703 16.5-11.703 15.5v-32z"></path>
+</symbol>
 <symbol id="icozaux1-littlearrow" viewBox="0 0 24 32">
 <path d="M3.186 2.071l17.628 13.578-17.628 12.755v-26.333z"></path>
 </symbol>

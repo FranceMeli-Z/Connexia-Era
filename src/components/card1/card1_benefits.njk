@@ -1,4 +1,5 @@
 {% import 'components/img/img.njk' as Img %}
+{% import 'components/icon/icon.njk' as Icon %}
 
 {% macro content(obj) %}
 
@@ -42,7 +43,16 @@
             </div>
           {% endif %}
            <div class="font-zaux2 text-center zaux-theme--light1">
-               <a href="#" class="{{obj.ctaClassName|safe}}">Discover More</a>
+               <a href="#" class="{{obj.ctaClassName|safe}}">
+                <span>Discover More</span>
+                 {{
+                    Icon.content({
+                      "className": ["align-txt-bottom","ps-2"],
+                      "iconName": "icozaux1-littlearrow",
+                      "iconSvgUrl": app.fonts.icozaux1.url
+                    })
+                  }}
+                </a>
             </div>
         </div>
         <!-- .{{componentClassName}}__profile -->

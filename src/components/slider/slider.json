@@ -27,6 +27,29 @@
           }
       }
     },
+    "sliderTwitter": {
+      "config": {
+		    "loop": true,
+        "speed": 800,
+		    "slidesPerView": 1,
+        "centeredSlides": true,
+        "grabCursor": true,
+        "parallax": true,
+        "breakpoints": {
+          "768": {
+            "slidesPerView": 2,
+            "effect": "coverflow",
+            "coverflowEffect": {
+            "rotate": 0,
+            "stretch": 135,
+            "depth": 0,
+            "modifier": 1,
+            "slideShadows" : false
+            }
+          }
+        }
+      }
+    },
     "sliderPopular": {
       "config": {
       "slidesPerView": 1,
@@ -121,6 +144,177 @@
       },
       "992": {
         "slidesPerView": 4
+      }
+      }
+    }
+  },
+  "sliderCook1": {
+    "config": {
+    "slidesPerView": 1,
+    "spaceBetween": 30,
+    "freeMode": true,
+    "navigation": {
+      "nextEl": ".swiper-button-next",
+      "prevEl": ".swiper-button-prev"
+    },
+    "breakpoints": {
+      "768": {
+        "slidesPerView": 2
+      },
+      "992": {
+        "slidesPerView": 3
+      }
+      }
+    }
+  },
+  "sliderCook2": {
+    "config": {
+    "slidesPerView": 1,
+    "spaceBetween": 30,
+    "freeMode": true,
+    "navigation": {
+      "nextEl": ".popular-swiper-button-next",
+      "prevEl": ".popular-swiper-button-prev"
+    },
+    "breakpoints": {
+      "768": {
+        "slidesPerView": 2
+      },
+      "992": {
+        "slidesPerView": 3
+      }
+      }
+    }
+  },
+  "sliderCook3": {
+    "config": {
+    "slidesPerView": 1,
+    "spaceBetween": 30,
+    "freeMode": true,
+    "navigation": {
+      "nextEl": ".swiper-button-next2",
+      "prevEl": ".swiper-button-prev2"
+    },
+    "breakpoints": {
+      "768": {
+        "slidesPerView": 2
+      },
+      "992": {
+        "slidesPerView": 3
+      }
+      }
+    }
+  },
+  "sliderCook4": {
+    "config": {
+    "slidesPerView": 1,
+    "spaceBetween": 30,
+    "freeMode": true,
+    "navigation": {
+      "nextEl": ".swiper-button-next3",
+      "prevEl": ".swiper-button-prev3"
+    },
+    "breakpoints": {
+      "768": {
+        "slidesPerView": 2
+      },
+      "992": {
+        "slidesPerView": 3
+      }
+      }
+    }
+  },
+  "sliderCook5": {
+    "config": {
+    "slidesPerView": 1,
+    "spaceBetween": 30,
+    "freeMode": true,
+    "navigation": {
+      "nextEl": ".swiper-button-next4",
+      "prevEl": ".swiper-button-prev4"
+    },
+    "breakpoints": {
+      "768": {
+        "slidesPerView": 2
+      },
+      "992": {
+        "slidesPerView": 3
+      }
+      }
+    }
+  },
+  "sliderCook6": {
+    "config": {
+    "slidesPerView": 1,
+    "spaceBetween": 30,
+    "freeMode": true,
+    "navigation": {
+      "nextEl": ".swiper-button-next5",
+      "prevEl": ".swiper-button-prev5"
+    },
+    "breakpoints": {
+      "768": {
+        "slidesPerView": 2
+      },
+      "992": {
+        "slidesPerView": 3
+      }
+      }
+    }
+  },
+  "sliderCook7": {
+    "config": {
+    "slidesPerView": 1,
+    "spaceBetween": 30,
+    "freeMode": true,
+    "navigation": {
+      "nextEl": ".swiper-button-next6",
+      "prevEl": ".swiper-button-prev6"
+    },
+    "breakpoints": {
+      "768": {
+        "slidesPerView": 2
+      },
+      "992": {
+        "slidesPerView": 3
+      }
+      }
+    }
+  },
+  "sliderCook8": {
+    "config": {
+    "slidesPerView": 1,
+    "spaceBetween": 30,
+    "freeMode": true,
+    "navigation": {
+      "nextEl": ".swiper-button-next7",
+      "prevEl": ".swiper-button-prev7"
+    },
+    "breakpoints": {
+      "768": {
+        "slidesPerView": 2
+      },
+      "992": {
+        "slidesPerView": 3
+      }
+      }
+    }
+  },
+  "sliderCook9": {
+    "config": {
+    "slidesPerView": 1,
+    "spaceBetween": 30,
+    "freeMode": true,
+    "navigation": {
+      "nextEl": ".swiper-button-next8",
+      "prevEl": ".swiper-button-prev8"
+    },
+    "breakpoints": {
+      "768": {
+        "slidesPerView": 2
+      },
+      "992": {
+        "slidesPerView": 3
       }
       }
     }

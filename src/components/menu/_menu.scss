@@ -15,6 +15,7 @@ $component: componentClass("menu");
   width: 100%;
   max-width: 1440px;
   background-color: white;
+  overflow-y: auto;
 
   @include media-breakpoint-down(lg) {
     height: 100%;
@@ -32,7 +33,6 @@ $component: componentClass("menu");
 
   &__content {
     font-size: 24px;
-    overflow-y: auto;
     &__nav {
       @include media-breakpoint-up(lg) {
         width: 27%;
@@ -41,11 +41,23 @@ $component: componentClass("menu");
       ul {
         list-style: none;
         li.#{$component}__content__navlist {
+            padding-bottom: 30px;
           &.open {
+            &:last-child {
+              @include media-breakpoint-down(lg) {
+              padding-bottom: 0;
+              }
+            }
             .#{$component}__content__navlist--click {
-            font-weight: 700;
-            @include media-breakpoint-down(lg) {
-              font-weight: 600;
+            font-weight: 600;
+            & i {
+              font-size: 32px;
+              right: -21px;
+              top:3px;
+              z-index: 1;
+            }
+            @include media-breakpoint-up(lg) {
+              font-weight: 700;
             }
             }
           }
@@ -90,7 +102,7 @@ $component: componentClass("menu");
         background-image: url(../../assets/icon/icozaux1/SVG/search.svg);
         background-repeat: no-repeat;
         background-size: 20px 20px;
-        background-position: bottom 2px right 20px;
+        background-position: bottom 7px right 20px;
       }
     }
 

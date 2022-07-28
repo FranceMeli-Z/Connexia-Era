@@ -1,0 +1,80 @@
+{% import 'components/img/img.njk' as Img %}
+{% import 'components/nav/nav.njk' as Nav %}
+{% import 'components/icon/icon.njk' as Icon %}
+{% import 'components/card2/card2_news.njk' as Card2 %}
+{% import 'components/card1/card1_recipe.njk' as CardRecipe %}
+
+{% macro content(obj) %}
+
+  {% set componentClassName = 'c-menu' %}
+
+<div class="c-slider h-100"  data-config='{{component_slider.demo.sliderCook1.config | dump | safe}}' data-js-component="Slider">
+  <div class="c-slider__wrapper">
+    <div class="c-slider__instance swiper swiper-container d-flex flex-column h-100">
+
+      <div class="swiper-wrapper">
+          {%
+                  set _decoVariations = [
+                    "deco1-l-t",
+                    "deco1-r-t",
+                    "deco1-r-b",
+                    "deco1-l-b",
+                    "deco1-l-b"
+                  ]
+                %}
+
+                {% for decoVariation in _decoVariations %}
+
+                   <div class="swiper-slide">
+
+                     {{CardRecipe.content(
+                              {
+                                "className": ["h-100"],
+                                "variations": [],
+                                "innerClassName": ["zaux-bg-set1-grey p-3 h-100"],
+                                "contentClassName": ["h-100","position-relative","mih-recipe"],
+                                "img": {
+                                  "isLazy": true,
+                                  "src": "media/Recipe.png",
+                                  "src2x": "media/Recipe@2x.png",
+                                  "width": 368,
+                                  "height": 207,
+                                  "alt": "Cover alternative text",
+                                  "className": ["img-fluid","w-100"]
+                                },
+                                "name": "Vegetable croquettes",
+                                "nation": "Italy",
+                                "time": "Easy, 40 minutes"
+                              }
+                            )}}
+
+                  </div>
+                  <!-- .col-* -->
+                {% endfor %}
+        </div>
+    </div>
+    <!-- .c-slider__instance -->
+  </div>
+  <!-- .c-slider__wrapper -->
+  <div class="swiper-navigation">
+        <div class="swiper-button-prev"> {{
+                    Icon.content({
+                      "className": "",
+                      "iconName": "icozaux1-arrowL",
+                      "iconSvgUrl": app.fonts.icozaux1.url
+                      })
+                    }}
+        </div>
+        <div class="swiper-button-next">
+          {{
+              Icon.content({
+                "className": "",
+                "iconName": "icozaux1-arrowR",
+                "iconSvgUrl": app.fonts.icozaux1.url
+              })
+          }}
+        </div>
+      </div>
+</div>
+
+{% endmacro %}

@@ -14,20 +14,59 @@
   {% set _className = [componentClassName] | mergeArray(obj.className or configDefault.className) %}
 
   <div class="{{_className | join(" ")}}">
-     <div class="ps-box zaux-bg-set1-grey h-100 d-none d-lg-block" aria-hidden="true">
+     <div class="ps-box zaux-bg-set1-grey h-100 d-none d-lg-block">
        <div class="text-lg-start text-center font-zaux2 zaux-theme--light2 pt-lg-8 pb-lg-12">
           <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">Main Topics</h6>
         </div>
-        <!-- `aria-hidden="true"` because the content already exists in the side nav (mobile first)  -->
         <nav class="c-nav3--layout1 zaux-theme--light1 c-typo-style1-8 pt-4 pe-8">
             <!-- BEGIN WP NAV -->
                 <ul class="">
-                  <li class="active"><a>Plenary Lectures</a></li>
-                  <li><a href="#">Institutional</a></li>
-                  <li><a href="#">Fluid electrolytes, tubular transport, renal physiology</a></li>
-                  <li><a href="#">Hereditary disorders, development, pregnancy, paediatric nephrology</a></li>
-                  <li><a href="#">Glomerular diseases & general clinical nephrology</a></li>
-                  <li><a href="#">Pathophysiology, epidemiology, prevention, progression, ageing</a></li>
+                  <li class="{{componentClassName}}__item is-active"><a href="#">Plenary Lectures</a>
+                  {{
+                    Icon.content({
+                    "className": ["zaux-color-set1-grey"],
+                    "iconName": "icozaux1-menuarrow",
+                    "iconSvgUrl": app.fonts.icozaux1.url
+                    })
+                  }}</li>
+                  <li class="{{componentClassName}}__item">
+                    <a href="#">Institutional</a>
+                    {{
+                    Icon.content({
+                    "className": ["zaux-color-set1-grey"],
+                    "iconName": "icozaux1-menuarrow",
+                    "iconSvgUrl": app.fonts.icozaux1.url
+                    })
+                  }}
+                    </li>
+                  <li class="{{componentClassName}}__item"><a href="#">Fluid electrolytes, tubular transport, renal physiology</a>{{
+                    Icon.content({
+                    "className": ["zaux-color-set1-grey"],
+                    "iconName": "icozaux1-menuarrow",
+                    "iconSvgUrl": app.fonts.icozaux1.url
+                    })
+                  }}</li>
+                  <li class="{{componentClassName}}__item"><a href="#">Hereditary disorders, development, pregnancy, paediatric nephrology</a>{{
+                    Icon.content({
+                    "className": ["zaux-color-set1-grey"],
+                    "iconName": "icozaux1-menuarrow",
+                    "iconSvgUrl": app.fonts.icozaux1.url
+                    })
+                  }}</li>
+                  <li class="{{componentClassName}}__item"><a href="#">Glomerular diseases & general clinical nephrology</a>{{
+                    Icon.content({
+                    "className": ["zaux-color-set1-grey"],
+                    "iconName": "icozaux1-menuarrow",
+                    "iconSvgUrl": app.fonts.icozaux1.url
+                    })
+                  }}</li>
+                  <li class="{{componentClassName}}__item"><a href="#">Pathophysiology, epidemiology, prevention, progression, ageing</a>{{
+                    Icon.content({
+                    "className": ["zaux-color-set1-grey"],
+                    "iconName": "icozaux1-menuarrow",
+                    "iconSvgUrl": app.fonts.icozaux1.url
+                    })
+                  }}</li>
                 </ul>
             <!-- END WP NAV -->
         </nav>

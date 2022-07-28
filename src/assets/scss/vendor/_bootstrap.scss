@@ -252,6 +252,7 @@ $utilities: map-merge(
   property: top,
   values: (
     "35": 35px,
+    "0": 0,
   )
       ),
   )
@@ -301,7 +302,8 @@ $utilities: map-merge(
       property: box-shadow,
       class: shadow,
       values: (
-      "-grey": 5px 5px 20px 5px rgba(#F1F1F1, 0.8),
+      "-grey": 1px 1px 10px 0px #0000001A,
+      "-grey2": 1px 1px 10px 0px #00000026
       ),
     ),
   )

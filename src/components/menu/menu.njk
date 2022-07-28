@@ -27,15 +27,22 @@
           <ul>
             {% for item in component_menu.props.panels[0].nav.items %}
               {% if item.childId == "2" %}
-                <li class="{{componentClassName}}__content__navlist open pb-6">
+                <li class="{{componentClassName}}__content__navlist open">
               {% else %}
-                <li class="{{componentClassName}}__content__navlist closed pb-6">
+                <li class="{{componentClassName}}__content__navlist closed">
                  {% endif %}
                 <div class="">
-                  <div class="{{componentClassName}}__content__navlist--click zaux-theme--dark1 d-inline-block ps-box pb-2 pe-4 w-100">
+                  <div class="{{componentClassName}}__content__navlist--click zaux-theme--dark1 position-relative d-inline-block ps-box pb-2 pe-4 w-100">
                     <a href="#" class="">
                       {{item.label}}
                     </a>
+                    {{
+                    Icon.content({
+                    "className": ["zaux-color-set1-darkgrey2","position-absolute"],
+                    "iconName": "icozaux1-menuarrow",
+                    "iconSvgUrl": app.fonts.icozaux1.url
+                    })
+                  }}
                   </div>
                   <div class="{{componentClassName}}__content__navlist--show d-none h-100 py-0 py-lg-8">
                     <div class="w-lg-50">
@@ -70,11 +77,11 @@
         {% endfor %}
           </ul>
           </nav>
-        <div class="{{componentClassName}}__foot d-block d-lg-none p-box">
+        <div class="{{componentClassName}}__foot d-block d-lg-none p-box pb-7">
           <div class="{{componentClassName}}__foot--search pb-4">
             <form class="c-form" role="search" method="get" autocomplete="off">
               <div class="form-group">
-              <input class="w-100" type="search" name="s" value="" placeholder="Search ERA..."/>
+              <input class="w-100 form-control" type="search" name="s" value="" placeholder="Search ERA..."/>
               </div>
             </form>
           </div>

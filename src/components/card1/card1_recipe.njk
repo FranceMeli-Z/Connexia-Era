@@ -26,6 +26,7 @@
   <div class="{{_className | join(" ")}}">
     <div class="{{_innerClassName | join(" ")}}">
         <div class="{{_contentClassName | join(" ")}}">
+          <div class="p-3">
              {% if obj.img %}
               <div class="{{componentClassName}}__recipe--img pb-3">
                 <a href="#">
@@ -43,13 +44,14 @@
                   <p>{{obj.nation|safe}}</p>
                 </div>
               </div>
-              <div class="position-absolute bottom-0">
+              <div class="position-absolute bottom-0 pb-3">
                 <div class="{{componentClassName}}__recipe--time font-zaux2 fst-italic c-typo-style-6">
                   <p>{{obj.time|safe}}</p>
                 </div>
               </div>
+            </div>
         </div>
-        <!-- .{{componentClassName}}__profile -->
+        <!-- .{{componentClassName}}__recipe -->
     </div>
     <!-- .{{componentClassName}}__inner -->
   </div>

@@ -23,9 +23,9 @@
           {% endif %}
 
           <li
-            class="{{componentClassName}}__item ps-box pb-5 {{ (itemClassNameArr | safe) | replace(",", " ") }} {{item.className}}"
-            {# {% if item.childId %} aria-owns="sidebar-panel-{{item.childId}}"{% endif %}
-            {% if item.targetPanelId %} data-sidebar-open-panel="{{item.targetPanelId|safe}}"{% endif %}
+            class="{{componentClassName}}__item ps-box {{ (itemClassNameArr | safe) | replace(",", " ") }} {{item.className}}"
+            {# {% if item.childId %} aria-owns="menu-panel-{{item.childId}}"{% endif %}
+            {% if item.targetPanelId %} data-menu-open-panel="{{item.targetPanelId|safe}}"{% endif %}
             {% if item.label %} title="{{item.label}}"{% endif %} #}
           >
             <a href="{{item.href|safe}}" class="{{componentClassName}}__item-wrapper">
@@ -33,13 +33,6 @@
               {% if item.showLabel and item.label %}
                 <span class="{{componentClassName}}__item-label {{item.labelClassName|safe}}">
                   {{item.label}}
-                </span>
-              {% endif %}
-
-              {% if item.description %}
-                <span class="{{componentClassName}}__item-description {{item.descriptionClassName|safe}}">
-                  <span class="visually-hidden">- </span>
-                  {{item.description|safe}}
                 </span>
               {% endif %}
             </a>

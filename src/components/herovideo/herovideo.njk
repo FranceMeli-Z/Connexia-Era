@@ -20,17 +20,17 @@
     {% if obj.htmlId %}id="{{obj.htmlId}}"{% endif %}
     class="{{_className | join(" ")}}"
     {% if obj.ytVidId %}data-yt-vid-id="{{obj.ytVidId}}"{% endif %}
-    {% if obj.isAutoplay %}data-autoplay="true"{% endif %}
+    {% if obj.isAutoplay %} data-autoplay="true"{% endif %}
     data-js-component="HeroVideo"
   >
     <div class="{{componentClassName}}__inner {{_innerClassName | join(" ")}}">
 
-      {# {{
+      {{
         Img.content(obj.imgCover)
-      }} #}
+      }}
 
       {% if obj.showPlayBtn %}
-        <div class="{{componentClassName}}__btn--play position-absolute top-0 start-0 w-100 h-100 text-center d-flex align-items-center">
+        <div class="{{componentClassName}}__btn--play position-absolute top-0 w-100 h-100 justify-content-center d-flex align-items-center">
            {{
             Icon.content({
               "className": ["zaux-color-set1-red1"],
