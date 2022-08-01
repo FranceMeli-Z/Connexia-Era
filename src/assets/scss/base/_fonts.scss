@@ -39,6 +39,7 @@
   stroke-width: 0;
   stroke: currentColor;
   fill: currentColor;
+  cursor: pointer;
   @include media-breakpoint-down(lg) {
     width: 30px;
     height: 30px;

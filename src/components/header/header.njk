@@ -21,7 +21,7 @@
     <div class="{{componentClassName}}__inner p-box">
 
       <div class="font-zaux2 d-flex align-items-center justify-content-between h-100">
-        <div class="fst-italic d-flex">
+        <div class="{{componentClassName}}__item1 fst-italic d-flex">
           <div class="c-menu__btn-toggle me-9">
              <a href="#">
            {{
@@ -50,13 +50,13 @@
                 "iconSvgUrl": app.fonts.icozaux1.url
               })
             }}
-            <span class="ps-1">Search</span>
+            <span id="ModalLabel" class="ps-1">Search</span>
 
           </button>
           </div>
         </div>
 
-        <div>
+        <div class="{{componentClassName}}__item2">
           {% if page.isHome %}
             {% set tagLogo = "h1" %}
           {% else %}
@@ -80,7 +80,7 @@
         </div>
         <!-- .{{componentClassName}}__section -->
 
-        <div class="d-none d-lg-block">
+        <div class="{{componentClassName}}__item3 d-none d-lg-block">
           <a href="#" class="fw-bold pe-7">My Era</a>
           <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">JOIN</a>
         </div>

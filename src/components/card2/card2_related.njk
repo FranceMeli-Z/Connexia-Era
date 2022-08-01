@@ -29,12 +29,12 @@
             <h6 class="fw-demi c-typo-fs-8 c-typo-fs-lg-10"> {{obj.content.title|safe}} </h6>
           </div>
           {% if obj.content.text %}
-          <div class="{{componentClassName}}__related--txt c-typo-style1-6 c-typo-style1-lg-8 pb-0 pb-md-2">
+          <div class="{{componentClassName}}__related--txt c-typo-style1-6 c-typo-style1-lg-8 pb-2">
               <p>{{obj.content.text|safe}}</p>
           </div>
           {% endif %}
           {% if obj.content.list %}
-          <div class="{{componentClassName}}__related--list c-typo-style1-4 c-typo-style1-lg-8 pb-0 pb-md-2">
+          <div class="{{componentClassName}}__related--list c-typo-style1-4 c-typo-style1-lg-8 pb-2">
               <ul>
                 {% for el in obj.content.list %}
                   <li class="mb-0">{{el|safe}}</li>

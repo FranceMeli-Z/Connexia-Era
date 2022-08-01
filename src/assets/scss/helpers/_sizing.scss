@@ -39,12 +39,22 @@ $zaux-helper-name: "size";
   }
 }
 
+.mih-seminarcard {
+  min-height: 291px;
+  @include media-breakpoint-up(lg) {
+    min-height: 210px;
+  }
+}
+
 //min height
 .mih-200 {
   min-height: 200px;
 }
 .mih-215 {
   min-height: 215px;
+}
+.mih-291 {
+  min-height: 291px;
 }
 .mih-380 {
   min-height: 380px;
@@ -93,6 +103,11 @@ $zaux-helper-name: "size";
 //height
 .h-#{$zaux-helper-name}-635 {
   height: 635px;
+}
+
+//Max-height
+.mah-f350px {
+  max-height: 350px;
 }
 
 

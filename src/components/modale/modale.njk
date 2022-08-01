@@ -5,7 +5,7 @@
 
   {% set componentClassName = 'c-modale' %}
 
-<div class="{{componentClassName}} modal fade" id="EraModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="{{componentClassName}} modal fade" id="EraModal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
   <div class="modal-dialog h-100">
     <div class="{{componentClassName}}--light h-100 p-box">
         <div class="{{componentClassName}}__content h-100">
@@ -22,21 +22,12 @@
             <div class="{{componentClassName}}__content--search--form pb-5">
                 <form class="c-form" role="search" method="get" autocomplete="off">
                   <div class="form-group">
-                    <input class="{{componentClassName}}__search-field w-100 p-2" type="search" name="s" value="" placeholder="Search ERA..."/>
-                    {# <button type="submit" class="{{componentClassName}}__search-btn">
-                      {{
-                        Icon.content({
-                          "className": "",
-                          "iconName": "icozaux1-search",
-                          "iconSvgUrl": app.fonts.icozaux1.url
-                        })
-                      }}
-                    </button> #}
+                    <input class="c-form__search--field w-100 p-2" type="search" name="s" value="" placeholder="Search ERA..."/>
                   </div>
                 </form>
               </div>
-              <div class="">
-                <div class="{{componentClassName}}__content--search--result pb-8 c-typo-style1-4">
+              <div class="c-menu__search--result mah-f350px overflow-auto">
+                <div class="c-menu__search--post pb-8 c-typo-style1-4">
                   <ul class="list-unstyled ps-0">
                     <li><a href="#">Chronic <strong>Kidney Disease</strong></a></li>
                     <li><a href="#">Chronic <strong>Kidney Disease</strong><span>in Publications </span></a></li>
@@ -44,7 +35,7 @@
                     <li><a href="#">Chronic <strong>Kidney Disease</strong><span>in Guideline </span></a></li>
                   </ul>
                 </div>
-                <div class="{{componentClassName}}__content--search--suggestion">
+                <div class="c-menu__search--suggestion">
                   <div class="zaux-theme--light2 font-zaux2 pb-5">
                     <h6 class="fw-demi c-typo-fs-8">Suggestions</h6>
                   </div>
@@ -76,9 +67,6 @@
                 </div>
               </div>
             </div>
-      {# <div class="{{componentClassName}}__content--footer">
-         <a type="button" class="c-btn1 c-btn1--size-l c-btn1--sm c-btn1--light" data-bs-dismiss="modal">Chiudi</a>
-      </div> #}
       </div>
       </div>
     </div>

@@ -54,7 +54,7 @@ $zaux-helper-name: "pos";
 }
 
 
-//Custom Benefits Stoty Card
+//Custom Benefits Story Card
 .zaux-#{$zaux-helper-name}-story1 {
  @include media-breakpoint-up(lg) {
   position: absolute;
@@ -62,4 +62,29 @@ $zaux-helper-name: "pos";
   }
 }
 
+//Custom Benefits cta Seminar Card
+.zaux-#{$zaux-helper-name}-ctasem {
+   position: absolute;
+   bottom: 30px;
+   right: 0;
+   left: 0;
+ }
 
+//Custom Header position on scroll
+.zaux-#{$zaux-helper-name}-header1 {
+  @include media-breakpoint-up(lg) {
+   position: absolute;
+   left: 350px;
+   }
+ }
+ .zaux-#{$zaux-helper-name}-header2 {
+  @include media-breakpoint-up(lg) {
+   position: absolute;
+   }
+ }
+ .zaux-#{$zaux-helper-name}-header3 {
+  @include media-breakpoint-up(lg) {
+   position: absolute;
+   right: 93px;
+   }
+ }

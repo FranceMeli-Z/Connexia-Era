@@ -14,6 +14,7 @@ a[class*="#{$component}"] {
 }
 
 .#{$component} {
+
   &__viewtag{
     &.closed::after{
       content: "...";
@@ -23,7 +24,9 @@ a[class*="#{$component}"] {
       color: #3F3F3F;
 
     }
+    cursor: pointer;
   }
+
   &1 {
     font-family: $zaux-font2;
     font-weight: $zaux-typo-fw-bold;
@@ -74,4 +77,11 @@ a[class*="#{$component}"] {
       border-bottom: 60px solid transparent;
       border-left: 60px solid green;
     }
+  }
+
+  .tag-list > .c-cta__tag:not(:nth-child(-n + 5)){
+    display: none;
+  }
+  .tag-list.is-active > *.c-cta__tag {
+    display: inline-block !important;
   }

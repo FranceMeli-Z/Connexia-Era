@@ -78,13 +78,57 @@
           </ul>
           </nav>
         <div class="{{componentClassName}}__foot d-block d-lg-none p-box pb-7">
-          <div class="{{componentClassName}}__foot--search pb-4">
-            <form class="c-form" role="search" method="get" autocomplete="off">
-              <div class="form-group">
-              <input class="w-100 form-control" type="search" name="s" value="" placeholder="Search ERA..."/>
+          <div class="{{componentClassName}}__foot--search">
+            <div class="pb-4">
+              <form class="c-form" role="search" method="get" autocomplete="off">
+                <div class="form-group">
+                <input class="c-form__search--field w-100 form-control" type="search" name="s" value="" placeholder="Search ERA..."/>
+                </div>
+              </form>
+            </div>
+            <!-- Risultati suggeriti -->
+            <div class="c-menu__search--result d-none mah-f390 overflow-auto">
+              <div class="c-menu__search--post pb-4 c-typo-style1-4">
+                <ul class="list-unstyled ps-0">
+                  <li><a href="#">Chronic <strong>Kidney Disease</strong></a></li>
+                  <li><a href="#">Chronic <strong>Kidney Disease</strong><span>in Publications </span></a></li>
+                  <li><a href="#">Chronic <strong>Kidney Disease</strong><span>in Webcasts </span></a></li>
+                  <li><a href="#">Chronic <strong>Kidney Disease</strong><span>in Guideline </span></a></li>
+                </ul>
               </div>
-            </form>
+              <div class="c-menu__search--suggestion">
+                <div class="zaux-theme--light2 font-zaux2 pb-5">
+                  <h6 class="fw-demi c-typo-fs-8">Suggestions</h6>
+                </div>
+                <div class="c-typo-style1-4">
+                  <ul class="list-unstyled ps-0">
+                    <li class="pb-2">
+                      <a href="#"><span>CKD-MBD working group</span>
+                            {{
+                              Icon.content({
+                                "className": ["ps-2","align-txt-bottom"],
+                                "iconName": "icozaux1-littlearrow",
+                                "iconSvgUrl": app.fonts.icozaux1.url
+                              })
+                            }}
+                      </a>
+                    </li>
+                    <li class="pb-2">
+                      <a href="#"><span>CKD-MBD disease portal</span>
+                            {{
+                              Icon.content({
+                                "className": ["ps-2","align-txt-bottom"],
+                                "iconName": "icozaux1-littlearrow",
+                                "iconSvgUrl": app.fonts.icozaux1.url
+                              })
+                            }}
+                      </a>
+                    </li>
+                  </ul>
+              </div>
           </div>
+          </div>
+        </div>
           <div class="d-flex justify-content-between">
             <a href="#" class="fw-bold pe-7">My Era</a>
             <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">JOIN</a>

@@ -55,7 +55,7 @@ $component: componentClass("slider");
     @include media-breakpoint-down(md) {
       display: flex;
       justify-content: center;
-      padding-top: 30px;
+      padding-top: 45px;
      }
 
   & .swiper-button-prev, & .popular-swiper-button-prev, & .swiper-button-prev2, & .swiper-button-prev3,

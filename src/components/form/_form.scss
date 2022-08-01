@@ -31,8 +31,71 @@ $component: componentClass("form");
 &__search {
   max-width: 725px;
   &--grp {
+    justify-content: space-between;
+
+  //   ul.selected-change {
+  //     height: 20px;
+  //     width: 150px;
+  //     position: relative;
+  //     line-height: normal;
+  //     font-size: 16px;
+  //     border: 1px solid transparent;
+
+  //     @include media-breakpoint-down(lg) {
+  //       font-size: 14px;
+  //     }
+  //     &:active {
+  //       border-color: tokenColor(set1, red1);
+  //     }
+  // }
+  // ul.selected-change li.optgroup, ul.selected-list li {
+  //   padding: 8px 20px; z-index: 2;
+  //   font-style: italic;
+  //   font-size: 13px;
+  //   float: left;
+  //   // width: 130px;
+  //    display: none;
+  //    background-color: white;
+  //    box-shadow: 1px 1px 10px 0px #0000001A;
+  // }
+
+  // ul.option-list li {
+  //   padding: 4px 0 4px 20px;
+  //   z-index: 2;
+  //   float: left;
+  //   display: none;
+  //   width: 100%;
+  //   background: none;
+  //   box-shadow: none;
+  //   cursor: pointer;
+  //   &:hover {
+  //     a {
+  //       text-decoration: underline;
+  //   }
+  // }
+  // &:active {
+  //     background-color: #951616;
+  // }
+  // &:first-child {
+  //   padding-top: 10px;
+  // }
+
+  // }
+
+
+  // a#submit { z-index: 1; }
+
+
     & .form-group{
-      margin-right: 20px;
+      @include media-breakpoint-up(lg) {
+        margin-right: 20px;
+      }
+      & select:focus > option:checked:before {
+        color: #A52A2A;
+        position: absolute;
+        content: attr(data-content);
+    }
+
       & select {
         padding: 4px 7px;
         border: 1px solid transparent;
@@ -56,11 +119,6 @@ $component: componentClass("form");
             text-decoration: underline !important;
           }
         }
-        // &:not(optgroup) {
-        //   option:first-child {
-        //   display: none;
-        //   }
-        // }
       }
     }
   }

@@ -5,14 +5,13 @@
 $component: componentClass("header");
 
 $zaux-header-h: 65px !default;
-$zaux-header-lg-h: 158px !default;
+$zaux-header-lg-h: 160px !default;
 
 .#{$component} {
-  // position: fixed;
-  // left: 0;
-  // top: 0;
-  // width: 100%;
-
+  position: fixed;
+  max-width: 1440px;
+  width: 100%;
+  background-color: white;
   z-index: $zaux-header-zindex;
 
   &__inner {
@@ -45,6 +44,7 @@ $zaux-header-lg-h: 158px !default;
   @include media-breakpoint-up(lg) {
     &__inner {
       height: $zaux-header-lg-h;
+      position: relative;
     }
   }
 

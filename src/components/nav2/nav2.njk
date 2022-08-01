@@ -106,25 +106,53 @@
             </ul>
               {% else %}
               <ul class="d-flex c-typo-style1-2 c-typo-style1-lg-4 maw-f825 m-auto justify-content-between align-items-center h-100">
-                <li class="{{componentClassName}}__item">
+                <li class="{{componentClassName}}__item is-active">
                   <a href="#" title="Recipe">
                   Recipe
                   </a>
+                   {{
+                    Icon.content({
+                    "className": ["zaux-color-set1-red1"],
+                    "iconName": "icozaux1-menuarrow",
+                    "iconSvgUrl": app.fonts.icozaux1.url
+                    })
+                  }}
                 </li>
                 <li class="{{componentClassName}}__item">
                   <a href="#" title="About the project">
                     About the project
                   </a>
+                   {{
+                    Icon.content({
+                    "className": ["zaux-color-set1-red1"],
+                    "iconName": "icozaux1-menuarrow",
+                    "iconSvgUrl": app.fonts.icozaux1.url
+                    })
+                  }}
                 </li>
                 <li class="{{componentClassName}}__item">
                   <a href="#" title="Nutritional information">
                     Nutritional information
                   </a>
+                   {{
+                    Icon.content({
+                    "className": ["zaux-color-set1-red1"],
+                    "iconName": "icozaux1-menuarrow",
+                    "iconSvgUrl": app.fonts.icozaux1.url
+                    })
+                  }}
                 </li>
                 <li class="{{componentClassName}}__item">
                   <a href="#" title=" Submit your recipe">
                   Submit your recipe
                   </a>
+                   {{
+                    Icon.content({
+                    "className": ["zaux-color-set1-red1"],
+                    "iconName": "icozaux1-menuarrow",
+                    "iconSvgUrl": app.fonts.icozaux1.url
+                    })
+                  }}
                 </li>
               </ul>
               {% endif %}
