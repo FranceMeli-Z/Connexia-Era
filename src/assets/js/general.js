@@ -75,7 +75,13 @@ $(window).resize(function() {
    }
    else {
        $(".c-menu__content__navlist:first-child").addClass("open");
-       $(".c-header__inner").height('158px');
+       var scrollTop = $(window).scrollTop();
+       if ( scrollTop > 50) {
+        $(".c-header__inner").addClass('110px');
+       }
+       else{
+        $(".c-header__inner").addClass('160px');
+        }
      }
  });
 
