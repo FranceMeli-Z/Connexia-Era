@@ -85,8 +85,74 @@ $component: componentClass("form");
 
   // a#submit { z-index: 1; }
 
+  & button.dropbtn {
+    text-align: left;
+    border: 1px solid transparent;
+    margin-right: 30px;
+    font-size: 16px;
+    @include media-breakpoint-down(lg) {
+      font-size: 14px;
+    }
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
 
-    & .form-group{
+      height: 20px;
+      width: 100%;
+      position: relative;
+      line-height: normal;
+      font-size: 16px;
+      border: 1px solid transparent;
+
+      @include media-breakpoint-down(lg) {
+        font-size: 14px;
+      }
+      &:active {
+        border-color: tokenColor(set1, red1);
+      }
+  }
+
+ &  div.dropdown-content {
+  position: absolute;
+    box-shadow: 1px 1px 10px 0px #0000001A;
+    padding: 8px 20px; z-index: 2;
+    margin-right: 20px;
+    display: none;
+    background-color: white;
+
+    & ul li.optgroup {
+      font-style: italic;
+      font-size: 13px;
+      & ul.option-list li {
+        padding: 4px 0 4px 20px;
+      }
+    }
+
+  & ul.option-list li {
+    padding-bottom: 4px;
+    font-style: normal;
+    z-index: 2;
+    width: 100%;
+    font-size: 13px;
+    background: none;
+    box-shadow: none;
+    cursor: pointer;
+    &:hover {
+      a {
+        text-decoration: underline;
+    }
+  }
+  &:active {
+      background-color: #951616;
+  }
+  // &:first-child {
+  //   padding-top: 10px;
+  // }
+  }
+
+ }
+
+    & .form-group {
       @include media-breakpoint-up(lg) {
         margin-right: 20px;
       }
@@ -96,7 +162,7 @@ $component: componentClass("form");
         content: attr(data-content);
     }
 
-      & select {
+      & select, & button.dropbtn {
         padding: 4px 7px;
         border: 1px solid transparent;
         margin-right: 30px;

@@ -10,7 +10,9 @@ $form-select-arrow : url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/
     input[type="email"] {
       background-color: tokenColor("default", "white");
     }
-    & select, & ul {
+    & select, & button.dropbtn
+    // & ul
+    {
       background-image: escape-svg($form-select-arrow);
       background-repeat: no-repeat;
       background-size: 10px;
