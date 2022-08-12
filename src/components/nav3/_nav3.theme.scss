@@ -8,13 +8,10 @@ $component: componentClass("nav3");
 // Theme: Light1
 ////////////////////////////////////////////////////
 
-.#{$component} {
-  @include media-breakpoint-up(lg) {
-    border-right: 1px solid #000000;
-    border-bottom: 1px solid #000000;
-  }
+// .#{$component} {
 
-}
+
+// }
 //   // &__item {
 //   //   &-wrapper {
 //   //     @at-root .#{$zaux-system-classname-components-loaded} & {

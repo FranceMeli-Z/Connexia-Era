@@ -35,7 +35,7 @@ export class Slider {
 
     // Initializes Swiper
     this.slider = new Swiper(this.$slider, this.config);
-    console.log(this.slider);
+
     // this.slider1 = new Swiper(this.$slider1, this.config);
 
     this.setupEvents();

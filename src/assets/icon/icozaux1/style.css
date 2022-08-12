@@ -15,6 +15,14 @@ Single-colored icons can be modified like so:
 }
 ========================================== */
 
+.icozaux1-like {
+  width: 1.1337890625em;
+}
+
+.icozaux1-reply {
+  width: 1.06640625em;
+}
+
 .icozaux1-menuarrow {
   width: 0.375em;
 }

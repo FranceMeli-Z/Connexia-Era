@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+@import "../../assets/scss/components/base";
+
+$component: componentClass("twitter");
+
+.#{$component} {
+  box-shadow: 1px 1px 10px 0px #0000001A;
+
+  &__head {
+    &--info {
+      & .tw--title {
+        color: #3F3F3F;
+      }
+      & .tw--name {
+        color: #7B7B7B;
+      }
+    }
+  }
+
+  &__content {
+    &--img {
+      border-radius: 8px;
+      border: 1px solid #F0F0F0;
+    }
+    &--date {
+      color: #7B7B7B;
+    }
+  }
+
+  &__footer {
+      & a {
+        color: #3F3F3F
+      }
+  }
+
+
+}

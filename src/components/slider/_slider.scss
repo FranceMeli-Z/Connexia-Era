@@ -8,14 +8,19 @@ $component: componentClass("slider");
   &__wrapper {
     overflow: hidden;
     position: relative;
+    @include media-breakpoint-up(md) {
+      margin: 0 10px;
+    }
   }
   & .swiper-slide {
+    // width: 306px !important;
     &--charts {
       border: 1px solid #F1F1F1;
     }
+
   }
   .swiper-3d {
-    max-width: 850px;
+    max-width: 920px;
   & .swiper-slide-shadow-left {
     background-image: none;
   }
@@ -23,8 +28,9 @@ $component: componentClass("slider");
     background-image: none;
   }
   & .swiper-slide-active {
-    & img {
-      transform: scale(1.45);
+    z-index: 5 !important;
+    & .c-twitter {
+      transform: scale(1.30);
       @include media-breakpoint-down(md) {
         transform: none;
       }
@@ -95,7 +101,40 @@ $component: componentClass("slider");
       content: none;
     }
   }
+
+  & .twitter-swiper-button-prev {
+    color: tokenColor("set1","red1");
+    top: 45%;
+    @include media-breakpoint-down(md) {
+      position: static;
+      padding-right: 50px;
+      width: auto;
+      height: auto;
+     }
+    &::after {
+      content: none;
+    }
+    &:hover {
+      color: #BD2910;
+    }
+  }
+  & .twitter-swiper-button-next {
+    color: tokenColor("set1","red1");
+    top: 45%;
+    @include media-breakpoint-down(md) {
+      position: static;
+      width: auto;
+      height: auto;
+    }
+    &::after {
+      content: none;
+    }
+    &:hover {
+      color: #BD2910;
+    }
+  }
 }
+
 
 .swiper-button-prev, .swiper-button-next,
 .popular-swiper-button-prev, .popular-swiper-button-next,
@@ -105,7 +144,8 @@ $component: componentClass("slider");
 .swiper-button-prev5, .swiper-button-next5,
 .swiper-button-prev6, .swiper-button-next6,
 .swiper-button-prev7, .swiper-button-next7,
-.swiper-button-prev8, .swiper-button-next8
+.swiper-button-prev8, .swiper-button-next8,
+.twitter-swiper-button-prev, .twitter-swiper-button-next
 {
   position: absolute;
   top: 50%;
@@ -123,6 +163,9 @@ $component: componentClass("slider");
     cursor: auto;
     pointer-events: none;
     color: #F1F1F1;
+    &:hover {
+      color: #F1F1F1;
+    }
   }
   &:after {
     font-family: swiper-icons;
@@ -145,10 +188,17 @@ $component: componentClass("slider");
   left: 10px;
   right: auto;
 }
+.twitter-swiper-button-prev, .swiper-rtl .twitter-swiper-button-next {
+  &:after {
+    content: 'prev';
+  }
+  left: 10px;
+  right: auto;
+}
 .popular-swiper-button-next, .swiper-button-next2, .swiper-button-next3, .swiper-button-next4, .swiper-button-next5,
-.swiper-button-next6, .swiper-button-next7, .swiper-button-next8,
+.swiper-button-next6, .swiper-button-next7, .swiper-button-next8, .twitter-swiper-button-next,
 .swiper-rtl .popular-swiper-button-prev, .swiper-rtl .swiper-button-prev2, .swiper-rtl .swiper-button-prev3, .swiper-rtl .swiper-button-prev4,
-.swiper-rtl .swiper-button-prev5, .swiper-rtl .swiper-button-prev6, .swiper-rtl .swiper-button-prev7, .swiper-rtl .swiper-button-prev8 {
+.swiper-rtl .swiper-button-prev5, .swiper-rtl .swiper-button-prev6, .swiper-rtl .swiper-button-prev7, .swiper-rtl .swiper-button-prev8, .swiper-rtl .twitter-swiper-button-prev {
   &:after {
     content: 'next';
   }
@@ -156,8 +206,21 @@ $component: componentClass("slider");
   left: auto;
 }
 
+.twitter-swiper-button-next, .swiper-rtl .twitter-swiper-button-prev {
+  &:after {
+    content: 'prev';
+  }
+  right: 10px;
+  left: auto;
+}
+
+
 .swiper-button-lock {
   display: none;
+}
+
+.print-chart {
+  cursor: pointer;
 }
 
 }

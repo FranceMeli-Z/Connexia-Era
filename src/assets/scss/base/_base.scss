@@ -18,9 +18,6 @@ body {
   @include text-antialiased;
   margin: auto;
   max-width: $zaux-app-max-width;
-  // & .c-menu.open {
-  //   overflow: hidden;
-  // }
 }
 
 // Custom scrollbars

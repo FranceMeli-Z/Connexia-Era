@@ -88,3 +88,17 @@ $zaux-helper-name: "pos";
    right: 93px;
    }
  }
+
+
+ //Custom Nav Paris Congress sticky on scroll
+ .zaux-#{$zaux-helper-name}-nav {
+    position: fixed;
+    max-width: 1440px;
+    width: 100%;
+    z-index: 20;
+    top: 65px;
+  @include media-breakpoint-up(lg) {
+    top: 114px;
+   }
+ }
+

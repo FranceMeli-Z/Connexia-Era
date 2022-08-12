@@ -51,6 +51,11 @@
   border-style: solid;
   border-image: linear-gradient(to right ,#D32E12 0%, #fd1892 25%, #fec837 50%,  #b8fd33 75%, #2c90fc 100%) 1;
 }
+.border-left-gradient {
+  border-left-width: 2px;
+  border-left-style: solid;
+  border-image: linear-gradient(to bottom ,#b827fc 0%, #fd1892 25%, #fec837 50%,  #b8fd33 75%, #2c90fc 100%) 1;
+}
 
 // .tag-list > *:nth-child(-n + 5) {
 //   display: inline-block;

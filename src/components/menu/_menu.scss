@@ -5,7 +5,9 @@
 $component: componentClass("menu");
 
 .zaux-menu-active {
+  @include media-breakpoint-down(lg) {
   overflow: hidden;
+  }
 }
 
 .#{$component} {
@@ -54,7 +56,7 @@ $component: componentClass("menu");
               font-size: 32px;
               right: -21px;
               top:3px;
-              z-index: 1;
+              z-index: 6;
             }
             @include media-breakpoint-up(lg) {
               font-weight: 700;
@@ -86,10 +88,19 @@ $component: componentClass("menu");
               left: 27%;
               display: flex !important;
               width: 73%;
+              z-index: 5;
+              padding-left: 93px;
             }
           }
         }
 
+      }
+    }
+
+    & .#{$component}__initialcards {
+      width: 73%;
+      &.open{
+        display: none !important;
       }
     }
 

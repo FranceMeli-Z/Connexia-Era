@@ -5,6 +5,14 @@
 $component: componentClass("nav2");
 
 .#{$component} {
+    // position: fixed;
+    // max-width: 1440px;
+    // width: 100%;
+    // z-index: 30;
+    // top: 160px;
+    // @include media-breakpoint-down(lg) {
+    //  top: 65px;
+    // }
 
   &--layout1 {
     height: 50px;

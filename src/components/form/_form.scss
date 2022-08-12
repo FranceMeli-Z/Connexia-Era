@@ -6,6 +6,8 @@ $component: componentClass("form");
 
 .#{$component} {
 
+
+
 &--newsletter {
   & .form-group {
     height: 50px;
@@ -26,6 +28,71 @@ $component: componentClass("form");
     height:50px;
   }
 
+}
+
+&__contact {
+  margin: 0 20px;
+  max-width: 747px;
+  & .form-group {
+    padding-bottom: 30px;
+
+    & input:not([type="checkbox"]) {
+    height: 70px;
+    border-radius: none !important;
+    border: 2px solid #F0F0F0;
+    padding-left: 25px;
+    &::placeholder {
+      font-size: rem(16px);
+      color: #3F3F3F;
+      opacity: 50%;
+    }
+    &:focus {
+      border: 3px solid #D32E12;
+      box-shadow: none !important;
+    }
+    }
+
+  & textarea {
+    height: 300px;
+    border-radius: none !important;
+    border: 2px solid #F0F0F0;
+    padding-left: 25px;
+    padding-top: 25px;
+    &::placeholder {
+      font-size: rem(16px);
+      color: #3F3F3F;
+      opacity: 50%;
+    }
+    &:focus {
+      border: 3px solid #D32E12;
+      box-shadow: none !important;
+    }
+  }
+  & .checkbox {
+    padding: 0 100px;
+    @include media-breakpoint-down(md) {
+      padding: 0 25px;
+    }
+    label {
+      font-size: 14px;
+      line-height: 16px;
+    }
+    input {
+      border: 1px solid #3F3F3F;
+      border-radius: 2px;
+      width: 14px;
+      height: 14px;
+      &:focus {
+        box-shadow: none !important;
+      }
+      &:checked {
+      background-color: black;
+      box-shadow: none !important;
+
+      }
+    }
+  }
+  }
 }
 
 &__search {

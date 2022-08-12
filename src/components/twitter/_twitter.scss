@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+@import "../../assets/scss/components/base";
+
+$component: componentClass("twitter");
+
+.#{$component} {
+  border-radius: 11px;
+
+  &__head {
+    &--info {
+      border-bottom-right-radius: 11px;
+      padding: 8px 12px;
+      text-align: left;
+      & i {
+        font-size: 18px;
+      }
+      & .tw--title {
+        font-size: 9px;
+        font-weight: bold;
+        // padding-bottom: 2px;
+      }
+      & .tw--name {
+        font-weight: normal;
+        font-size: 9px;
+      }
+      & p {
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+
+  &__content {
+    padding: 10px 12px;
+    &--txt {
+      font-weight: 500;
+      text-align: left;
+      & p {
+        line-height: 13px !important;
+      }
+    }
+    &--img {
+      margin-bottom: 10px;
+    }
+    &--date {
+      text-align: left;
+      font-size: 7px;
+      letter-spacing: 1px;
+    }
+  }
+
+  &__footer {
+    padding: 8px 0;
+    border-bottom-right-radius: 11px;
+    border-bottom-left-radius: 11px;
+    &--explore {
+      cursor: pointer;
+    }
+    p {
+      margin-bottom: 0;
+    }
+    & i {
+      font-size: 14px;
+    }
+    & span {
+      font-size: 7px;
+    }
+  }
+
+
+}

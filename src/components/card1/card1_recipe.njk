@@ -24,9 +24,9 @@
   {% endfor %}
 
   <div class="{{_className | join(" ")}}">
+
     <div class="{{_innerClassName | join(" ")}}">
-        <div class="{{_contentClassName | join(" ")}}">
-          <div class="p-3">
+        <div class="{{_contentClassName | join(" ")}} p-3">
              {% if obj.img %}
               <div class="{{componentClassName}}__recipe--img pb-3">
                 <a href="#">
@@ -36,7 +36,7 @@
                 </a>
               </div>
             {% endif %}
-              <div class="">
+              <div class="pb-6">
                 <div class="font-zaux2 zaux-theme--light1 pb-2">
                   <h6 class="fw-demi c-typo-fs-8 c-typo-fs-lg-10">
                     <a href="#">{{obj.name|safe}} </a></h6>
@@ -50,7 +50,6 @@
                   <p>{{obj.time|safe}}</p>
                 </div>
               </div>
-            </div>
         </div>
         <!-- .{{componentClassName}}__recipe -->
     </div>

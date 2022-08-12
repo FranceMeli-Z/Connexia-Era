@@ -1,0 +1,106 @@
+{# Sets the layout to be extended #}
+{% extends "layouts/default.njk" %}
+
+{# Imports components #}
+{% import 'components/img/img.njk' as Img %}
+{% import 'components/icon/icon.njk' as Icon %}
+{% import 'components/btn/btnIcon.njk' as BtnIcon %}
+{% import 'components/card1/card1_recipe.njk' as CardRecipe %}
+{% import 'components/slider/slider_cookbook.njk' as SliderCookbook %}
+{% import 'components/card2/card2_news.njk' as Card2 %}
+{% import 'components/boxcontent/boxcontent.njk' as BoxContent %}
+{% import 'components/breadcrumbs/breadcrumbs.njk' as Breadcrumbs %}
+{% import 'components/nav2/nav2.njk' as Nav2 %}
+{% import 'components/form/form.njk' as Form %}
+
+{# Sets page-specific variables #}
+{% set page = {
+  "data": page_paris-home,
+  "title": "Cookbook Recipe",
+  "isHome": false
+} %}
+
+{% block head_css %}
+  <link rel="stylesheet" href="assets/css/general.bundle.css">
+{% endblock %}
+
+{% block content %}
+
+  <main>
+     <!-- First box -->
+      <div class="">
+        <div class="row m-0">
+          <div class="zaux-bg-set1-grey p-box rounded-bottom-100  col-12 col-lg-8 mih-boxtitle pt-3 pt-lg-6">
+            <div class="pb-2 pb-lg-4">
+              {{ Breadcrumbs.content() }}
+            </div>
+            <div class="font-zaux2 zaux-theme--light1 pb-2 pb-lg-4">
+              <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Contact us</h6>
+            </div>
+          </div>
+          <div class="col-lg-4 d-none d-lg-block">
+          </div>
+        </div>
+      </div>
+      <!-- end First box -->
+
+
+      <div class="pb-7 pb-lg-11 p-box pt-6 pt-lg-8">
+        <div class="mb-6 mb-lg-10">
+        <div class="row gx-3">
+          <div class="col-12 col-lg-6 pb-lg-0 pb-6">
+              <div class="border-gradient h-100 px-8 px-lg-11">
+                <div class="zaux-theme--light1 pt-7 pb-4">
+                  <div class="font-zaux2 pb-4">
+                    <h6 class="fw-demi c-typo-fs-8 c-typo-fs-lg-10">ERA Operative Headquarters</h6>
+                  </div>
+                  <div class="c-typo-style1-4 c-typo-style1-lg-8 pb-6">
+                    <ul class="list-unstyled ps-0">
+                      <li>Strada dei Mercati 16/A</li>
+                      <li>I-43126 Parma – Italy</li>
+                      <li>Phone: +39 0521 989078</li>
+                      <li>Fax: +39 0521 959242</li>
+                      <li>E-mail: secretariat@era-online.org</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+          </div>
+           <div class="col-12 col-lg-6 pb-lg-0 pb-6">
+              <div class="border-gradient h-100 px-8 px-lg-11">
+                <div class="zaux-theme--light1 pt-7 pb-4">
+                  <div class="font-zaux2 pb-4">
+                    <h6 class="fw-demi c-typo-fs-8 c-typo-fs-lg-10">ERA Registered Office</h6>
+                  </div>
+                  <div class="c-typo-style1-4 c-typo-style1-lg-8 pb-6">
+                    <ul class="list-unstyled ps-0">
+                      <li>c/o PKF Littlejohn, 15 Westferry Circus,</li>
+                      <li>Canary Wharf</li>
+                      <li>London E14 4HD – United Kingdom</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+        </div>
+        <!-- end row -->
+      </div>
+    </div>
+
+        <div class="mb-16">
+          {{
+            Form.content({
+            "contact": "y",
+            "className": ["d-flex","justify-content-center"]
+            })
+        }}
+        </div>
+
+  </main>
+
+{% endblock %}
+
+{% block foot_js %}
+  <script defer src="assets/js/general.bundle.js"></script>
+{% endblock %}

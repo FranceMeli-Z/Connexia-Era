@@ -35,15 +35,19 @@
         "centeredSlides": true,
         "grabCursor": true,
         "parallax": true,
+        "navigation": {
+          "nextEl": ".twitter-swiper-button-next",
+          "prevEl": ".twitter-swiper-button-prev"
+        },
         "breakpoints": {
           "768": {
-            "slidesPerView": 2,
+            "slidesPerView": 3,
             "effect": "coverflow",
             "coverflowEffect": {
             "rotate": 0,
-            "stretch": 135,
-            "depth": 0,
-            "modifier": 1,
+            "stretch": 10,
+            "depth": 10,
+            "modifier": 0,
             "slideShadows" : false
             }
           }

@@ -3,6 +3,7 @@
 {% import 'components/nav/nav.njk' as Nav %}
 {% import 'components/icon/icon.njk' as Icon %}
 {% import 'components/card2/card2_news.njk' as Card2 %}
+{% import 'components/card1/card1_recipe.njk' as CardRecipe %}
 
 {% macro content(obj) %}
 
@@ -12,7 +13,7 @@
     <div class="{{componentClassName}}__inner">
 
        <div class="{{componentClassName}}__btn-toggle hamburger open d-lg-none zaux-bg-set1-darkgrey2 p-box py-4">
-           <a href="#" class="">
+           <a class="">
           {{
             Icon.content({
               "className": ["zaux-color-default-white"],
@@ -22,12 +23,12 @@
           }}
         </a>
       </div>
-      <div class="{{componentClassName}}__content font-zaux2 position-relative">
+      <div class="{{componentClassName}}__content d-lg-flex font-zaux2 position-relative">
         <nav class="{{componentClassName}}__content__nav mb-6 mb-lg-0 pt-lg-8 zaux-bg-set1-darkgrey2 pb-lg-12">
           <ul>
             {% for item in component_menu.props.panels[0].nav.items %}
               {% if item.childId == "2" %}
-                <li class="{{componentClassName}}__content__navlist open">
+                <li class="{{componentClassName}}__content__navlist closed">
               {% else %}
                 <li class="{{componentClassName}}__content__navlist closed">
                  {% endif %}
@@ -44,7 +45,7 @@
                     })
                   }}
                   </div>
-                  <div class="{{componentClassName}}__content__navlist--show d-none h-100 py-0 py-lg-8">
+                  <div class="{{componentClassName}}__content__navlist--show zaux-bg-default-white d-none h-100 py-0 py-lg-9">
                     <div class="w-lg-50">
                     {% for panel in component_menu.props.panels %}
                       {% if panel.id !== "1" %}
@@ -54,22 +55,91 @@
                       {% endif %}
                     {% endfor %}
                     </div>
-                    <div class="d-none d-lg-block w-lg-50 pt-4">
-                       {{Card2.content(
-                      {
-                        "className": ["pb-4","maw-f270"],
-                        "innerClassName": ["h-100"],
-                        "contentClassName": ["d-flex", "justify-content-between", "flex-column","h-100","zaux-color-set1-darkgrey2"],
-                        "content": {
-                          "category": "",
-                          "title": "Discoveries about CKD-MBD in Europe and Middle East countries",
-                          "date": "",
-                          "author": ""
-                        }
-                      }
-                    )}}
-
-                     <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">Discover the congress</a>
+                    <div class="d-none d-lg-block w-lg-50">
+                      {% for panel in component_menu.props.panels %}
+                        {% if panel.id !== "1" %}
+                           {% if panel.id == item.childId %}
+                            {% if panel.contentRel == "t1" %}
+                              {{Card2.content(
+                                {
+                                  "className": ["pb-4","maw-f270","m-auto"],
+                                  "innerClassName": [],
+                                  "contentClassName": ["d-flex", "justify-content-between", "flex-column","h-100","zaux-color-set1-darkgrey2"],
+                                  "content": {
+                                    "category": "",
+                                    "title": "Discoveries about CKD-MBD in Europe and Middle East countries",
+                                    "date": "",
+                                    "author": "",
+                                    "cta": "Discover the congress"
+                                  }
+                                }
+                              )}}
+                          {% elif panel.contentRel == "t2" %}
+                            {{Card2.content(
+                                {
+                                  "className": ["pb-4","maw-f270","m-auto"],
+                                  "innerClassName": [],
+                                  "contentClassName": ["d-flex", "justify-content-between", "flex-column","h-100","zaux-color-set1-darkgrey2"],
+                                  "content": {
+                                    "category": "",
+                                    "title": "Discoveries about CKD-MBD in Europe and Middle East countries",
+                                    "date": "",
+                                    "txt": "Being a Member of ERA means being part of one of the most important and prestigious international Medical Associations",
+                                    "author": "",
+                                    "cta": "Discover the congress"
+                                  }
+                                }
+                              )}}
+                          {% elif panel.contentRel == "t3" %}
+                            {{Card2.content(
+                          {
+                            "className": ["maw-f270","m-auto"],
+                            "innerClassName": ["h-100"],
+                            "contentClassName": ["d-flex", "justify-content-between", "flex-column","h-100","mih-215"],
+                            "content": {
+                              "category": "Article",
+                              "title": "Differentiating the causes of adynamic bone in advanced...",
+                              "date": "March 18, 2022",
+                              "author": "CKD-MBD working group"
+                            }
+                          }
+                        )}}
+                        {% elif panel.contentRel == "t4" %}
+                            {{Card2.content(
+                          {
+                            "className": ["maw-f550","m-auto"],
+                            "innerClassName": ["h-100"],
+                            "contentClassName": ["d-flex", "justify-content-between", "flex-column","h-100","mih-215"],
+                            "content": {
+                              "onlytitle": "The brand new tool of ERA for clinicians who need all the instruments to give their patients best care."
+                            }
+                          }
+                        )}}
+                         {% elif panel.contentRel == "t5" %}
+                         {{CardRecipe.content(
+                            {
+                              "className": ["maw-f400","m-auto"],
+                              "variations": [],
+                              "innerClassName": ["border-left-gradient h-100"],
+                              "contentClassName": ["h-100","position-relative","mih-recipe","pt-0"],
+                                                "img": {
+                                                  "isLazy": true,
+                                                  "src": "media/Recipe.png",
+                                                  "src2x": "media/Recipe@2x.png",
+                                                  "width": 368,
+                                                  "height": 207,
+                                                  "alt": "Cover alternative text",
+                                                  "className": ["img-fluid","w-100","pt-0"]
+                                                },
+                                                "name": "Vegetable croquettes",
+                                                "nation": "Italy",
+                                                "time": "Easy, 40 minutes"
+                                              }
+                          )}}
+                        {% endif %}
+                        {% endif %}
+                     {% endif %}
+                    {% endfor %}
                     </div>
                   </div>
                 </div>
@@ -77,6 +147,43 @@
         {% endfor %}
           </ul>
           </nav>
+        <div class="{{componentClassName}}__initialcards d-none d-lg-flex p-box pt-9 pb-7">
+          {# <div class="row"> #}
+            <div class="w-lg-50">
+               {{Card2.content(
+                                {
+                                  "className": ["pb-4","maw-f270","m-auto"],
+                                  "innerClassName": ["h-100"],
+                                  "contentClassName": ["d-flex", "justify-content-between", "flex-column","h-100","zaux-color-set1-darkgrey2"],
+                                  "content": {
+                                    "category": "",
+                                    "title": "Discoveries about CKD-MBD in Europe and Middle East countries",
+                                    "date": "",
+                                    "author": "",
+                                    "cta": "Discover the congress"
+                                  }
+                                }
+                              )}}
+
+            </div>
+             <div class="w-lg-50">
+               {{Card2.content(
+                                {
+                                  "className": ["pb-4","maw-f270","m-auto"],
+                                  "innerClassName": ["h-100"],
+                                  "contentClassName": ["d-flex", "justify-content-between", "flex-column","h-100","zaux-color-set1-darkgrey2"],
+                                  "content": {
+                                    "category": "",
+                                    "title": "Discoveries about CKD-MBD in Europe and Middle East countries",
+                                    "date": "",
+                                    "author": "",
+                                    "cta": "Discover the congress"
+                                  }
+                                }
+                              )}}
+            </div>
+          </div>
+        </div>
         <div class="{{componentClassName}}__foot d-block d-lg-none p-box pb-7">
           <div class="{{componentClassName}}__foot--search">
             <div class="pb-4">

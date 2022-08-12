@@ -40,7 +40,8 @@
               "labelClassName": "zaux-show-on-sidebar-active",
               "href": "#",
               "targetPanelId": "5",
-              "childId": "5"
+              "childId": "5",
+              "contentRel": "t4"
             },
             {
               "className": "",
@@ -49,7 +50,8 @@
               "labelClassName": "zaux-show-on-sidebar-active",
               "href": "#",
               "targetPanelId": "6",
-              "childId": "6"
+              "childId": "6",
+              "contentRel": "t5"
             },
             {
               "className": "",
@@ -58,7 +60,8 @@
               "labelClassName": "zaux-show-on-sidebar-active",
               "href": "#",
               "targetPanelId": "7",
-              "childId": "7"
+              "childId": "7",
+              "contentRel": "t6"
             },
             {
               "className": "",
@@ -67,7 +70,8 @@
               "labelClassName": "zaux-show-on-sidebar-active",
               "href": "#",
               "targetPanelId": "8",
-              "childId": "8"
+              "childId": "8",
+              "contentRel": "t7"
             }
           ]
         }
@@ -76,6 +80,7 @@
         "level": "2",
         "id": "2",
         "breadcrumbTitle": "About us",
+        "contentRel": "t1",
         "nav": {
           "items": [
             {
@@ -126,6 +131,7 @@
         {
               "level": "3",
               "id": "3",
+              "contentRel": "t2",
               "breadcrumbTitle": "Membership",
               "nav": {
                 "items": [
@@ -170,6 +176,7 @@
                   {
                     "level": "4",
                     "id": "4",
+                    "contentRel": "t3",
                     "breadcrumbTitle": "Events",
                     "nav": {
                       "items": [
@@ -228,6 +235,7 @@
       {
         "level": "5",
         "id": "5",
+        "contentRel": "t4",
         "breadcrumbTitle": "Research & Education",
         "nav": {
           "items": [
@@ -305,6 +313,7 @@
       {
         "level": "6",
         "id": "6",
+        "contentRel": "t1",
         "breadcrumbTitle": "Papers & Publications",
         "nav": {
           "items": [
@@ -375,6 +384,7 @@
         {
           "level": "7",
           "id": "7",
+          "contentRel": "t2",
           "breadcrumbTitle": "Clinical Guidance",
           "nav": {
             "items": [
@@ -426,6 +436,7 @@
           {
             "level": "8",
             "id": "8",
+            "contentRel": "t5",
             "breadcrumbTitle": "For Patients",
             "nav": {
               "items": [

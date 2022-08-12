@@ -31,10 +31,22 @@
               <a>{{obj.content.category}}</a>
             </div>
             {% endif %}
+            {% if obj.content.onlytitle %}
+            <div class="{{componentClassName}}__content--title font-zaux2 zaux-theme--light1 pb-4">
+              <h6 class="fw-demi c-typo-fs-16"><a href="#">{{obj.content.onlytitle|safe}} </a></h6>
+            </div>
+            {% else %}
             <div class="{{componentClassName}}__content--title font-zaux2 zaux-theme--light1 pb-4">
               <h6 class="fw-demi c-typo-fs-10"><a href="#">{{obj.content.title|safe}} </a></h6>
             </div>
+            {% endif %}
           </div>
+          {% if obj.content.txt %}
+           <div class="{{componentClassName}}__content--txt c-typo-style1-4 zaux-theme--light1 pb-4">
+              <p>{{obj.content.txt|safe}}</h6>
+           </div>
+          {% endif %}
+
           <div>
             {% if obj.content.date %}
              <div class="{{componentClassName}}__content--date font-zaux2 fst-italic zaux-color-set1-grey1 pb-0 pb-md-2">
@@ -47,9 +59,13 @@
             </div>
             {% endif %}
           </div>
+           {% if obj.content.cta %}
+            <div>
+              <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">{{obj.content.cta|safe}}</a>
+            </div>
+            {% endif %}
         </div>
-        <!-- .{{componentClassName}}__cover -->
-
+        <!-- .{{componentClassName}}__content -->
     </div>
     <!-- .{{componentClassName}}__inner -->
   </article>

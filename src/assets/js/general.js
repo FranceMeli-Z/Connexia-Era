@@ -20,6 +20,8 @@ Component.register("HeroVideo", HeroVideo);
 init();
 
 document.addEventListener('DOMContentLoaded', () => {
+
+
   var viewportWidth = $(window).width();
   if (viewportWidth < 992){
     $(".c-menu__content__navlist").removeClass("open");
@@ -52,10 +54,12 @@ $("ul.option-list li").on("click", function() {
 
   //Menu secondari Congresso Parigi
   $(".c-nav3__item").click(function() {
+    event.preventDefault();
     $(".c-nav3__item").removeClass("is-active");
     $(this).addClass("is-active");
   });
   $(".c-nav2__item").click(function() {
+    event.preventDefault();
     $(".c-nav2__item").removeClass("is-active");
     $(this).addClass("is-active");
   });
@@ -63,21 +67,49 @@ $("ul.option-list li").on("click", function() {
 
 //Apertura- chiusura Menu principale
 $(".c-menu__btn-toggle").click(function() {
+  event.preventDefault();
   $(".c-menu").toggleClass("closed");
   $(".c-menu").toggleClass("open");
 });
 
-
 //Accordion interno al menu principale
+// var viewportWidth = $(window).width();
+// if (viewportWidth < 992 ) {
+//   $(".c-menu__content__navlist--click").click(function() {
+//   event.preventDefault();
+//     $(this).parents(".c-menu__content__navlist").toggleClass("closed");
+//     $(this).parents(".c-menu__content__navlist").toggleClass("open");
+//   })
+// }
+//   else {
+//     $(".c-menu__content__navlist--click").mouseover(function() {
+//       $(".c-menu__content__navlist").removeClass("open");
+//       $(this).parents(".c-menu__content__navlist").addClass("open");
+//     });
+//     $(".c-menu__content__navlist--click").mouseout(function() {
+//       if ( $(this).parents(".c-menu__content__navlist").hasClass("open")) {
+//         $(this).parents(".c-menu__content__navlist").removeClass("open");
+//     }
+//   });
+// };
+
 $(".c-menu__content__navlist--click").click(function() {
+  event.preventDefault();
   var viewportWidth = $(window).width();
   if (viewportWidth < 992 ) {
     $(this).parents(".c-menu__content__navlist").toggleClass("closed");
     $(this).parents(".c-menu__content__navlist").toggleClass("open");
   }
   else {
-  $(".c-menu__content__navlist").removeClass("open");
-  $(this).parents(".c-menu__content__navlist").addClass("open");
+    if ( $(this).parents(".c-menu__content__navlist").hasClass("open")) {
+        $(this).parents(".c-menu__content__navlist").removeClass("open");
+    }
+    else{
+    $(".c-menu__content__navlist").removeClass("open");
+    $(this).parents(".c-menu__content__navlist").toggleClass("closed");
+    $(this).parents(".c-menu__content__navlist").toggleClass("open");
+    }
+  // $(this).parents(".c-menu__content__navlist").addClass("open");
   }
 });
 
@@ -181,15 +213,48 @@ let dialogHeight = 350;
         $(".c-header__item1").addClass('zaux-pos-header1');
         $(".c-header__item2").addClass('zaux-pos-header2');
         $(".c-header__item3").addClass('zaux-pos-header3');
+        if ( scrollTop > 290) {
+          $(".c-nav2").addClass('zaux-pos-nav');
+        }
+        else {
+          $(".c-nav2").removeClass('zaux-pos-nav');
+        }
       }
       else {
         $(".c-header__inner").height('160px');
         $(".c-header__item1").removeClass('zaux-pos-header1');
         $(".c-header__item2").removeClass('zaux-pos-header2');
         $(".c-header__item3").removeClass('zaux-pos-header3');
+        $(".c-nav2").removeClass('zaux-pos-nav');
       }
   }
+  else {
+    var scrollTop = $(window).scrollTop();
+    if ( scrollTop > 354) {
+       $(".c-nav2").addClass('zaux-pos-nav');
+  }
+  else {
+    $(".c-nav2").removeClass('zaux-pos-nav');
+  }
+}
+
   });
+
+
+$(".print-chart").click(function(){
+    var img = $(".swiper-slide-active").html();
+    var left = (screen.width - 600) / 2;
+    var top = (screen.height - 480) / 4;
+    var a = window.open('','Print_Chart','width=640, height=480, top=' + top + ', left=' + left);
+    a.document.open("text/html");
+    a.document.write("<html><head></head><body>");
+    a.document.write("<div>"+img+"</div>");
+    a.document.write("</body></html>");
+    a.document.close();
+    a.print();
+})
+
+
 
 
 

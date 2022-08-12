@@ -9,7 +9,9 @@
 {% import 'components/card2/card2_news.njk' as Card2 %}
 {% import 'components/boxcontent/boxcontent.njk' as BoxContent %}
 {% import 'components/form/form.njk' as Form %}
+{% import 'components/twitter/twitter.njk' as Twitter %}
 {% import 'components/slider/slider_news.njk' as Slider %}
+
 
 {# Sets page-specific variables #}
 {% set page = {
@@ -63,7 +65,7 @@
 
         <!-- start row -->
         <div class="row gx-3">
-           {% set total = 6 %}
+           {% set total = 5 %}
            {% set _htmlCardContent %}
           <div class="card1__head zaux-theme--dark1">
             <div class="card1__head--title font-zaux2 pb-2">
@@ -74,6 +76,16 @@
             </div>
           </div>
           {% endset %}
+          {% set _htmlCardContent2 %}
+          <div class="card1__head zaux-theme--dark1">
+            <div class="card1__head--title font-zaux2 pb-2">
+              <h6 class="fw-bold c-typo-fs-8 c-typo-fs-lg-10">59th ERA Congress: Paris & Virtual</h6>
+            </div>
+            <div class="card1__head--abstract c-typo-style1-6 c-typo-style1-lg-8">
+              <p>The ERA 2022 Congress in Paris will take place from May 19 to 22, 2022 as a hybrid event, thus being both live and virtual, with speakers, chairs and delegates attending live and remotely</p>
+            </div>
+          </div>
+          {% endset %}
            {# "c-ratio--square", "c-ratio--md-none" #}
           {% for i in range(0, total) %}
           <div class="col-12 col-md-6 col-lg-4">
@@ -81,7 +93,7 @@
               {
                 "className": ["h-100", "pb-6","c-card1--theme--light"],
                 "variations": ["lg-size1"],
-                "innerClassName": [],
+                "innerClassName": ["h-100"],
                 "contentClassName": ["d-flex", "justify-content-between", "flex-column", "p-6"],
                 "content": _htmlCardContent,
                 "ctaValue": "apply now",
@@ -103,6 +115,32 @@
             )}}
           </div>
           {% endfor %}
+           <div class="col-12 col-md-6 col-lg-4">
+            {{CardHighlight.content(
+              {
+                "className": ["h-100", "pb-6","c-card1--theme--light"],
+                "variations": ["lg-size1"],
+                "innerClassName": ["h-100"],
+                "contentClassName": ["d-flex", "justify-content-between", "flex-column", "p-6"],
+                "content": _htmlCardContent2,
+                "ctaValue": "apply now",
+                "img": {
+                "isShaped": true,
+                "className": ["rounded-2", "overflow-hidden"],
+                "variations": ["style1", decoVariation],
+                "img": {
+                "isLazy": true,
+                "src": "media/backCard1.png",
+                "src2x": "media/backCard1.png",
+                "width": 396,
+                "height": 380,
+                "alt": "Cover alternative text",
+                "className": ["zaux-fit-cover-center-center", "w-100"]
+                }
+                }
+              }
+            )}}
+          </div>
         </div>
       <!-- end row -->
 
@@ -114,7 +152,7 @@
       <div class="font-zaux2 py-6 zaux-theme--light2 text-center">
         <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16 mb-3">Latest Tweets</h6>
       </div>
-      <div class="pb-9 m-auto">
+      <div class="pb-6 pb-md-9 m-auto position-relative p-6">
         {# <div class="d-flex align-items-center justify-content-center position-relative"> #}
 
           <div class="c-slider h-100"  data-config='{{component_slider.demo.sliderTwitter.config | dump | safe}}' data-js-component="Slider">
@@ -125,62 +163,60 @@
                   <div class="swiper-slide ">
                     {# d-none d-lg-block position-absolute zaux-pos-twitter1
                     w:274 h:287#}
-                    {{
-                      Img.content({
-                      "isLazy": false,
-                      "src": "media/ProvaTwitter.png",
-                      "src2x": "media/ProvaTwitter.png",
-                      "width": 274,
-                      "height": 287,
-                      "className": ["img-fluid"],
-                      "title": "title",
-                      "alt": "alt",
-                      "wrapperElement": ["figure"],
-                      "wrapperClassName": [""]
-                      })
-                    }}
+                     {{Twitter.content(
+                      {
+                        "className": ["h-100","c-card1--theme--light","zaux-bg-default-white"],
+                        "innerClassName": [],
+                        "contentClassName": []
+                      }
+                    )}}
                   </div>
                   <div class="swiper-slide">
                     {# zaux-zi-1 position relative
                     w:396 h:415 #}
-                    {{
-                          Img.content({
-                          "isLazy": false,
-                          "src": "media/ProvaTwitter.png",
-                          "src2x": "media/ProvaTwitter.png",
-                          "width": 274,
-                          "height": 287,
-                          "className": ["img-fluid"],
-                          "title": "title",
-                          "alt": "alt",
-                          "wrapperElement": ["figure"],
-                          "wrapperClassName": ""
-                          })
-                        }}
+                    {{Twitter.content(
+                      {
+                        "className": ["h-100","c-card1--theme--light","zaux-bg-default-white"],
+                        "innerClassName": [],
+                        "contentClassName": []
+                      }
+                    )}}
                   </div>
                   <div class="swiper-slide">
                     {# d-none d-lg-block position-absolute zaux-pos-twitter2 #}
-                      {{
-                            Img.content({
-                            "isLazy": false,
-                            "src": "media/ProvaTwitter.png",
-                            "src2x": "media/ProvaTwitter.png",
-                            "width": 274,
-                            "height": 287,
-                            "className": ["img-fluid"],
-                            "title": "title",
-                            "alt": "alt",
-                            "wrapperElement": ["figure"],
-                            "wrapperClassName": [""]
-                            })
-                          }}
+                       {{Twitter.content(
+                      {
+                        "className": ["h-100","c-card1--theme--light","zaux-bg-default-white"],
+                        "innerClassName": [],
+                        "contentClassName": []
+                      }
+                    )}}
                   </div>
                 </div>
               </div>
             </div>
+           <div class="swiper-navigation">
+        <div class="twitter-swiper-button-prev"> {{
+                    Icon.content({
+                      "className": "",
+                      "iconName": "icozaux1-arrowL",
+                      "iconSvgUrl": app.fonts.icozaux1.url
+                      })
+                    }}
+        </div>
+        <div class="twitter-swiper-button-next">
+          {{
+              Icon.content({
+                "className": "",
+                "iconName": "icozaux1-arrowR",
+                "iconSvgUrl": app.fonts.icozaux1.url
+              })
+          }}
+        </div>
+      </div>
+
           </div>
 
-        {# </div> #}
         </div>
     </div>
   </div>
