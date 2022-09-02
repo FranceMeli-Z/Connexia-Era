@@ -22,6 +22,7 @@ $component: componentClass("card1");
     position: relative;
   }
   &__content {
+    // Rivedere il position absolute -> Valutare il background image ERA
     position: absolute;
     top: 0;
     left: 0;
