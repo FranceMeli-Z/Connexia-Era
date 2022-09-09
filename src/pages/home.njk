@@ -6,6 +6,7 @@
 {% import 'components/icon/icon.njk' as Icon %}
 {% import 'components/btn/btnIcon.njk' as BtnIcon %}
 {% import 'components/card1/card1_highlight.njk' as CardHighlight %}
+{% import 'components/card1/card1_highlightbox.njk' as CardHighlightBox %}
 {% import 'components/card2/card2_news.njk' as Card2 %}
 {% import 'components/boxcontent/boxcontent.njk' as BoxContent %}
 {% import 'components/form/form.njk' as Form %}
@@ -64,7 +65,7 @@
         </div>
 
       <!-- start row -->
-        <div class="row gx-3">
+        <div class="row gx-3 h-100">
            {% set total = 5 %}
            {% set _htmlCardContent %}
           <div class="card1__head zaux-theme--dark1">
@@ -89,17 +90,16 @@
            {# "c-ratio--square", "c-ratio--md-none" #}
           {% for i in range(0, total) %}
           <div class="col-12 col-md-6 col-lg-4">
-            {{CardHighlight.content(
+            {# {{CardHighlight.content(
               {
                 "className": ["h-100", "pb-6","c-card1--theme--light"],
-                "variations": ["lg-size1"],
-                "innerClassName": ["h-100"],
+                "innerClassName": ["h-100","mih-highlight"],
                 "contentClassName": ["d-flex", "justify-content-between", "flex-column", "p-6"],
                 "content": _htmlCardContent,
                 "ctaValue": "apply now",
                 "img": {
                 "isShaped": true,
-                "className": ["rounded-2", "overflow-hidden"],
+                "className": ["rounded-2", "overflow-hidden","h-100"],
                 "variations": ["style1", decoVariation],
                 "img": {
                 "isLazy": true,
@@ -108,38 +108,66 @@
                 "width": 396,
                 "height": 380,
                 "alt": "Cover alternative text",
-                "className": ["zaux-fit-cover-center-center", "w-100"]
+                "wrapperClassName": ["h-100"],
+                "className": ["zaux-fit-cover-center-center", "w-100","h-100"]
                 }
                 }
               }
-            )}}
+            )}} #}
+             {{CardHighlightBox.content(
+                    {
+                      "className": ["h-100", "pb-6","c-card1--theme--light"],
+                      "innerClassName": ["h-100"],
+                      "contentClassName": ["d-flex", "justify-content-between", "flex-column", "p-6","h-100"],
+                      "imgurl": "media/backCard1.png",
+                      "ctaValue": "apply now",
+                      "content": {
+                       "title": "59th ERA Congress: Paris & Virtual",
+                       "abstract": "The ERA 2022 Congress in Paris will take place from May 19 to 22, 2022 as a hybrid event, thus being both live and virtual, with speakers, chairs and delegates attending live and remotely"
+                      }
+                    }
+                  )}}
           </div>
           {% endfor %}
            <div class="col-12 col-md-6 col-lg-4">
-            {{CardHighlight.content(
+            {# {{CardHighlight.content(
               {
                 "className": ["h-100", "pb-6","c-card1--theme--light"],
-                "variations": ["lg-size1"],
-                "innerClassName": ["h-100"],
-                "contentClassName": ["d-flex", "justify-content-between", "flex-column", "p-6"],
+                "innerClassName": ["h-100","mih-highlight"],
+                "contentClassName": ["d-flex", "justify-content-between", "flex-column", "p-6","h-100"],
                 "content": _htmlCardContent2,
                 "ctaValue": "apply now",
                 "img": {
                 "isShaped": true,
-                "className": ["rounded-2", "overflow-hidden"],
+                "className": ["rounded-2", "overflow-hidden","h-100"],
                 "variations": ["style1", decoVariation],
                 "img": {
                 "isLazy": true,
-                "src": "media/backCard1.png",
-                "src2x": "media/backCard1.png",
+                "src": "media/HeroBen.png",
+                "src2x": "media/HeroBen.png",
                 "width": 396,
                 "height": 380,
                 "alt": "Cover alternative text",
-                "className": ["zaux-fit-cover-center-center", "w-100"]
+                "wrapperClassName": ["h-100"],
+                "className": ["zaux-fit-cover-center-center", "w-100","h-100"]
                 }
                 }
               }
-            )}}
+            )}} #}
+             {{CardHighlightBox.content(
+                    {
+                      "className": ["h-100", "pb-6","c-card1--theme--light"],
+                      "innerClassName": ["h-100"],
+                      "contentClassName": ["d-flex", "justify-content-between", "flex-column", "p-6","h-100"],
+                      "content": _htmlCardContent2,
+                      "imgurl": "media/HeroBen.png",
+                      "ctaValue": "apply now",
+                       "content": {
+                       "title": "Open Call: NDT Editor in Chief",
+                       "abstract": "Submit your application by e-mail by January 31, 2022"
+                      }
+                    }
+                  )}}
           </div>
         </div>
       <!-- end row -->

@@ -6,6 +6,7 @@
 {% import 'components/icon/icon.njk' as Icon %}
 {% import 'components/btn/btnIcon.njk' as BtnIcon %}
 {% import 'components/card1/card1_highlight.njk' as CardHighlight %}
+{% import 'components/card1/card1_highlightbox.njk' as CardHighlightBox %}
 {% import 'components/card2/card2_news.njk' as Card2 %}
 {% import 'components/herovideo/herovideo.njk' as HeroVideo %}
 {% import 'components/breadcrumbs/breadcrumbs.njk' as Breadcrumbs %}
@@ -168,10 +169,9 @@
           </div>
           {% endset %}
           <div class="col-12 col-lg-5">
-          {{CardHighlight.content(
+          {# {{CardHighlight.content(
               {
                 "className": ["h-100","c-card1--theme--light"],
-                "variations": ["lg-size1"],
                 "innerClassName": [],
                 "contentClassName": ["d-flex", "justify-content-between", "flex-column", "p-6"],
                 "content": _htmlCardContent,
@@ -192,6 +192,20 @@
                 "className": ["zaux-fit-cover-center-center", "w-100"]
                 }
                 }
+              }
+            )}} #}
+            {{CardHighlightBox.content(
+              {
+                "className": ["h-100","c-card1--theme--light"],
+                "innerClassName": ["h-100"],
+                "contentClassName": ["d-flex", "justify-content-between", "flex-column", "p-6", "h-100"],
+                "content": {
+                  "title": "Open Call: NDT Editor in Chief"
+                } ,
+                "ctaAbsolute": "y",
+                "imgurl": "media/backCard1.png",
+                "ctaClassName": ["c-card1__content__cta--absolute"],
+                "ctaValue": "go to Diabesity"
               }
             )}}
           </div>

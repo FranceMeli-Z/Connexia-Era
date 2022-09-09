@@ -1,0 +1,31 @@
+{# Sets the layout to be extended #}
+{% extends "layouts/default.njk" %}
+
+{% block head_css %}
+  <link rel="stylesheet" href="assets/css/general.bundle.css">
+{% endblock %}
+
+{% block content %}
+
+<main>
+
+   <!-- First box -->
+      <div class="">
+          <div class="zaux-bg-set1-grey p-box rounded-bottom-100 mih-boxtitle pt-6">
+            <div class="font-zaux2 zaux-theme--light1 pb-2 pb-lg-4">
+              <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Pagina non trovata: Errore 404</h6>
+            </div>
+            <div class="maw-f768px c-typo-style1-3 c-typo-style1-lg-4">
+              <p>La pagina che stavi cercando non esiste, oppure è stata spostata.</p>
+              <p><a href="home.html">Premi qui</a> per tornare alla pagina principale.</p>
+          </div>
+          </div>
+        </div>
+      <!-- end First box -->
+</main>
+
+{% endblock %}
+
+{% block foot_js %}
+  <script defer src="assets/js/general.bundle.js"></script>
+{% endblock %}

@@ -12,13 +12,14 @@ $zaux-header-lg-h: 160px !default;
   max-width: 1440px;
   width: 100%;
   background-color: white;
-  z-index: $zaux-header-zindex;
+  z-index: 20;
 
   &__inner {
     height: $zaux-header-h;
     border-bottom-width: 4px;
     border-bottom-style: solid;
     border-image: linear-gradient(to right,#b827fc 0%, #fd1892 25%, #fec837 50%,  #b8fd33 75%, #2c90fc 100%) 1;
+    transition: height 0.5s;
     // background-color: #FFFFFF;
 
     & .c-menu__btn-toggle.is-active {

@@ -122,12 +122,11 @@ $(window).resize(function() {
    else {
        $(".c-menu__content__navlist:first-child").addClass("open");
        var scrollTop = $(window).scrollTop();
-       console.log(scrollTop);
        if ( scrollTop > 50) {
         $(".c-header__inner").height('110px');
        }
        else{
-        $(".c-header__inner").height('160px');
+        $(".c-header__inner").height('154px');
         }
      }
  });

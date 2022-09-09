@@ -10,6 +10,7 @@
 {% import 'components/card1/card1_overview.njk' as CardOverview %}
 {% import 'components/card2/card2_related.njk' as CardRelated %}
 {% import 'components/card1/card1_profile.njk' as CardProfile %}
+{% import 'components/modale/modale_profile.njk' as ModalProfile %}
 {% import 'components/boxcontent/boxcontent.njk' as BoxContent %}
 {% import 'components/breadcrumbs/breadcrumbs.njk' as Breadcrumbs %}
 
@@ -534,7 +535,6 @@
                     {{CardProfile.content(
                       {
                       "className": [],
-                      "variations": [],
                       "innerClassName": ["zaux-bg-set1-grey","py-8","shadow-2"],
                       "contentClassName": ["text-center"],
                       "img": {
@@ -557,6 +557,7 @@
         </div>
         <!-- end row-* -->
       </div>
+      {{ ModalProfile.content() }}
     </div>
     <!-- End Card Profile -->
 

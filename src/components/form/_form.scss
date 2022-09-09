@@ -33,6 +33,11 @@ $component: componentClass("form");
 &__contact {
   margin: 0 20px;
   max-width: 747px;
+
+  & input[type="submit"]{
+    border: none;
+  }
+
   & .form-group {
     padding-bottom: 30px;
 
@@ -45,11 +50,27 @@ $component: componentClass("form");
       font-size: rem(16px);
       color: #3F3F3F;
       opacity: 50%;
+
     }
     &:focus {
       border: 3px solid #D32E12;
       box-shadow: none !important;
     }
+    }
+    select {
+      color: #3F3F3F80;
+      border-color: #F0F0F0;
+      height: 70px;
+      border-radius: none !important;
+      border: 2px solid #F0F0F0FF;
+      padding-left: 25px;
+      &:focus {
+        border: 3px solid #D32E12;
+        box-shadow: none !important;
+      }
+      & option {
+        color: #3F3F3F;
+      }
     }
 
   & textarea {
@@ -258,6 +279,31 @@ $component: componentClass("form");
   & input {
     height: 30px;
   }
+  & input[type="search"] {
+    &:focus {
+      box-shadow: none;
+      border: 1px solid #D32E12;
+    }
+  }
 }
 
+}
+
+.wpcf7 form.sent .wpcf7-response-output {
+  background-color: #0DAF2B;
+}
+
+.wpcf7 form.failed .wpcf7-response-output,
+.wpcf7 form.aborted .wpcf7-response-output {
+  background-color: #D32E12;
+}
+
+.wpcf7 form.spam .wpcf7-response-output {
+  background-color: #D32E12;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output,
+.wpcf7-not-valid-tip {
+  background-color: #FBC817;
 }

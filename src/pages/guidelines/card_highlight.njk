@@ -11,12 +11,12 @@
 {% import 'components/card1/card1_highlightbox.njk' as CardHighlightBox %}
 
 
-{% set componentName = "Card 1" %}
+{% set componentName = "Card Highlight" %}
 
 {# Sets page-specific variables #}
 {% set page = {
   "data": {},
-  "title": componentName + " - Components"
+  "title": componentName
 } %}
 
 {% block head_css %}
@@ -37,6 +37,8 @@
         <!-- .col-* -->
       </div>
       <!-- .row -->
+
+    <div class="pb-5 pt-5">
 
       <div class="row gx-3 py-5 zaux-theme--dark1">
 
@@ -74,31 +76,30 @@
               {% for decoVariation in _decoVariations %}
 
                 <div class="col-12 col-md-6 col-lg-4 mb-3">
-                {{CardHighlight.content(
+               {{CardHighlight.content(
               {
                 "className": ["h-100", "pb-6","c-card1--theme--light"],
-                "variations": ["lg-size1"],
-                "innerClassName": ["h-100", "mih-highlight"],
-                "contentClassName": ["d-flex", "justify-content-between", "flex-column", "p-6"],
-                "content": _htmlCardContent,
+                "innerClassName": ["h-100","mih-highlight"],
+                "contentClassName": ["d-flex", "justify-content-between", "flex-column", "p-6","h-100"],
+                "content": _htmlCardContent2,
                 "ctaValue": "apply now",
                 "img": {
                 "isShaped": true,
-                "className": ["rounded-2", "overflow-hidden"],
+                "className": ["rounded-2", "overflow-hidden","h-100"],
                 "variations": ["style1", decoVariation],
                 "img": {
                 "isLazy": true,
-                "src": "media/backCard1.png",
-                "src2x": "media/backCard1.png",
+                "src": "../media/HeroBen.png",
+                "src2x": "../media/HeroBen.png",
                 "width": 396,
                 "height": 380,
                 "alt": "Cover alternative text",
-                "className": ["zaux-fit-cover-center-center", "w-100"]
+                "wrapperClassName": ["h-100"],
+                "className": ["zaux-fit-cover-center-center", "w-100","h-100"]
                 }
                 }
               }
             )}}
-
                 </div>
                 <!-- .col-* -->
               {% endfor %}
@@ -110,34 +111,33 @@
                 {{CardHighlight.content(
               {
                 "className": ["h-100", "pb-6","c-card1--theme--light"],
-                "variations": ["lg-size1"],
                 "innerClassName": ["h-100","mih-highlight"],
                 "contentClassName": ["d-flex", "justify-content-between", "flex-column", "p-6"],
-                "content": _htmlCardContent2,
+                "content": _htmlCardContent,
                 "ctaValue": "apply now",
                 "img": {
                 "isShaped": true,
-                "className": ["rounded-2", "overflow-hidden"],
+                "className": ["rounded-2", "overflow-hidden","h-100"],
                 "variations": ["style1", decoVariation],
                 "img": {
                 "isLazy": true,
-                "src": "media/HeroBen.png",
-                "src2x": "media/HeroBen.png",
+                "src": "../../media/backCard1.png",
+                "src2x": "../../media/backCard1.png",
                 "width": 396,
                 "height": 380,
                 "alt": "Cover alternative text",
-                "className": ["zaux-fit-cover-center-center", "w-100"]
+                "wrapperClassName": ["h-100"],
+                "className": ["zaux-fit-cover-center-center", "w-100","h-100"]
                 }
                 }
               }
             )}}
-
                 </div>
                 <!-- .col-* -->
               {% endfor %}
 
-            </div>
-            <!-- .row -->
+        </div>
+      </div>
       <!-- .row -->
 
 
@@ -202,95 +202,6 @@
     </div>
     <!-- .container-* -->
 
-    <div class="container-l g-3 g-lg-7 py-4">
-
-      <div class="row gx-3">
-          {% for decoVariation in _decoVariations %}
-          <div class="col-12 col-lg-4 pb-2">
-            {{CardProfile.content(
-              {
-              "className": [],
-              "variations": [],
-              "innerClassName": ["zaux-bg-set1-grey py-8"],
-              "contentClassName": ["text-center"],
-              "img": {
-                "isLazy": true,
-                "src": "media/Profile.png",
-                "src2x": "media/Profile@2x.png",
-                "width": 120,
-                "height": 120,
-                "alt": "Cover alternative text",
-                "className": ["img-fluid"]
-              },
-              "nome": "Marc Vervloet",
-              "ruolo": "Chair"
-              }
-            )}}
-          </div>
-      {% endfor %}
-      </div>
-
-    </div>
-
-     <div class="container-l g-3 g-lg-7 py-4">
-
-      <div class="row gx-3">
-          {% for decoVariation in _decoVariations %}
-          <div class="col-6 col-lg-3 pb-2">
-            {{CardOverview.content(
-              {
-              "className": [],
-              "variations": [],
-              "innerClassName": [""],
-              "contentClassName": ["text-center"],
-              "img": {
-                "isLazy": true,
-                "src": "media/LogoOverview.png",
-                "src2x": "media/LogoOverview@2x.png",
-                "width": 200,
-                "height": 90,
-                "alt": "Cover alternative text",
-                "className": ["img-fluid"]
-              },
-              "title": "CKD-MBD"
-              }
-            )}}
-          </div>
-      {% endfor %}
-      </div>
-
-    </div>
-
-    <div class="container-l g-3 g-lg-7 py-4">
-
-      <div class="row gx-3">
-          {% for decoVariation in _decoVariations %}
-          <div class="col-12 col-lg-4 pb-2">
-            {{CardStory.content(
-              {
-              "className": ["shadow--grey rounded-2"],
-              "variations": [],
-              "innerClassName": [""],
-              "contentClassName": ["py-7 text-center"],
-              "img": {
-                "isLazy": true,
-                "src": "media/Profile.png",
-                "src2x": "media/Profile@2x.png",
-                "width": 40,
-                "height": 40,
-                "alt": "Cover alternative text",
-                "className": ["img-fluid"]
-              },
-              "nome": "Marc Vervloet",
-              "cit": "“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.”"
-              }
-            )}}
-          </div>
-      {% endfor %}
-      </div>
-
-    </div>
-
   </main>
 {% endblock %}
 
@@ -298,37 +209,3 @@
   <script defer src="assets/js/general.bundle.js"></script>
 {% endblock %}
 
-
-{# {% set _htmlCardContent %}
-
-              {{
-                Icon.content({
-                  "className": ["zaux-color-set1-cyan1", "c-typo-fs-18", "c-typo-fs-sm-20", "mb-2", "mb-md-4"],
-                  "iconFamily": "icozaux1",
-                  "iconName": "branches"
-                })
-              }}
-
-              <h3 class="c-card1__title c-typo-fs-6 c-typo-fs-md-15 fw-bold mb-3 mb-md-6">
-                Digital Transformation
-              </h3>
-              <!-- .c-card1__title -->
-
-              {{ BtnIcon.content(
-                {
-                  "className": ["zaux-color-set1-white1"],
-                  "iconFamily": "icozaux1",
-                  "iconName": "arrow3"
-                },
-                {
-                  "tag": "a",
-                  "link": "#Card1Link",
-                  "label": "Esplora",
-                  "variations": ["style2", "ani-2", "px3"],
-                  "className": ["d-none", "d-md-inline-block", "stretched-link"],
-                  "innerClassName": ["d-flex", "justify-content-center", "align-items-center"],
-                  "labelClassName": ["c-typo-fs-6", "fw-bold"]
-                }
-              )}}
-
-              {% endset %} #}

@@ -6,9 +6,11 @@
 {% import 'components/icon/icon.njk' as Icon %}
 {% import 'components/btn/btnIcon.njk' as BtnIcon %}
 {% import 'components/card1/card1_highlight.njk' as CardHighlight %}
+{% import 'components/card1/card1_highlightbox.njk' as CardHighlightBox %}
 {% import 'components/card2/card2_news.njk' as Card2 %}
 {% import 'components/card1/card1_overview.njk' as CardOverview %}
 {% import 'components/card1/card1_profile.njk' as CardProfile %}
+{% import 'components/modale/modale_profile.njk' as ModalProfile %}
 {% import 'components/boxcontent/boxcontent.njk' as BoxContent %}
 {% import 'components/breadcrumbs/breadcrumbs.njk' as Breadcrumbs %}
 {% import 'components/slider/slider_news.njk' as Slider %}
@@ -196,7 +198,6 @@
                     {{CardProfile.content(
                       {
                       "className": [],
-                      "variations": [],
                       "innerClassName": ["zaux-bg-set1-grey py-8 shadow-2"],
                       "contentClassName": ["text-center"],
                       "img": {
@@ -215,7 +216,7 @@
                   </div>
                   <!-- .col-* -->
                 {% endfor %}
-
+        {{ ModalProfile.content() }}
         </div>
         <!-- end row-* -->
       </div>
@@ -338,10 +339,9 @@
           {% endset %}
 
            <div class="col-12 col-md-4">
-            {{CardHighlight.content(
+            {# {{CardHighlight.content(
               {
                 "className": ["h-100", "pb-6","c-card1--theme--light"],
-                "variations": ["lg-size1"],
                 "innerClassName": [],
                 "contentClassName": ["d-flex", "justify-content-between", "flex-column", "p-6"],
                 "content": _htmlCardContent,
@@ -362,32 +362,31 @@
                 }
                 }
               }
+            )}} #}
+            {{CardHighlightBox.content(
+              {
+                "className": ["h-100", "pb-6","c-card1--theme--light"],
+                "innerClassName": ["h-100"],
+                "contentClassName": ["d-flex", "justify-content-between", "flex-column", "p-6","h-100"],
+                "content": {
+                  "title": "Open Call: NDT Editor in Chief"
+                } ,
+                "cta100": "y",
+                "ctaValue": "More updates will be posted soon"
+              }
             )}}
             </div>
           {% for i in range(0, total) %}
             <div class="col-12 col-md-4">
-            {{CardHighlight.content(
+            {{CardHighlightBox.content(
               {
                 "className": ["h-100", "pb-6","c-card1--theme--light"],
-                "variations": ["lg-size1"],
-                "innerClassName": [],
-                "contentClassName": ["d-flex", "justify-content-between", "flex-column", "p-6"],
-                "content": _htmlCardContent,
-                "ctaValue": "read more",
-                "img": {
-                "isShaped": true,
-                "className": ["rounded-2", "overflow-hidden"],
-                "variations": ["style1", decoVariation],
-                "img": {
-                "isLazy": true,
-                "src": "media/backCard1.png",
-                "src2x": "media/backCard1.png",
-                "width": 396,
-                "height": 380,
-                "alt": "Cover alternative text",
-                "className": ["zaux-fit-cover-center-center", "w-100"]
-                }
-                }
+                "innerClassName": ["h-100"],
+                "contentClassName": ["d-flex", "justify-content-between", "flex-column", "p-6","h-100"],
+                "content": {
+                  "title": "Open Call: NDT Editor in Chief"
+                } ,
+                "ctaValue": "read more"
               }
             )}}
             </div>

@@ -124,6 +124,20 @@
               "label": "Networking",
               "labelClassName": "",
               "href": "#"
+            },
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Nephrology News Flash",
+              "labelClassName": "",
+              "href": "#"
+            },
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Contact us",
+              "labelClassName": "",
+              "href": "#"
             }
           ]
         }
@@ -284,13 +298,13 @@
             {
               "className": "",
               "showLabel": true,
-              "label": "YNP",
+              "label": "YNP - Young Nephrology platform",
               "labelClassName": "",
               "href": "single_committees.html"
             }, {
               "className": "",
               "showLabel": true,
-              "label": "NEP",
+              "label": "NEP - Nephrology Education Portal",
               "labelClassName": "",
               "href": "#"
             }, {
@@ -359,19 +373,7 @@
               "labelClassName": "",
               "href": "#"
             },
-            {
-              "className": "",
-              "showLabel": true,
-              "label": "YNP",
-              "labelClassName": "",
-              "href": "#"
-            }, {
-              "className": "",
-              "showLabel": true,
-              "label": "NEP",
-              "labelClassName": "",
-              "href": "#"
-            }, {
+           {
               "className": "",
               "showLabel": true,
               "label": "Nephrology News Flash",
@@ -412,7 +414,7 @@
               {
                 "className": "",
                 "showLabel": true,
-                "label": "Patent guides",
+                "label": "Patient guides",
                 "labelClassName": "",
                 "href": "#"
               },

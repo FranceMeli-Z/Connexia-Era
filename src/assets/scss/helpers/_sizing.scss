@@ -18,6 +18,20 @@ $zaux-helper-name: "size";
   min-width: 397px;
 }
 
+// Highlight //
+.mih-highlight {
+  min-height: 240px;
+  @include media-breakpoint-up(lg) {
+    min-height: 380px;
+  }
+}
+.mih-highlight-title {
+  min-height: 250px;
+  @include media-breakpoint-up(lg) {
+    min-height: 295px;
+  }
+}
+
 //// Box Custom ///
 .mih-boxtitle {
   min-height: 155px;

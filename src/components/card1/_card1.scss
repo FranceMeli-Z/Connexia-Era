@@ -28,7 +28,7 @@ $component: componentClass("card1");
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: $zaux-global-content-zindex;
+    z-index: 18;
 
     &__cta--absolute {
       position: absolute;
@@ -45,6 +45,7 @@ $component: componentClass("card1");
     }
     }
   }
+
   &__cover {
     img {
     @include media-breakpoint-down(lg) {
@@ -96,14 +97,4 @@ $component: componentClass("card1");
     }
   }
 
-
-  // &--lg-size1 {
-  //   .#{$component} {
-  //     &__inner {
-  //       @include media-breakpoint-up(sm) {
-  //         height: 300px;
-  //       }
-  //     }
-  //   }
-  // }
 }

@@ -95,7 +95,7 @@ $zaux-helper-name: "pos";
     position: fixed;
     max-width: 1440px;
     width: 100%;
-    z-index: 20;
+    z-index: 19;
     top: 65px;
   @include media-breakpoint-up(lg) {
     top: 114px;

@@ -18,11 +18,6 @@
   {% set _innerClassName = [componentClassName + "__inner"] | mergeArray(obj.innerClassName or configDefault.innerClassName) %}
   {% set _contentClassName = [componentClassName + "__story"] | mergeArray(obj.contentClassName or configDefault.contentClassName) %}
 
-  {# Pushes every variation into class attribute (prepending the base class) #}
-  {% for variation in ([] | mergeArray(obj.variations or configDefault.variations)) %}
-    {% set _className = (_className.push(componentClassName + "--" + variation), _className) %}
-  {% endfor %}
-
   <div class="{{_className | join(" ")}}">
     <div class="{{_innerClassName | join(" ")}}">
         <div class="{{_contentClassName | join(" ")}}">

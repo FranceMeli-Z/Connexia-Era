@@ -1,0 +1,59 @@
+{% import 'components/img/img.njk' as Img %}
+{% import 'components/icon/icon.njk' as Icon %}
+
+{% macro content(obj) %}
+
+  {% set componentClassName = 'c-modale' %}
+
+<div class="{{componentClassName}} modal fade" id="EraProfileModal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-profile h-100">
+    <div class="{{componentClassName}}--light h-100 px-6 py-6">
+        <div class="{{componentClassName}}__contentprofile h-100">
+          <button type="button" class="{{componentClassName}}__btn--close float-end" data-bs-dismiss="modal" aria-label="Close">
+          {{
+            Icon.content({
+              "className": "",
+              "iconName": "icozaux1-close",
+              "iconSvgUrl": app.fonts.icozaux1.url
+            })
+          }}
+          </button>
+          <div class="{{componentClassName}}__contentprofile__data">
+            <div class="{{componentClassName}}__contentprofile__data--img">
+              <div class="pe-5 pb-5">
+                   {{
+                    Img.content({
+                      "isLazy": false,
+                      "src": "media/Profile.png",
+                      "src2x": "media/Profile@2x.png",
+                      "width": 150,
+                      "height": 150,
+                      "className": "",
+                      "title": "title",
+                      "alt": "alt",
+                      "wrapperElement": "",
+                      "wrapperClassName": ""
+                  })
+                }}
+              </div>
+              <div class="">
+                <h6>Nome Cognome</h6>
+                <p>Ruolo</p>
+                <p>Luogo</p>
+              </div>
+            </div>
+            <div class="{{componentClassName}}__contentprofile__data--bio">
+              <p>Marc Vervloet is associate professor at the department of Nephrology of the VU university medical center, where he practices clinical nephrology (Head of department: Professor Piet ter Wee), is leading the hemodialysis department, and is teacher of clinical nephrology for medical students and nephrology fellows. He is project leader at he Institute of Cardiovascular Research VU (ICaR-VU) focussing on cardiovascular changes induced by metabolic derangements of chronic kidney disease, and treatment of acute kidney disease, combining basic and clinical research.
+
+He co-chaired the national committee developing Dutch guidelines on CKD-MBD, board member of the scientific committee of the Dutch kidney Foundation, and is co-founder and secretary of the ERA-EDTA working group on CKD-MBD. He was active member of the European Vitamin D expert centers, co-chaired several international symposia on the role of the vitamin D in CKD, and organised several European renal fellow training programs.
+
+He has published several original studies on several topics, mainly focused on CKD-MBD, is member of ERA-EDTA and the ASN.
+            </p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endmacro %}
