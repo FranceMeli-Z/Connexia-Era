@@ -26,6 +26,7 @@ const Base = () => {
 
     // Inits the components in page
     Component.initAll();
+    Utils.getNS().config.helpers.component = Component;
   });
 
 };
