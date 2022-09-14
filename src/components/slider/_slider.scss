@@ -18,6 +18,18 @@ $component: componentClass("slider");
       border: 1px solid #F1F1F1;
     }
 
+    &.swiper-slide-visible .c-twitter {
+      box-shadow: 1px 1px 10px 0px #0000001A;
+    }
+
+    &.swiper-slide-next .c-twitter {
+      margin-right: 10px;
+    }
+
+    &.swiper-slide-prev .c-twitter {
+      margin-left: 10px;
+    }
+
   }
   .swiper-3d {
     max-width: 920px;
