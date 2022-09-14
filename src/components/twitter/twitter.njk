@@ -66,27 +66,18 @@
       </div>
 
       <div class="{{componentClassName}}__content zaux-bg-default-white pt-3">
+        {% if obj.content %}
         <div class="{{componentClassName}}__content--txt c-typo-style1-1 pb-1">
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-          when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five any.</p>
+          <p>{{obj.content|safe}}</p>
         </div>
+        {% endif %}
+        {% if obj.img %}
         <div class="{{componentClassName}}__content--img">
-          {{
-                  Img.content({
-                  "isLazy": false,
-                  "src": "media/twitter-img.png",
-                  "src2x": "media/twitter-img.png",
-                  "width": 282,
-                  "height": 155,
-                  "className": ["img-fluid"],
-                  "title": "title",
-                  "alt": "alt",
-                  "wrapperElement": ["figure"],
-                  "wrapperClassName": [""]
-                  })
-            }}
+           {{
+          Img.content(obj.img)
+          }}
         </div>
+        {% endif %}
         <div class="{{componentClassName}}__content--date">
           12:02 PM • Jun 1, 2022
         </div>

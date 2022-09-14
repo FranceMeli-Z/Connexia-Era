@@ -21,7 +21,9 @@ $component: componentClass("twitter");
   &__content {
     &--img {
       border-radius: 8px;
+      @include media-breakpoint-up(md) {
       border: 1px solid #F0F0F0;
+      }
     }
     &--date {
       color: #7B7B7B;
