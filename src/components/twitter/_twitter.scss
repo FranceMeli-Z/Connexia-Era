@@ -34,6 +34,9 @@ $component: componentClass("twitter");
   &__content {
     padding: 10px 12px;
     position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     height:300px;
     &--txt {
       font-weight: 500;
@@ -54,8 +57,8 @@ $component: componentClass("twitter");
       text-align: left;
       font-size: 7px;
       letter-spacing: 1px;
-      position: absolute;
-      bottom: 5px;
+      // position: absolute;
+      // bottom: 5px;
     }
   }
 

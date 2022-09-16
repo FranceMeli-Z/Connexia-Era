@@ -197,6 +197,68 @@
     </div>
 
 
+    <div class="pb-5 pt-5">
+      <div class="double-row py-5 zaux-theme--dark1">
+         {%
+                set _decoVariations = [
+                  "deco1-l-t",
+                  "deco1-r-t",
+                  "deco1-l-t"
+                ]
+              %}
+
+         {%
+                set _decoVariations2 = [
+                  "deco1-l-t",
+                  "deco1-r-t",
+                  "deco1-l-t"
+                ]
+              %}
+
+              {% for decoVariation in _decoVariations %}
+
+                <div class="col first-col mb-3">
+                  {{CardHighlightBox.content(
+              {
+                "className": ["h-100", "pb-6","c-card1--theme--light"],
+                "variations": ["lg-size1"],
+                "innerClassName": ["h-100"],
+                "contentClassName": ["d-flex", "justify-content-between", "flex-column", "p-6","h-100"],
+                "content": {
+                       "title": "59th ERA Congress: Paris & Virtual",
+                       "abstract": "The ERA 2022 Congress in Paris will take place from May 19 to 22, 2022 as a hybrid event, thus being both live and virtual, with speakers, chairs and delegates attending live and remotely"
+                      },
+                "imgurl": "../media/backCard1.png",
+                "ctaValue": "apply now"
+              }
+            )}}
+
+                </div>
+                <!-- .col-* -->
+              {% endfor %}
+
+               <div class="col-12 col-md-6 col-lg-4 mb-3">
+                  {{CardHighlightBox.content(
+              {
+                "className": ["h-100", "pb-6","c-card1--theme--light"],
+                "variations": ["lg-size1"],
+                "innerClassName": ["h-100"],
+                "contentClassName": ["d-flex", "justify-content-between", "flex-column", "p-6","h-100"],
+                "content": {
+                       "title": "59th ERA Congress: Paris & Virtual",
+                       "abstract": "The ERA 2022 Congress in Paris will take place from May 19 to 22, 2022 as a hybrid event, thus being both live and virtual, with speakers, chairs and delegates attending live and remotely"
+                      },
+                "imgurl": "../media/HeroBen.png",
+                "ctaValue": "apply now"
+              }
+            )}}
+
+                </div>
+
+            </div>
+    </div>
+
+
 
 
     </div>

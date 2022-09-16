@@ -19,16 +19,14 @@
   {% set _innerClassName = [componentClassName + "__inner"] | mergeArray(obj.innerClassName or configDefault.innerClassName) %}
   {% set _contentClassName = [componentClassName + "__profile"] | mergeArray(obj.contentClassName or configDefault.contentClassName) %}
 
-  <div class="{{_className | join(" ")}}" data-bs-toggle="modal" data-bs-target="#EraProfileModal">
+  <div class="{{_className | join(" ")}}">
     <div class="{{_innerClassName | join(" ")}}">
         <div class="{{_contentClassName | join(" ")}}">
              {% if obj.img %}
               <div class="{{componentClassName}}__profile--img pb-3 pb-lg-7">
-                <a href="#">
                   {{
                     Img.content(obj.img)
                   }}
-                </a>
               </div>
             {% endif %}
             <div class=" font-zaux2 zaux-theme--light1 pb-3 pb-lg-4">
@@ -38,7 +36,7 @@
                {{obj.ruolo|safe}}
             </div>
           <div class="{{componentClassName}}__profile--cta">
-            <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">Profile</a>
+            <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title" data-bs-toggle="modal" data-bs-target="#EraProfileModal">Profile</a>
           </div>
         </div>
         <!-- .{{componentClassName}}__profile -->

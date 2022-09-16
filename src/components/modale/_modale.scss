@@ -3,32 +3,75 @@
 $component: componentClass("modale");
 
 .#{$component} {
+  &.modal-profile {
+    @include media-breakpoint-down(lg) {
+    padding-top: 65px;
+    padding-left: 0;
+    padding-right: 0;
+    }
+  }
 
   & .modal-dialog {
     max-width: 100% !important;
     margin: 0 !important;
   }
-  & .modal-dialog.modal-profile {
-    max-width: 600px !important;
-    max-height: 100%;
+  &.modal-profile .modal-dialog {
+    max-width: 500px !important;
+    height: 100%;
     margin: auto !important;
     @include media-breakpoint-up(lg) {
-      top: 25%;
-      max-height: 500px;
+      height: 700px;
+      top: calc( 50% - 350px );
     }
 
     & .#{$component}__contentprofile {
       position: relative;
-      overflow-y: scroll;
+      overflow-y: overlay;
+      & .#{$component}__btn {
+        display: none;
+        @include media-breakpoint-down(lg) {
+         display: block;
+         z-index: 5;
+        }
+       button {
+          @include media-breakpoint-down(lg) {
+            left: 0;
+            right: auto;
+          }
+        }
+      // span {
+      //   display: none;
+      //   @include media-breakpoint-down(lg) {
+      //    display: inline-block;
+      //   }
+      // }
+      }
       &__data {
         padding: 0 20px;
+        overflow: auto;
+        position: relative;
+        @include media-breakpoint-down(lg) {
+        padding: 0;
+        }
         &--img {
           display: flex;
+          @include media-breakpoint-down(lg) {
+           flex-direction: column;
+          }
+          & img {
+            object-fit: cover;
+            width: 182px;
+            height: 133px;
+            @include media-breakpoint-down(lg) {
+              width: 100%;
+              height: auto;
+              max-height: 200px;
+             }
+          }
         }
       }
     }
   }
-
 
   &__btn--close {
     position: absolute;

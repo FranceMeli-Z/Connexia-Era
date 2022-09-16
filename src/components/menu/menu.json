@@ -320,6 +320,20 @@
               "label": "Other courses",
               "labelClassName": "",
               "href": "#"
+            },
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Other courses",
+              "labelClassName": "",
+              "href": "#"
+            },
+            {
+              "className": "",
+              "showLabel": true,
+              "label": "Other courses",
+              "labelClassName": "",
+              "href": "#"
             }
         ]
         }

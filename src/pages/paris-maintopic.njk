@@ -6,6 +6,7 @@
 {% import 'components/icon/icon.njk' as Icon %}
 {% import 'components/btn/btnIcon.njk' as BtnIcon %}
 {% import 'components/card1/card1_highlight.njk' as CardHighlight %}
+{% import 'components/card1/card1_highlightbox.njk' as CardHighlightBox %}
 {% import 'components/card2/card2_news.njk' as Card2 %}
 {% import 'components/card2/card2_related.njk' as CardRelated %}
 {% import 'components/breadcrumbs/breadcrumbs.njk' as Breadcrumbs %}
@@ -96,7 +97,7 @@
                     <p>Add conferences, seminars and CME courses directly to your congress plan</p>
                   </div>
                     <!-- start row -->
-                    <div class="row gx-3">
+                    <div class="row gx-3 h-100">
                       {% set total = 4 %}
                       {% set _htmlCardContent %}
                       <div class="card1__head zaux-theme--dark1">
@@ -106,8 +107,8 @@
                       </div>
                       {% endset %}
                       {% for i in range(0, total) %}
-                      <div class="col-12 col-md-6 h-100 pb-6">
-                        {{CardHighlight.content(
+                      <div class="col-12 col-md-6 pb-6">
+                        {# {{CardHighlight.content(
                           {
                             "className": ["c-card1--theme--light"],
                             "innerClassName": [],
@@ -129,7 +130,20 @@
                             }
                             }
                           }
-                        )}}
+                        )}} #}
+                        {{CardHighlightBox.content(
+                    {
+                      "className": ["h-100", "pb-6","c-card1--theme--light"],
+                      "innerClassName": ["h-100"],
+                      "contentClassName": ["d-flex", "justify-content-between", "flex-column", "p-6","h-100"],
+                      "imgurl": "media/HeroBen.png",
+                       "ctaValue": "add to planner",
+                       "content": {
+                       "title": "Open Call: NDT Editor in Chief",
+                       "abstract": "Submit your application by e-mail by January 31, 2022"
+                      }
+                    }
+                  )}}
                         </div>
                       {% endfor %}
                     </div>

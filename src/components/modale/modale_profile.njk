@@ -5,29 +5,32 @@
 
   {% set componentClassName = 'c-modale' %}
 
-<div class="{{componentClassName}} modal fade" id="EraProfileModal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-profile h-100">
-    <div class="{{componentClassName}}--light h-100 px-6 py-6">
+<div class="{{componentClassName}} modal-profile modal fade" id="EraProfileModal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="{{componentClassName}}--grey h-100 px-4 px-lg-6 py-lg-6 py-4">
         <div class="{{componentClassName}}__contentprofile h-100">
-          <button type="button" class="{{componentClassName}}__btn--close float-end" data-bs-dismiss="modal" aria-label="Close">
-          {{
-            Icon.content({
-              "className": "",
-              "iconName": "icozaux1-close",
-              "iconSvgUrl": app.fonts.icozaux1.url
-            })
-          }}
+          <div class="{{componentClassName}}__btn position-relative">
+            <button type="button" class="{{componentClassName}}__btn--close" data-bs-dismiss="modal" aria-label="Close">
+            {{
+              Icon.content({
+                "className": "",
+                "iconName": "icozaux1-close",
+                "iconSvgUrl": app.fonts.icozaux1.url
+              })
+            }}
+            <span class="ps-1"> Close profile </span>
           </button>
+          </div>
           <div class="{{componentClassName}}__contentprofile__data">
-            <div class="{{componentClassName}}__contentprofile__data--img">
-              <div class="pe-5 pb-5">
+            <div class="{{componentClassName}}__contentprofile__data--img pt-lg-0 pt-7">
+              <div class="pe-lg-5 pb-lg-5 pe-0 pb-1">
                    {{
                     Img.content({
                       "isLazy": false,
                       "src": "media/Profile.png",
                       "src2x": "media/Profile@2x.png",
-                      "width": 150,
-                      "height": 150,
+                      "width": 182,
+                      "height": 133,
                       "className": "",
                       "title": "title",
                       "alt": "alt",
@@ -36,17 +39,17 @@
                   })
                 }}
               </div>
-              <div class="">
-                <div class="">
-                  <h6 class="">Nome Cognome Profilo</h6>
+              <div class="pb-5 pb-lg-0">
+                <div class="zaux-theme--light1 font-zaux2 pb-1">
+                  <h6 class="fw-demi c-typo-fs-8">Marc Vervloet</h6>
                 </div>
-                <div class="">
-                  <p>Ruolo Profilo</p>
-                  <p>Luogo</p>
+                <div class="zaux-theme--light1 font-zaux2 c-typo-fs-2">
+                  <p class="mb-0">M.D., Ph.D</p>
+                  <p>Amsterdam, The Netherlands</p>
                 </div>
               </div>
             </div>
-            <div class="{{componentClassName}}__contentprofile__data--bio">
+            <div class="{{componentClassName}}__contentprofile__data--bio pb-4">
               <p>Marc Vervloet is associate professor at the department of Nephrology of the VU university medical center, where he practices clinical nephrology (Head of department: Professor Piet ter Wee), is leading the hemodialysis department, and is teacher of clinical nephrology for medical students and nephrology fellows. He is project leader at he Institute of Cardiovascular Research VU (ICaR-VU) focussing on cardiovascular changes induced by metabolic derangements of chronic kidney disease, and treatment of acute kidney disease, combining basic and clinical research.
 
 He co-chaired the national committee developing Dutch guidelines on CKD-MBD, board member of the scientific committee of the Dutch kidney Foundation, and is co-founder and secretary of the ERA-EDTA working group on CKD-MBD. He was active member of the European Vitamin D expert centers, co-chaired several international symposia on the role of the vitamin D in CKD, and organised several European renal fellow training programs.

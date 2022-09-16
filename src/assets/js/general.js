@@ -21,8 +21,48 @@ init();
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  function resizeHighlight(viewport) {
+    var min_height;
+
+        $('.c-card1__inner--highlight').each(function(){
+          if ( $(".c-card1__head--abstract") ) {
+            if (viewport < 992){
+              min_height=250;
+            }
+            else {
+              min_height=300;
+            }
+        var height = ( $( this ).outerHeight(true) );
+        if (height > min_height) {
+          min_height = height;
+        }
+        $(".c-card1__inner--highlight").css("min-height", min_height);
+      }
+    else {
+      $(".c-card1__inner--highlight").addClass("min-highlight-title");
+    }
+  });
+
+  }
 
   var viewportWidth = $(window).width();
+  resizeHighlight(viewportWidth);
+
+
+function removeProperty(id,property) {
+  $(id).css(property,"");
+}
+
+ $(".c-menu__content__navlist--show .c-nav").each(function() {
+  var maxH = 0
+  var height = ( $(this).outerHeight(true) );
+  console.log(height);
+  if ( height > maxH ) {
+    maxH = height;
+  }
+
+ });
+
   if (viewportWidth < 992){
     $(".c-menu__content__navlist").removeClass("open");
   }
@@ -54,12 +94,10 @@ $("ul.option-list li").on("click", function() {
 
   //Menu secondari Congresso Parigi
   $(".c-nav3__item").click(function() {
-    event.preventDefault();
     $(".c-nav3__item").removeClass("is-active");
     $(this).addClass("is-active");
   });
   $(".c-nav2__item").click(function() {
-    event.preventDefault();
     $(".c-nav2__item").removeClass("is-active");
     $(this).addClass("is-active");
   });
@@ -112,14 +150,14 @@ $(".c-menu__content__navlist--click").click(function() {
   // $(this).parents(".c-menu__content__navlist").addClass("open");
   }
 });
-
+var resizeTimer;
 $(window).resize(function() {
   var viewportWidth = $(window).width();
-   if (viewportWidth < 992) {
+    if (viewportWidth < 992) {
      $(".c-menu__content__navlist").removeClass("open");
      $(".c-header__inner").height('65px');
-   }
-   else {
+    }
+    else {
        $(".c-menu__content__navlist:first-child").addClass("open");
        var scrollTop = $(window).scrollTop();
        if ( scrollTop > 50) {
@@ -128,7 +166,14 @@ $(window).resize(function() {
        else{
         $(".c-header__inner").height('154px');
         }
-     }
+    }
+
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+     removeProperty(".c-card1__inner--highlight","min-height");
+     resizeHighlight(viewportWidth);
+    }, 100);
+
  });
 
 
@@ -188,7 +233,26 @@ var myWindow = window.open(myURL, title, 'toolbar=no, location=no, directories=n
 let dialogWidth = 600;
 let dialogHeight = 350;
 
+
+  // $(".c-card1__contentbox").each(function(){
+  //   var actualheight = 380;
+  //   var newminheight = $(this).outerHeight();
+  //   if (newminheight > actualheight ) {
+  //     actualheight = newminheight;
+  //     setMinheight(actualheight)
+  //   }
+  // })
+  // function setMinheight(minheight){
+  //   $(".c-card1__contentbox").parents(".c-card1__inner").css("min-height", minheight);
+  // }
+
+
+
+
+
 });
+
+
 
   //Aggiungere o diminuire i tag
   $(".c-cta__viewtag").click(function() {
@@ -203,7 +267,7 @@ let dialogHeight = 350;
     }
   });
 
-  $(window).scroll(function(){
+$(window).scroll(function(){
     var viewportWidth = $(window).width();
     if (viewportWidth > 992) {
       var scrollTop = $(window).scrollTop();
@@ -231,13 +295,12 @@ let dialogHeight = 350;
     var scrollTop = $(window).scrollTop();
     if ( scrollTop > 354) {
        $(".c-nav2").addClass('zaux-pos-nav');
+    }
+    else {
+      $(".c-nav2").removeClass('zaux-pos-nav');
+    }
   }
-  else {
-    $(".c-nav2").removeClass('zaux-pos-nav');
-  }
-}
-
-  });
+});
 
 
 $(".print-chart").click(function(){
@@ -252,6 +315,8 @@ $(".print-chart").click(function(){
     a.document.close();
     a.print();
 })
+
+
 
 
 

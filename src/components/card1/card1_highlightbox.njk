@@ -24,12 +24,13 @@
 
 
   <div class="{{_className | join(" ")}}">
+     <div class="{{_innerClassName | join(" ")}} {{componentClassName}}__inner--highlight" style="background-image: url('{{obj.imgurl}}'); background-size: cover;">
 
-    {% if obj.content.abstract %}
-      <div class="{{_innerClassName | join(" ")}} mih-highlight" style="background-image: url('{{obj.imgurl}}'); background-size: cover;">
+    {# {% if obj.content.abstract %}
+
     {% else %}
-      <div class="{{_innerClassName | join(" ")}} mih-highlight-title" style="background-image: url('{{obj.imgurl}}'); background-size: cover;">
-    {% endif %}
+      <div class="{{_innerClassName | join(" ")}} {{componentClassName}}__inner--highlight mih-highlight-title" style="background-image: url('{{obj.imgurl}}'); background-size: cover;">
+    {% endif %} #}
 
       {# {% if obj.img.isShaped %}
         {{
@@ -46,12 +47,12 @@
       {% if obj.content %}
         <div class="{{_contentClassName | join(" ")}}">
 
-          <div class="card1__head zaux-theme--dark1">
-            <div class="card1__head--title font-zaux2 pb-2">
+          <div class="{{componentClassName}}__head zaux-theme--dark1">
+            <div class="{{componentClassName}}__head--title font-zaux2 pb-2">
               <h6 class="fw-bold c-typo-fs-8 c-typo-fs-lg-10">{{obj.content.title|safe}}</h6>
             </div>
             {% if obj.content.abstract %}
-             <div class="card1__head--abstract c-typo-style1-6 c-typo-style1-lg-8">
+             <div class="{{componentClassName}}__head--abstract c-typo-style1-6 c-typo-style1-lg-8">
               <p>{{obj.content.abstract|safe}}</p>
             </div>
             {% endif %}

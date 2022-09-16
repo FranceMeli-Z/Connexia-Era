@@ -6,6 +6,7 @@
 {% import 'components/icon/icon.njk' as Icon %}
 {% import 'components/btn/btnIcon.njk' as BtnIcon %}
 {% import 'components/card1/card1_highlight.njk' as CardHighlight %}
+{% import 'components/card1/card1_highlightbox.njk' as CardHighlightBox %}
 {% import 'components/card2/card2_news.njk' as Card2 %}
 {% import 'components/boxcontent/boxcontent.njk' as BoxContent %}
 {% import 'components/breadcrumbs/breadcrumbs.njk' as Breadcrumbs %}
@@ -107,7 +108,7 @@
       <div class="zaux-theme--light2">
 
         <!-- start row -->
-        <div class="row gx-3">
+        <div class="row gx-3 h-100">
            {% set total = 4 %}
            {% set _htmlCardContent %}
           <div class="card1__head zaux-theme--dark1">
@@ -121,8 +122,8 @@
           {% endset %}
            {# "c-ratio--square", "c-ratio--md-none" #}
           {% for i in range(0, total) %}
-          <div class="col-12 col-md-5 h-100 pb-6">
-            {{CardHighlight.content(
+          <div class="col-12 col-md-5 pb-6">
+            {# {{CardHighlight.content(
               {
                 "className": ["c-card1--theme--light"],
                 "innerClassName": [],
@@ -146,7 +147,22 @@
                 }
                 }
               }
-            )}}
+            )}} #}
+            {{CardHighlightBox.content(
+                    {
+                      "className": ["h-100", "pb-6","c-card1--theme--light"],
+                      "innerClassName": ["h-100"],
+                      "contentClassName": ["d-flex", "justify-content-between", "flex-column", "p-6","h-100"],
+                      "imgurl": "media/HeroBen.png",
+                      "ctaAbsolute": "y",
+                      "ctaClassName": ["c-card1__content__cta--absolute"],
+                      "ctaValue": "go to hand courses",
+                       "content": {
+                       "title": "Open Call: NDT Editor in Chief",
+                       "abstract": "Submit your application by e-mail by January 31, 2022"
+                      }
+                    }
+                  )}}
             </div>
             <div class="col-md-1 d-none d-lg-block">
             </div>

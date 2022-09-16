@@ -43,6 +43,7 @@ $component: componentClass("slider");
     z-index: 5 !important;
     & .c-twitter {
       transform: scale(1.30);
+      transition: 1s;
       @include media-breakpoint-down(md) {
         transform: none;
       }
