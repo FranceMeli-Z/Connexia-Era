@@ -12,6 +12,10 @@ $component: componentClass("menu");
 
 .#{$component} {
 
+  @include media-breakpoint-up(lg) {
+    max-height: calc( 100vh - 140px);
+  }
+
   position: absolute;
   z-index: 30;
   width: 100%;

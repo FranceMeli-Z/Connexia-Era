@@ -4,6 +4,13 @@
 
 $component: componentClass("nav3");
 
+.#{$component} {
+
+  @include media-breakpoint-up(lg) {
+      background-color: #F1F1F1;
+      }
+}
+
 ////////////////////////////////////////////////////
 // Theme: Light1
 ////////////////////////////////////////////////////

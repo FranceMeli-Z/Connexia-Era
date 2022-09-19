@@ -6,8 +6,10 @@ $component: componentClass("nav3");
 
 .#{$component} {
   width: 100%;
+  margin-bottom: 90px;
   @include media-breakpoint-up(lg) {
     max-width: 415px;
+    margin-bottom: 0;
     }
   ul {
     list-style: none;
@@ -19,7 +21,7 @@ $component: componentClass("nav3");
       display: none;
     }
     &.is-active {
-      font-weight: bold;
+      font-weight: 600;
       i {
         @include media-breakpoint-up(lg) {
           position: absolute;
@@ -42,4 +44,62 @@ $component: componentClass("nav3");
     background-color: #F1F1F1;
     font-weight: 600;
   }
+
+  @include media-breakpoint-down(lg) {
+    .#{$component}--layout1 {
+      position: relative;
+    ul {
+      // height: 100px;
+      position: absolute;
+      width: 100%;
+      margin: auto;
+      border: 1px solid transparent;
+      background-color: #F1F1F1;
+    & li {
+      padding: 10px 35px 10px 10px;
+      margin-bottom: 0 !important;
+    }
+
+    & li:not(.is-active) {
+        display: none;
+        list-style: none;
+      }
+    &:not(.dropopen) {
+    & li.is-active {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    & li.is-active::after {
+        content: "\25bc";
+        color: gray;
+        right: 20px;
+        position: absolute;
+        font-size: 16px;
+    }
+  }
+    &.dropopen {
+
+      &::before {
+        content: "\25b2";
+        color: gray;
+        right: 20px;
+        top: 7px;
+        position: absolute;
+        font-size: 16px;
+      }
+    li {
+      display: list-item;
+
+    }
+
+  }
+
+  }
+}
+
+}
+
+
+
   }

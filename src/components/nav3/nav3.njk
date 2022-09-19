@@ -14,11 +14,11 @@
   {% set _className = [componentClassName] | mergeArray(obj.className or configDefault.className) %}
 
   <div class="{{_className | join(" ")}}">
-     <div class="ps-box zaux-bg-set1-grey h-100 d-none d-lg-block">
-       <div class="text-lg-start text-center font-zaux2 zaux-theme--light2 pt-lg-8 pb-lg-12">
+     <div class="ps-box h-100 pe-4 pe-lg-0">
+       <div class="text-lg-start text-center font-zaux2 zaux-theme--light2 pt-6 pt-lg-8 pb-lg-12">
           <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">Main Topics</h6>
         </div>
-        <nav class="c-nav3--layout1 zaux-theme--light1 c-typo-style1-8 pt-4 pe-8">
+        <nav class="c-nav3--layout1 zaux-theme--light1 c-typo-style1-8 pt-4 pe-4 pe-lg-8">
             <!-- BEGIN WP NAV -->
                 <ul class="">
                   <li class="{{componentClassName}}__item is-active"><a href="#">Plenary Lectures</a>
@@ -71,7 +71,8 @@
             <!-- END WP NAV -->
         </nav>
     </div>
-    <div class="p-box d-block d-lg-none pb-6">
+
+    {# <div class="p-box d-block d-lg-none pb-6">
       <div class="text-lg-start text-center font-zaux2 zaux-theme--light2 pt-6 pb-6">
           <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">Main Topics</h6>
       </div>
@@ -85,7 +86,8 @@
           <option value="6">Pathophysiology, epidemiology, prevention, progression, ageing</option>
         </select>
       </div>
-    </div>
+    </div> #}
+
   </div>
 
 {% endmacro %}
