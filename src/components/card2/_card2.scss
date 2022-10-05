@@ -43,6 +43,15 @@ $component: componentClass("card2");
         li:not(:last-child) {
           padding-bottom: 20px;
         }
+        & li {
+          & a {
+          color: tokenColor(set1, darkgrey) !important;
+          &:hover {
+            text-decoration: underline;
+          }
+          }
+
+        }
       }
     }
   }

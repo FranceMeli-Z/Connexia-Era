@@ -6,6 +6,12 @@ $component: componentClass("boxcontent");
 
 .#{$component} {
 
+  &__img {
+    img {
+    width: 100%;
+    }
+  }
+
   &__content{
     &:hover {
       cursor: pointer;
@@ -25,5 +31,6 @@ $component: componentClass("boxcontent");
       line-height: 1 !important;
     }
   }
+
 }
 }

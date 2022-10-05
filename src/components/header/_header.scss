@@ -9,7 +9,7 @@ $zaux-header-lg-h: 160px !default;
 
 .#{$component} {
   position: fixed;
-  max-width: 1440px;
+  // max-width: 1440px;
   width: 100%;
   background-color: white;
   z-index: 20;
@@ -34,6 +34,9 @@ $zaux-header-lg-h: 160px !default;
   }
 
   &__logo {
+    &.is-sticky {
+    width: 85px;
+    }
     @include media-breakpoint-down(lg) {
     width: 98px;
     position: absolute;

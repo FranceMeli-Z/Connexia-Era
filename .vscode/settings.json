@@ -29,6 +29,24 @@
       "host": "giustisoft.it",
       "username": "zaki01",
       "password": "woozaNo4os:i"
+    },
+    "arredoteam": {
+      "scheme": "ftp",
+      "host": "wh1.zaki.it",
+      "username": "d371_ftp_u1",
+      "password": "3zotk2q5G_ToehIv"
+    },
+    "alphateam": {
+      "scheme": "ftp",
+      "host": "94.130.189.43",
+      "username": "alphateam_alphateam.it",
+      "password": "nBXUdy#8"
+    },
+    "tuscanytravelling": {
+      "scheme": "ftp",
+      "host": "cloud2.zaki.it",
+      "username": "d338_ftp_u1",
+      "password": "p@tmFma1xNo2q0Oq"
     }
   }
 }

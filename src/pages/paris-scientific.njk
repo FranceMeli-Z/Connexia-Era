@@ -27,8 +27,8 @@
 
   <main>
      <!-- First box -->
-      <div class="mb-0 mb-lg-4 pe-0">
-        <div class="row gx-3 m-0">
+      <div class="position-relative mb-0 mb-lg-4 pe-0">
+        {# <div class="row gx-3 m-0">
           <div class="zaux-bg-set1-grey p-box rounded-bottom-100 col-12 col-lg-8 mih-boxtitle pt-3 pt-lg-6">
             <div class="pb-2 pb-lg-4">
               {{ Breadcrumbs.content() }}
@@ -57,7 +57,48 @@
                   })
             }}
           </div>
+        </div> #}
+
+        <div class="zaux-pos-content row gx-3">
+          <div class="zaux-bg-set1-grey p-box rounded-bottom-100 col-12 col-lg-7 mih-boxtitle pt-3 pt-lg-6">
+            <div class="pb-2 pb-lg-4">
+              {{ Breadcrumbs.content() }}
+            </div>
+            <div class="font-zaux2 zaux-theme--light1 pb-2 pb-lg-4">
+              <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Paris Congress 2022</h6>
+            </div>
+             <div class="c-typo-style1-3 c-typo-style1-lg-4 maw-f768px">
+              <p>ERA organizes the largest annual Nephrology Congress in Europe, welcoming thousands of attendees coming from all over the world,
+                focusing on key learning features both in the clinical field as well as the scientific and latest innovations.</p>
+            </div>
+          </div>
+          <div class="pe-box col-12 col-lg-5 d-flex align-items-center mih-boxtitle justify-content-center justify-content-lg-end">
+            {{
+                  Img.content({
+                  "isLazy": false,
+                  "src": "media/ParisLogo.png",
+                  "src2x": "media/ParisLogo@2x.png",
+                  "width": 300,
+                  "height": 51,
+                  "className": ["img-fluid"],
+                  "title": "title",
+                  "alt": "alt",
+                  "wrapperElement": ["figure"],
+                  "wrapperClassName": [""]
+                  })
+            }}
+          </div>
         </div>
+
+        <div class="position-absolute" style="top:0; left:0; width:100%; z-index:-1;">
+            <div class="d-flex">
+              <div class="zaux-bg-set1-grey rounded-bottom-100 col-12 col-lg-7 mih-boxtitle">
+              </div>
+              <div class="col-lg-5 d-none d-lg-block">
+              </div>
+            </div>
+          </div>
+
       </div>
       <!-- end First box -->
 
@@ -68,7 +109,7 @@
        }}
 
        <!-- Testo Innovation-->
-      <div class="pb-7 pb-lg-10 p-box pb-11 pt-6 pt-lg-8">
+      <div class="zaux-pos-content pb-7 pb-lg-10 p-box pb-11 pt-6 pt-lg-8">
         <div class="mb-7 mb-lg-9">
         <div class="row gx-3">
           <div class="col-12 col-lg-6 pb-lg-0 pb-6">
@@ -105,7 +146,7 @@
         </div>
 
 
-      <div class="zaux-theme--light2">
+      <div class="zaux-pos-content zaux-theme--light2">
 
         <!-- start row -->
         <div class="row gx-3 h-100">
@@ -155,7 +196,7 @@
                       "contentClassName": ["d-flex", "justify-content-between", "flex-column", "p-6","h-100"],
                       "imgurl": "media/HeroBen.png",
                       "ctaAbsolute": "y",
-                      "ctaClassName": ["c-card1__content__cta--absolute"],
+                      "ctaClassName": [""],
                       "ctaValue": "go to hand courses",
                        "content": {
                        "title": "Open Call: NDT Editor in Chief",
@@ -177,8 +218,8 @@
 
 
     <div class="mb-lg-8 mb-5 zaux-bg-set1-grey mih-380">
-        <div class="row">
-           <div class="col-12 col-lg-6">
+        <div class="row gx-3 m-0">
+           <div class="col-12 col-lg-6 p-0">
             {{
             Img.content({
               "isLazy": false,
@@ -194,8 +235,8 @@
             })
             }}
           </div>
-          <div class="p-box mb-lg-0 mb-7 col-12 col-lg-6 ps-lg-0 pt-3 pt-lg-6">
-            <div class="d-flex flex-column justify-content-center h-100">
+          <div class="p-box mb-lg-0 mb-7 col-12 col-lg-6 ps-lg-0 py-3 py-lg-9">
+            <div class="maw-f625 h-100">
               <div class="font-zaux2 zaux-theme--light1 pb-2 pb-lg-4">
                 <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Subscribe to ERA for exclusive discounts!</h6>
               </div>
@@ -205,7 +246,7 @@
               <div class="text-center text-lg-start">
                 <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">Discover all benefits</a>
               </div>
-            </diV>
+            </div>
           </div>
 
         </div>

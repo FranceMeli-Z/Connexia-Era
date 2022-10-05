@@ -59,8 +59,10 @@
           </div>
 
         {% if obj.ctaAbsolute %}
-        <div class="{{_ctaClassName | join(" ")}}">
-          <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">{{obj.ctaValue|safe}}</a>
+        <div class="{{_ctaClassName | join(" ")}} pt-lg-8">
+          <div class="c-card1__content__cta--absolute">
+            <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">{{obj.ctaValue|safe}}</a>
+          </div>
         </div>
         {% elif obj.cta100 %}
         <div class="{{_ctaClassName | join(" ")}}">

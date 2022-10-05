@@ -33,7 +33,7 @@
           <div class="{{componentClassName}}__related--list c-typo-style1-4 c-typo-style1-lg-8 pb-2">
               <ul>
                 {% for el in obj.content.list %}
-                  <li class="mb-0">{{el|safe}}</li>
+                  <li class="mb-0"><a href="#">{{el|safe}}</a></li>
                 {% endfor %}
               </ul>
           </div>

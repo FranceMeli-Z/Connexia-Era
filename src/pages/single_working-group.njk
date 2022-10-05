@@ -30,8 +30,8 @@
 
   <main>
       <!-- First box -->
-      <div class="mb-lg-8 mb-5">
-        <div class="row m-0">
+      <div class="position-relative mb-lg-8 mb-5">
+        {# <div class="row m-0">
           <div class="zaux-bg-set1-grey p-box rounded-bottom-100 mb-lg-0 mb-7 col-12 col-lg-8 mih-boxtitle pt-3 pt-lg-6">
             <div class="pb-2 pb-lg-4">
               {{ Breadcrumbs.content() }}
@@ -58,13 +58,52 @@
                   "wrapperClassName": [""]
                   })
             }}
+          </div> #}
+
+          <div class="zaux-pos-content zaux-pos-herobox gx-3">
+          <div class="zaux-bg-set1-grey p-box rounded-bottom-100 hcol-1 mih-boxtitle pt-3 pt-lg-6">
+            <div class="pb-2 pb-lg-4">
+              {{ Breadcrumbs.content() }}
+            </div>
+              <div class="font-zaux2 zaux-theme--light1 pb-2 pb-lg-4">
+              <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">CKD-MBD Working Group</h6>
+            </div>
+             <div class="c-typo-style1-3 c-typo-style1-lg-4 maw-f768px pb-2 pb-lg-0">
+              <p>Chronic Kidney Disease and Metabolic Bone Disease Working Group</p>
+            </div>
+          </div>
+          <div class="pe-lg-box hcol-2 d-flex align-items-center mih-boxtitle justify-content-center">
+             {{
+                  Img.content({
+                  "isLazy": false,
+                  "src": "media/LogoOverview.png",
+                  "src2x": "media/LogoOverview.png",
+                  "width": 200,
+                  "height": 90,
+                  "className": ["img-fluid"],
+                  "title": "title",
+                  "alt": "alt",
+                  "wrapperElement": ["figure"],
+                  "wrapperClassName": [""]
+                  })
+            }}
           </div>
         </div>
+
+        <div class="position-absolute" style="top:0; left:0; width:100%; z-index:-1;">
+            <div class="d-flex">
+              <div class="zaux-bg-set1-grey rounded-bottom-100 col-12 col-lg-7 mih-boxtitle">
+              </div>
+              <div class="col-lg-5 d-none d-lg-block">
+              </div>
+            </div>
+          </div>
+
       </div>
       <!-- end First box -->
 
        <!-- Testo Works-->
-      <div class="pb-7 pb-lg-10 p-box">
+      <div class="zaux-pos-content pb-7 pb-lg-10 p-box">
 
         <div class="row gx-3">
           <div class="col-12 col-lg-8">
@@ -113,8 +152,8 @@
 
        <!--Box Join WorkingGroup -->
       <div class="mb-lg-8 mb-5 zaux-bg-set1-grey mih-380">
-        <div class="row">
-           <div class="col-12 col-lg-4 order-lg-2">
+        <div class="row gx-3 m-0">
+           <div class="col-12 col-lg-6 order-lg-2 p-0">
             {{
             Img.content({
               "isLazy": false,
@@ -130,17 +169,19 @@
             })
             }}
           </div>
-          <div class="p-box mb-lg-0 mb-7 col-12 col-lg-8 pt-3 pt-lg-6 order-lg-1">
-            <div class="font-zaux2 zaux-theme--light1 pb-2 pb-lg-4">
-              <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Join this working group</h6>
-            </div>
-             <div class="pb-4 c-typo-style1-3 c-typo-style1-lg-4 maw-f768">
-              <p>Being a ordinary member of the CKD-MBD Working Group means being part of a network which facilitates exchanges of in the field of interest of CKD-MBD and Bone Mineral disorders in CKD.</p>
-              <p>Becoming an ordinary member of the CKD-MBD Working Group is FREE OF CHARGE. Ordinary members must be ERA members and be persons with a proven interest in the research area covered by the WG. Exceptions are possible only for non-nephrologists.</p>
-              <p>By joining the CKD-MBD Working Group you will receive constant updates on the Working Group initiatives be included in the Directory of CKD-MBD Working Groups’ ordinary members and start networking with colleagues from all over the world.</p>
-            </div>
-            <div class="text-center text-lg-start pb-4 pb-lg-5">
-              <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">Join CKD-MBD</a>
+          <div class="pb-lg-0 mb-7 col-12 col-lg-6 pt-3 pt-lg-9 order-lg-1">
+            <div class="float-lg-end maw-f625">
+              <div class="font-zaux2 zaux-theme--light1 pb-2 pb-lg-4">
+                <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Join this working group</h6>
+              </div>
+              <div class="pb-4 c-typo-style1-3 c-typo-style1-lg-4 maw-f768">
+                <p>Being a ordinary member of the CKD-MBD Working Group means being part of a network which facilitates exchanges of in the field of interest of CKD-MBD and Bone Mineral disorders in CKD.</p>
+                <p>Becoming an ordinary member of the CKD-MBD Working Group is FREE OF CHARGE. Ordinary members must be ERA members and be persons with a proven interest in the research area covered by the WG. Exceptions are possible only for non-nephrologists.</p>
+                <p>By joining the CKD-MBD Working Group you will receive constant updates on the Working Group initiatives be included in the Directory of CKD-MBD Working Groups’ ordinary members and start networking with colleagues from all over the world.</p>
+              </div>
+              <div class="text-center text-lg-start">
+                <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">Join CKD-MBD</a>
+              </div>
             </div>
           </div>
         </div>
@@ -149,7 +190,7 @@
        <!-- End Box Join WorkingGroup -->
 
     <!-- Start Latest Publication of Working Group -->
-     <div class="p-box mb-6 mb-lg-9">
+     <div class="zaux-pos-content p-box mb-6 mb-lg-9">
   <div class="pb-6 pb-lg-8 border-bottom-box position-relative">
 
       <div class="font-zaux2 zaux-theme--light2 pb-6 pb-md-9 maw-f825">
@@ -172,7 +213,7 @@
 
 
     <!-- Start Card Profile  -->
-    <div class="p-box mb-3 mb-lg-7">
+    <div class="zaux-pos-content p-box mb-3 mb-lg-7">
       <div class="border-bottom-lg-box border-bottom-none ">
         <div class="font-zaux2 zaux-theme--light2 mb-4">
           <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16 mb-3">CKD-MBD Board</h6>
@@ -223,7 +264,7 @@
     </div>
     <!-- End Card Profile  -->
 
-    <div class="p-box pb-8">
+    <div class="zaux-pos-content p-box pb-8">
       <div class="border-bottom-box mb-6">
         <div class="font-zaux2 zaux-theme--light2 pb-4">
           <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">Webcast</h6>
@@ -304,7 +345,7 @@
     </div>
 
 
-    <div class="mb-6 position-relative mih-625 overflow-hidden">
+    <div class="zaux-pos-content mb-6 position-relative mih-625 overflow-hidden">
        <div class="position-absolute zaux-zi--1 zaux-pos-custom2">
         {{
           Img.content({
@@ -396,7 +437,7 @@
       </div>
     </div>
 
-    <div class="p-box mb-6 mb-lg-9">
+    <div class="zaux-pos-content p-box mb-6 mb-lg-9">
       <div class="row gx-3 border-bottom-box">
         <div class="col-12 col-lg-6">
               <div class="font-zaux2 zaux-theme--light2 pb-6 pb-lg-7 maw-f768px">
@@ -485,7 +526,7 @@
         <!-- end row -->
     </div>
 
-    <div class="mb-6 p-box">
+    <div class="zaux-pos-content mb-6 p-box">
       <div class="">
         <div class="font-zaux2 zaux-theme--light2 pb-6 pb-lg-7 maw-f768px">
           <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">Guidelines related to CKD-MBD</h6>

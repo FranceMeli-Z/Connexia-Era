@@ -105,8 +105,8 @@
       line-height: 18px;
       font-weight: 600;
       padding: 15px;
-      &:not(:last-child) {
-        border-right: 1px solid #d8d8d8;
+      &:not(:first-child) {
+        border-left: 1px solid #d8d8d8;
       }
     }
   }
@@ -220,4 +220,9 @@
     transition: 500ms;
   }
 }
+
+.zaux-fit-contain {
+  object-fit: contain;
+}
+
 

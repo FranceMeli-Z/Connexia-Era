@@ -72,6 +72,8 @@ $component: componentClass("card1");
     }
 
     &--foot {
+      border-bottom-left-radius: 10px ;
+      border-bottom-right-radius: 10px ;
       &:hover {
         cursor: pointer;
         a {

@@ -32,7 +32,7 @@
     {# {{ HeroVideo.content(page.data.blocks.videoHero1) }} #}
 
      <div class="zaux-bg-set1-grey position-relative">
-        <div class="position-absolute w-lg-40 end-0">
+        <div class="position-absolute end-0">
            {{
         Img.content({
           "isLazy": false,
@@ -48,7 +48,7 @@
         })
       }}
         </div>
-        <div class="p-box pb-4 pt-9 py-lg-8">
+        <div class="p-box pb-4 pt-9 py-lg-8 zaux-pos-content">
           <div class="zaux-theme--light1 font-zaux2 pb-5 maw-size-custom1">
             <h6 class="fw-demi c-typo-fs-8 c-typo-fs-lg-13">Leading European Nephrology</h6>
           </div>
@@ -58,7 +58,7 @@
         </div>
       </div>
 
-      <div class="pb-7 pb-lg-16">
+      <div class="pb-7 pb-lg-16 zaux-pos-content">
       <div class="zaux-bg-set1-white p-box zaux-theme--light2">
         <div class="font-zaux2 pb-4 pt-6 pb-lg-9 pt-lg-11">
           <h6 class="fw-demi  c-typo-fs-10 c-typo-fs-lg-16">What we do</h6>
@@ -200,7 +200,7 @@
       <div class="font-zaux2 py-6 zaux-theme--light2 text-center">
         <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16 mb-3">Latest Tweets</h6>
       </div>
-      <div class="pb-6 pb-md-9 m-auto position-relative p-6">
+      <div class="pb-6 pb-md-9 m-auto position-relative p-6 zaux-pos-content2">
         {# <div class="d-flex align-items-center justify-content-center position-relative"> #}
 
           <div class="c-slider h-100"  data-config='{{component_slider.demo.sliderTwitter.config | dump | safe}}' data-js-component="Slider">
@@ -341,7 +341,7 @@
     </div>
    </div>
 
-   <div class="mb-9 position-relative mih-560 overflow-hidden">
+   <div class="mb-9 position-relative mih-560 overflow-hidden zaux-pos-content">
     <div class="position-absolute zaux-zi--1 zaux-pos-custom1">
        {{
         Img.content({
@@ -399,7 +399,7 @@
   {% include "partials/ui/mostpopular.njk" %}
 
 
-  <div class="p-box pb-8">
+  <div class="p-box pb-8 zaux-pos-content">
     <div class="zaux-theme--light2 pb-6 pb-md-9">
       <h6 class="c-typo-fs-10 c-typo-fs-lg-16"><strong>Latest Webcast</strong></h6>
     </div>

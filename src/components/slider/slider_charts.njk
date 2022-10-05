@@ -1,14 +1,16 @@
 {% import 'components/img/img.njk' as Img %}
 
-<div class="c-slider flex-grow-1"  data-config='{{component_slider.demo.sliderFlowchart.config | dump | safe}}' data-js-component="Slider">
+<div class="c-slider position-relative"  data-config='{{component_slider.demo.sliderFlowchart.config | dump | safe}}' data-js-component="Slider">
   {# mb-lg-8 #}
   <div class="c-slider__wrapper">
     <div class="c-slider__instance swiper swiper-container d-flex flex-column">
 
       <div class="swiper-wrapper">
 
-        <div class="swiper-slide mb-4">
-          <div class="swiper-slide__charts zaux-bg-default-white py-6 py-lg-10 px-4 px-lg-8">
+        {# Slide 1 #}
+        <div class="swiper-slide">
+          <div class="swiper-slide__charts">
+            <div class="swiper-slide__charts--img zaux-bg-default-white shadow-chart mx-1 mb-2 mb-lg-4 py-6 py-lg-10 px-4 px-lg-8">
             {# mih-lg-f350vh #}
                 {{
                   Img.content({
@@ -17,38 +19,15 @@
                   "src2x": "media/Chart1@2x.png",
                   "width": 940,
                   "height": 392,
-                  "className": ["img-fluid"],
+                  "className": ["zaux-fit-contain position-absolute top-0 start-0 w-100 h-100 -in-lazy -is-loaded"],
                   "title": "title",
                   "alt": "alt",
                   "wrapperTag": ["picture"],
-                  "wrapperClassName": ["d-block text-center"]
+                  "wrapperClassName": ["c-img d-block h-100 position-relative c-ratio--chart c-img--lazy -is-loaded"]
                   })
                 }}
-          </div>
-        </div>
-
-        <div class="swiper-slide mb-4">
-          <div class="swiper-slide__charts zaux-bg-default-white py-6 py-lg-10 px-4 px-lg-8">
-            {# mih-lg-f350vh #}
-                {{
-                  Img.content({
-                  "isLazy": false,
-                  "src": "media/Mappa.png",
-                  "src2x": "media/Mappa@2x.png",
-                  "width": 940,
-                  "height": 392,
-                  "className": ["img-fluid"],
-                  "title": "title",
-                  "alt": "alt",
-                  "wrapperTag": ["picture"],
-                  "wrapperClassName": ["d-block text-center"]
-                  })
-                }}
-          </div>
-        </div>
-
-      </div>
-      <div class="d-flex justify-content-between mb-10">
+            </div>
+            <div class="d-flex justify-content-between mb-2 mb-lg-10">
             <div class="w-70 c-typo-style1-1 c-typo-style1-lg-3">
               <p>Transplantation decision flow chart for patients with type 1 diabetes.</p>
             </div>
@@ -71,10 +50,128 @@
             </a>
             </div>
           </div>
-      <div class="swiper-pagination"></div>
+          </div>
+        </div>
+
+        {# Slide 2 #}
+        <div class="swiper-slide">
+          <div class="swiper-slide__charts">
+            <div class="swiper-slide__charts--img zaux-bg-default-white shadow-chart mx-1 mb-2 mb-lg-4 py-6 py-lg-10 px-4 px-lg-8">
+                {{
+                  Img.content({
+                  "isLazy": false,
+                  "src": "media/Mappa.png",
+                  "src2x": "media/Mappa@2x.png",
+                  "width": 940,
+                  "height": 392,
+                  "className": ["zaux-fit-contain position-absolute top-0 start-0 w-100 h-100 -in-lazy -is-loaded"],
+                  "title": "title",
+                  "alt": "alt",
+                  "wrapperTag": ["picture"],
+                  "wrapperClassName": ["c-img d-block h-100 position-relative c-ratio--chart c-img--lazy -is-loaded"]
+                  })
+                }}
+            </div>
+
+                <div class="d-flex justify-content-between mb-10">
+            <div class="w-70 c-typo-style1-1 c-typo-style1-lg-3">
+              <p>Transplantation decision flow chart for patients with type 1 diabetes.</p>
+            </div>
+            <div class="">
+              <a target="PrintSwiperActive" class="print-chart pe-3 pe-lg-5"> {{
+              Icon.content({
+                "className": ["zaux-color-set1-darkgrey"],
+                "iconName": "icozaux1-Print",
+                "iconSvgUrl": app.fonts.icozaux1.url
+                })
+              }}
+            </a>
+            <a href="#" target="_blank"> {{
+              Icon.content({
+                "className": ["zaux-color-set1-darkgrey"],
+                "iconName": "icozaux1-Download",
+                "iconSvgUrl": app.fonts.icozaux1.url
+                })
+              }}
+            </a>
+            </div>
+          </div>
+          </div>
+        </div>
+
+        {# Slide 3 #}
+        <div class="swiper-slide">
+          <div class="swiper-slide__charts">
+            <div class="swiper-slide__charts--img zaux-bg-default-white shadow-chart mx-1 mb-2 mb-lg-4 py-6 py-lg-10 px-4 px-lg-8">
+
+                {{
+                  Img.content({
+                  "isLazy": false,
+                  "src": "media/Doctor.png",
+                  "src2x": "media/Doctor.png",
+                  "width": 700,
+                  "height": 1050,
+                  "className":  ["zaux-fit-contain position-absolute top-0 start-0 w-100 h-100 -in-lazy -is-loaded"],
+                  "title": "title",
+                  "alt": "alt",
+                  "wrapperTag": ["picture"],
+                  "wrapperClassName": ["c-img d-block h-100 position-relative c-ratio--chart c-img--lazy -is-loaded"]
+                  })
+                }}
+            </div>
+
+                <div class="d-flex justify-content-between mb-10">
+            <div class="w-70 c-typo-style1-1 c-typo-style1-lg-3">
+              <p>Transplantation decision flow chart for patients with type 1 diabetes.</p>
+            </div>
+            <div class="">
+              <a target="PrintSwiperActive" class="print-chart pe-3 pe-lg-5"> {{
+              Icon.content({
+                "className": ["zaux-color-set1-darkgrey"],
+                "iconName": "icozaux1-Print",
+                "iconSvgUrl": app.fonts.icozaux1.url
+                })
+              }}
+            </a>
+            <a href="#" target="_blank"> {{
+              Icon.content({
+                "className": ["zaux-color-set1-darkgrey"],
+                "iconName": "icozaux1-Download",
+                "iconSvgUrl": app.fonts.icozaux1.url
+                })
+              }}
+            </a>
+            </div>
+          </div>
+
+          </div>
+        </div>
+
+      </div>
 
     </div>
     <!-- .c-slider__instance -->
   </div>
+
+  <div class="swiper-pagination"></div>
+  <div class="swiper-navigation">
+        <div class="chart-swiper-button-prev"> {{
+                    Icon.content({
+                      "className": "",
+                      "iconName": "icozaux1-arrowL",
+                      "iconSvgUrl": app.fonts.icozaux1.url
+                      })
+                    }}
+        </div>
+        <div class="chart-swiper-button-next">
+          {{
+              Icon.content({
+                "className": "",
+                "iconName": "icozaux1-arrowR",
+                "iconSvgUrl": app.fonts.icozaux1.url
+              })
+          }}
+        </div>
+      </div>
   <!-- .c-slider__wrapper -->
 </div>

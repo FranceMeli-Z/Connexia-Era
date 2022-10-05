@@ -29,7 +29,7 @@
   <main>
      <!-- First box -->
       <div class="">
-        <div class="row m-0">
+        {# <div class="row m-0">
           <div class="zaux-bg-set1-grey p-box rounded-bottom-100  col-12 col-lg-8 mih-boxtitle pt-3 pt-lg-6">
             <div class="pb-2 pb-lg-4">
               {{ Breadcrumbs.content() }}
@@ -40,11 +40,33 @@
           </div>
           <div class="col-lg-4 d-none d-lg-block">
           </div>
-        </div>
+        </div> #}
+        <div class="position-relative">
+          <div class="p-box zaux-pos-content">
+            <div class="zaux-bg-set1-grey mih-boxtitle rounded-bottom-100 maw-f825 pt-3 pt-lg-6 h-100">
+                <div class="pb-2 pb-lg-4">
+                  {{ Breadcrumbs.content() }}
+                </div>
+               <div class="font-zaux2 zaux-theme--light1 pb-2 pb-lg-4">
+              <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Contact us</h6>
+            </div>
+            </div>
+          </div>
+
+          <div class="position-absolute" style="top:0; left:0; width:100%; z-index:-1;">
+            <div class="d-flex">
+              <div class="zaux-bg-set1-grey rounded-bottom-100 col-12 col-lg-7 mih-boxtitle">
+              </div>
+              <div class="col-lg-5 d-none d-lg-block">
+              </div>
+            </div>
+          </div>
+      </div>
+
       </div>
       <!-- end First box -->
 
-      <div class="pb-7 pb-lg-9 p-box pt-6 pt-lg-8">
+      <div class="zaux-pos-content pb-7 pb-lg-9 p-box pt-6 pt-lg-8">
         <div class="mb-6 mb-lg-10">
         <div class="row gx-3">
           <div class="col-12 col-lg-6 pb-lg-0 pb-6">

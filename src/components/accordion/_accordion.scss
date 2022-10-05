@@ -19,11 +19,11 @@ $component: componentClass("accordion");
     }
   }
     &.closed {
-      & .#{$component}__inner {
-        &:hover {
-          background-color: #F9F9F9 !important;
-        }
+      &:hover {
+        background-color: #F9F9F9 !important;
       }
+      // & .#{$component}__inner {
+      // }
     }
 
   &__inner {

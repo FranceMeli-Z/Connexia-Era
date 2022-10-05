@@ -12,6 +12,32 @@
 
 $zaux-helper-name: "pos";
 
+.zaux-#{$zaux-helper-name}-content {
+  max-width: 1440px;
+  margin: auto;
+}
+.zaux-#{$zaux-helper-name}-content2 {
+  max-width: 1254px;
+  margin: auto;
+}
+
+.zaux-#{$zaux-helper-name}-herobox {
+  @include media-breakpoint-up(lg) {
+  display: flex;
+  & .hcol-1 {
+    @include media-breakpoint-up(lg) {
+    flex-basis: 64%;
+    }
+  }
+  & .hcol-2 {
+    @include media-breakpoint-up(lg) {
+    flex-basis: 36%;
+    }
+  }
+}
+}
+
+
 // Custom
 
 .zaux-#{$zaux-helper-name}-custom1 {
@@ -38,6 +64,13 @@ $zaux-helper-name: "pos";
   @include media-breakpoint-down(lg) {
     transform: translateY(45px) rotate(180deg);
    }
+ }
+
+ .zaux-#{$zaux-helper-name}-custom5 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
  }
 
 
@@ -74,7 +107,10 @@ $zaux-helper-name: "pos";
 .zaux-#{$zaux-helper-name}-header1 {
   @include media-breakpoint-up(lg) {
    position: absolute;
-   left: 350px;
+   left: 150px;
+   }
+   & .c-menu__btn-toggle {
+    margin-right: 35px !important;
    }
  }
  .zaux-#{$zaux-helper-name}-header2 {
@@ -85,7 +121,7 @@ $zaux-helper-name: "pos";
  .zaux-#{$zaux-helper-name}-header3 {
   @include media-breakpoint-up(lg) {
    position: absolute;
-   right: 93px;
+   right: 0;
    }
  }
 
@@ -93,12 +129,12 @@ $zaux-helper-name: "pos";
  //Custom Nav Paris Congress sticky on scroll
  .zaux-#{$zaux-helper-name}-nav {
     position: fixed;
-    max-width: 1440px;
+    // max-width: 1440px;
     width: 100%;
     z-index: 19;
     top: 65px;
   @include media-breakpoint-up(lg) {
-    top: 114px;
+    top: 80px;
    }
  }
 

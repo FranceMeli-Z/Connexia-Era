@@ -19,12 +19,12 @@
           "el": ".swiper-pagination",
           "clickable": true
         },
-        "loop": true,
+        "navigation": {
+          "nextEl": ".chart-swiper-button-next",
+          "prevEl": ".chart-swiper-button-prev"
+        },
         "speed": 900,
-        "allowTouchMove": true,
-        "autoplay": {
-          "delay": 5000
-          }
+        "allowTouchMove": true
       }
     },
     "sliderTwitter": {

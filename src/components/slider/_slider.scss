@@ -8,14 +8,17 @@ $component: componentClass("slider");
   &__wrapper {
     overflow: hidden;
     position: relative;
-    @include media-breakpoint-up(md) {
-      margin: 0 10px;
-    }
+    // @include media-breakpoint-up(md) {
+    //   margin: 0 10px;
+    // }
   }
   & .swiper-slide {
-    // width: 306px !important;
-    &--charts {
-      border: 1px solid #F1F1F1;
+    height: auto;
+    &__charts {
+      // border: 1px solid #F1F1F1;
+      // height: 100%;
+      // display: flex;
+      // align-items: center;
     }
 
     &.swiper-slide-visible .c-twitter {
@@ -52,8 +55,9 @@ $component: componentClass("slider");
 }
 
   & .swiper-pagination {
+    bottom: 20px;
     @include media-breakpoint-down(lg) {
-      bottom: 30px;
+      bottom: 40px;
      }
 
     &-bullet{
@@ -115,6 +119,36 @@ $component: componentClass("slider");
     }
   }
 
+  & .chart-swiper-button-prev {
+    color: tokenColor("set1","red1");
+    left: -30px;
+    top: 42%;
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+    &::after {
+      content: none;
+    }
+    &:hover {
+      color: #BD2910;
+    }
+  }
+
+  & .chart-swiper-button-next {
+    color: tokenColor("set1","red1");
+    right: -30px;
+    top: 42%;
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+    &::after {
+      content: none;
+    }
+    &:hover {
+      color: #BD2910;
+    }
+  }
+
   & .twitter-swiper-button-prev {
     color: tokenColor("set1","red1");
     top: 45%;
@@ -148,7 +182,7 @@ $component: componentClass("slider");
   }
 }
 
-
+.chart-swiper-button-prev, .chart-swiper-button-next,
 .swiper-button-prev, .swiper-button-next,
 .popular-swiper-button-prev, .popular-swiper-button-next,
 .swiper-button-prev2, .swiper-button-next2,
@@ -227,13 +261,24 @@ $component: componentClass("slider");
   left: auto;
 }
 
-
 .swiper-button-lock {
   display: none;
 }
 
 .print-chart {
   cursor: pointer;
+}
+
+.chart-swiper-button-prev, .chart-swiper-button-next {
+  &.swiper-button-disabled {
+    opacity: 1;
+    cursor: auto;
+    pointer-events: none;
+    color: #FFFFFF;
+    &:hover {
+      color: #FFFFFF;
+    }
+  }
 }
 
 }

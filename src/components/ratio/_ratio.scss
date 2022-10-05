@@ -32,6 +32,7 @@ $component: componentClass("ratio");
 }
 
 .#{$component} {
+
   &--square {
     &:before {
       --w: 1;
@@ -42,6 +43,13 @@ $component: componentClass("ratio");
     &:before {
       --w: 16;
       --h: 9;
+    }
+  }
+
+  &--chart {
+    &::before{
+    --w: 280;
+    --h: 128;
     }
   }
 }

@@ -28,12 +28,12 @@
           <ul>
             {% for item in component_menu.props.panels[0].nav.items %}
               {% if item.childId == "2" %}
-                <li class="{{componentClassName}}__content__navlist closed">
+                <li class="{{componentClassName}}__content__navlist">
               {% else %}
-                <li class="{{componentClassName}}__content__navlist closed">
+                <li class="{{componentClassName}}__content__navlist">
                  {% endif %}
                 <div class="">
-                  <div class="{{componentClassName}}__content__navlist--click zaux-theme--dark1 position-relative d-inline-block ps-box pb-2 pe-4 w-100">
+                  <div class="{{componentClassName}}__content__navlist--click zaux-theme--dark1 position-relative d-inline-block ps-box pe-4 w-100">
                     <a href="#" class="">
                       {{item.label}}
                     </a>

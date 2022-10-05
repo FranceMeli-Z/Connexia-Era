@@ -27,8 +27,7 @@
 
   <main>
      <!-- First box -->
-      <div class="mb-0 mb-lg-4 pe-0">
-        <div class="row gx-3 m-0">
+        {# <div class="row gx-3 m-0">
           <div class="zaux-bg-set1-grey p-box rounded-bottom-100 col-12 col-lg-8 mih-boxtitle pt-3 pt-lg-6">
 
             <div class="pb-2 pb-lg-4">
@@ -59,7 +58,48 @@
                   })
             }}
           </div>
+        </div> #}
+      <div class="position-relative mb-0 mb-lg-4">
+        <div class="zaux-pos-content zaux-pos-herobox">
+          <div class="hcol-1 zaux-bg-set1-grey p-box rounded-bottom-100 mih-boxtitle pt-3 pt-lg-6">
+            <div class="pb-2 pb-lg-4">
+              {{ Breadcrumbs.content() }}
+            </div>
+            <div class="font-zaux2 zaux-theme--light1 pb-2 pb-lg-4">
+              <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Paris Congress 2022</h6>
+            </div>
+             <div class="c-typo-style1-3 c-typo-style1-lg-4 maw-f768 pe-lg-0 pe-2 pb-lg-0 pb-2">
+              <p>ERA organizes the largest annual Nephrology Congress in Europe, welcoming thousands of attendees coming from all over the world,
+                focusing on key learning features both in the clinical field as well as the scientific and latest innovations.</p>
+            </div>
+          </div>
+          <div class="hcol-2 pe-box d-flex align-items-center mih-boxtitle justify-content-center justify-content-lg-end">
+            {{
+                  Img.content({
+                  "isLazy": false,
+                  "src": "media/ParisLogo.png",
+                  "src2x": "media/ParisLogo@2x.png",
+                  "width": 300,
+                  "height": 51,
+                  "className": ["img-fluid"],
+                  "title": "title",
+                  "alt": "alt",
+                  "wrapperElement": ["figure"],
+                  "wrapperClassName": [""]
+                  })
+            }}
+          </div>
         </div>
+
+        <div class="position-absolute" style="top:0; left:0; width:100%; z-index:-1;">
+            <div class="d-flex">
+              <div class="zaux-bg-set1-grey rounded-bottom-100 col-12 col-lg-7 mih-boxtitle">
+              </div>
+              <div class="col-lg-5 d-none d-lg-block">
+              </div>
+            </div>
+          </div>
+
       </div>
       <!-- end First box -->
 
@@ -70,8 +110,8 @@
        }}
 
        <!-- missing time box -->
-      <div class="mb-6 mb-lg-7">
-        <div class="p-box zaux-bg-set1-grey pb-11 pt-6 pb-lg-8 pt-lg-8">
+      <div class="zaux-bg-set1-grey mb-6 mb-lg-7">
+        <div class="p-box zaux-pos-content pb-11 pt-6 pb-lg-8 pt-lg-8">
 
           <div class="row m-0">
             <div class="col-12 col-md-6 pb-8 pb-lg-0">
@@ -88,12 +128,14 @@
               </div>
             </div>
             <div class="col-12 col-md-6">
-              <div class="row gx-3 align-items-center h-100">
+              <!-- Set the date end of countdown -->
+              <span class="countdown-date visually-hidden">March 22, 2023 12:00 am</span>
 
+              <div class="row gx-3 align-items-center h-100">
                 <div class="col-4">
                   <div class="zaux-bg-default-white rounded-2 pt-5 pt-lg-9 pb-2 zaux-size-timebox">
                     <div class="font-zaux2 text-center pb-lg-4 pt-lg-2 fw-demi c-typo-style1-13 c-typo-style1-lg-20">
-                      <p>57</p>
+                      <p class="countdown-d"></p>
                     </div>
                     <div class="text-center c-typo-style1-3 c-typo-style1-lg-8">
                       <p>days</p>
@@ -104,7 +146,7 @@
                 <div class="col-4">
                   <div class="zaux-bg-default-white rounded-2 pt-5 pt-lg-9 pb-2 zaux-size-timebox">
                     <div class="font-zaux2 text-center pb-lg-4 pt-lg-2 fw-demi c-typo-style1-13 c-typo-style1-lg-20">
-                      <p>20</p>
+                      <p class="countdown-h"></p>
                     </div>
                     <div class="text-center c-typo-style1-3 c-typo-style1-lg-8">
                       <p>hours</p>
@@ -115,7 +157,7 @@
                <div class="col-4">
                   <div class="zaux-bg-default-white rounded-2 pt-5 pt-lg-9 pb-2 zaux-size-timebox">
                     <div class="font-zaux2 text-center pb-lg-4 pt-lg-2 fw-demi c-typo-style1-13 c-typo-style1-lg-20">
-                      <p>30</p>
+                      <p class="countdown-m"></p>
                     </div>
                     <div class="text-center c-typo-style1-3 c-typo-style1-lg-8">
                       <p>minutes</p>
@@ -131,7 +173,7 @@
       </div>
        <!-- End missing time box -->
 
-      <div class="p-box mb-6 mb-lg-10">
+      <div class="zaux-pos-content p-box mb-6 mb-lg-10">
         <div class="row gx-3">
           <div class="col-12 col-lg-6 pb-7 pb-lg-0 mb-4 mb-lg-0 border-bottom-box border-bottom-lg-none">
               <div class="font-zaux2 zaux-theme--light1 pb-4 pb-lg-5 maw-f768">
@@ -186,8 +228,8 @@
 
 
       <div class="mb-lg-8 mb-5 zaux-bg-set1-grey mih-380">
-        <div class="row">
-           <div class="col-12 col-lg-6">
+        <div class="row gx-3 m-0">
+           <div class="col-12 col-lg-6 p-0">
             {{
             Img.content({
               "isLazy": false,
@@ -203,18 +245,18 @@
             })
             }}
           </div>
-          <div class="p-box mb-lg-0 mb-7 col-12 col-lg-6 pt-3 pt-lg-6">
-            <div class="d-flex flex-column justify-content-center h-100">
+          <div class="mb-lg-0 mb-7 col-12 col-lg-6 py-3 py-lg-9">
+            <div class=" h-100 maw-f625">
               <div class="font-zaux2 zaux-theme--light1 pb-2 pb-lg-4">
                 <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Subscribe to ERA for exclusive discounts!</h6>
               </div>
               <div class="pb-4 c-typo-style1-3 c-typo-style1-lg-4 maw-f768">
                 <p>Choose your membership category from Free to EUR 170 and enjoy all benefits!</p>
               </div>
-              <div class="text-center text-lg-start pb-4 pb-lg-5">
+              <div class="text-center text-lg-start">
                 <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">Discover all benefits</a>
               </div>
-            </diV>
+            </div>
           </div>
 
         </div>
@@ -222,7 +264,7 @@
 
 
 
-      <div class="p-box mb-10 mb-0 mb-lg-12">
+      <div class="zaux-pos-content p-box mb-10 mb-0 mb-lg-12">
         <div class="row gx-3">
           <div class="col-12 col-lg-6 pb-8 pb-lg-0">
               <div class="font-zaux2 zaux-theme--light1 pb-3 pb-lg-4 maw-f768">
@@ -308,7 +350,7 @@
           <!-- end row -->
         </div>
 
-      <div class="mb-0 mb-lg-6 position-relative mih-625 overflow-hidden">
+      <div class="zaux-pos-content mb-0 mb-lg-6 position-relative mih-625 overflow-hidden">
        <div class="position-absolute zaux-zi--1 zaux-pos-custom2">
         {{
           Img.content({

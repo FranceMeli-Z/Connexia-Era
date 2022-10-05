@@ -15,7 +15,10 @@ $zaux-helper-name: "size";
 
 //min-width
 .miw-f397 {
+  @include media-breakpoint-up(lg) {
   min-width: 397px;
+  }
+
 }
 
 // Highlight //
@@ -60,6 +63,13 @@ $zaux-helper-name: "size";
   }
 }
 
+.mih-cardprofile {
+  min-height: 364px;
+  @include media-breakpoint-up(lg) {
+    min-height: 410px;
+  }
+}
+
 //min height
 .mih-200 {
   min-height: 200px;
@@ -98,8 +108,15 @@ $zaux-helper-name: "size";
   max-width: 550px;
 }
 
+.maw-f625 {
+  max-width: 625px;
+}
+
 .maw-f640 {
   max-width: 640px;
+}
+.maw-f720 {
+  max-width: 720px;
 }
 
 .maw-f768 {
@@ -112,6 +129,10 @@ $zaux-helper-name: "size";
 
 .maw-f1025 {
   max-width: 1025px;
+}
+
+.maw-f1040 {
+  max-width: 1040px;
 }
 
 //height

@@ -24,28 +24,33 @@ $component: componentClass("modale");
       top: calc( 50% - 350px );
     }
 
+    & .#{$component}__btn {
+      z-index: 25;
+      & span {
+        display: none;
+      @include media-breakpoint-down(lg) {
+        display: inline-block;
+      }
+    }
+     button {
+        right: 15px;
+        @include media-breakpoint-down(lg) {
+          left: 0;
+          right: auto;
+        }
+      }
+    // span {
+    //   display: none;
+    //   @include media-breakpoint-down(lg) {
+    //    display: inline-block;
+    //   }
+    // }
+    }
+
     & .#{$component}__contentprofile {
       position: relative;
       overflow-y: overlay;
-      & .#{$component}__btn {
-        display: none;
-        @include media-breakpoint-down(lg) {
-         display: block;
-         z-index: 5;
-        }
-       button {
-          @include media-breakpoint-down(lg) {
-            left: 0;
-            right: auto;
-          }
-        }
-      // span {
-      //   display: none;
-      //   @include media-breakpoint-down(lg) {
-      //    display: inline-block;
-      //   }
-      // }
-      }
+
       &__data {
         padding: 0 20px;
         overflow: auto;

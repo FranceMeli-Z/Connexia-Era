@@ -26,7 +26,7 @@
   <main>
       <!-- First box -->
       <div class="mb-4 mb-lg-5">
-        <div class="row m-0">
+        {# <div class="row m-0">
           <div class="zaux-bg-set1-grey p-box rounded-bottom-100  col-12 col-lg-8 mih-boxtitle pt-3 pt-lg-6">
             <div class="pb-2 pb-lg-4">
               {{ Breadcrumbs.content() }}
@@ -37,12 +37,35 @@
           </div>
           <div class="col-lg-4 d-none d-lg-block">
           </div>
-        </div>
+        </div> #}
+
+          <div class="position-relative">
+          <div class="p-box zaux-pos-content">
+            <div class="zaux-bg-set1-grey mih-boxtitle rounded-bottom-100 maw-f825 pt-3 pt-lg-6 h-100">
+                <div class="pb-2 pb-lg-4">
+                  {{ Breadcrumbs.content() }}
+                </div>
+              <div class="font-zaux2 zaux-theme--light1 pb-2 pb-lg-4 maw-f768px">
+              <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Chronic Kidney Disease & Diabetes guideline</h6>
+            </div>
+            </div>
+          </div>
+
+          <div class="position-absolute" style="top:0; left:0; width:100%; z-index:-1;">
+            <div class="d-flex">
+              <div class="zaux-bg-set1-grey rounded-bottom-100 col-12 col-lg-7 mih-boxtitle">
+              </div>
+              <div class="col-lg-5 d-none d-lg-block">
+              </div>
+            </div>
+          </div>
+      </div>
+
       </div>
       <!-- end First box -->
 
       <!-- Testo Scope Guidelines-->
-      <div class="mb-7 mb-lg-9 p-box">
+      <div class="zaux-pos-content mb-7 mb-lg-9 p-box">
         <div class="border-bottom-box pb-8 pb-lg-10">
          <div class="font-zaux2 fst-italic c-typo-style1-4 zaux-color-set1-grey1 pb-3 pb-lg-5">
             <p>March 18, 2022</p>
@@ -68,7 +91,7 @@
       </div>
        <!-- Fine Testo Scope Guidelines -->
 
-    <div class="p-box pb-2 pb-lg-8">
+    <div class="zaux-pos-content p-box pb-2 pb-lg-8">
       <div class="zaux-theme--light2 zaux-font2 pb-6 pb-md-9">
         <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">Resources</h6>
       </div>
@@ -104,7 +127,7 @@
     </div>
 
     <!-- Charts Box -->
-     <div class="mb-6 position-relative mih-560 overflow-hidden">
+     <div class="zaux-pos-content mb-6 position-relative mih-560 overflow-hidden">
        <div class="position-absolute zaux-zi--1 zaux-pos-custom2">
        {{
         Img.content({
@@ -121,14 +144,14 @@
         })
       }}
     </div>
-      <div class="p-box position-relative">
-        <div class="maw-1040 m-auto">
+      <div class="p-box position-relative mb-8 mb-lg-0">
+        <div class="maw-f1040 m-auto">
 
-        <div class="zaux-theme--light2 zaux-font2 text-center pb-6 pb-md-9">
+        <div class="zaux-theme--light2 zaux-font2 text-center pb-lg-6 pb-8">
         <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-16">Flowcharts and figures</h6>
         </div>
 
-          <div class="mb-2 mb-lg-4">
+          <div class="">
             {% include "components/slider/slider_charts.njk" %}
           </div>
 
@@ -145,8 +168,8 @@
     <!-- End Charts Box -->
 
     <!--Accordion Box -->
-    <div class="mb-2 mb-lg-6">
-      <div class="zaux-bg-set1-grey p-box py-8 py-lg-10">
+    <div class="zaux-bg-set1-grey mb-2 mb-lg-6">
+      <div class="zaux-pos-content p-box py-8 py-lg-10">
          <div class="mb-3 mb-lg-6">
           {{Accordion.content(
                     {

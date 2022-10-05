@@ -28,7 +28,7 @@
   <main>
       <!-- First box -->
       <div class="mb-lg-8 mb-5">
-        <div class="row m-0">
+        {# <div class="row m-0">
           <div class="zaux-bg-set1-grey p-box rounded-bottom-100  col-12 col-lg-8 mih-boxtitle pt-3 pt-lg-6">
             <div class="pb-2 pb-lg-4">
               {{ Breadcrumbs.content() }}
@@ -39,11 +39,35 @@
           </div>
           <div class="col-lg-4 d-none d-lg-block">
           </div>
-        </div>
+        </div> #}
+
+        <div class="position-relative">
+          <div class="p-box zaux-pos-content">
+            <div class="zaux-bg-set1-grey mih-boxtitle rounded-bottom-100 maw-f825 pt-3 pt-lg-6 h-100">
+                <div class="pb-2 pb-lg-4">
+                  {{ Breadcrumbs.content() }}
+                </div>
+                <div class="font-zaux2 zaux-theme--light1 pb-2 pb-lg-4 maw-f768">
+              <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Non-Alcoholic Fatty Liver Disease and Chronic Kidney Disease – what is the link</h6>
+            </div>
+            </div>
+          </div>
+
+          <div class="position-absolute" style="top:0; left:0; width:100%; z-index:-1;">
+            <div class="d-flex">
+              <div class="zaux-bg-set1-grey rounded-bottom-100 col-12 col-lg-7 mih-boxtitle">
+              </div>
+              <div class="col-lg-5 d-none d-lg-block">
+              </div>
+            </div>
+          </div>
+      </div>
+
+
       </div>
       <!-- end First box -->
       <!--Video box -->
-      <div class="p-box mb-3">
+      <div class="zaux-pos-content p-box mb-3">
         <div class="pb-4 pb-lg-8 border-bottom-box border-bottom-lg-none">
           <div class="pb-5">
             {{ HeroVideo.content(component_herovideo.blocks.videoHero1) }}
@@ -112,7 +136,7 @@
       <!-- end Video box -->
 
        <!-- Testo Scope Guidelines-->
-      <div class="pb-7 pb-lg-10 p-box">
+      <div class="zaux-pos-content pb-7 pb-lg-10 p-box">
 
         <!-- row -->
         <div class="row gx-3 mb-9 mb-lg-10">
@@ -204,7 +228,7 @@
                 } ,
                 "ctaAbsolute": "y",
                 "imgurl": "media/backCard1.png",
-                "ctaClassName": ["c-card1__content__cta--absolute"],
+                "ctaClassName": [""],
                 "ctaValue": "go to Diabesity"
               }
             )}}
@@ -221,7 +245,7 @@
 
   {% include "partials/ui/swiper_news2.njk" %}
 
-  <div class="p-box mb-6 mb-lg-7">
+  <div class="zaux-pos-content p-box mb-6 mb-lg-7">
     <div class="pb-6 pb-lg-8 position-relative">
 
       <div class="font-zaux2 zaux-theme--light2 pb-6 pb-md-9">

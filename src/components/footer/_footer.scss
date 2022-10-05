@@ -63,14 +63,16 @@ $zaux-footer-last-h:50px;
 
 }
 .#{$component}__last {
-  min-height: $zaux-footer-last-h;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  & div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: $zaux-footer-last-h;
+    @include media-breakpoint-down(lg) {
+      flex-direction: column;
+    }
+  }
   & a {
     text-decoration: none;
-  }
-  @include media-breakpoint-down(lg) {
-  flex-direction: column;
   }
 }

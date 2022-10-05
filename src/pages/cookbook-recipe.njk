@@ -28,8 +28,8 @@
 
   <main>
      <!-- First box -->
-      <div class="mb-0 mb-lg-4 pe-0">
-        <div class="row gx-3 m-0">
+      <div class="position-relative mb-0 mb-lg-4 pe-0">
+        {# <div class="row gx-3 m-0">
           <div class="zaux-bg-set1-grey p-box rounded-bottom-100 col-12 col-lg-8 mih-boxtitle pt-3 pt-lg-6">
             <div class="pb-2 pb-lg-4">
               {{ Breadcrumbs.content() }}
@@ -57,7 +57,45 @@
                   })
             }}
           </div>
+        </div> #}
+                <div class="zaux-pos-content row gx-3">
+          <div class="zaux-bg-set1-grey p-box rounded-bottom-100 col-12 col-lg-7 mih-boxtitle pt-3 pt-lg-6">
+            <div class="pb-2 pb-lg-4">
+              {{ Breadcrumbs.content() }}
+            </div>
+             <div class="font-zaux2 zaux-theme--light1 pb-2 pb-lg-4">
+              <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Cookbook</h6>
+            </div>
+             <div class="c-typo-style1-3 c-typo-style1-lg-4 maw-f768px">
+              <p>Healthy food for healthy kidneys</p>
+            </div>
+          </div>
+          <div class="pe-box col-12 col-lg-5 d-flex align-items-center mih-boxtitle justify-content-center justify-content-lg-end">
+            {{
+                  Img.content({
+                  "isLazy": false,
+                  "src": "media/CookbookLogo.png",
+                  "src2x": "media/CookbookLogo@2x.png",
+                  "width": 340,
+                  "height": 156,
+                  "className": ["img-fluid"],
+                  "title": "title",
+                  "alt": "alt",
+                  "wrapperElement": ["figure"],
+                  "wrapperClassName": [""]
+                  })
+            }}
+          </div>
         </div>
+
+        <div class="position-absolute" style="top:0; left:0; width:100%; z-index:-1;">
+            <div class="d-flex">
+              <div class="zaux-bg-set1-grey rounded-bottom-100 col-12 col-lg-7 mih-boxtitle">
+              </div>
+              <div class="col-lg-5 d-none d-lg-block">
+              </div>
+            </div>
+          </div>
       </div>
       <!-- end First box -->
 
@@ -66,7 +104,7 @@
        })
        }}
 
-      <div class="position-relative mih-560 mb-6 overflow-hidden">
+      <div class="zaux-pos-content position-relative mih-560 mb-6 overflow-hidden">
         <div class="pt-6 position-absolute zaux-zi--1 zaux-pos-custom1">
           {{
             Img.content({
@@ -101,7 +139,7 @@
         </div>
       </div>
 
-      <div class="p-box pb-6 pb-lg-9">
+      <div class="zaux-pos-content p-box pb-6 pb-lg-9">
             {{
             Form.content({
               "searchfilter": "y",
@@ -111,7 +149,7 @@
       </div>
 
       <!-- All recipe -->
-      <div class="p-box">
+      <div class="zaux-pos-content p-box">
 
         <!-- New recipe -->
         <div class="mb-7 mb-lg-10">
