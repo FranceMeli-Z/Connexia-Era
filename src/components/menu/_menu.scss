@@ -5,17 +5,29 @@
 $component: componentClass("menu");
 
 .zaux-menu-active {
-  @include media-breakpoint-down(lg) {
+  // @include media-breakpoint-down(lg) {
+  // overflow: hidden;
+  // }
   overflow: hidden;
-  }
 }
 
 .#{$component} {
 
   @include media-breakpoint-up(lg) {
-    max-height: calc( 100vh - 140px);
-    max-width: 1440px;
-    margin: auto;
+    // max-height: calc( 100vh - 140px);
+    // min-height: calc( 100vh - 140px);
+    // max-width: 1440px;
+    // margin: auto;
+    position: relative;
+    &::before {
+      content: '';
+      background-color: #676767;
+      position: absolute;
+      width: 30%;
+      height: 100%;
+      left: 0;
+      top: 0;
+    }
   }
 
   @include media-breakpoint-down(lg) {
@@ -28,8 +40,9 @@ $component: componentClass("menu");
 
   &__inner {
     @include media-breakpoint-up(lg) {
-  position: absolute;
+  // position: absolute;
   z-index: 30;
+  height: 100%;
   max-width: 1440px;
   width: 100%;
   background-color: white;
@@ -54,14 +67,19 @@ $component: componentClass("menu");
 
   &__content {
     font-size: 24px;
+    height: 100%;
+    @include media-breakpoint-up(lg){
+      min-height: calc( 100vh - 60px);
+    }
     &__nav {
       @include media-breakpoint-up(lg) {
         width: 27%;
         background-color: #676767;
-        min-height: 530px;
+        // min-height: 550px;
       }
       ul {
         list-style: none;
+        margin: 0 !important;
         li.#{$component}__content__navlist {
             padding-bottom: 10px;
           &.open {
@@ -100,6 +118,7 @@ $component: componentClass("menu");
         }
         li.#{$component}__content__navlist.open {
           & .#{$component}__content__navlist--show {
+            overflow-y: auto;
             width: 100%;
             display: block !important;
             @include media-breakpoint-up(lg) {

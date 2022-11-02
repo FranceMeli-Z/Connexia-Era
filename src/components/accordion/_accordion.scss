@@ -16,6 +16,7 @@ $component: componentClass("accordion");
   &.closed {
     & .#{$component}__head::after {
       content: '+';
+      top: calc( 50% - 20px ) ;
     }
   }
     &.closed {
@@ -29,22 +30,26 @@ $component: componentClass("accordion");
   &__inner {
 
     & .#{$component}__head {
-          height: 60px;
+        position: relative;
+          min-height: 60px;
         @include media-breakpoint-up(lg) {
-            height: 90px;
+            min-height: 90px;
       }
       &::after {
         content: '-';
         position: absolute;
         right: 25px;
-        top:24px;
+        // top:24px;
+        top: calc( 50% - 25px ) ;
         font-size: 30px;
         font-family: $zaux-font2;
         font-weight: 600;
-        @include media-breakpoint-down(lg) {
-        top:8px;
-    }
       }
+    &--title {
+      h6 {
+        margin-right: 45px;
+      }
+    }
     }
     & ul {
       list-style: none;
@@ -53,12 +58,6 @@ $component: componentClass("accordion");
 
   &.open  .#{$component}__head {
    border-bottom: 5px solid #F1F1F1;
-   &::after {
-    top:20px;
-    @include media-breakpoint-down(lg) {
-      top:4px;
-  }
-   }
 
   }
   &.open  .#{$component}__show {

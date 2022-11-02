@@ -96,6 +96,12 @@ $zaux-helper-name: "size";
 
 //max width
 
+.maw-f200 {
+  @include media-breakpoint-up(lg) {
+    max-width: 200px;
+  }
+}
+
 .maw-f270 {
   max-width: 270px;
 }

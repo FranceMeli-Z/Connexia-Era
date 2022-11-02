@@ -21,6 +21,7 @@ export class Menu {
 
   toggleMenu(doOpen) {
     const $btns = $(`.${Menu.cssClass}__btn-toggle`);
+    const $navlist = $(`.${Menu.cssClass}__content__navlist`);
     const cssClassActive = `${Utils.getVarNS()}-menu-active`;
     const bodyClassList = document.body.classList;
 
@@ -34,6 +35,7 @@ export class Menu {
 
     } else if (!doOpen) {
       $btns.removeClass('is-active');
+      $navlist.removeClass('open');
       bodyClassList.remove(cssClassActive);
     }
   }

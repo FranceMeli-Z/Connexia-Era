@@ -67,6 +67,10 @@ $component: componentClass("typo");
       text-decoration: none;
     }
   }
+
+  & ul, ol {
+    margin-left: 20px;
+  }
 }
 
 /////////
@@ -108,6 +112,9 @@ $component: componentClass("typo");
       // text-decoration: underline;
       text-decoration: none;
     }
+  }
+  & ul {
+    margin-left: 20px;
   }
 }
 
@@ -151,5 +158,8 @@ $component: componentClass("typo");
       color: tokenColor(default, white);
       text-decoration: underline;
     }
+  }
+  & ul {
+    margin-left: 20px;
   }
 }

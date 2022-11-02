@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   var viewportWidth = $(window).width();
   resizeHighlight(viewportWidth);
-  resizeMenu(viewportWidth);
+  // resizeMenu(viewportWidth);
 
 //  $(".c-menu__content__navlist--show").each(function() {
 //   var maxH = 0
@@ -174,35 +174,35 @@ if (viewportWidth < 992 ) {
 //   }
 // });
 
-function resizeMenu(viewport){
-if (viewport > 992){
-$('.c-menu__content__navlist').mouseover(function(){
-  if($(this.open)) {
-    var h = $(this).find('.c-menu__content__navlist--show .c-nav').height();
-    if ( h > 530) {
-    var hg = h - 30;
-    $(this).parents('.c-menu__content__nav').removeClass('h-100');
-    $(this).parents('.c-menu__content__nav').height(hg);
-    }
-    else {
-      // $(this).parents('.c-menu__content__nav').addClass('h-100');
-      $(this).parents('.c-menu__content__nav').css('height','');
+// function resizeMenu(viewport){
+// if (viewport > 992){
+// $('.c-menu__content__navlist').click(function(){
+//   if($(this.open)) {
+//     var h = $(this).find('.c-menu__content__navlist--show .c-nav').height();
+//     if ( h > 530) {
+//     var hg = h - 30;
+//     $(this).parents('.c-menu__content__nav').removeClass('h-100');
+//     $(this).parents('.c-menu__content__nav').height(hg);
+//     }
+//     else {
+//       // $(this).parents('.c-menu__content__nav').addClass('h-100');
+//       $(this).parents('.c-menu__content__nav').css('height','');
 
-    }
-  }
-  if(!$(this.open)) {
-    // $(this).parents('.c-menu__content__nav').addClass('h-100');
-  }
-})
-}
-else {
-  $('.c-menu__content__navlist').click(function(){
-  if($(this.open)){
-    $(this).parents('.c-menu__content__nav').addClass('h-100');
-  }
-});
-}
-}
+//     }
+//   }
+//   if(!$(this.open)) {
+//     // $(this).parents('.c-menu__content__nav').addClass('h-100');
+//   }
+// })
+// }
+// else {
+//   $('.c-menu__content__navlist').click(function(){
+//   if($(this.open)){
+//     $(this).parents('.c-menu__content__nav').addClass('h-100');
+//   }
+// });
+// }
+// }
 
 
 var resizeTimer;
@@ -227,7 +227,7 @@ $(window).resize(function() {
     resizeTimer = setTimeout(function() {
      removeProperty(".c-card1__inner--highlight","min-height");
      resizeHighlight(viewportWidth);
-     resizeMenu(viewportWidth);
+    //  resizeMenu(viewportWidth);
     }, 100);
 
  });
@@ -343,7 +343,6 @@ var now = new Date().getTime();
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  // Display the result in the element with id="demo"
   $('.countdown-d').text(days);
   $('.countdown-h').text(hours);
   $('.countdown-m').text(minutes);
@@ -353,7 +352,9 @@ var now = new Date().getTime();
   // If the count down is finished, write some text
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
+    $('.countdown-d').text("0");
+    $('.countdown-h').text("0");
+    $('.countdown-m').text("0");
   }
 }, 1000);
 
@@ -400,25 +401,35 @@ $(window).scroll(function(){
   }
   else {
     var scrollTop = $(window).scrollTop();
-    if ( scrollTop > 354) {
-       $(".c-nav2").addClass('zaux-pos-nav');
+    if (  scrollTop > 50 ) {
+      $(".c-header__item1").addClass('zaux-pos-header1');
+        $(".c-header__item2").addClass('zaux-pos-header2');
+        $(".c-header__item3").addClass('zaux-pos-header3');
+      if ( scrollTop > 354) {
+        $(".c-nav2").addClass('zaux-pos-nav');
+      }
+      else {
+        $(".c-nav2").removeClass('zaux-pos-nav');
+      }
     }
     else {
-      $(".c-nav2").removeClass('zaux-pos-nav');
+      $(".c-header__item1").removeClass('zaux-pos-header1');
+      $(".c-header__item2").removeClass('zaux-pos-header2');
+      $(".c-header__item3").removeClass('zaux-pos-header3');
     }
   }
 });
 
 
 $(".print-chart").click(function(){
-    var img = $(".swiper-slide-active").html();
+    var src = $(".swiper-slide-active img").attr('src');
     var left = (screen.width - 600) / 2;
     var top = (screen.height - 480) / 4;
     var a = window.open('','Print_Chart','width=640, height=480, top=' + top + ', left=' + left);
-    a.document.open("text/html");
-    a.document.write("<html><head></head><body>");
-    a.document.write("<div>"+img+"</div>");
-    a.document.write("</body></html>");
+    a.document.open('text/html');
+    a.document.write('<html><head></head><body>');
+    a.document.write('<div> <img src="' + src + '" alt="" /></div>');
+    a.document.write('</body></html>');
     a.document.close();
     a.print();
 })

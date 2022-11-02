@@ -105,17 +105,22 @@ $zaux-helper-name: "pos";
 
 //Custom Header position on scroll
 .zaux-#{$zaux-helper-name}-header1 {
+  position: absolute;
+   left: 140px;
+  //  top: 20px;
   @include media-breakpoint-up(lg) {
-   position: absolute;
    left: 150px;
+   top: auto;
    }
    & .c-menu__btn-toggle {
     margin-right: 35px !important;
    }
  }
  .zaux-#{$zaux-helper-name}-header2 {
+  left: 50px;
+  position: absolute;
   @include media-breakpoint-up(lg) {
-   position: absolute;
+   left: 0;
    }
  }
  .zaux-#{$zaux-helper-name}-header3 {

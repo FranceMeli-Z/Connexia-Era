@@ -14,6 +14,9 @@ $component: componentClass("slider");
   }
   & .swiper-slide {
     height: auto;
+    @include media-breakpoint-down(lg) {
+      padding: 10px;
+    }
     &__charts {
       // border: 1px solid #F1F1F1;
       // height: 100%;
@@ -23,6 +26,11 @@ $component: componentClass("slider");
 
     &.swiper-slide-visible .c-twitter {
       box-shadow: 1px 1px 10px 0px #0000001A;
+    }
+    @include media-breakpoint-down(lg) {
+      &.swiper-slide-active .c-twitter {
+        box-shadow: 1px 1px 10px 0px #0000001A;
+      }
     }
 
     &.swiper-slide-next .c-twitter {

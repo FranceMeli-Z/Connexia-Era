@@ -19,7 +19,7 @@
   {% set _contentClassName = [componentClassName + "__recipe"] | mergeArray(obj.contentClassName or configDefault.contentClassName) %}
 
 
-  <div class="{{_className | join(" ")}}">
+  <div class="{{_className | join(" ")}} pb-1">
 
     <div class="{{_innerClassName | join(" ")}}">
         <div class="{{_contentClassName | join(" ")}} p-3">

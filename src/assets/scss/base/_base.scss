@@ -31,6 +31,11 @@ body {
   @include media-breakpoint-up(lg) {
     padding-top: 158px;
   }
+
+  & p a img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 main {
