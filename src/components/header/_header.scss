@@ -56,6 +56,10 @@ $zaux-header-lg-h: 160px !default;
     & .icozaux1-menu {
       width: 26px;
       height: 20px;
+      @include media-breakpoint-down(lg) {
+        width: 24px;
+        height: 18px;
+      }
     }
     & .icozaux1-search {
      width: 24px;

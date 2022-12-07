@@ -62,6 +62,7 @@ $component: componentClass("nav2");
       position: absolute;
       transform: rotate(90deg);
       bottom: -35px;
+      z-index: 1;
       & svg {
         font-size: 30px;
       }

@@ -113,8 +113,15 @@ var viewportWidth = $(window).width();
 if (viewportWidth < 992 ) {
   $(".c-menu__content__navlist--click").click(function() {
   event.preventDefault();
-    $(this).parents(".c-menu__content__navlist").toggleClass("closed");
-    $(this).parents(".c-menu__content__navlist").toggleClass("open");
+    // $(this).parents(".c-menu__content__navlist").toggleClass("closed");
+    // $(this).parents(".c-menu__content__navlist").toggleClass("open");
+    if ( $(this).parents(".c-menu__content__navlist").hasClass("open") ) {
+        $(".c-menu__content__navlist").removeClass("open");
+    }
+    else {
+      $(".c-menu__content__navlist").removeClass("open");
+      $(this).parents(".c-menu__content__navlist").addClass("open");
+    }
   })
 }
   else {
@@ -124,6 +131,14 @@ if (viewportWidth < 992 ) {
     });
 
 };
+
+
+// $(".c-menu__content__navlist--click").mouseover(function() {
+//   event.preventDefault();
+//       $(".c-menu__content__navlist").removeClass("open");
+//       $(this).parents(".c-menu__content__navlist").addClass("open");
+
+// });
 
 // $(".c-menu__content__navlist--click").click(function() {
 //   event.preventDefault();
@@ -242,7 +257,7 @@ $(window).resize(function() {
 //Share dei pulsanti social
 $(".c-share--fb").click(function(e) {
   e.preventDefault();
-  let url = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(location.href);
+  let url = 'https://www.facebook.com/sharer.php?u=' + encodeURIComponent(location.href);
   console.log(url);
   popupCenter(url, 'Condividi su Facebook', dialogWidth, dialogHeight)
   return false;
@@ -276,7 +291,7 @@ $(".c-share--wh").click(function(e) {
   e.preventDefault();
   let url = 'https://wa.me/?text=' + encodeURIComponent(location.href)
   console.log(url);
-  popupCenter(url, 'Condividi su Linkedin', dialogWidth, dialogHeight)
+  popupCenter(url, 'Condividi su Whats App', dialogWidth, dialogHeight)
   return false;
 });
 
