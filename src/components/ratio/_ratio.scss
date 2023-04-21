@@ -45,6 +45,12 @@ $component: componentClass("ratio");
       --h: 9;
     }
   }
+  &--high {
+    &:before {
+      --w: 2;
+      --h: 3;
+    }
+  }
 
   &--chart {
     &::before{

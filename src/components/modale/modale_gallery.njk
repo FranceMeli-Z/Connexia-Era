@@ -1,0 +1,62 @@
+{% import 'components/img/img.njk' as Img %}
+{% import 'components/icon/icon.njk' as Icon %}
+
+{% macro content(obj) %}
+
+  {% set componentClassName = 'c-modale' %}
+
+<div class="{{componentClassName}} modal-gallery modal fade" id="EraGalleryModal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="{{componentClassName}}__contentgallery d-flex flex-column flex-lg-row position-relative h-100">
+          <button type="button" class="{{componentClassName}}__btn--close" data-bs-dismiss="modal" aria-label="Close">
+                {{
+                  Icon.content({
+                    "className": "",
+                    "iconName": "icozaux1-close",
+                    "iconSvgUrl": app.fonts.icozaux1.url
+                  })
+                }}
+          </button>
+          <div class="{{componentClassName}}__contentgallery--img">
+            {{
+                    Img.content({
+                      "isLazy": false,
+                      "src": "media/Doctor.png",
+                      "src2x": "media/Doctor.png",
+                      "width": 182,
+                      "height": 133,
+                      "className": ["img-fluid"],
+                      "title": "title",
+                      "alt": "alt",
+                      "wrapperElement": "",
+                      "wrapperClassName": ["position-relative"]
+                  })
+                }}
+          </div>
+          <div class="{{componentClassName}}__contentgallery--data">
+            <div class="{{componentClassName}}__contentgallery--data--overlay">
+                <div class="zaux-theme--light1 font-zaux2 mb-3">
+                  <h6 class="fw-demi c-typo-fs-8 c-typo-fs-lg-10">Author: Marc Vervloet</h6>
+                </div>
+                <div class="zaux-theme--light1 font-zaux2 c-typo-style1-2 c-typo-style1-lg-3 mb-3">
+                  <p class="mb-0"><time datetime="">2022</time></p>
+                  <p><strong>Category</strong></p>
+                </div>
+                <div class="c-typo-style1-3 c-typo-style1-md-4 c-typo-style1-lg-6">
+                  <p>Marc Vervloet is associate professor at the department of Nephrology of the VU university medical center, where he practices clinical nephrology
+                    (Head of department: Professor Piet ter Wee), is leading the hemodialysis department, and is teacher of clinical nephrology for medical students
+                    and nephrology fellows. He is project leader at he Institute of Cardiovascular Research VU (ICaR-VU) focussing on cardiovascular changes induced
+                    by metabolic derangements of chronic kidney disease, and treatment of acute kidney disease, combining basic and clinical research. He co-chaired the national
+                    committee developing Dutch guidelines on CKD-MBD, board member of the scientific committee of the Dutch kidney Foundation, and is co-founder
+                    and secretary of the ERA-EDTA working group on CKD-MBD. He was active member of the European Vitamin D expert centers, co-chaired several
+                    international symposia on the role of the vitamin D in CKD, and organised several European renal fellow training programs.
+                    He has published several original studies on several topics, mainly focused on CKD-MBD, is member of ERA-EDTA and the ASN.
+                  </p>
+                </div>
+            </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+{% endmacro %}

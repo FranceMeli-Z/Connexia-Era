@@ -138,8 +138,71 @@ $component: componentClass("modale");
     }
   }
 
+  //Codice per modale card galleria
 
+  &.modal-gallery {
+    overflow-y: hidden;
+    & .modal-dialog {
+      height: 100%;
+      margin: auto !important;
+      padding: 40px;
+      pointer-events: auto;
 
+      & .#{$component}__contentgallery {
+        & .#{$component}__btn--close {
+          position: absolute;
+          top:20px;
+          right: 20px;
+          z-index: 1;
+        }
+        &--img {
+          width: 60%;
+          @include media-breakpoint-down(lg) {
+            width: 100%;
+            height: 60%;
+          }
+          & picture {
+            width: 100%;
+            height: 100%;
+            & img {
+              position: absolute;
+              height: 100%;
+              width: 100%;
+              top: 0;
+              left: 0;
+              object-fit: cover;
+              object-position: center center;
+            }
+          }
+        }
+        &--data {
+          position: relative;
+          width: 40%;
+          @include media-breakpoint-down(lg) {
+            width: 100%;
+            height: 40%;
+          }
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(to bottom, transparent 10%, #FFFFFF);
+            height: 100px;
+            width: 100%;
+          }
+          &--overlay {
+            height: 100%;
+            overflow-y: overlay;
+            padding: 60px 30px;
+            @include media-breakpoint-down(lg) {
+              padding: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 .btn.btn-primary {
@@ -148,7 +211,8 @@ $component: componentClass("modale");
   text-decoration: none;
 }
 .modal-backdrop {
-  z-index: 19;
+  // z-index: 19;
+  z-index: 20;
 }
 
 [type="search"]::-webkit-search-cancel-button,

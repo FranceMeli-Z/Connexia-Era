@@ -1,0 +1,151 @@
+{# Sets the layout to be extended #}
+{% extends "layouts/default.njk" %}
+
+{# Imports components #}
+{% import 'components/img/img.njk' as Img %}
+{% import 'components/icon/icon.njk' as Icon %}
+{% import 'components/btn/btnIcon.njk' as BtnIcon %}
+{% import 'components/card2/card2_news.njk' as Card2 %}
+{% import 'components/card3/card3.njk' as Card3 %}
+{% import 'components/boxcontent/boxcontent.njk' as BoxContent %}
+{% import 'components/form/form.njk' as Form %}
+{% import 'components/breadcrumbs/breadcrumbs.njk' as Breadcrumbs %}
+{% import 'components/slider/slider_news.njk' as Slider %}
+{% import 'components/modale/modale_gallery.njk' as ModaleGalleria %}
+
+{# Sets page-specific variables #}
+{% set page = {
+  "data": page_page_archive,
+  "title": "Page Archive",
+  "isHome": false
+} %}
+
+{% block head_css %}
+  <link rel="stylesheet" href="assets/css/general.bundle.css">
+{% endblock %}
+
+{% block content %}
+
+  <main>
+      <!-- First box -->
+      <div class="">
+         <div class="position-relative">
+          <div class="p-box zaux-pos-content">
+            <div class="zaux-bg-set1-grey mih-boxtitle rounded-bottom-100 maw-f825 pt-3 pt-lg-6 h-100">
+                <div class="pb-2 pb-lg-4">
+                  {{ Breadcrumbs.content() }}
+                </div>
+            <div class="font-zaux2 zaux-theme--light1 pb-2 pb-lg-4">
+              <h6 class="fw-demi c-typo-fs-10 c-typo-fs-lg-13">Page gallery</h6>
+            </div>
+            <div class="maw-f768px c-typo-style1-3 c-typo-style1-lg-4">
+              <p>Lorem ipsum .......</p>
+            </div>
+            </div>
+          </div>
+
+          <div class="position-absolute" style="top:0; left:0; width:100%; z-index:-1;">
+            <div class="d-flex">
+              <div class="zaux-bg-set1-grey rounded-bottom-100 col-12 col-lg-7 mih-boxtitle">
+              </div>
+              <div class="col-lg-5 d-none d-lg-block">
+              </div>
+            </div>
+          </div>
+      </div>
+
+      </div>
+      <!-- end First box -->
+
+      <!-- Archvio con ricerca-->
+      <div class="p-box zaux-pos-content">
+
+        <!-- Box ricerca -->
+        <div class="pt-6 pt-lg-8 border-bottom-box">
+          <div class="tag-list pb-5 pb-lg-8 overflow-auto text-nowrap maw-f1025">
+              <a class="c-cta__tag c-cta2 c-cta2--sm c-cta1--grey" href="#" title="button title">Optimising care</a>
+              <a class="c-cta__tag c-cta2 c-cta2--sm c-cta1--grey" href="#" title="button title">Covid-19</a>
+              <a class="c-cta__tag c-cta2 c-cta2--sm c-cta1--grey" href="#" title="button title">Robot assistance</a>
+              <a class="c-cta__tag c-cta2 c-cta2--sm c-cta1--grey" href="#" title="button title">Tag___4</a>
+              <a class="c-cta__tag c-cta2 c-cta2--sm c-cta1--grey" href="#" title="button title">Tag___5</a>
+              <a class="c-cta__tag c-cta2 c-cta2--sm c-cta1--grey" href="#" title="button title">Tag___6</a>
+              <a class="c-cta__tag c-cta2 c-cta2--sm c-cta1--grey" href="#" title="button title">Tag___7</a>
+              <a class="c-cta__viewtag c-cta2 c-cta2--sm c-cta1--grey closed" title="button title"></a>
+          </div>
+          <div class="zaux-color-set1-grey1 c-typo-style1-3">
+            <p>4/67 publications</p>
+          </div>
+        </div>
+       <!-- Fine Box ricerca -->
+
+        <!-- Inizio gallery Archive -->
+        <div class="pt-3 pt-lg-6 pb-7 pb-lg-12">
+          <!-- start row -->
+          <div class="row gx-3">
+            {% for i in range(0,12) %}
+
+            <div class="col-6 col-md-4 col-lg-3 pb-6">
+              {# {{Card3.content({
+              "className": ["shadow--grey", "rounded-2", "zaux-bg-default-white"],
+              "innerClassName": [""],
+              "contentClassName": ["py-7 text-center"],
+              "img": {
+                "isLazy": true,
+                "src": "media/Story.png",
+                "src2x": "media/Story@2x.png",
+                "width": 40,
+                "height": 40,
+                "alt": "Cover alternative text",
+                "className": ["img-fluid"]
+              },
+              "nome": "Marc Vervloet",
+              "time": "2022",
+              "ruolo": "aaa",
+              "descr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+              }
+              )}} #}
+             {{Card3.content({
+              "className": [""],
+              "innerClassName": [""],
+              "contentClassName": [""],
+              "img": {
+                "isLazy": true,
+                "src": "media/Doctor.png",
+                "src2x": "media/Doctor.png",
+                "width": 40,
+                "height": 40,
+                "alt": "Cover alternative text",
+                "className": ["img-fluid position-absolute w-100 h-100 start-0 top-0"],
+                "wrapperClassName": ["c-ratio--high position-relative"]
+              },
+              "nome": "Marc Vervloet",
+              "time": "2022",
+              "cat": "Category",
+              "descr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...."
+              }
+            )}}
+            </div>
+
+            {% endfor %}
+          </div>
+          {{ ModaleGalleria.content() }}
+          <!-- end row -->
+          <div class="text-center pt-4 pt-lg-6">
+            <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">Load more</a>
+          </div>
+        </div>
+        <!-- end archive -->
+      </div>
+    <!-- end archive + search -->
+
+    {% include "partials/ui/swiper_news.njk" %}
+
+    {% include "partials/ui/related_cont.njk" %}
+
+  </main>
+
+{% endblock %}
+
+{% block foot_js %}
+  <script defer src="assets/js/general.bundle.js"></script>
+{% endblock %}

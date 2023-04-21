@@ -109,36 +109,41 @@ $(".c-menu__btn-toggle").click(function() {
 });
 
 //Accordion interno al menu principale
-var viewportWidth = $(window).width();
-if (viewportWidth < 992 ) {
-  $(".c-menu__content__navlist--click").click(function() {
-  event.preventDefault();
-    // $(this).parents(".c-menu__content__navlist").toggleClass("closed");
-    // $(this).parents(".c-menu__content__navlist").toggleClass("open");
-    if ( $(this).parents(".c-menu__content__navlist").hasClass("open") ) {
-        $(".c-menu__content__navlist").removeClass("open");
-    }
-    else {
-      $(".c-menu__content__navlist").removeClass("open");
-      $(this).parents(".c-menu__content__navlist").addClass("open");
-    }
-  })
-}
-  else {
-    $(".c-menu__content__navlist--click").mouseover(function() {
-      $(".c-menu__content__navlist").removeClass("open");
-      $(this).parents(".c-menu__content__navlist").addClass("open");
-    });
-
-};
-
-
-// $(".c-menu__content__navlist--click").mouseover(function() {
+// var viewportWidth = $(window).width();
+// if (viewportWidth < 992 ) {
+//   $(".c-menu__content__navlist--click").click(function() {
 //   event.preventDefault();
+//     // $(this).parents(".c-menu__content__navlist").toggleClass("closed");
+//     // $(this).parents(".c-menu__content__navlist").toggleClass("open");
+//     if ( $(this).parents(".c-menu__content__navlist").hasClass("open") ) {
+//         $(".c-menu__content__navlist").removeClass("open");
+//     }
+//     else {
 //       $(".c-menu__content__navlist").removeClass("open");
 //       $(this).parents(".c-menu__content__navlist").addClass("open");
+//     }
+//   })
+// }
+//   else {
+//     $(".c-menu__content__navlist--click").mouseover(function() {
+//       $(".c-menu__content__navlist").removeClass("open");
+//       $(this).parents(".c-menu__content__navlist").addClass("open");
+//     });
 
-// });
+// };
+
+
+$(".c-menu__content__navlist--click").click(function() {
+  event.preventDefault();
+  if ( $(this).parents(".c-menu__content__navlist").hasClass("open") ) {
+      $(".c-menu__content__navlist").removeClass("open");
+  }
+  else {
+    $(".c-menu__content__navlist").removeClass("open");
+    $(this).parents(".c-menu__content__navlist").addClass("open");
+  }
+
+});
 
 // $(".c-menu__content__navlist--click").click(function() {
 //   event.preventDefault();

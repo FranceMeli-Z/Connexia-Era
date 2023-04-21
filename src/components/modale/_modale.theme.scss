@@ -34,4 +34,11 @@ $component: componentClass("modale");
       }
     }
 
+    &.modal-gallery {
+      & .modal-dialog {
+        & .#{$component}__contentgallery {
+          background-color: #FFFFFF;
+        }
+      }
+    }
 }
