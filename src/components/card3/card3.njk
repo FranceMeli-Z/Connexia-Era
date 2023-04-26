@@ -17,34 +17,34 @@
   {# Creates new arrays for manipulation) #}
   {% set _className = [componentClassName] | mergeArray(obj.className or configDefault.className) %}
   {% set _innerClassName = [componentClassName + "__inner"] | mergeArray(obj.innerClassName or configDefault.innerClassName) %}
-  {% set _contentClassName = [componentClassName + "__profile"] | mergeArray(obj.contentClassName or configDefault.contentClassName) %}
+  {% set _contentClassName = [componentClassName + "__content"] | mergeArray(obj.contentClassName or configDefault.contentClassName) %}
 
   <div class="{{_className | join(" ")}} zaux-theme--light1">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#EraGalleryModal">
-    <div class="{{_innerClassName | join(" ")}}">
-        {% if obj.img %}
-              <div class="{{componentClassName}}__img mb-2">
-                  {{
-                    Img.content(obj.img)
-                  }}
+    <a href="#" data-bs-toggle="modal" data-bs-target="#EraGalleryModal{{obj.id}}">
+      <div class="{{_innerClassName | join(" ")}}">
+          {% if obj.img %}
+                <div class="{{componentClassName}}__img mb-2">
+                    {{
+                      Img.content(obj.img)
+                    }}
+                </div>
+              {% endif %}
+          <div class="{{_contentClassName | join(" ")}}">
+              <div class=" font-zaux2 zaux-theme--light1 mb-2">
+                <h6 class="fw-demi c-typo-fs-8"> {{obj.nome|safe}} </h6>
               </div>
-            {% endif %}
-        <div class="{{_contentClassName | join(" ")}}">
-            <div class=" font-zaux2 zaux-theme--light1 mb-2">
-              <h6 class="fw-demi c-typo-fs-6 c-typo-fs-lg-8"> {{obj.nome|safe}} </h6>
-            </div>
-            <div class="c-typo-style1-3 mb-1">
-              <p>
-                <time>{{obj.time|safe}}</time> — <span>{{obj.cat|safe}}</span>
-              </p>
-            </div>
-            <div class="c-typo-style1-4">
-              <p>{{obj.descr|safe}}...</p>
-            </div>
-        </div>
-        <!-- .{{componentClassName}}__profile -->
-    </div>
-    <!-- .{{componentClassName}}__inner -->
+              <div class="c-typo-style1-2 c-typo-style1-lg-3">
+                <p>
+                  <time datetime="{{obj.time|safe}}">{{obj.time|safe}}</time> — <span>{{obj.cat|safe}}</span>
+                </p>
+              </div>
+              <div class="c-typo-style1-3 c-typo-style1-lg-4">
+                <p>{{obj.descr|safe}}...</p>
+              </div>
+          </div>
+          <!-- .{{componentClassName}}__profile -->
+      </div>
+      <!-- .{{componentClassName}}__inner -->
     </a>
   </div>
   <!-- .{{componentClassName}} -->

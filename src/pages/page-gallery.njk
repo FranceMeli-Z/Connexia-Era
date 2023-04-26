@@ -78,63 +78,13 @@
         </div>
        <!-- Fine Box ricerca -->
 
-        <!-- Inizio gallery Archive -->
-        <div class="pt-3 pt-lg-6 pb-7 pb-lg-12">
-          <!-- start row -->
-          <div class="row gx-3">
-            {% for i in range(0,12) %}
+      <!-- Inizio gallery Archive -->
 
-            <div class="col-6 col-md-4 col-lg-3 pb-6">
-              {# {{Card3.content({
-              "className": ["shadow--grey", "rounded-2", "zaux-bg-default-white"],
-              "innerClassName": [""],
-              "contentClassName": ["py-7 text-center"],
-              "img": {
-                "isLazy": true,
-                "src": "media/Story.png",
-                "src2x": "media/Story@2x.png",
-                "width": 40,
-                "height": 40,
-                "alt": "Cover alternative text",
-                "className": ["img-fluid"]
-              },
-              "nome": "Marc Vervloet",
-              "time": "2022",
-              "ruolo": "aaa",
-              "descr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
-              }
-              )}} #}
-             {{Card3.content({
-              "className": [""],
-              "innerClassName": [""],
-              "contentClassName": [""],
-              "img": {
-                "isLazy": true,
-                "src": "media/Doctor.png",
-                "src2x": "media/Doctor.png",
-                "width": 40,
-                "height": 40,
-                "alt": "Cover alternative text",
-                "className": ["img-fluid position-absolute w-100 h-100 start-0 top-0"],
-                "wrapperClassName": ["c-ratio--high position-relative"]
-              },
-              "nome": "Marc Vervloet",
-              "time": "2022",
-              "cat": "Category",
-              "descr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...."
-              }
-            )}}
-            </div>
+        {% include "partials/ui/gallery_list.njk" %}
 
-            {% endfor %}
-          </div>
-          {{ ModaleGalleria.content() }}
-          <!-- end row -->
-          <div class="text-center pt-4 pt-lg-6">
-            <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">Load more</a>
-          </div>
-        </div>
-        <!-- end archive -->
+      <!-- end archive -->
+
+
       </div>
     <!-- end archive + search -->
 

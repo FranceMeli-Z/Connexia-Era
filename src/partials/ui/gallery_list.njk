@@ -1,0 +1,138 @@
+<!-- Gallery Listing -->
+
+<div class="pt-3 pt-lg-6 pb-7 pb-lg-12">
+
+  <!-- start row -->
+  <div class="row gx-3">
+    {% set ids = 0 %}
+    {% for i in range(0, 4) %}
+    {% set ids = ids + 1 %}
+      <div class="col-6 col-md-4 col-lg-3 pb-6">
+        {{Card3.content({
+              "id": ids ,
+              "className": [""],
+              "innerClassName": [""],
+              "contentClassName": [""],
+              "img": {
+                "isLazy": true,
+                "src": "https://via.placeholder.com/1920x1080/eee?text=image-type1",
+                "src2x": "https://via.placeholder.com/1920x1080/eee?text=image-type1",
+                "width": 40,
+                "height": 40,
+                "alt": "Cover alternative text",
+                "className": ["img-fluid position-absolute zaux-fit-cover-center-center w-100 h-100 start-0 top-0"],
+                "wrapperClassName": ["c-ratio--high position-relative"]
+              },
+              "nome": "Marc Vervloet",
+              "time": "2022",
+              "cat": "Category",
+              "descr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...."
+              }
+            )}}
+      </div>
+      {{ ModaleGalleria.content({
+        "id": ids,
+              "img": {
+                "isLazy": true,
+                "src": "https://via.placeholder.com/1920x1080/eee?text=16:9",
+                "src2x": "https://via.placeholder.com/1920x1080/eee?text=16:9",
+                "width": 40,
+                "height": 40,
+                "alt": "Cover alternative text",
+                "className": ["img-fluid"],
+                "wrapperClassName": ["position-relative"]
+              }
+            }) }}
+
+    {% endfor %}
+
+    {% for i in range(0, 4) %}
+    {% set ids = ids + 1 %}
+      <div class="col-6 col-md-4 col-lg-3 pb-6">
+        {{Card3.content({
+              "id": ids,
+              "className": [""],
+              "innerClassName": [""],
+              "contentClassName": [""],
+              "img": {
+                "isLazy": true,
+                "src": "https://via.placeholder.com/500x750/eee?text=image-type2",
+                "src2x": "https://via.placeholder.com/500x750/eee?text=image-type2",
+                "width": 40,
+                "height": 40,
+                "alt": "Cover alternative text",
+                "className": ["img-fluid position-absolute zaux-fit-cover-center-center w-100 h-100 start-0 top-0"],
+                "wrapperClassName": ["c-ratio--high position-relative"]
+              },
+              "nome": "Marc Vervloet",
+              "time": "2022",
+              "cat": "Category",
+              "descr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...."
+              }
+            )}}
+      </div>
+      {{ ModaleGalleria.content({
+        "id": ids,
+              "img": {
+                "isLazy": true,
+                "src": "https://via.placeholder.com/500x750/eee?text=500:750",
+                "src2x": "https://via.placeholder.com/500x750/eee?text=500:750",
+                "width": 40,
+                "height": 40,
+                "alt": "Cover alternative text",
+                "className": ["img-fluid"],
+                "wrapperClassName": ["position-relative"]
+              }
+            }) }}
+
+    {% endfor %}
+
+    {% for i in range(0, 4) %}
+    {% set ids = ids + 1 %}
+      <div class="col-6 col-md-4 col-lg-3 pb-6">
+        {{Card3.content({
+              "id": ids,
+              "className": [""],
+              "innerClassName": [""],
+              "contentClassName": [""],
+              "img": {
+                "isLazy": true,
+                "src": "https://via.placeholder.com/1080x1080/eee?text=image-type3",
+                "src2x": "https://via.placeholder.com/1080x1080/eee?text=image-type3",
+                "width": 40,
+                "height": 40,
+                "alt": "Cover alternative text",
+                "className": ["img-fluid position-absolute zaux-fit-cover-center-center w-100 h-100 start-0 top-0"],
+                "wrapperClassName": ["c-ratio--high position-relative"]
+              },
+              "nome": "Marc Vervloet",
+              "time": "2022",
+              "cat": "Category",
+              "descr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...."
+              }
+            )}}
+      </div>
+      {{ ModaleGalleria.content({
+              "id": ids,
+              "img": {
+                "isLazy": true,
+                "src": "https://via.placeholder.com/1080x1080/eee?text=1:1",
+                "src2x": "https://via.placeholder.com/1080x1080/eee?text=1:1",
+                "width": 180,
+                "height": 180,
+                "alt": "Cover alternative text",
+                "className": ["img-fluid"],
+                "wrapperClassName": ["position-relative"]
+              }
+            }) }}
+
+    {% endfor %}
+  </div>
+  <!-- end row -->
+  <div class="text-center pt-4 pt-lg-6">
+    <a class="c-cta1 c-cta1--sm c-cta1--red" href="#" title="button title">Load more</a>
+  </div>
+
+</div>
+
+<!-- Gallery Listing -->

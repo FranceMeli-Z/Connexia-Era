@@ -36,8 +36,19 @@ $component: componentClass("modale");
 
     &.modal-gallery {
       & .modal-dialog {
+        & .#{$component}__inner {
+          @include media-breakpoint-down(lg){
+            background-color: #FFFFFF;
+          }
+        }
         & .#{$component}__contentgallery {
-          background-color: #FFFFFF;
+          // background-color: #FFFFFF;
+          &--img {
+            background-color: #FFFFFF;
+          }
+          &--data {
+            background-color: #FFFFFF;
+          }
         }
       }
     }
