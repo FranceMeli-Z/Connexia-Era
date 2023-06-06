@@ -35,6 +35,10 @@ $component: componentClass("modale");
     }
 
     &.modal-gallery {
+
+        // background-color: #80808033;
+        background-color: #808080CC;
+
       & .modal-dialog {
         & .#{$component}__inner {
           @include media-breakpoint-down(lg){

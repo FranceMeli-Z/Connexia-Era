@@ -247,8 +247,8 @@ $component: componentClass("modale");
   text-decoration: none;
 }
 .modal-backdrop {
-  // z-index: 19;
-  z-index: 20;
+  // z-index: 20;
+  z-index: 19;
 }
 
 [type="search"]::-webkit-search-cancel-button,
